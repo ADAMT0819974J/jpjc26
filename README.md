@@ -22,7 +22,7 @@ JPJC H2 Computing 2026
     <tr><td>25S21</td><td>Goh Jun Le, Javier</td></tr>
     <tr><td>25S21</td><td>Jimson Teo Kheng Seng</td></tr>
     <tr><td>25S21</td><td>Kendrick Chan Zi Chuan (Zeng Ziquan)</td></tr>
-    <tr><td>25S21</td><td>Koh Hong Kiat (Xu Hongjie)</td></tr>
+    <tr><td>25S21</td><td><a href = "https://github.com/hh0ngjieee/h2computing">Koh Hong Kiat (Xu Hongjie)</a></td></tr>
     <tr><td>25S21</td><td>Kor Jing Heng, Ashton</td></tr>
     <tr><td>25S21</td><td>Liew Xing Ying, Shermaine</td></tr>
     <tr><td>25S21</td><td>Magana Constantine Albert</td></tr>
