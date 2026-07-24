@@ -29,7 +29,7 @@ JPJC H2 Computing 2026
     <tr><td>25S21</td><td>Mickeannu Chen</td></tr>
     <tr><td>25S21</td><td>Ng Shi Han Caleb</td></tr>
     <tr><td>25S21</td><td>Niranjan Saravanan</td></tr>
-    <tr><td>25S21</td><td>Paul Raymond</td></tr>
+    <tr><td>25S21</td><td><a href="https://github.com/F1r3Ph0EniX/test1">Paul Raymond</a></td></tr>
     <tr><td>25S21</td><td>Shao Yi</td></tr>
     <tr><td>25S21</td><td>Sia Chaturvedi</td></tr>
     <tr><td>25S21</td><td>Stanley Yong Zheng Jie</td></tr>
