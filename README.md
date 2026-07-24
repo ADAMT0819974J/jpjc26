@@ -46,7 +46,7 @@ JPJC H2 Computing 2026
     <tr><td>25S22</td><td>Hrithik Ram Ganesh Kumar</td></tr>
     <tr><td>25S22</td><td>John Silas</td></tr>
     <tr><td>25S22</td><td>Kang Zhen Yu, Josh</td></tr>
-    <tr><td>25S22</td><td>Navien Vivekanandan</td></tr>
+    <tr><td>25S22</td><td><a href="https://github.com/navienvivekanandan-glitch/Navien">Navien Vivekanandan</a></td></tr>
     <tr><td>25S22</td><td>Timothy Hui Jun Xiang</td></tr>
   </tbody>
 </table>
