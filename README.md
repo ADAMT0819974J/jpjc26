@@ -38,7 +38,7 @@ JPJC H2 Computing 2026
     <tr><td>25S21</td><td>Tham Hoa Yu (Tan Haoyu)</td></tr>
     <tr><td>25S21</td><td>Wong Jia Xi</td></tr>
     <tr><td>25S22</td><td>Adam Nazraoul Bin Azmi</td></tr>
-    <tr><td>25S22</td><td>Carter Lee Harbick</td></tr>
+    <tr><td>25S22</td><td><a href="https://github.com/carter166/H2Computing/tree/main">Carter Lee Harbick</a></td></tr>
     <tr><td>25S22</td><td>Edgar Ow Yeong Yuan Hao</td></tr>
     <tr><td>25S22</td><td>Han Feng</td></tr>
     <tr><td>25S22</td><td>Han Jeong Seu, Caleb</td></tr>
