@@ -12,8 +12,8 @@ JPJC H2 Computing 2026
     <tr><td>25S11</td><td>Chan Hao Yang</td></tr>
     <tr><td>25S11</td><td>Chia He Jun</td></tr>
     <tr><td>25S11</td><td>Hein Thurein Kyaw</td></tr>
+    <tr><td>25S11</td><td><a href="https://github.com/meltierd/H2-computing">Melissa Nataniela Darmali</a></td></tr>
     <tr><td>25S11</td><td><a herf = "https://github.com/lql-svg/H2-computing">Li Qiaoling</a></td></tr>
-    <tr><td>25S11</td><td>Melissa Nataniela Darmali</td></tr>
     <tr><td>25S11</td><td>Phuah Xuan Yun</td></tr>
     <tr><td>25S11</td><td>Tan Xiang Kai</td></tr>
     <tr><td>25S21</td><td>Alvirra Chan Yee Syuen</td></tr>
