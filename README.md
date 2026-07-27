@@ -34,7 +34,7 @@ JPJC H2 Computing 2026
     <tr><td>25S21</td><td>Sia Chaturvedi</td></tr>
     <tr><td>25S21</td><td>Stanley Yong Zheng Jie</td></tr>
     <tr><td>25S21</td><td>Tan Bo Yu (Chen Boyu)</td></tr>
-    <tr><td>25S21</td><td><a href="https://github.com/coderingfailuring/H2-FILES/tree/main">Tan Yan Kai Brayden</a>a</td></tr>
+    <tr><td>25S21</td><td><a href="https://github.com/coderingfailuring/H2-FILES/tree/main">Tan Yan Kai Brayden</a></td></tr>
     <tr><td>25S21</td><td>Tham Hoa Yu (Tan Haoyu)</td></tr>
     <tr><td>25S21</td><td>Wong Jia Xi</td></tr>
     <tr><td>25S22</td><td>Adam Nazraoul Bin Azmi</td></tr>
