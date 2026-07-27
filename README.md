@@ -11,7 +11,7 @@ JPJC H2 Computing 2026
   <tbody>
     <tr><td>25S11</td><td><a href="https://github.com/ChiaHeJun/H2Computing">Chan Hao Yang</a></td></tr>
     <tr><td>25S11</td><td><a href="https://github.com/HaoYangChan/H2-Computing">Chia He Jun</a></td></tr>
-    <tr><td>25S11</td><td>Hein Thurein Kyaw</td></tr>
+    <tr><td>25S11</td><td><a href="https://github.com/heinthureinkyaw-cmyk/2020-task-2">Hein Thurein Kyaw</a></td></tr>
     <tr><td>25S11</td><td><a href="https://github.com/meltierd/H2-computing">Melissa Nataniela Darmali</a></td></tr>
     <tr><td>25S11</td><td><a href = "https://github.com/lql-svg/H2-computing">Li Qiaoling</a></td></tr>
     <tr><td>25S11</td><td><a href="https://github.com/PhuahXuanYun/H2-Computing/tree/main">Phuah Xuan Yun</a></td></tr>
