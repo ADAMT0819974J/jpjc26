@@ -1,4 +1,4 @@
-﻿# jpjc26
+# jpjc26
 JPJC H2 Computing 2026
 
 <table>
@@ -18,7 +18,7 @@ JPJC H2 Computing 2026
     <tr><td>25S11</td><td><a href="https://github.com/xkboi01050">Tan Xiang Kai</a></td></tr>
     <tr><td>25S21</td><td><a href="https://github.com/mamee-monster/H2-Computing">Alvirra Chan Yee Syuen</a></td></tr>
     <tr><td>25S21</td><td>Ashton Tan Jun Rui (Chen Junrui)</td></tr>
-    <tr><td>25S21</td><td><a href='https://github.com/paulnormanazucena-gif/CompPract'>Azucena Paul Norman Matias</a></td></tr>
+    <tr><td>25S21</td><td><a href="https://github.com/paulnormanazucena-gif/CompPract">Azucena Paul Norman Matias</a></td></tr>
     <tr><td>25S21</td><td>Goh Jun Le, Javier</td></tr>
     <tr><td>25S21</td><td>Jimson Teo Kheng Seng</td></tr>
     <tr><td>25S21</td><td>Kendrick Chan Zi Chuan (Zeng Ziquan)</td></tr>
@@ -28,21 +28,21 @@ JPJC H2 Computing 2026
     <tr><td>25S21</td><td><a href="https://github.com/constantinemagana3-alt/H2computing">Magana Constantine
 Albert</a></td></tr>
     <tr><td>25S21</td><td>Mickeannu Chen</td></tr>
-    <tr><td>25S21</td><td>Ng Shi Han Caleb</td></tr>
-    <tr><td>25S21</td><td>Niranjan Saravanan</td></tr>
+    <tr><td>25S21</td><td><a href="https://github.com/hh0ngjieee/h2computing.git">Ng Shi Han Caleb</a></td></tr>
+    <tr><td>25S21</td><td><a href="https://github.com/NJ11422/H2-FILES">Niranjan Saravanan</a></td></tr>
     <tr><td>25S21</td><td><a href="https://github.com/F1r3Ph0EniX/test1">Paul Raymond</a></td></tr>
     <tr><td>25S21</td><td>Shao Yi</td></tr>
-    <tr><td>25S21</td><td>Sia Chaturvedi</td></tr>
-    <tr><td>25S21</td><td>Stanley Yong Zheng Jie</td></tr>
+    <tr><td>25S21</td><td><a href="https://github.com/siachaturvedit/h2comp">Sia Chaturvedi</a></td></tr>
+    <tr><td>25S21</td><td><a href="https://github.com/stanley680426/h2-computing/tree/main">Stanley Yong Zheng Jie</a></td></tr>
     <tr><td>25S21</td><td>Tan Bo Yu (Chen Boyu)</td></tr>
     <tr><td>25S21</td><td><a href="https://github.com/coderingfailuring/H2-FILES/tree/main">Tan Yan Kai Brayden</a></td></tr>
-    <tr><td>25S21</td><td>Tham Hoa Yu (Tan Haoyu)</td></tr>
+    <tr><td>25S21</td><td><a href="https://github.com/thamhoayu-wq/H2cp">Tham Hoa Yu (Tan Haoyu)</a></td></tr>
     <tr><td>25S21</td><td>Wong Jia Xi</td></tr>
     <tr><td>25S22</td><td><a href="https://github.com/ADAMT0819974J/H2COMPUTING">Adam Nazraoul Bin Azmi</a></td></tr>
     <tr><td>25S22</td><td><a href="https://github.com/carter166/H2Computing/tree/main">Carter Lee Harbick</a></td></tr>
     <tr><td>25S22</td><td><a href="https://github.com/cynicalzaza/A_Level_2020_Edgar.git">Edgar Ow Yeong Yuan Hao</a></td></tr>
     <tr><td>25S22</td><td><a href="https://github.com/wind-hanfeng/A-Level_Computing">Han Feng</a></td></tr>
-    <tr><td>25S22</td><td><a href="https://github.com/kidscoots101/h2-computing">Han Jeong Seu, Caleb</td></tr>
+    <tr><td>25S22</td><td><a href="https://github.com/kidscoots101/h2-computing">Han Jeong Seu, Caleb</a></td></tr>
     <tr><td>25S22</td><td><a href="https://github.com/jingxuan4/H2_computing">Hou Jingxuan</a></td></tr>
     <tr><td>25S22</td><td><a href="https://github.com/Hrithikram101/H2-Computing-2020-Paper-2">Hrithik Ram Ganesh Kumar</a></td></tr>
     <tr><td>25S22</td><td><a href="https://github.com/silasaple/JPJC-H2_Computing">John Silas</a></td></tr>
