@@ -25,7 +25,8 @@ JPJC H2 Computing 2026
     <tr><td>25S21</td><td><a href = "https://github.com/hh0ngjieee/h2computing">Koh Hong Kiat (Xu Hongjie)</a></td></tr>
     <tr><td>25S21</td><td>Kor Jing Heng, Ashton</td></tr>
     <tr><td>25S21</td><td><a href="https://github.com/shemnin/h2cp">Liew Xing Ying, Shermaine</a></td></tr>
-    <tr><td>25S21</td><td>Magana Constantine Albert</td></tr>
+    <tr><td>25S21</td><td><a href="https://github.com/constantinemagana3-alt/H2computing">Magana Constantine
+Albert</a></td></tr>
     <tr><td>25S21</td><td>Mickeannu Chen</td></tr>
     <tr><td>25S21</td><td>Ng Shi Han Caleb</td></tr>
     <tr><td>25S21</td><td>Niranjan Saravanan</td></tr>
