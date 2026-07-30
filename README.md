@@ -19,7 +19,7 @@ JPJC H2 Computing 2026
     <tr><td>25S21</td><td><a href="https://github.com/mamee-monster/H2-Computing">Alvirra Chan Yee Syuen</a></td></tr>
     <tr><td>25S21</td><td>Ashton Tan Jun Rui (Chen Junrui)</td></tr>
     <tr><td>25S21</td><td><a href="https://github.com/paulnormanazucena-gif/CompPract">Azucena Paul Norman Matias</a></td></tr>
-    <tr><td>25S21</td><td>Goh Jun Le, Javier</td></tr>
+    <tr><td>25S21</td><td><a href=“https://github.com/Javierdaloser/Computing.git”> Goh Jun Le, Javier</a></td></tr>
     <tr><td>25S21</td><td>Jimson Teo Kheng Seng</td></tr>
     <tr><td>25S21</td><td>Kendrick Chan Zi Chuan (Zeng Ziquan)</td></tr>
     <tr><td>25S21</td><td><a href = "https://github.com/hh0ngjieee/h2computing">Koh Hong Kiat (Xu Hongjie)</a></td></tr>
