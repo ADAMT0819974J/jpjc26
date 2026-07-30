@@ -34,7 +34,7 @@ Albert</a></td></tr>
     <tr><td>25S21</td><td><a href="https://github.com/CodedCrafter/COMPUTING">Shao Yi</a></td></tr>
     <tr><td>25S21</td><td><a href="https://github.com/siachaturvedit/h2comp">Sia Chaturvedi</a></td></tr>
     <tr><td>25S21</td><td><a href="https://github.com/stanley680426/h2-computing/tree/main">Stanley Yong Zheng Jie</a></td></tr>
-    <tr><td>25S21</td><td>Tan Bo Yu (Chen Boyu)</td></tr>
+    <tr><td>25S21</td><td><a href= "https://github.com/boyu131/computing.git">Tan Bo Yu (Chen Boyu)</a></td></tr>
     <tr><td>25S21</td><td><a href="https://github.com/coderingfailuring/H2-FILES/tree/main">Tan Yan Kai Brayden</a></td></tr>
     <tr><td>25S21</td><td><a href="https://github.com/thamhoayu-wq/H2cp">Tham Hoa Yu (Tan Haoyu)</a></td></tr>
     <tr><td>25S21</td><td><a href="https://github.com/blankets524/jpjc26">Wong Jia Xi</td></tr>
