@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback: Ng Shi Han Caleb</title>
+  <style>
+    :root { color-scheme: light; --bg:#f5f7fb; --panel:#fff; --text:#1f2937;
+      --muted:#6b7280; --border:#dbe2ea; --accent:#1d4ed8; --accent-soft:#dbeafe; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: Arial, Helvetica, sans-serif; color:var(--text);
+      background: linear-gradient(180deg,#eef4ff 0%,var(--bg) 240px); }
+    .page { max-width: 840px; margin:0 auto; padding:32px 20px 48px; }
+    .hero { background:var(--panel); border:1px solid var(--border); border-radius:18px;
+      padding:24px 28px; box-shadow:0 16px 40px rgba(15,23,42,.08); }
+    h1 { margin:0 0 6px; font-size:1.8rem; }
+    .meta { color:var(--muted); font-size:.95rem; }
+    .meta a { color:var(--accent); text-decoration:none; }
+    .meta a:hover { text-decoration:underline; }
+    section.task { margin-top:24px; background:var(--panel); border:1px solid var(--border);
+      border-radius:18px; overflow:hidden; box-shadow:0 16px 40px rgba(15,23,42,.06); }
+    .task-header { padding:14px 24px; background:var(--accent-soft);
+      border-bottom:1px solid var(--border); font-weight:700; }
+    .task-header .files { float:right; font-weight:400; font-size:.9rem; }
+    .task-header .files a { margin-left:10px; }
+    .task-body { padding:8px 24px 20px; }
+    h3 { font-size:1.02rem; margin:18px 0 6px; }
+    p { margin:6px 0; line-height:1.55; }
+    code { background:#eef2f7; border:1px solid var(--border); border-radius:4px;
+      padding:1px 5px; font-size:.9em; }
+    ul { margin:6px 0; padding-left:22px; }
+    .next { background:#f0fdf4; border:1px solid #bbf7d0; border-radius:10px;
+      padding:10px 14px; margin-top:6px; }
+    .farewell { padding:22px 24px; font-size:1.05rem; line-height:1.6; }
+    .foot { margin-top:20px; font-size:.85rem; color:var(--muted); }
+</style>
+</head>
+<body>
+  <main class="page">
+    <div class="hero">
+      <h1>Ng Shi Han Caleb</h1>
+      <p class="meta">25S21 &middot; <a href="https://github.com/caleb-123456/h2computing" target="_blank" rel="noopener">GitHub repo</a> &middot; <a href="../all.html">Back to the work grid</a></p>
+    </div>
+    <section class="task" id="task-2020-1">
+      <div class="task-header">2020 Paper 2, Task 1 <span class="files"><a href="https://github.com/caleb-123456/h2computing/blob/main/2020/task1_Caleb_answer.ipynb" target="_blank" rel="noopener">task1_Caleb_answer.ipynb</a></span></div>
+      <div class="task-body">
+<p>This is a complete and correct Task 1 with all required evidence saved.</p>
+<h3>Task 1.1</h3><p>The hash follows the pseudocode exactly, taking % 1024 inside the loop, and the outputs 116, 1008 and 644 for &quot;Hello&quot;, &quot;Hallo&quot; and &quot;Hullo&quot; are clear evidence your code runs correctly.</p>
+<h3>Task 1.2</h3><p>Good reuse: task1_1(seed + string_value) keeps the seed in front, and all three seed tests are shown with correct results.</p>
+<h3>Next step</h3><div class="next"><p>Add one extra edge test, such as an empty string, and confirm task1_1 returns 0 for it.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2020-2">
+      <div class="task-header">2020 Paper 2, Task 2 <span class="files"><a href="https://github.com/caleb-123456/h2computing/blob/main/2020/task2_Caleb_answer.ipynb" target="_blank" rel="noopener">task2_Caleb_answer.ipynb</a></span></div>
+      <div class="task-body">
+<p>Tasks 2.1 and 2.2 are in good shape; Task 2.3 has a bug and no run evidence.</p>
+<h3>Task 2.1</h3><p>Correct use of random.randint(0, maximum) with newlines, though &#x27;my_file.txt&#x27; should follow the randomnumbers_&lt;name&gt;_&lt;centre&gt;_&lt;index&gt; naming.</p>
+<h3>Task 2.2</h3><p>A clean recursive merge sort with a separate merge function, and the saved True output is clear evidence it runs correctly.</p>
+<h3>Task 2.3</h3><p>You open the output file with &#x27;r&#x27; but then call fileout.write, which fails because the file is read-only; the mode must be &#x27;w&#x27;. The function is also never called.</p>
+<h3>Next step</h3><div class="next"><p>Change the mode to &#x27;w&#x27;, call task2_3 on your random numbers file, then Run All and save.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2020-3">
+      <div class="task-header">2020 Paper 2, Task 3 <span class="files"><a href="https://github.com/caleb-123456/h2computing/blob/main/2020/task3_Caleb_answer.ipynb" target="_blank" rel="noopener">task3_Caleb_answer.ipynb</a></span></div>
+      <div class="task-body">
+<p>Your conversions are correct and 3.2&#x27;s test coverage is a highlight; validating the digits is the main gap.</p>
+<h3>Task 3.1</h3><p>Only the unit is checked: the number part never goes through isdigit(), so a string like &quot;a8KB&quot; crashes int(value) instead of returning &quot;invalid data&quot;. Only &quot;8KB&quot; is tested; the task wants all four units plus invalid cases.</p>
+<h3>Task 3.2</h3><p>All eight units plus four invalid cases tested, with correct values like 2097152 for &quot;2MiB&quot;.</p>
+<h3>Task 3.3</h3><p>Good reuse of task3_2 and propagation of &quot;invalid data&quot;; 0.5 for &quot;512MiB&quot; to &quot;GiB&quot; is right.</p>
+<h3>Next step</h3><div class="next"><p>Add an isdigit() check on the number part, then re-test 3.1 fully.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2020-4">
+      <div class="task-header">2020 Paper 2, Task 4 <span class="files"><a href="https://github.com/caleb-123456/h2computing/blob/main/2020/task4/TASK4_1_Caleb_12345.sql" target="_blank" rel="noopener">TASK4_1_Caleb_12345.sql</a> <a href="https://github.com/caleb-123456/h2computing/blob/main/2020/task4/task4_2_Caleb_answer.ipynb" target="_blank" rel="noopener">task4_2_Caleb_answer.ipynb</a></span></div>
+      <div class="task-body">
+<p>Your table design and class work are largely right, but the database run fails and the web step is missing.</p>
+<h3>Task 4.1</h3><p>CREATE TABLE with PersonID INTEGER PRIMARY KEY AUTOINCREMENT and IsAdult INTEGER matches the requirement.</p>
+<h3>Task 4.2</h3><p>Person, Staff and Student behave correctly, and JohnTan0601 with True is good evidence. But cursor = conn.connect raises AttributeError, so no rows were ever inserted; it must be conn.cursor(). Also screen_name only removes spaces, so Evan O&#x27;Reilly keeps his apostrophe.</p>
+<h3>Task 4.3</h3><p>No Flask application or output page is present.</p>
+<h3>Next step</h3><div class="next"><p>Fix conn.cursor(), re-run the insert cell until it completes without error, then build the Flask page.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2021-1">
+      <div class="task-header">2021 Paper 2, Task 1 <span class="files"><a href="https://github.com/caleb-123456/h2computing/blob/main/2021/task1_Caleb_answer_2021.ipynb" target="_blank" rel="noopener">task1_Caleb_answer_2021.ipynb</a></span></div>
+      <div class="task-body">
+<p>Good work: the doubling and digit-pair sums are correct, and Task 1.3 reuses <code>task1_1</code> well with all four tests printing True.</p>
+<h3>Task 1.1</h3><p><code>check_d = 10 - (total%10)</code> gives 10 when the sum is already divisible by 10; use <code>(10 - total%10) % 10</code> so it returns 0. The even loop also checks <code>i.isdigit()</code> instead of <code>j.isdigit()</code>, so a letter there would crash <code>int(j)</code>.</p>
+<h3>Task 1.2</h3><p>You printed raw results (3, 3, -1, -1) instead of the required <code>print(task1_1(input_value) == expected)</code> form.</p>
+<h3>Next step</h3><div class="next"><p>Apply the <code>% 10</code> fix, rewrite the 1.2 tests as <code>== expected</code> comparisons, then re-run.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2021-2">
+      <div class="task-header">2021 Paper 2, Task 2 <span class="files"><a href="https://github.com/caleb-123456/h2computing/blob/main/2021/task2_Caleb_answer.ipynb" target="_blank" rel="noopener">task2_Caleb_answer.ipynb</a></span></div>
+      <div class="task-body">
+<p>Strong submission: file reading, insertion sort and the timing comparison are all correct with clear saved output.</p>
+<h3>Task 2.3</h3><p>Your recursive calls are to <code>quick_sort</code>, but the function is named <code>task2_3</code>; the cell only ran because an old definition was in memory, so a fresh Run All stops with NameError. Values equal to the pivot are also dropped, since you keep only <code>&lt;</code> and <code>&gt;</code>.</p>
+<h3>Task 2.4</h3><p>Timings across all three files plus the O(n^2) versus O(n log n) explanation read well.</p>
+<h3>Next step</h3><div class="next"><p>Rename the recursive calls to <code>task2_3</code>, keep values equal to the pivot, then Run All and save.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2021-3">
+      <div class="task-header">2021 Paper 2, Task 3 <span class="files"><a href="https://github.com/caleb-123456/h2computing/blob/main/2021/task3_Caleb_answer.ipynb" target="_blank" rel="noopener">task3_Caleb_answer.ipynb</a></span></div>
+      <div class="task-body">
+<p>The structure is genuinely node-based and the pointer work in delete and search is sound, but a few requirements are missed.</p>
+<h3>Task 3.1</h3><p><code>to_String</code> returns a Python list, not the required string; and the nodes store raw file lines like &quot;5\n&quot;, so convert with <code>int(i)</code> before inserting.</p>
+<h3>Task 3.2</h3><p>Sorted output is correct, but the required print of <code>search(94)</code> is missing.</p>
+<h3>Task 3.3</h3><p>Enqueue at the tail is right; <code>dequeue</code> ends with <code>return print(value)</code>, returning None instead of the element.</p>
+<h3>Next step</h3><div class="next"><p>Insert integers with <code>int()</code>, make <code>to_String</code> return a string, and add the <code>search(94)</code> print.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2021-4">
+      <div class="task-header">2021 Paper 2, Task 4 <span class="files"><a href="https://github.com/caleb-123456/h2computing/blob/main/2021/task4_1_Caleb_answer.py" target="_blank" rel="noopener">task4_1_Caleb_answer.py</a> <a href="https://github.com/caleb-123456/h2computing/blob/main/2021/task4_2_Caleb_answer.py" target="_blank" rel="noopener">task4_2_Caleb_answer.py</a> <a href="https://github.com/caleb-123456/h2computing/blob/main/2021/task4_3_Caleb_answer.py" target="_blank" rel="noopener">task4_3_Caleb_answer.py</a> <a href="https://github.com/caleb-123456/h2computing/blob/main/2021/task4_4_Caleb_answer.py" target="_blank" rel="noopener">task4_4_Caleb_answer.py</a> <a href="https://github.com/caleb-123456/h2computing/blob/main/2021/templates/index.html" target="_blank" rel="noopener">index.html</a> <a href="https://github.com/caleb-123456/h2computing/blob/main/2021/templates/mean.html" target="_blank" rel="noopener">mean.html</a> <a href="https://github.com/caleb-123456/h2computing/blob/main/2021/templates/qualifiers.html" target="_blank" rel="noopener">qualifiers.html</a> <a href="https://github.com/caleb-123456/h2computing/blob/main/2021/templates/round.html" target="_blank" rel="noopener">round.html</a></span></div>
+      <div class="task-body">
+<p>An essentially correct web application: every menu option has a working route and the SQL is accurate throughout.</p>
+<h3>Task 4.2</h3><p>The JOIN with <code>ORDER BY scores.score DESC</code> per round is right, though the three near-identical routes could be one parameterised route.</p>
+<h3>Task 4.3 and 4.4</h3><p><code>ROUND(AVG(scores.score), 2)</code> ordered by name, and the CASE giving Qualified status ordered by total DESC with all competitors listed, both match the task. The one gap: only the Jinja templates are in the repo, so the rendered pages are not saved as .html.</p>
+<h3>Next step</h3><div class="next"><p>Run the app and save each rendered page as a .html file alongside your code.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2022-1">
+      <div class="task-header">2022 Paper 2, Task 1 <span class="files"><a href="https://github.com/caleb-123456/h2computing/blob/main/2022/task1_Caleb_answer.ipynb" target="_blank" rel="noopener">task1_Caleb_answer.ipynb</a></span></div>
+      <div class="task-body">
+<p>Good wraparound logic, but one missing rule changes your output everywhere.</p>
+<h3>Task 1.1</h3><p>char_to_ASCII handles the upper and lower wraparound correctly by subtracting 26, but there is no space case: a space should return 33, and yours falls through to -1. Your own test output shows the space reported as invalid.</p>
+<h3>Task 1.2</h3><p>The task asks you to read a single character from the user with input(); your loop over a test list covers the four values but skips the user input step.</p>
+<h3>Task 1.3</h3><p>The file handling is right and you reuse the 1.1 function, but because spaces return -1 they are dropped, so the file reads &quot;Drscscwic...&quot; instead of &quot;Drsc!sc!wi!...&quot;.</p>
+<h3>Next step</h3><div class="next"><p>Add <code>if char == &#x27; &#x27;: return 33</code> before the invalid case, then rerun 1.2 and 1.3.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2023-1">
+      <div class="task-header">2023 Paper 2, Task 1 <span class="files"><a href="https://github.com/caleb-123456/h2computing/blob/main/2023/task1_Caleb_answer.ipynb" target="_blank" rel="noopener">task1_Caleb_answer.ipynb</a></span></div>
+      <div class="task-body">
+<p>Your schema is largely sound, but the notebook was never run and a syntax slip would have surfaced immediately.</p>
+<h3>Task 1.1</h3><p>Good foreign keys in both <code>Student</code> and <code>Student_Test</code>, but there is a missing comma between <code>FOREIGN KEY(ClassName) REFERENCES Class(ClassName)</code> and <code>PRIMARY KEY(StudentID)</code> in <code>Student</code>, which sqlite3 will reject. The exam requires visible output in the .ipynb: Run All so the cell completes without error, then save.</p>
+<h3>Task 1.2</h3><p>Mary&#x27;s name is split correctly, but your <code>Student_Test</code> insert omits <code>StudentTestID</code>, so 123 is never stored; include it explicitly.</p>
+<h3>Next step</h3><div class="next"><p>Fix the missing comma, then Run All and save the notebook with outputs.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2023-2">
+      <div class="task-header">2023 Paper 2, Task 2 <span class="files"><a href="https://github.com/caleb-123456/h2computing/blob/main/2023/task2_Caleb_answer.ipynb" target="_blank" rel="noopener">task2_Caleb_answer.ipynb</a></span></div>
+      <div class="task-body">
+<p>Your circular queue is correct throughout, with % 4 wrap-around, numberItems driving the full and empty tests, and saved runs for every sub-task.</p>
+<h3>Task 2.3</h3><p>The task asks you to take five sets of ID and quantity as input; you hardcode item1 to item5, and print the bare True or False instead of a suitable message such as &#x27;Queue is full&#x27;.</p>
+<h3>Task 2.4</h3><p>Good: the main code prints each removed item&#x27;s ID and quantity, and &#x27;Queue is empty&#x27; for the fifth call.</p>
+<h3>Next step</h3><div class="next"><p>Rewrite the 2.3 test to read ID and quantity with input() in a loop and print a message based on the returned value.</p></div>
+      </div>
+    </section>
+    <p class="foot">Disclaimer: AI-assisted evaluation may contain issues. Exercise discretion and seek clarification if in doubt.</p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback: Navien Vivekanandan</title>
+  <style>
+    :root { color-scheme: light; --bg:#f5f7fb; --panel:#fff; --text:#1f2937;
+      --muted:#6b7280; --border:#dbe2ea; --accent:#1d4ed8; --accent-soft:#dbeafe; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: Arial, Helvetica, sans-serif; color:var(--text);
+      background: linear-gradient(180deg,#eef4ff 0%,var(--bg) 240px); }
+    .page { max-width: 840px; margin:0 auto; padding:32px 20px 48px; }
+    .hero { background:var(--panel); border:1px solid var(--border); border-radius:18px;
+      padding:24px 28px; box-shadow:0 16px 40px rgba(15,23,42,.08); }
+    h1 { margin:0 0 6px; font-size:1.8rem; }
+    .meta { color:var(--muted); font-size:.95rem; }
+    .meta a { color:var(--accent); text-decoration:none; }
+    .meta a:hover { text-decoration:underline; }
+    section.task { margin-top:24px; background:var(--panel); border:1px solid var(--border);
+      border-radius:18px; overflow:hidden; box-shadow:0 16px 40px rgba(15,23,42,.06); }
+    .task-header { padding:14px 24px; background:var(--accent-soft);
+      border-bottom:1px solid var(--border); font-weight:700; }
+    .task-header .files { float:right; font-weight:400; font-size:.9rem; }
+    .task-header .files a { margin-left:10px; }
+    .task-body { padding:8px 24px 20px; }
+    h3 { font-size:1.02rem; margin:18px 0 6px; }
+    p { margin:6px 0; line-height:1.55; }
+    code { background:#eef2f7; border:1px solid var(--border); border-radius:4px;
+      padding:1px 5px; font-size:.9em; }
+    ul { margin:6px 0; padding-left:22px; }
+    .next { background:#f0fdf4; border:1px solid #bbf7d0; border-radius:10px;
+      padding:10px 14px; margin-top:6px; }
+    .farewell { padding:22px 24px; font-size:1.05rem; line-height:1.6; }
+    .foot { margin-top:20px; font-size:.85rem; color:var(--muted); }
+</style>
+</head>
+<body>
+  <main class="page">
+    <div class="hero">
+      <h1>Navien Vivekanandan</h1>
+      <p class="meta">25S22 &middot; <a href="https://github.com/navienvivekanandan-glitch/Navien" target="_blank" rel="noopener">GitHub repo</a> &middot; <a href="../all.html">Back to the work grid</a></p>
+    </div>
+    <section class="task" id="task-2020-1">
+      <div class="task-header">2020 Paper 2, Task 1 <span class="files"><a href="https://github.com/navienvivekanandan-glitch/Navien/blob/main/2020_ALevel_P2/TASK1_Navien_A_LEVEL_2020.ipynb" target="_blank" rel="noopener">TASK1_Navien_A_LEVEL_2020.ipynb</a></span></div>
+      <div class="task-body">
+<p>The structure of both functions is right, but an off-by-one bug makes every hash wrong.</p>
+<h3>Task 1.1</h3><p>range(len(string_value)-1) never hashes the last character, so task1_1(&quot;Hello&quot;) prints 549 when the correct value is 116; the pseudocode&#x27;s FOR i = 0 TO length minus 1 is inclusive, which is range(len(string_value)) in Python.</p>
+<h3>Task 1.2</h3><p>Concatenating seed + string_value and reusing task1_1 is correct, and all three required seed calls are shown; their outputs will come right once 1.1 is fixed.</p>
+<h3>Next step</h3><div class="next"><p>Change the loop to range(len(string_value)) and rerun; the three Task 1.1 calls should then show 116, 1008 and 644.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2020-2">
+      <div class="task-header">2020 Paper 2, Task 2 <span class="files"><a href="https://github.com/navienvivekanandan-glitch/Navien/blob/main/2020_ALevel_P2/TASK2_Navien_A_LEVEL_2020.ipynb" target="_blank" rel="noopener">TASK2_Navien_A_LEVEL_2020.ipynb</a></span></div>
+      <div class="task-body">
+<p>Task 2 is correct from generation through to the sorted output file.</p>
+<h3>Task 2.1</h3><p>randint(0, maximum) keeps both bounds inclusive and each number is written on its own line; the only slip is saving to randomnumbers.txt instead of the randomnumbers_&lt;name&gt;_&lt;centre&gt;_&lt;index&gt;.txt pattern.</p>
+<h3>Task 2.2</h3><p>task2_2 splits recursively and merge drains both lists properly; the printed result matches [0, 0, 4, 4, 5, 7, 18, 25, 56, 98]. Printing the == comparison as True would match the paper&#x27;s example.</p>
+<h3>Task 2.3</h3><p>Reading with int(line.strip()) and writing line by line are both right.</p>
+<h3>Next step</h3><div class="next"><p>Rerun 2.1 and 2.3 using the exact file names the paper asks for.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2020-3">
+      <div class="task-header">2020 Paper 2, Task 3 <span class="files"><a href="https://github.com/navienvivekanandan-glitch/Navien/blob/main/2020_ALevel_P2/TASK3_Navien_A_LEVEL_2020.ipynb" target="_blank" rel="noopener">TASK3_Navien_A_LEVEL_2020.ipynb</a></span></div>
+      <div class="task-body">
+<p>This is a well structured Task 3 with proper reuse and error propagation.</p>
+<h3>Task 3.1 and 3.2</h3><p>Slicing the unit off the end and delegating decimal units from task3_2 back to task3_1 works, and bad units return &quot;invalid data&quot;. Two gaps: the digits are never validated, so task3_1(&quot;aKB&quot;) crashes on int(), and the tests cover only a couple of units rather than all eight.</p>
+<h3>Task 3.3</h3><p>Validating target_unit, checking task3_2&#x27;s result before converting, and four test sets including an invalid one are all correct, with 0.5 for (&quot;512MiB&quot;, &quot;GiB&quot;).</p>
+<h3>Next step</h3><div class="next"><p>Add an isdigit() check on the number part and extend your tests to all eight units.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2020-4">
+      <div class="task-header">2020 Paper 2, Task 4 <span class="files"><a href="https://github.com/navienvivekanandan-glitch/Navien/blob/main/2020_ALevel_P2/2020_Paper%202%20A%20Level_Task4_3.py" target="_blank" rel="noopener">2020_Paper 2 A Level_Task4_3.py</a> <a href="https://github.com/navienvivekanandan-glitch/Navien/blob/main/2020_ALevel_P2/TASK4_1.sql" target="_blank" rel="noopener">TASK4_1.sql</a> <a href="https://github.com/navienvivekanandan-glitch/Navien/blob/main/2020_ALevel_P2/TASK4_Navien_A_LEVEL_2020.ipynb" target="_blank" rel="noopener">TASK4_Navien_A_LEVEL_2020.ipynb</a> <a href="https://github.com/navienvivekanandan-glitch/Navien/blob/main/2020_ALevel_P2/home.html" target="_blank" rel="noopener">home.html</a></span></div>
+      <div class="task-body">
+<p>Much of Task 4 is in place, but nothing yet shows it running.</p>
+<h3>Task 4.1</h3><p>TASK4_1.sql contains Python rather than plain SQL, and conn.execute(&#x27;&#x27;&#x27;...&#x27;&#x27;&#x27;;) has a stray semicolon inside the brackets, a syntax error; the DDL itself is right.</p>
+<h3>Task 4.2</h3><p>The classes and parameterised INSERT with commit() are well built, and isalpha() handles Evan O&#x27;Reilly. But the notebook has no saved outputs, and Staff.screen_name keeps the spaces in full_name + &quot;Staff&quot;.</p>
+<h3>Task 4.3</h3><p>The Flask app takes identity from people.txt by index; reading it from school.db would be safer.</p>
+<h3>Next step</h3><div class="next"><p>Fix the stray semicolon, then Run All the Task 4 notebook and save.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2021-1">
+      <div class="task-header">2021 Paper 2, Task 1 <span class="files"><a href="https://github.com/navienvivekanandan-glitch/Navien/blob/main/2021_ALevel_P2/TASK1_Navien_A_LEVEL_2021.ipynb" target="_blank" rel="noopener">TASK1_Navien_A_LEVEL_2021.ipynb</a></span></div>
+      <div class="task-body">
+<p>A strong Task 1: both functions are correct, and your while loop returns 0 when the sum is already divisible by 10, a case many miss.</p>
+<h3>Task 1.2</h3><p>Your inputs cover the required cases and avoid the worked example, but you printed raw results (4, 4, -1, -1) instead of the form <code>print(task1_1(input_value) == expected)</code> so all four print True.</p>
+<h3>Task 1.3</h3><p>Good reuse of <code>task1_1</code> with <code>str(calc_check_digit) == check_digit</code>, but both valid tests use the same IMEI 565656565656564; pick a second value.</p>
+<h3>Next step</h3><div class="next"><p>Rewrite the Task 1.2 tests as <code>print(task1_1(...) == expected)</code> comparisons.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2021-2">
+      <div class="task-header">2021 Paper 2, Task 2 <span class="files"><a href="https://github.com/navienvivekanandan-glitch/Navien/blob/main/2021_ALevel_P2/TASK2_Navien_A_LEVEL_2021.ipynb" target="_blank" rel="noopener">TASK2_Navien_A_LEVEL_2021.ipynb</a></span></div>
+      <div class="task-body">
+<p>Tasks 2.1 to 2.3 are correct with clear evidence of running, but Task 2.4 is missing entirely.</p>
+<h3>Task 2.1 to 2.3</h3><p><code>task2_1</code> converts each stripped line with <code>int(line)</code> and prints ten integers. The insertion sort shifts elements correctly, and the quicksort recurses on <code>lower</code> and <code>upper</code> with a <code>len &lt;= 1</code> base case; both print the sorted TEN.txt list.</p>
+<h3>Task 2.4</h3><p>The cell holds only <code># Task 2.4</code>: no timeit calls, no timings, no orders of growth (insertion sort O(n^2), quicksort O(n log n) average).</p>
+<h3>Next step</h3><div class="next"><p>Time both sorts on all three files with timeit and explain the growth you observe.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2021-3">
+      <div class="task-header">2021 Paper 2, Task 3 <span class="files"><a href="https://github.com/navienvivekanandan-glitch/Navien/blob/main/2021_ALevel_P2/TASK3_Navien_A_LEVEL_2021.ipynb" target="_blank" rel="noopener">TASK3_Navien_A_LEVEL_2021.ipynb</a></span></div>
+      <div class="task-body">
+<p>Your subclasses work well, but the base LinkedList has untested bugs and a missing method.</p>
+<h3>Task 3.1</h3><p><code>insert</code> adds at the tail although the task asks for the head. <code>delete</code> would crash on the typo <code>seld.head.next</code>, and <code>while curr != None or curr.data != integer_value</code> needs <code>and</code>; <code>search</code> shares this fault. <code>count()</code> is missing, and none of these methods is ever called.</p>
+<h3>Task 3.2</h3><p>The overridden insert keeps ascending order, including the new-head case, but the print of <code>search(94)</code> is missing.</p>
+<h3>Task 3.3</h3><p><code>enqueue</code> and <code>dequeue</code> are correct, with matching output.</p>
+<h3>Next step</h3><div class="next"><p>Add <code>count()</code>, fix <code>delete</code> and <code>search</code>, then test all three with printed calls.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2021-4">
+      <div class="task-header">2021 Paper 2, Task 4 <span class="files"><a href="https://github.com/navienvivekanandan-glitch/Navien/blob/main/2021_ALevel_P2/2021%20A%20Level%20Paper%202%20Task%204.py" target="_blank" rel="noopener">2021 A Level Paper 2 Task 4.py</a> <a href="https://github.com/navienvivekanandan-glitch/Navien/blob/main/2021_ALevel_P2/home.html" target="_blank" rel="noopener">home.html</a> <a href="https://github.com/navienvivekanandan-glitch/Navien/blob/main/2021_ALevel_P2/mean_scores.html" target="_blank" rel="noopener">mean_scores.html</a> <a href="https://github.com/navienvivekanandan-glitch/Navien/blob/main/2021_ALevel_P2/qualified.html" target="_blank" rel="noopener">qualified.html</a> <a href="https://github.com/navienvivekanandan-glitch/Navien/blob/main/2021_ALevel_P2/round1.html" target="_blank" rel="noopener">round1.html</a> <a href="https://github.com/navienvivekanandan-glitch/Navien/blob/main/2021_ALevel_P2/round2.html" target="_blank" rel="noopener">round2.html</a> <a href="https://github.com/navienvivekanandan-glitch/Navien/blob/main/2021_ALevel_P2/round3.html" target="_blank" rel="noopener">round3.html</a></span></div>
+      <div class="task-body">
+<p>Your Flask app and round queries are sound, but the aggregate pages sidestep SQL and no rendered output is saved.</p>
+<h3>Task 4.1 and 4.2</h3><p>The menu links all five options, and each round query joins competitor to scores with <code>ORDER BY scores.score DESC</code>: correct. But the saved .html files still contain Jinja <code>{% for %}</code> tags, so they are templates, not output.</p>
+<h3>Task 4.3 and 4.4</h3><p>Means and totals come from a manual Python loop instead of AVG and SUM with GROUP BY, and the Qualifiers page stays in name order rather than total descending.</p>
+<h3>Next step</h3><div class="next"><p>Rewrite 4.3 and 4.4 as GROUP BY queries ordered correctly, and save the rendered pages.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2023-1">
+      <div class="task-header">2023 Paper 2, Task 1 <span class="files"><a href="https://github.com/navienvivekanandan-glitch/Navien/blob/main/2023_ALevel%20P2/Task_1_2023_A_Level_P2.ipynb" target="_blank" rel="noopener">Task_1_2023_A_Level_P2.ipynb</a></span></div>
+      <div class="task-body">
+<p>All four tables are present and rerunnable, but the key definitions need reworking.</p>
+<h3>Task 1.1</h3><p>The question asks for primary keys, yet you wrote StudentID INTEGER NOT NULL UNIQUE; declare PRIMARY KEY instead. The ClassName and TestID foreign keys are also missing, and UNIQUE on Student_Test.StudentID would stop a student taking a second test.</p>
+<h3>Task 1.2</h3><p>Your values are correct and Mary is split properly into GivenName and FamilyName: well done. Insert Class before Student, and add SELECT * FROM Student_Test so the output is visible in the .ipynb; nothing is saved now.</p>
+<h3>Next step</h3><div class="next"><p>Rewrite the CREATE TABLE statements with PRIMARY KEY and all three foreign keys, then Run All and save with outputs.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2023-2">
+      <div class="task-header">2023 Paper 2, Task 2 <span class="files"><a href="https://github.com/navienvivekanandan-glitch/Navien/blob/main/2023_ALevel%20P2/Task_2_2023_A_Level_P2.ipynb" target="_blank" rel="noopener">Task_2_2023_A_Level_P2.ipynb</a></span></div>
+      <div class="task-body">
+<p>The queue is not circular yet, and the saved outputs come from different runs.</p>
+<h3>Task 2.3</h3><p>Pointers increment without % 4 and only reset when the queue empties; after one dequeue and further enqueues, tailPointer reaches 4 and queueList[4] fails. The saved run also stops after the first input, so the fifth failing enqueue is not shown.</p>
+<h3>Task 2.4</h3><p>dequeue() returns the string &#x27;Queue is empty&#x27; instead of False, and its output lists items #103 to #106 that never appear in 2.3&#x27;s saved run; 2.5 prints only one of the four enqueued items.</p>
+<h3>Next step</h3><div class="next"><p>Wrap both pointers with % 4, then Run All from a fresh kernel and save.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2023-3">
+      <div class="task-header">2023 Paper 2, Task 3 <span class="files"><a href="https://github.com/navienvivekanandan-glitch/Navien/blob/main/2023_ALevel%20P2/Task_3_2023_A_Level_P2.ipynb" target="_blank" rel="noopener">Task_3_2023_A_Level_P2.ipynb</a></span></div>
+      <div class="task-body">
+<p>Tasks 3.1 and 3.2 are working; the column check and the mini-square check need attention.</p>
+<h3>Task 3.1</h3><p>Good re-prompting and both examples stored, though <code>lst</code> is not cleared when a row fails partway, so a retry would append onto leftover digits.</p>
+<h3>Task 3.3</h3><p>vertical_check() is a copy of the row check: it still scans row by row and returns j + 1. It prints 4 here only because example2&#x27;s duplicate sits in a row; a puzzle with only a column duplicate would wrongly return -1. Traverse with a fixed column index instead.</p>
+<h3>Task 3.4</h3><p>The mini-square function is missing entirely.</p>
+<h3>Next step</h3><div class="next"><p>Write the 3x3 mini-square check with nested loops stepping in 3s and test both examples.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2023-4">
+      <div class="task-header">2023 Paper 2, Task 4 <span class="files"><a href="https://github.com/navienvivekanandan-glitch/Navien/blob/main/2023_ALevel%20P2/Task_4.3_2023_A_Level_P2.py" target="_blank" rel="noopener">Task_4.3_2023_A_Level_P2.py</a> <a href="https://github.com/navienvivekanandan-glitch/Navien/blob/main/2023_ALevel%20P2/Task_4_2023_A_Level_P2.ipynb" target="_blank" rel="noopener">Task_4_2023_A_Level_P2.ipynb</a> <a href="https://github.com/navienvivekanandan-glitch/Navien/blob/main/2023_ALevel%20P2/home.html" target="_blank" rel="noopener">home.html</a></span></div>
+      <div class="task-body">
+<p>Task 4 is incomplete: compression loops forever, Task 4.2 is missing, and the web app never receives a decompressed file from your own code.</p>
+<h3>Task 4.1</h3><p><code>while lst[i] == lst[i+1]: count += 1</code> never advances i, so compress_data() hangs; the print(compress_data(...)) cell has no saved output and write_file() is never called, so compressedimage.txt is not produced.</p>
+<h3>Task 4.2</h3><p>There are no decompress functions and no menu.</p>
+<h3>Task 4.3</h3><p>The Flask structure and template are sound, but each cell receives the whole [&#x27;red&#x27;, &#x27;000&#x27;] list as its background colour, which is invalid CSS; pass colour[0] for the background.</p>
+<h3>Next step</h3><div class="next"><p>Rewrite compress_data() with a single forward index over the list, then build Task 4.2.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2024-1">
+      <div class="task-header">2024 Paper 2, Task 1 <span class="files"><a href="https://github.com/navienvivekanandan-glitch/Navien/blob/main/2024%20A%20Level%20P2/TASK1_Navien_A_LEVEL_2024.ipynb" target="_blank" rel="noopener">TASK1_Navien_A_LEVEL_2024.ipynb</a></span></div>
+      <div class="task-body">
+<p>Tasks 1.1 and 1.2 are solid: correct card ranges and a clean colour cycle returning 1, 2 or 3.</p>
+<h3>Task 1.3</h3><p>The tie-break tests <code>hand[i][1] == &#x27;red&#x27;</code>, comparing the number with a colour, so it never fires; your &quot;before sorting&quot; printout already shows sorted hands from an earlier run.</p>
+<h3>Task 1.4</h3><p><code>compare_colours(hand1[i], hand2[i])</code> passes whole cards rather than colours, so the checks never match and it almost always returns 2; the loser should also score their own number.</p>
+<h3>Task 1.5</h3><p>A tied score would print player 2 as the winner; add a draw message.</p>
+<h3>Next step</h3><div class="next"><p>Pass <code>hand1[i][0]</code> and <code>hand2[i][0]</code> into <code>compare_colours</code>, then re-run from the top.</p></div>
+      </div>
+    </section>
+    <p class="foot">Disclaimer: AI-assisted evaluation may contain issues. Exercise discretion and seek clarification if in doubt.</p>
+  </main>
+</body>
+</html>

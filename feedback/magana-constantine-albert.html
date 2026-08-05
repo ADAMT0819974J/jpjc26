@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback: Magana Constantine Albert</title>
+  <style>
+    :root { color-scheme: light; --bg:#f5f7fb; --panel:#fff; --text:#1f2937;
+      --muted:#6b7280; --border:#dbe2ea; --accent:#1d4ed8; --accent-soft:#dbeafe; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: Arial, Helvetica, sans-serif; color:var(--text);
+      background: linear-gradient(180deg,#eef4ff 0%,var(--bg) 240px); }
+    .page { max-width: 840px; margin:0 auto; padding:32px 20px 48px; }
+    .hero { background:var(--panel); border:1px solid var(--border); border-radius:18px;
+      padding:24px 28px; box-shadow:0 16px 40px rgba(15,23,42,.08); }
+    h1 { margin:0 0 6px; font-size:1.8rem; }
+    .meta { color:var(--muted); font-size:.95rem; }
+    .meta a { color:var(--accent); text-decoration:none; }
+    .meta a:hover { text-decoration:underline; }
+    section.task { margin-top:24px; background:var(--panel); border:1px solid var(--border);
+      border-radius:18px; overflow:hidden; box-shadow:0 16px 40px rgba(15,23,42,.06); }
+    .task-header { padding:14px 24px; background:var(--accent-soft);
+      border-bottom:1px solid var(--border); font-weight:700; }
+    .task-header .files { float:right; font-weight:400; font-size:.9rem; }
+    .task-header .files a { margin-left:10px; }
+    .task-body { padding:8px 24px 20px; }
+    h3 { font-size:1.02rem; margin:18px 0 6px; }
+    p { margin:6px 0; line-height:1.55; }
+    code { background:#eef2f7; border:1px solid var(--border); border-radius:4px;
+      padding:1px 5px; font-size:.9em; }
+    ul { margin:6px 0; padding-left:22px; }
+    .next { background:#f0fdf4; border:1px solid #bbf7d0; border-radius:10px;
+      padding:10px 14px; margin-top:6px; }
+    .farewell { padding:22px 24px; font-size:1.05rem; line-height:1.6; }
+    .foot { margin-top:20px; font-size:.85rem; color:var(--muted); }
+</style>
+</head>
+<body>
+  <main class="page">
+    <div class="hero">
+      <h1>Magana Constantine Albert</h1>
+      <p class="meta">25S21 &middot; <a href="https://github.com/constantinemagana3-alt/H2computing" target="_blank" rel="noopener">GitHub repo</a> &middot; <a href="../all.html">Back to the work grid</a></p>
+    </div>
+    <section class="task" id="task-2020-1">
+      <div class="task-header">2020 Paper 2, Task 1 <span class="files"><a href="https://github.com/constantinemagana3-alt/H2computing/blob/main/2020p2/task1.py" target="_blank" rel="noopener">task1.py</a></span></div>
+      <div class="task-body">
+<p>Both parts are correct and fully tested; the only thing missing is visible evidence of a run.</p>
+<h3>Task 1.1</h3><p>Your loop keeps <code>h = (h + val) % 1024</code> inside each iteration, exactly matching the pseudocode, and all three required calls on &quot;Hello&quot;, &quot;Hallo&quot; and &quot;Hullo&quot; are printed. The <code>i = 0</code> before the loop is redundant since <code>range</code> handles it.</p>
+<h3>Task 1.2</h3><p><code>new_string_value = seed + string_value</code> in the right order, reusing task1_1 rather than re-implementing the hash, with the three seed calls all on &quot;Hello&quot;.</p>
+<h3>Next step</h3><div class="next"><p>Run this in a Jupyter notebook and save it so the six printed hash values are visible.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2020-2">
+      <div class="task-header">2020 Paper 2, Task 2 <span class="files"><a href="https://github.com/constantinemagana3-alt/H2computing/blob/main/2020p2/task2.py" target="_blank" rel="noopener">task2.py</a></span></div>
+      <div class="task-body">
+<p>The merge sort structure is there, but this file cannot run as written; it looks untested.</p>
+<h3>Task 2.1</h3><p><code>file = file.write(str(num))</code> rebinds <code>file</code> to an integer, so the second iteration crashes with AttributeError; there is also no <code>&#x27;\n&#x27;</code>, so numbers would merge into one line.</p>
+<h3>Task 2.2</h3><p>The recursion calls <code>mergesort</code>, which does not exist (it should call <code>task2_2</code>), and <code>list_of_integer</code> is misspelt; <code>merge</code> also assigns <code>result[k]</code> into an empty list, raising IndexError.</p>
+<h3>Task 2.3</h3><p><code>list_of_integers</code> is used before it exists; the list was created as <code>lsit_of_integers</code>.</p>
+<h3>Next step</h3><div class="next"><p>Run the file and fix each error until the Task 2.2 equality test prints True.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2020-3">
+      <div class="task-header">2020 Paper 2, Task 3 <span class="files"><a href="https://github.com/constantinemagana3-alt/H2computing/blob/main/2020p2/task3.py" target="_blank" rel="noopener">task3.py</a></span></div>
+      <div class="task-body">
+<p>Your dictionary approach is good, but task3_2 covers only half its units and invalid cases return None.</p>
+<h3>Task 3.1</h3><p>The units dictionary and the &quot;4LB&quot; invalid test are good. However <code>return print(&#x27;invalid data&#x27;)</code> returns None, not the string, and with no digit check <code>task3_1(&quot;abKB&quot;)</code> crashes on <code>int()</code>.</p>
+<h3>Task 3.2</h3><p>Only KiB, MiB, GiB and TiB are in the dictionary; the task requires all eight units, so <code>task3_2(&quot;8KB&quot;)</code> wrongly fails. The debug <code>print(unit)</code> should go.</p>
+<h3>Task 3.3</h3><p>Sensible reuse and propagation, but there are no test calls at all.</p>
+<h3>Next step</h3><div class="next"><p>Add the four decimal units to task3_2, then test all three functions including invalid inputs.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2020-4">
+      <div class="task-header">2020 Paper 2, Task 4 <span class="files"><a href="https://github.com/constantinemagana3-alt/H2computing/blob/main/2020p2/task4_1.sql" target="_blank" rel="noopener">task4_1.sql</a> <a href="https://github.com/constantinemagana3-alt/H2computing/blob/main/2020p2/task4_2.py" target="_blank" rel="noopener">task4_2.py</a></span></div>
+      <div class="task-body">
+<p>The classes are largely right, but createTable&#x27;s SQL cannot run, so nothing is inserted.</p>
+<h3>Task 4.1</h3><p>The .sql file is correct, with <code>PersonID INTEGER PRIMARY KEY AUTOINCREMENT</code>.</p>
+<h3>Task 4.2</h3><p><code>createTable</code> builds its CREATE TABLE string with no closing bracket before the &quot;;&quot;, so sqlite3 raises an OperationalError. In the classes, <code>is_adult</code> hardcodes 2026 and uses <code>&gt;= 18</code> where the rule is today&#x27;s year minus birth year greater than 18; <code>screen_name</code> only removes spaces, so O&#x27;Reilly keeps its apostrophe. The parameterised INSERT with <code>?</code> is correct. No Task 4.3 web app is submitted.</p>
+<h3>Next step</h3><div class="next"><p>Load task4_1.sql with executescript instead of the broken string, then run the file.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2021-1">
+      <div class="task-header">2021 Paper 2, Task 1 <span class="files"><a href="https://github.com/constantinemagana3-alt/H2computing/blob/main/2021p2/task1.py" target="_blank" rel="noopener">task1.py</a></span></div>
+      <div class="task-body">
+<p>The framework is in place, but the check digit algorithm in 1.1 is wrong.</p>
+<h3>Task 1.1</h3><p>You double only input[::2] and sum nothing else: the undoubled digits are never added, two-digit doubles such as 16 are not split into 1 + 6, and both branches return sum % 10 rather than the digit that makes the sum divisible by 10. The validation and length check are fine.</p>
+<h3>Task 1.2 and 1.3</h3><p>1.2 lacks a valid 14-digit string test, and in 1.3 no test uses a genuine 15-digit IMEI; not task1_3(&#x27;1&#x27;) == -1 mixes Booleans with integers.</p>
+<h3>Next step</h3><div class="next"><p>Rework steps 2 to 4 against the worked example 14576567654934, then re-test.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2021-2">
+      <div class="task-header">2021 Paper 2, Task 2 <span class="files"><a href="https://github.com/constantinemagana3-alt/H2computing/blob/main/2021p2/task2.py" target="_blank" rel="noopener">task2.py</a></span></div>
+      <div class="task-body">
+<p>Task 2.1 is correct, but the file stops working immediately after it.</p>
+<h3>Task 2.1</h3><p>Reading with int(line.strip()) and printing the list and its length follow the specification exactly.</p>
+<h3>Task 2.2</h3><p>This will not run: for i in range of (1, ...) and while j = 0 are both syntax errors, j is never initialised from i, and key is never placed back; the file ends mid-line with a trailing comma.</p>
+<p>Tasks 2.3 and 2.4 are not attempted, and a .py file shows no run evidence.</p>
+<h3>Next step</h3><div class="next"><p>Fix the insertion sort (range(1, ...), j = i - 1, while j &gt;= 0), then add the quicksort and timeit comparison.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2023-1">
+      <div class="task-header">2023 Paper 2, Task 1 <span class="files"><a href="https://github.com/constantinemagana3-alt/H2computing/blob/main/2023p2/task1.py" target="_blank" rel="noopener">task1.py</a></span></div>
+      <div class="task-body">
+<p>Your SQL is among the most complete I marked, but the submission format and one Python error hold it back.</p>
+<h3>Task 1.1</h3><p>Well done declaring all three foreign keys, including <code>FOREIGN KEY(&#x27;ClassName&#x27;) REFERENCES &#x27;Class&#x27;(&#x27;ClassName&#x27;)</code> in Student; however Paper 2 requires a single Jupyter Notebook per task with output shown, so move this .py code into a .ipynb.</p>
+<h3>Task 1.2</h3><p>The body of <code>insertTable()</code> is not indented, so Python raises an IndentationError and nothing runs; the inserts themselves are correct, with Class first and <code>&#x27;01-02-2023&#x27;</code> matching the format.</p>
+<h3>Next step</h3><div class="next"><p>Move the code into a notebook, fix the indentation, then Run All and save.</p></div>
+      </div>
+    </section>
+    <p class="foot">Disclaimer: AI-assisted evaluation may contain issues. Exercise discretion and seek clarification if in doubt.</p>
+  </main>
+</body>
+</html>

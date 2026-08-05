@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback: Kendrick Chan Zi Chuan (Zeng Ziquan)</title>
+  <style>
+    :root { color-scheme: light; --bg:#f5f7fb; --panel:#fff; --text:#1f2937;
+      --muted:#6b7280; --border:#dbe2ea; --accent:#1d4ed8; --accent-soft:#dbeafe; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: Arial, Helvetica, sans-serif; color:var(--text);
+      background: linear-gradient(180deg,#eef4ff 0%,var(--bg) 240px); }
+    .page { max-width: 840px; margin:0 auto; padding:32px 20px 48px; }
+    .hero { background:var(--panel); border:1px solid var(--border); border-radius:18px;
+      padding:24px 28px; box-shadow:0 16px 40px rgba(15,23,42,.08); }
+    h1 { margin:0 0 6px; font-size:1.8rem; }
+    .meta { color:var(--muted); font-size:.95rem; }
+    .meta a { color:var(--accent); text-decoration:none; }
+    .meta a:hover { text-decoration:underline; }
+    section.task { margin-top:24px; background:var(--panel); border:1px solid var(--border);
+      border-radius:18px; overflow:hidden; box-shadow:0 16px 40px rgba(15,23,42,.06); }
+    .task-header { padding:14px 24px; background:var(--accent-soft);
+      border-bottom:1px solid var(--border); font-weight:700; }
+    .task-header .files { float:right; font-weight:400; font-size:.9rem; }
+    .task-header .files a { margin-left:10px; }
+    .task-body { padding:8px 24px 20px; }
+    h3 { font-size:1.02rem; margin:18px 0 6px; }
+    p { margin:6px 0; line-height:1.55; }
+    code { background:#eef2f7; border:1px solid var(--border); border-radius:4px;
+      padding:1px 5px; font-size:.9em; }
+    ul { margin:6px 0; padding-left:22px; }
+    .next { background:#f0fdf4; border:1px solid #bbf7d0; border-radius:10px;
+      padding:10px 14px; margin-top:6px; }
+    .farewell { padding:22px 24px; font-size:1.05rem; line-height:1.6; }
+    .foot { margin-top:20px; font-size:.85rem; color:var(--muted); }
+</style>
+</head>
+<body>
+  <main class="page">
+    <div class="hero">
+      <h1>Kendrick Chan Zi Chuan (Zeng Ziquan)</h1>
+      <p class="meta">25S21 &middot; <a href="https://github.com/KendrickChanZiChuan/H2Computing" target="_blank" rel="noopener">GitHub repo</a> &middot; <a href="../all.html">Back to the work grid</a></p>
+    </div>
+    <section class="task" id="task-2020-1">
+      <div class="task-header">2020 Paper 2, Task 1 <span class="files"><a href="https://github.com/KendrickChanZiChuan/H2Computing/blob/main/2020%20Task%201.ipynb" target="_blank" rel="noopener">2020 Task 1.ipynb</a></span></div>
+      <div class="task-body">
+<p>This is fully correct, with saved outputs for every required call.</p>
+<h3>Task 1.1</h3><p>The loop mirrors the pseudocode exactly: <code>val = 33 * ord(string_value[i])</code> and <code>h = (h + val) % 1024</code> inside the loop, producing 116, 1008 and 644.</p>
+<h3>Task 1.2</h3><p>You concatenate <code>seed + string_value</code> in the right order and reuse task1_1 instead of re-implementing the hash; all three seeds tested with &quot;Hello&quot; give 388, 156 and 282. The comments explaining each step are a good habit for Paper 2.</p>
+<h3>Next step</h3><div class="next"><p>Add one extra test such as <code>task1_1(&quot;&quot;)</code> to confirm the empty string returns 0, so your boundary behaviour is shown too.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2020-2">
+      <div class="task-header">2020 Paper 2, Task 2 <span class="files"><a href="https://github.com/KendrickChanZiChuan/H2Computing/blob/main/2020%20Task%202.ipynb" target="_blank" rel="noopener">2020 Task 2.ipynb</a></span></div>
+      <div class="task-body">
+<p>All three sub-tasks are correct; the notebook runs cleanly with the sorted list displayed.</p>
+<h3>Task 2.1</h3><p>The while loop with <code>count</code> works and <code>randint(0, maximum)</code> is correctly inclusive, though a <code>for</code> over <code>range(quantity)</code> is tidier. The run saves to <code>randomnumbers.txt</code>; the paper wants <code>randomnumbers_&lt;name&gt;_&lt;centre&gt;_&lt;index&gt;.txt</code>.</p>
+<h3>Task 2.2</h3><p>Clean recursive merge sort: base case at length 1, split at mid, <code>extend</code> for leftovers. You printed the sorted list; the task asks for the <code>==</code> condition so True is shown.</p>
+<h3>Task 2.3</h3><p>Correct read with <code>int()</code>, reuse of task2_2 and line-by-line write.</p>
+<h3>Next step</h3><div class="next"><p>Rename both text files to the required pattern and print the Task 2.2 equality condition.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2020-3">
+      <div class="task-header">2020 Paper 2, Task 3 <span class="files"><a href="https://github.com/KendrickChanZiChuan/H2Computing/blob/main/2020%20Task%203.ipynb" target="_blank" rel="noopener">2020 Task 3.ipynb</a></span></div>
+      <div class="task-body">
+<p>Tasks 3.1 and 3.2 are excellent with proper invalid-input testing; 3.3 has a missing return and thin testing.</p>
+<h3>Task 3.1</h3><p>The <code>isdigit()</code> slice check plus unit chain is correct; &quot;12XB&quot;, &quot;ABCMB&quot; and &quot;45&quot; all print invalid data.</p>
+<h3>Task 3.2</h3><p>All eight units handled, with twelve tests covering valid and invalid cases: thorough.</p>
+<h3>Task 3.3</h3><p>The KB branch assigns <code>result</code> but never returns it, so a KB target gives None; and if task3_2 returns &quot;invalid data&quot; the division crashes. Only one test set of the required three.</p>
+<h3>Next step</h3><div class="next"><p>Fix the KB branch to return, then add two more test sets including an invalid quantity.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2023-2">
+      <div class="task-header">2023 Paper 2, Task 2 <span class="files"><a href="https://github.com/KendrickChanZiChuan/H2Computing/blob/main/2023%20Task%202.ipynb" target="_blank" rel="noopener">2023 Task 2.ipynb</a></span></div>
+      <div class="task-body">
+<p>This is a complete, correct Task 2 with clear evidence your code runs correctly: the fifth enqueue fails, the fifth dequeue reports empty, and printQueue walks from headPointer with % 4 wrap.</p>
+<h3>Task 2.2</h3><p>Your first version initialises queueList to [&quot;&quot;] * 4; empty strings are not null objects, and your corrected cell rightly uses [None] * 4. Keep only the corrected version.</p>
+<h3>Task 2.3</h3><p>All three test sections sit in one combined cell; the paper asks for a new cell per sub-task, each labelled with a #Task 2.x comment.</p>
+<h3>Next step</h3><div class="next"><p>Split the main program into separate labelled cells for 2.3, 2.4 and 2.5.</p></div>
+      </div>
+    </section>
+    <p class="foot">Disclaimer: AI-assisted evaluation may contain issues. Exercise discretion and seek clarification if in doubt.</p>
+  </main>
+</body>
+</html>

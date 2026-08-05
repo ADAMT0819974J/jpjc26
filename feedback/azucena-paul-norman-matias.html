@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback: Azucena Paul Norman Matias</title>
+  <style>
+    :root { color-scheme: light; --bg:#f5f7fb; --panel:#fff; --text:#1f2937;
+      --muted:#6b7280; --border:#dbe2ea; --accent:#1d4ed8; --accent-soft:#dbeafe; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: Arial, Helvetica, sans-serif; color:var(--text);
+      background: linear-gradient(180deg,#eef4ff 0%,var(--bg) 240px); }
+    .page { max-width: 840px; margin:0 auto; padding:32px 20px 48px; }
+    .hero { background:var(--panel); border:1px solid var(--border); border-radius:18px;
+      padding:24px 28px; box-shadow:0 16px 40px rgba(15,23,42,.08); }
+    h1 { margin:0 0 6px; font-size:1.8rem; }
+    .meta { color:var(--muted); font-size:.95rem; }
+    .meta a { color:var(--accent); text-decoration:none; }
+    .meta a:hover { text-decoration:underline; }
+    section.task { margin-top:24px; background:var(--panel); border:1px solid var(--border);
+      border-radius:18px; overflow:hidden; box-shadow:0 16px 40px rgba(15,23,42,.06); }
+    .task-header { padding:14px 24px; background:var(--accent-soft);
+      border-bottom:1px solid var(--border); font-weight:700; }
+    .task-header .files { float:right; font-weight:400; font-size:.9rem; }
+    .task-header .files a { margin-left:10px; }
+    .task-body { padding:8px 24px 20px; }
+    h3 { font-size:1.02rem; margin:18px 0 6px; }
+    p { margin:6px 0; line-height:1.55; }
+    code { background:#eef2f7; border:1px solid var(--border); border-radius:4px;
+      padding:1px 5px; font-size:.9em; }
+    ul { margin:6px 0; padding-left:22px; }
+    .next { background:#f0fdf4; border:1px solid #bbf7d0; border-radius:10px;
+      padding:10px 14px; margin-top:6px; }
+    .farewell { padding:22px 24px; font-size:1.05rem; line-height:1.6; }
+    .foot { margin-top:20px; font-size:.85rem; color:var(--muted); }
+</style>
+</head>
+<body>
+  <main class="page">
+    <div class="hero">
+      <h1>Azucena Paul Norman Matias</h1>
+      <p class="meta">25S21 &middot; <a href="https://github.com/paulnormanazucena-gif/CompPract" target="_blank" rel="noopener">GitHub repo</a> &middot; <a href="../all.html">Back to the work grid</a></p>
+    </div>
+    <section class="task" id="task-2020-1">
+      <div class="task-header">2020 Paper 2, Task 1 <span class="files"><a href="https://github.com/paulnormanazucena-gif/CompPract/blob/main/alevel2020%20paper%202/task1.ipynb" target="_blank" rel="noopener">task1.ipynb</a></span></div>
+      <div class="task-body">
+<p>Both parts are correct and your saved outputs are clear evidence the code runs.</p>
+<h3>Task 1.1</h3><p>Your loop follows the pseudocode faithfully: <code>val = 33 * ord(string_value[i])</code> with <code>h = (h + val) % 1024</code> applied inside the loop, giving 116, 1008 and 644 as expected.</p>
+<h3>Task 1.2</h3><p>Concatenation order <code>seed + string_value</code> and reuse of <code>task1_1</code> are right. However, the task specifies three calls all using <code>&quot;Hello&quot;</code>; you paired <code>&quot;seed-two&quot;</code> with <code>&quot;Hallo&quot;</code> and <code>&quot;seed-three&quot;</code> with <code>&quot;Hullo&quot;</code>, so two of the required results are not shown.</p>
+<h3>Next step</h3><div class="next"><p>Rerun task1_2 with <code>&quot;seed-one&quot;</code>, <code>&quot;seed-two&quot;</code> and <code>&quot;seed-three&quot;</code> each on <code>&quot;Hello&quot;</code>, then save.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2020-2">
+      <div class="task-header">2020 Paper 2, Task 2 <span class="files"><a href="https://github.com/paulnormanazucena-gif/CompPract/blob/main/alevel2020%20paper%202/task2.ipynb" target="_blank" rel="noopener">task2.ipynb</a></span></div>
+      <div class="task-body">
+<p>All three sub-tasks work, and your printed sorted list matches the expected result.</p>
+<h3>Task 2.1</h3><p><code>randint(0, maximum)</code> inclusive and one number per line: correct. The run saves to <code>randomnumbers.txt</code>; the paper asks for <code>randomnumbers_&lt;name&gt;_&lt;centre&gt;_&lt;index&gt;.txt</code>.</p>
+<h3>Task 2.2</h3><p>Proper recursive merge sort: split at <code>n // 2</code>, recurse through <code>task2_2</code>, and your merge keeps leftovers with the two trailing while loops. Delete the unused <code>mergesort</code> stub, and print the <code>==</code> comparison so <code>True</code> is displayed as the task asks.</p>
+<h3>Task 2.3</h3><p>Reads with <code>int()</code>, reuses <code>task2_2</code>, writes with newlines: correct.</p>
+<h3>Next step</h3><div class="next"><p>Rename both output files to the required name pattern and print the Task 2.2 equality check.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2020-3">
+      <div class="task-header">2020 Paper 2, Task 3 <span class="files"><a href="https://github.com/paulnormanazucena-gif/CompPract/blob/main/alevel2020%20paper%202/task%203.ipynb" target="_blank" rel="noopener">task 3.ipynb</a></span></div>
+      <div class="task-body">
+<p>Your conversions are right for the cases tested, but the functions display without returning, and task3_2 covers only half its units.</p>
+<h3>Task 3.1</h3><p><code>return print(number * 10 ** 3)</code> returns None; the task says return and display the value. Only <code>&quot;8KB&quot;</code> is tested.</p>
+<h3>Task 3.2</h3><p>Only KiB, MiB, GiB and TiB are handled; task3_2 must accept all eight units, so <code>task3_2(&quot;8KB&quot;)</code> wrongly gives invalid data.</p>
+<h3>Task 3.3</h3><p>Three tests including an invalid case: good. But it re-parses the string instead of reusing task3_2.</p>
+<h3>Next step</h3><div class="next"><p>Extend task3_2 to all eight units, return the values, then retest every unit.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2020-4">
+      <div class="task-header">2020 Paper 2, Task 4 <span class="files"><a href="https://github.com/paulnormanazucena-gif/CompPract/blob/main/alevel2020%20paper%202/index.html" target="_blank" rel="noopener">index.html</a> <a href="https://github.com/paulnormanazucena-gif/CompPract/blob/main/alevel2020%20paper%202/server.py" target="_blank" rel="noopener">server.py</a> <a href="https://github.com/paulnormanazucena-gif/CompPract/blob/main/alevel2020%20paper%202/task%204.ipynb" target="_blank" rel="noopener">task 4.ipynb</a> <a href="https://github.com/paulnormanazucena-gif/CompPract/blob/main/alevel2020%20paper%202/task4.py" target="_blank" rel="noopener">task4.py</a> <a href="https://github.com/paulnormanazucena-gif/CompPract/blob/main/alevel2020%20paper%202/task4_1.sql" target="_blank" rel="noopener">task4_1.sql</a></span></div>
+      <div class="task-body">
+<p>A strong attempt: the database side is solid, but the web template has a loop bug.</p>
+<h3>Task 4.1</h3><p>The <code>PersonID INTEGER PRIMARY KEY AUTOINCREMENT</code> DDL is correct.</p>
+<h3>Task 4.2</h3><p>Parameterised INSERT with <code>?</code> and IsAdult as 1/0 are right. Two issues: <code>Staff</code> never overrides <code>screen_name</code> to append &quot;Staff&quot;, and <code>is_adult</code> compares whole-date digits against 180000 instead of today&#x27;s year minus birth year greater than 18.</p>
+<h3>Task 4.3</h3><p>The template loops <code>for i in thing</code> but prints <code>thing[0]</code>, <code>thing[1]</code>, <code>thing[2]</code>, so every row repeats the first record.</p>
+<h3>Next step</h3><div class="next"><p>Add the Staff screen_name override, fix the template to use <code>i</code>, re-run and save the page.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2021-1">
+      <div class="task-header">2021 Paper 2, Task 1 <span class="files"><a href="https://github.com/paulnormanazucena-gif/CompPract/blob/main/alvl%202021%20p2/task%201.ipynb" target="_blank" rel="noopener">task 1.ipynb</a></span></div>
+      <div class="task-body">
+<p>Careful, well-tested work with one algorithm gap.</p>
+<h3>Task 1.1</h3><p>The doubling and digit splitting are correct, but checkdigit = 10 - (value % 10) returns 10 when the sum is already divisible by 10; add a final % 10. The try on input_value / 3 is also fragile: a 14-character float passes it and then crashes at int(i), whereas str(input_value).isdigit() covers both types safely.</p>
+<h3>Task 1.2 and 1.3</h3><p>All required cases are here: your own values, int conversion of the removed digit, not for the invalid cases, and every line printing True.</p>
+<h3>Next step</h3><div class="next"><p>Add the % 10 guard and re-test with a value whose sum ends in 0.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2021-2">
+      <div class="task-header">2021 Paper 2, Task 2 <span class="files"><a href="https://github.com/paulnormanazucena-gif/CompPract/blob/main/alvl%202021%20p2/task2.ipynb" target="_blank" rel="noopener">task2.ipynb</a></span></div>
+      <div class="task-body">
+<p>The sorting is solid; the timing evidence is flawed.</p>
+<h3>Task 2.1 to 2.3</h3><p>All three functions print correct results for TEN.txt, and the quicksort with a middle pivot recursing on both halves is fine.</p>
+<h3>Task 2.4</h3><p>Every timeit lambda calls the sort on t1000, so the rows labelled HUNDRED and TEN re-time the thousand-element list, already sorted by the previous call. Your only analysis is one comment that quicksort is faster; the task wants orders of growth, insertion sort O(n^2) against quicksort O(n log n) average, supported by the timings.</p>
+<h3>Next step</h3><div class="next"><p>Point the lambdas at t100 and t10, re-run, and add the orders of growth comparison.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2021-3">
+      <div class="task-header">2021 Paper 2, Task 3 <span class="files"><a href="https://github.com/paulnormanazucena-gif/CompPract/blob/main/alvl%202021%20p2/task%203.ipynb" target="_blank" rel="noopener">task 3.ipynb</a></span></div>
+      <div class="task-body">
+<p>3.1 and 3.3 are in good shape; 3.2 has a head-insertion bug your own output reveals.</p>
+<h3>Task 3.1</h3><p>Loading Task3data.txt and printing works, but delete reads current.data where current can be None, so deleting an absent value crashes instead of returning None; to_String also returns print(List) rather than the string.</p>
+<h3>Task 3.2</h3><p>The insert-at-head branch sets self.head = newnode.next instead of newnode, discarding the new node; your printed [5, 6, 7, 8, 9] kept only five of the ten values. search(94) correctly returns False.</p>
+<h3>Task 3.3</h3><p>enqueue at the tail and dequeue printing 5 7 1 3 2 are correct.</p>
+<h3>Next step</h3><div class="next"><p>Change that line to self.head = newnode and re-run 3.2.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2021-4">
+      <div class="task-header">2021 Paper 2, Task 4 <span class="files"><a href="https://github.com/paulnormanazucena-gif/CompPract/blob/main/alvl%202021%20p2/htmloutputs/task4_1.html" target="_blank" rel="noopener">task4_1.html</a> <a href="https://github.com/paulnormanazucena-gif/CompPract/blob/main/alvl%202021%20p2/htmloutputs/task4_2_1.html" target="_blank" rel="noopener">task4_2_1.html</a> <a href="https://github.com/paulnormanazucena-gif/CompPract/blob/main/alvl%202021%20p2/htmloutputs/task4_2_2.html" target="_blank" rel="noopener">task4_2_2.html</a> <a href="https://github.com/paulnormanazucena-gif/CompPract/blob/main/alvl%202021%20p2/htmloutputs/task4_2_3.html" target="_blank" rel="noopener">task4_2_3.html</a> <a href="https://github.com/paulnormanazucena-gif/CompPract/blob/main/alvl%202021%20p2/htmloutputs/task4_3.html" target="_blank" rel="noopener">task4_3.html</a> <a href="https://github.com/paulnormanazucena-gif/CompPract/blob/main/alvl%202021%20p2/htmloutputs/task4_4.html" target="_blank" rel="noopener">task4_4.html</a> <a href="https://github.com/paulnormanazucena-gif/CompPract/blob/main/alvl%202021%20p2/task4_1/Task4_3.sql" target="_blank" rel="noopener">Task4_3.sql</a> <a href="https://github.com/paulnormanazucena-gif/CompPract/blob/main/alvl%202021%20p2/task4_1/server.py" target="_blank" rel="noopener">server.py</a> <a href="https://github.com/paulnormanazucena-gif/CompPract/blob/main/alvl%202021%20p2/task4_1/task4_2.sql" target="_blank" rel="noopener">task4_2.sql</a> <a href="https://github.com/paulnormanazucena-gif/CompPract/blob/main/alvl%202021%20p2/task4_1/task4_4.sql" target="_blank" rel="noopener">task4_4.sql</a> <a href="https://github.com/paulnormanazucena-gif/CompPract/blob/main/alvl%202021%20p2/task4_1/templates/index.html" target="_blank" rel="noopener">index.html</a> <a href="https://github.com/paulnormanazucena-gif/CompPract/blob/main/alvl%202021%20p2/task4_1/templates/mean.html" target="_blank" rel="noopener">mean.html</a> <a href="https://github.com/paulnormanazucena-gif/CompPract/blob/main/alvl%202021%20p2/task4_1/templates/qualified.html" target="_blank" rel="noopener">qualified.html</a> <a href="https://github.com/paulnormanazucena-gif/CompPract/blob/main/alvl%202021%20p2/task4_1/templates/round_results.html" target="_blank" rel="noopener">round_results.html</a></span></div>
+      <div class="task-body">
+<p>A working app with saved pages; the aggregation should move into SQL.</p>
+<h3>Task 4.1</h3><p>The menu plus all six pages saved under htmloutputs are clear evidence the app runs.</p>
+<h3>Task 4.2</h3><p>The join with scores.round = ? is right, but there is no ORDER BY, and your saved round pages show unsorted scores (16, 96, 97, 87, ...).</p>
+<h3>Task 4.3 and 4.4</h3><p>Both use Python loops over SELECT * rather than AVG and SUM with GROUP BY; the mean is rounded to 1 decimal place instead of 2, and the qualifiers table is not ordered by total descending.</p>
+<h3>Next step</h3><div class="next"><p>Rewrite 4.3 and 4.4 as single GROUP BY queries with ROUND(..., 2) and ORDER BY.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2022-1">
+      <div class="task-header">2022 Paper 2, Task 1 <span class="files"><a href="https://github.com/paulnormanazucena-gif/CompPract/blob/main/Alevel%202022/task%201.ipynb" target="_blank" rel="noopener">task 1.ipynb</a></span></div>
+      <div class="task-body">
+<p>Your cypher logic is correct, but the presentation around it needs work.</p>
+<h3>Task 1.1</h3><p><code>hashing</code> handles wraparound properly (97 + (asciicode - 123)), maps space to 33 and returns -1 for invalid characters: well done. Note the scratch cell above it (&quot;123 -&gt; 97&quot;) is not valid Python and will crash a Run All.</p>
+<h3>Task 1.2</h3><p>The task asks you to read one character from the user with input(), then output the encrypted character using chr(), or a message if invalid; you print the raw ASCII values instead. All four test values are covered.</p>
+<h3>Task 1.3</h3><p>Encryption and skipping of &#x27;#&#x27; are right, but you print the original text, not the contents of ENCRYPTEDMESSAGE.txt.</p>
+<h3>Next step</h3><div class="next"><p>Rewrite 1.2 with input() and chr(), then reread and print ENCRYPTEDMESSAGE.txt in 1.3.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2022-2">
+      <div class="task-header">2022 Paper 2, Task 2 <span class="files"><a href="https://github.com/paulnormanazucena-gif/CompPract/blob/main/Alevel%202022/task2.ipynb" target="_blank" rel="noopener">task2.ipynb</a></span></div>
+      <div class="task-body">
+<p>Your sorting code is in good shape; the details of 2.1 and 2.4 need tightening.</p>
+<h3>Task 2.1</h3><p><code>random.randint(0, 100)</code> allows 0, but the range is 1 to 100 inclusive; your 2.3 output shows a 0. task2_1() must fill a global list and output it.</p>
+<h3>Task 2.2 and 2.3</h3><p>The hand-written bubble sort and recursive merge sort are both correct, and the menu validation loop works; show one invalid choice in your 2.3 test.</p>
+<h3>Task 2.4</h3><p><code>if low &lt; high</code> stops one step early: when the search narrows to one position, the key there is never checked. Use low &lt;= high. Good test choices.</p>
+<h3>Next step</h3><div class="next"><p>Fix the randint bounds and the low &lt;= high condition, then rerun all cells.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2022-3">
+      <div class="task-header">2022 Paper 2, Task 3 <span class="files"><a href="https://github.com/paulnormanazucena-gif/CompPract/blob/main/Alevel%202022/task%203.ipynb" target="_blank" rel="noopener">task 3.ipynb</a></span></div>
+      <div class="task-body">
+<p>This is a well built binary search tree, with one requirement missed in the main program.</p>
+<h3>Task 3.1</h3><p>Your recursive insertrecurhelper correctly compares with the current node&#x27;s data, recurses left or right and attaches a new node at an empty pointer, and both traversals are recursive; the saved in-order output is ascending, which is clear evidence the tree works. The gap: <code>random.randint(0, 999)</code> in the loop does not guarantee 10 unique values; a repeat would simply be inserted twice. Use random.sample(range(1000), 10) or a membership check before inserting. The iterative insert method left in the class is unused and can go.</p>
+<h3>Next step</h3><div class="next"><p>Replace the randint loop with random.sample so the 10 inserted integers are guaranteed unique, then rerun.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2022-4">
+      <div class="task-header">2022 Paper 2, Task 4 <span class="files"><a href="https://github.com/paulnormanazucena-gif/CompPract/blob/main/Alevel%202022/task%204.ipynb" target="_blank" rel="noopener">task 4.ipynb</a> <a href="https://github.com/paulnormanazucena-gif/CompPract/blob/main/Alevel%202022/task4/task4.py" target="_blank" rel="noopener">task4.py</a> <a href="https://github.com/paulnormanazucena-gif/CompPract/blob/main/Alevel%202022/task4/templates/index.html" target="_blank" rel="noopener">index.html</a></span></div>
+      <div class="task-body">
+<p>This is a capable solution; a missing foreign key and a missing saved page are the main gaps.</p>
+<h3>Task 4.1</h3><p>Loan declares FOREIGN KEY(MemberNumber) but there is no FOREIGN KEY for BookID referencing Book; the primary keys on all three tables are correct.</p>
+<h3>Task 4.2 and 4.3</h3><p>Parameterised INSERTs with a sensible 0/1 conversion of Returned, and the 4.3 join shows saved output for member 200 with each title and its status: good.</p>
+<h3>Task 4.4</h3><p>The Flask app, three-table join and Jinja template are consistent with your 0/1 storage, but no rendered webpage output is saved in the repo, and <code>&lt;DOCTYPE! html&gt;</code> should be <code>&lt;!DOCTYPE html&gt;</code>.</p>
+<h3>Next step</h3><div class="next"><p>Add FOREIGN KEY(BookID) REFERENCES Book(BookID) to Loan, rerun, and save the rendered page from your browser.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2023-1">
+      <div class="task-header">2023 Paper 2, Task 1 <span class="files"><a href="https://github.com/paulnormanazucena-gif/CompPract/blob/main/2023%20p2/task1.ipynb" target="_blank" rel="noopener">task1.ipynb</a></span></div>
+      <div class="task-body">
+<p>Well organised functions, but an unquoted date corrupts your data and the notebook was pushed unrun.</p>
+<h3>Task 1.1</h3><p>All four tables have correct primary keys; however you declared only one foreign key, <code>FOREIGN KEY(TestID) REFERENCES Test</code>, and still need them for StudentID in Student_Test and ClassName in Student.</p>
+<h3>Task 1.2</h3><p>In <code>VALUES (123, 102, &#x27;PG1&#x27;, 85, 2023/2/1)</code> the unquoted date is treated as division, storing 1011; quote it as <code>&#x27;01-02-2023&#x27;</code>. There is also no saved output, so add a verification SELECT, Run All and save.</p>
+<h3>Next step</h3><div class="next"><p>Quote the date as a string, then Run All and check the row with a SELECT.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2023-2">
+      <div class="task-header">2023 Paper 2, Task 2 <span class="files"><a href="https://github.com/paulnormanazucena-gif/CompPract/blob/main/2023%20p2/task2.ipynb" target="_blank" rel="noopener">task2.ipynb</a></span></div>
+      <div class="task-body">
+<p>Your Queue class is correct at its core, with % 4 wrap on both pointers and numberItems driving the full and empty tests.</p>
+<h3>Task 2.3</h3><p>The task asks for five ID and quantity sets as input; you hardcode them, and print bare True or False rather than a suitable message.</p>
+<h3>Task 2.4</h3><p>The output shows raw object references like &lt;__main__.QueueItem object at ...&gt;; print the removed item&#x27;s getID() and getQuantity() instead.</p>
+<h3>Task 2.5</h3><p>printQueue() loops range(4) with a None check, but dequeued slots are never reset to None, so stale items would print on a partly filled queue; loop numberItems times from headPointer.</p>
+<h3>Next step</h3><div class="next"><p>Re-run 2.4 printing the ID and quantity of each removed item.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2023-3">
+      <div class="task-header">2023 Paper 2, Task 3 <span class="files"><a href="https://github.com/paulnormanazucena-gif/CompPract/blob/main/2023%20p2/task%203.ipynb" target="_blank" rel="noopener">task 3.ipynb</a></span></div>
+      <div class="task-body">
+<p>The building blocks are here, but the wrong test data and a placement bug undermine the results.</p>
+<h3>Task 3.1</h3><p>Your first stored puzzle is nine copies of &#x27;1 2 3 4 5 6 7 8 9&#x27;, not Example 1, and Example 2 with the duplicate 6 was never entered; validation also only tests int(check) &lt; 10, so 0 would pass.</p>
+<h3>Task 3.2</h3><p>checkrow returns the row list itself instead of the row number, and checkcolumn returns the 0-based index i.</p>
+<h3>Task 3.4</h3><p><code>return True</code> sits inside the outer loop, so only the top band of three mini-squares is ever checked.</p>
+<h3>Next step</h3><div class="next"><p>Re-test all three functions with Example 1 and Example 2 exactly as given in the paper.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2023-4">
+      <div class="task-header">2023 Paper 2, Task 4 <span class="files"><a href="https://github.com/paulnormanazucena-gif/CompPract/blob/main/2023%20p2/index.html" target="_blank" rel="noopener">index.html</a> <a href="https://github.com/paulnormanazucena-gif/CompPract/blob/main/2023%20p2/task%204.ipynb" target="_blank" rel="noopener">task 4.ipynb</a> <a href="https://github.com/paulnormanazucena-gif/CompPract/blob/main/2023%20p2/task4_3.py" target="_blank" rel="noopener">task4_3.py</a> <a href="https://github.com/paulnormanazucena-gif/CompPract/blob/main/2023%20p2/task4_output.html" target="_blank" rel="noopener">task4_output.html</a></span></div>
+      <div class="task-body">
+<p>Compression and the web page work well; the decompress path in the menu does not.</p>
+<h3>Task 4.1</h3><p>Your compressed string matches the expected single digit output, and the count-of-9 reset shows careful reading of the task.</p>
+<h3>Task 4.2</h3><p>Choosing decompress passes readfile()&#x27;s list into decompress(), which indexes it character by character, so it fails on a real compressed file; the decompressed data also goes to a misspelled &#x27;deccompressedimage.txt&#x27; as one long string rather than one code per line in decompressedimage.txt.</p>
+<h3>Task 4.3</h3><p>The Flask app maps codes to colours, renders a 9x9 table, and you saved the rendered browser output. Well done.</p>
+<h3>Next step</h3><div class="next"><p>Make the menu&#x27;s decompress branch read the compressed file as a single string.</p></div>
+      </div>
+    </section>
+    <p class="foot">Disclaimer: AI-assisted evaluation may contain issues. Exercise discretion and seek clarification if in doubt.</p>
+  </main>
+</body>
+</html>

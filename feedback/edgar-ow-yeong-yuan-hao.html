@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback: Edgar Ow Yeong Yuan Hao</title>
+  <style>
+    :root { color-scheme: light; --bg:#f5f7fb; --panel:#fff; --text:#1f2937;
+      --muted:#6b7280; --border:#dbe2ea; --accent:#1d4ed8; --accent-soft:#dbeafe; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: Arial, Helvetica, sans-serif; color:var(--text);
+      background: linear-gradient(180deg,#eef4ff 0%,var(--bg) 240px); }
+    .page { max-width: 840px; margin:0 auto; padding:32px 20px 48px; }
+    .hero { background:var(--panel); border:1px solid var(--border); border-radius:18px;
+      padding:24px 28px; box-shadow:0 16px 40px rgba(15,23,42,.08); }
+    h1 { margin:0 0 6px; font-size:1.8rem; }
+    .meta { color:var(--muted); font-size:.95rem; }
+    .meta a { color:var(--accent); text-decoration:none; }
+    .meta a:hover { text-decoration:underline; }
+    section.task { margin-top:24px; background:var(--panel); border:1px solid var(--border);
+      border-radius:18px; overflow:hidden; box-shadow:0 16px 40px rgba(15,23,42,.06); }
+    .task-header { padding:14px 24px; background:var(--accent-soft);
+      border-bottom:1px solid var(--border); font-weight:700; }
+    .task-header .files { float:right; font-weight:400; font-size:.9rem; }
+    .task-header .files a { margin-left:10px; }
+    .task-body { padding:8px 24px 20px; }
+    h3 { font-size:1.02rem; margin:18px 0 6px; }
+    p { margin:6px 0; line-height:1.55; }
+    code { background:#eef2f7; border:1px solid var(--border); border-radius:4px;
+      padding:1px 5px; font-size:.9em; }
+    ul { margin:6px 0; padding-left:22px; }
+    .next { background:#f0fdf4; border:1px solid #bbf7d0; border-radius:10px;
+      padding:10px 14px; margin-top:6px; }
+    .farewell { padding:22px 24px; font-size:1.05rem; line-height:1.6; }
+    .foot { margin-top:20px; font-size:.85rem; color:var(--muted); }
+</style>
+</head>
+<body>
+  <main class="page">
+    <div class="hero">
+      <h1>Edgar Ow Yeong Yuan Hao</h1>
+      <p class="meta">25S22 &middot; <a href="https://github.com/cynicalzaza/A_Level_2020_Edgar" target="_blank" rel="noopener">GitHub repo</a> &middot; <a href="../all.html">Back to the work grid</a></p>
+    </div>
+    <section class="task" id="task-2020-1">
+      <div class="task-header">2020 Paper 2, Task 1 <span class="files"><a href="https://github.com/cynicalzaza/A_Level_2020_Edgar/blob/main/2020_ALevel_Edgar_task1.ipynb" target="_blank" rel="noopener">2020_ALevel_Edgar_task1.ipynb</a></span></div>
+      <div class="task-body">
+<p>Your structure is right in both parts, but an off-by-one in the loop makes every hash value wrong.</p>
+<h3>Task 1.1</h3><p>range(len(string_value)-1) stops before the last character, so task1_1(&quot;Hello&quot;) gives 549 instead of 116. The pseudocode runs i from 0 to length minus 1 inclusive, which is range(len(string_value)) in Python.</p>
+<h3>Task 1.2</h3><p>Concatenating seed + string_value and reusing task1_1 is correct. Your first test uses &quot;hello&quot; rather than the required &quot;Hello&quot;, and the saved output still shows debug list prints you later commented out.</p>
+<h3>Next step</h3><div class="next"><p>Change the loop to range(len(string_value)), restore the &quot;Hello&quot; test call, then rerun and save.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2020-2">
+      <div class="task-header">2020 Paper 2, Task 2 <span class="files"><a href="https://github.com/cynicalzaza/A_Level_2020_Edgar/blob/main/2020_ALevel_Edgar_task2.ipynb" target="_blank" rel="noopener">2020_ALevel_Edgar_task2.ipynb</a></span></div>
+      <div class="task-body">
+<p>Tasks 2.1 and 2.2 are close, but Task 2.3&#x27;s indentation undoes the good work.</p>
+<h3>Task 2.1</h3><p>random.randint(0, maximum) with one value per line is correct; the saved output &quot;hello&quot; does not match this cell, though.</p>
+<h3>Task 2.2</h3><p>A genuine in-place merge sort, but the test call has no saved output; print the == comparison so True is visible.</p>
+<h3>Task 2.3</h3><p>The task2_2 call and the with open(filename_out) block sit inside the reading loop, so the file is rewritten after every line, and file.write(str(result)) stores a whole Python list, not one integer per line.</p>
+<h3>Next step</h3><div class="next"><p>Dedent the sorting and writing out of the loop, then Run All and save.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2020-3">
+      <div class="task-header">2020 Paper 2, Task 3 <span class="files"><a href="https://github.com/cynicalzaza/A_Level_2020_Edgar/blob/main/2020_ALevel_Edgar_task3.ipynb" target="_blank" rel="noopener">2020_ALevel_Edgar_task3.ipynb</a></span></div>
+      <div class="task-body">
+<p>A solid Task 3 with sensible reuse: task3_2 falls back on task3_1 and task3_3 reuses task3_2.</p>
+<h3>Task 3.1 and 3.2</h3><p>Checking the last two or three characters against the unit lists works, but the number part is never tested with isdigit(), so task3_1(&quot;aKB&quot;) would crash with ValueError instead of returning &quot;invalid data&quot;. Your 3.2 tests also skip the four decimal units.</p>
+<h3>Task 3.3</h3><p>Validating target_unit, propagating &quot;invalid data&quot;, and three test sets including an invalid unit are all correct; (&quot;512MiB&quot;, &quot;GiB&quot;) shows 0.5.</p>
+<h3>Next step</h3><div class="next"><p>Add an isdigit() check on the numeric part in task3_1, then retest with a case like &quot;aKB&quot;.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2020-4">
+      <div class="task-header">2020 Paper 2, Task 4 <span class="files"><a href="https://github.com/cynicalzaza/A_Level_2020_Edgar/blob/main/2020A_Level_Task4_1.sql" target="_blank" rel="noopener">2020A_Level_Task4_1.sql</a> <a href="https://github.com/cynicalzaza/A_Level_2020_Edgar/blob/main/2020A_Level_Task4_3.py" target="_blank" rel="noopener">2020A_Level_Task4_3.py</a> <a href="https://github.com/cynicalzaza/A_Level_2020_Edgar/blob/main/2020_Task4_3_1.html" target="_blank" rel="noopener">2020_Task4_3_1.html</a></span></div>
+      <div class="task-body">
+<p>Task 4.1&#x27;s table design is correct, but Task 4.2 is missing and Task 4.3 displays the wrong data.</p>
+<h3>Task 4.1</h3><p>The People table has the right columns and PRIMARY KEY(&quot;PersonID&quot; AUTOINCREMENT), though the paper asks for plain SQL in the .sql file, not Python.</p>
+<h3>Task 4.2</h3><p>There is no file with the Person, Staff and Student classes or the code inserting people.txt into school.db.</p>
+<h3>Task 4.3</h3><p>The Flask route reads people.txt directly, so the &quot;Screen name&quot; column actually shows dates of birth; the data should come from ScreenName in school.db.</p>
+<h3>Next step</h3><div class="next"><p>Write Task 4.2&#x27;s classes and insertion code, then point the Flask app at school.db.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2021-1">
+      <div class="task-header">2021 Paper 2, Task 1 <span class="files"><a href="https://github.com/cynicalzaza/A_Level_2020_Edgar/blob/main/2021/ALEVEL2021_task1.ipynb" target="_blank" rel="noopener">ALEVEL2021_task1.ipynb</a></span></div>
+      <div class="task-body">
+<p>The algorithm works: your search loop correctly yields a 0 check digit when the sum is divisible by 10, and the digit-splitting via string append is right.</p>
+<h3>Task 1.1</h3><p>In the string branch, a digit string of the wrong length has no <code>else</code>, so the function returns None instead of -1; your wrong-length test only passes because it used an int.</p>
+<h3>Task 1.3</h3><p>The function is named <code>task3_1</code>, not <code>task1_3</code>, and only the two valid tests appear; the two <code>not</code> error tests are missing.</p>
+<h3>Next step</h3><div class="next"><p>Rename it <code>task1_3</code>, add the two error tests, and return False on every invalid path.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2021-2">
+      <div class="task-header">2021 Paper 2, Task 2 <span class="files"><a href="https://github.com/cynicalzaza/A_Level_2020_Edgar/blob/main/2021/2021_ALevel_task2.ipynb" target="_blank" rel="noopener">2021_ALevel_task2.ipynb</a></span></div>
+      <div class="task-body">
+<p>The sorting logic is largely sound, but the saved run fails, so no sub-task has output evidence.</p>
+<h3>Task 2.1</h3><p>The cell ends in FileNotFoundError for TEN.txt; the data files must sit beside the notebook. Task 2.3&#x27;s NameError shows cells run out of order in a fresh kernel. The three-way quicksort design itself is correct.</p>
+<h3>Task 2.4</h3><p><code>time100quick</code> calls <code>task2_2</code>, not <code>task2_3</code>, so quicksort is never timed at 100; <code>time1000quick</code> prints twice; and beyond &quot;Quicksort is longer&quot; there is no orders-of-growth discussion.</p>
+<h3>Next step</h3><div class="next"><p>Add the data files, fix the 2.4 calls, write the O(n^2) versus O(n log n) comparison, then Run All and save.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2021-4">
+      <div class="task-header">2021 Paper 2, Task 4 <span class="files"><a href="https://github.com/cynicalzaza/A_Level_2020_Edgar/blob/main/2021/2021_Task4.2_Edgar.py" target="_blank" rel="noopener">2021_Task4.2_Edgar.py</a> <a href="https://github.com/cynicalzaza/A_Level_2020_Edgar/blob/main/2021/2021_Task4.3_Edgar.py" target="_blank" rel="noopener">2021_Task4.3_Edgar.py</a> <a href="https://github.com/cynicalzaza/A_Level_2020_Edgar/blob/main/2021/2021_Task4.4_Edgar.py" target="_blank" rel="noopener">2021_Task4.4_Edgar.py</a> <a href="https://github.com/cynicalzaza/A_Level_2020_Edgar/blob/main/2021/Task4_1_Edgar.py" target="_blank" rel="noopener">Task4_1_Edgar.py</a> <a href="https://github.com/cynicalzaza/A_Level_2020_Edgar/blob/main/2021/templates/Task4_1_Edgar.html" target="_blank" rel="noopener">Task4_1_Edgar.html</a> <a href="https://github.com/cynicalzaza/A_Level_2020_Edgar/blob/main/2021/templates/Task4_2_Edgar_1.html" target="_blank" rel="noopener">Task4_2_Edgar_1.html</a> <a href="https://github.com/cynicalzaza/A_Level_2020_Edgar/blob/main/2021/templates/Task4_2_Edgar_2.html" target="_blank" rel="noopener">Task4_2_Edgar_2.html</a> <a href="https://github.com/cynicalzaza/A_Level_2020_Edgar/blob/main/2021/templates/Task4_2_Edgar_3.html" target="_blank" rel="noopener">Task4_2_Edgar_3.html</a> <a href="https://github.com/cynicalzaza/A_Level_2020_Edgar/blob/main/2021/templates/Task4_3_Edgar.html" target="_blank" rel="noopener">Task4_3_Edgar.html</a> <a href="https://github.com/cynicalzaza/A_Level_2020_Edgar/blob/main/2021/templates/Task4_4_Edgar.html" target="_blank" rel="noopener">Task4_4_Edgar.html</a></span></div>
+      <div class="task-body">
+<p>The SQL underneath is mostly right, but splitting the site across four scripts breaks the menu.</p>
+<h3>Task 4.1</h3><p>The menu template calls <code>url_for(&#x27;scores1&#x27;)</code> and <code>url_for(&#x27;mean&#x27;)</code>, yet those routes live in other files&#x27; apps, so rendering the menu errors; the Round 3 link is missing too.</p>
+<h3>Task 4.2</h3><p>The join with <code>ORDER BY scores.score DESC</code> per round is correct.</p>
+<h3>Task 4.3 and 4.4</h3><p>The mean query lacks <code>ORDER BY competitor.name ASC</code>, and the totals query lacks <code>ORDER BY SUM(scores.score) DESC</code>; the template&#x27;s over-250 check does show qualified status.</p>
+<h3>Next step</h3><div class="next"><p>Merge everything into one Flask app and add the two missing ORDER BY clauses.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2023-1">
+      <div class="task-header">2023 Paper 2, Task 1 <span class="files"><a href="https://github.com/cynicalzaza/A_Level_2020_Edgar/blob/main/2023/2023_ALevel_Task1.ipynb" target="_blank" rel="noopener">2023_ALevel_Task1.ipynb</a></span></div>
+      <div class="task-body">
+<p>Your table design is largely sound, but the saved notebook ends in an error traceback.</p>
+<h3>Task 1.1</h3><p>Primary keys on all four tables and both foreign keys in Student_Test are well done. In Student, &quot;GiveName&quot; is misspelt and ClassName is missing FOREIGN KEY (&quot;ClassName&quot;) REFERENCES Class(&quot;ClassName&quot;).</p>
+<h3>Task 1.2</h3><p>The traceback OperationalError: no such table: Student arose because this cell ran before Task 1.1 in a fresh kernel; run cells top to bottom. Also quote the date as &quot;01-02-2023&quot;; unquoted, SQLite treats 01-02-2023 as arithmetic and stores -2024.</p>
+<h3>Next step</h3><div class="next"><p>Restart the kernel, Run All top to bottom, then save and push once every cell completes without error.</p></div>
+      </div>
+    </section>
+    <p class="foot">Disclaimer: AI-assisted evaluation may contain issues. Exercise discretion and seek clarification if in doubt.</p>
+  </main>
+</body>
+</html>

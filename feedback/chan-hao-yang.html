@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback: Chan Hao Yang</title>
+  <style>
+    :root { color-scheme: light; --bg:#f5f7fb; --panel:#fff; --text:#1f2937;
+      --muted:#6b7280; --border:#dbe2ea; --accent:#1d4ed8; --accent-soft:#dbeafe; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: Arial, Helvetica, sans-serif; color:var(--text);
+      background: linear-gradient(180deg,#eef4ff 0%,var(--bg) 240px); }
+    .page { max-width: 840px; margin:0 auto; padding:32px 20px 48px; }
+    .hero { background:var(--panel); border:1px solid var(--border); border-radius:18px;
+      padding:24px 28px; box-shadow:0 16px 40px rgba(15,23,42,.08); }
+    h1 { margin:0 0 6px; font-size:1.8rem; }
+    .meta { color:var(--muted); font-size:.95rem; }
+    .meta a { color:var(--accent); text-decoration:none; }
+    .meta a:hover { text-decoration:underline; }
+    section.task { margin-top:24px; background:var(--panel); border:1px solid var(--border);
+      border-radius:18px; overflow:hidden; box-shadow:0 16px 40px rgba(15,23,42,.06); }
+    .task-header { padding:14px 24px; background:var(--accent-soft);
+      border-bottom:1px solid var(--border); font-weight:700; }
+    .task-header .files { float:right; font-weight:400; font-size:.9rem; }
+    .task-header .files a { margin-left:10px; }
+    .task-body { padding:8px 24px 20px; }
+    h3 { font-size:1.02rem; margin:18px 0 6px; }
+    p { margin:6px 0; line-height:1.55; }
+    code { background:#eef2f7; border:1px solid var(--border); border-radius:4px;
+      padding:1px 5px; font-size:.9em; }
+    ul { margin:6px 0; padding-left:22px; }
+    .next { background:#f0fdf4; border:1px solid #bbf7d0; border-radius:10px;
+      padding:10px 14px; margin-top:6px; }
+    .farewell { padding:22px 24px; font-size:1.05rem; line-height:1.6; }
+    .foot { margin-top:20px; font-size:.85rem; color:var(--muted); }
+</style>
+</head>
+<body>
+  <main class="page">
+    <div class="hero">
+      <h1>Chan Hao Yang</h1>
+      <p class="meta">25S11 &middot; <a href="https://github.com/HaoYangChan/H2-Computing" target="_blank" rel="noopener">GitHub repo</a> &middot; <a href="../all.html">Back to the work grid</a></p>
+    </div>
+    <section class="task" id="task-2020-1">
+      <div class="task-header">2020 Paper 2, Task 1 <span class="files"><a href="https://github.com/HaoYangChan/H2-Computing/blob/main/2020.ipynb" target="_blank" rel="noopener">2020.ipynb</a></span></div>
+      <div class="task-body">
+<p>Both hash functions are implemented correctly and faithfully follow the pseudocode.</p>
+<h3>Task 1.1</h3><p>Your loop applies <code>h = (h + val) % 1024</code> inside each iteration, exactly as the pseudocode requires, and the 644 for &quot;Hullo&quot; is correct. However, the cell with the three required calls shows no output: only the last bare expression would display, so wrap each call in <code>print()</code>.</p>
+<h3>Task 1.2</h3><p>Concatenating seed then string and reusing task1_1 is right, and 388 for &quot;seed-one&quot; matches. You only tested &quot;seed-one&quot;; &quot;seed-two&quot; and &quot;seed-three&quot; are still missing.</p>
+<h3>Next step</h3><div class="next"><p>Print all six required test calls, then Run All and save so the outputs are captured.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2020-2">
+      <div class="task-header">2020 Paper 2, Task 2 <span class="files"><a href="https://github.com/HaoYangChan/H2-Computing/blob/main/2020.ipynb" target="_blank" rel="noopener">2020.ipynb</a></span></div>
+      <div class="task-body">
+<p>This is a complete and correct pipeline: generate, merge sort, then sort the file.</p>
+<h3>Task 2.1</h3><p><code>random.randint(0, maximum)</code> keeps both bounds inclusive and each value gets its own line; the 1000 and 5000 run is present.</p>
+<h3>Task 2.2</h3><p>The recursion and merge are correct, including <code>extend</code> of the leftovers. You tested with your own list <code>[0,19,17,14,12,12]</code> instead of the required <code>task2_2([56,25,4,98,0,18,4,5,7,0]) == [0,0,4,4,5,7,18,25,56,98]</code> printing True.</p>
+<h3>Task 2.3</h3><p>Reading with <code>int(item.strip())</code> and reusing task2_2 is right; note the output filename &quot;sortednumbers,haoyang_s11_idk.txt&quot; has a comma where an underscore belongs.</p>
+<h3>Next step</h3><div class="next"><p>Add the specified equality test for 2.2 and rerun so True is shown.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2020-3">
+      <div class="task-header">2020 Paper 2, Task 3 <span class="files"><a href="https://github.com/HaoYangChan/H2-Computing/blob/main/2020.ipynb" target="_blank" rel="noopener">2020.ipynb</a></span></div>
+      <div class="task-body">
+<p>Task 3.1 works for valid inputs, but the task as a whole is unfinished.</p>
+<h3>Task 3.1</h3><p>The unit factors are all correct and &quot;8TB&quot; gives the right byte count. However, <code>int(quantity_of_data[:-2])</code> runs before any digit check, so an input like &quot;abKB&quot; crashes instead of returning &quot;invalid data&quot;. Only one test is shown; the task asks for all four units plus invalid cases.</p>
+<h3>Task 3.2</h3><p>This only routes decimal units back to task3_1: KiB, MiB, GiB and TiB are not handled, there is no &quot;invalid data&quot; branch, and no tests.</p>
+<h3>Task 3.3</h3><p>Not attempted.</p>
+<h3>Next step</h3><div class="next"><p>Finish 3.2 with the four binary units (2<strong>10 to 2</strong>40), then build 3.3 on top of it.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2021-1">
+      <div class="task-header">2021 Paper 2, Task 1 <span class="files"><a href="https://github.com/HaoYangChan/H2-Computing/blob/main/2021%20%282%29.ipynb" target="_blank" rel="noopener">2021 (2).ipynb</a></span></div>
+      <div class="task-body">
+<p>This notebook does not contain the 2021 Task 1 work: the assigned task is the IMEI check digit function task1_1 with validation and tests. Your task1_1 here computes a hash, summing 33 * ord(character) mod 1024, which belongs to a different paper. The cell runs cleanly and returns 644 for &quot;Hullo&quot;, so what you wrote executes, but there is no 14-digit validation, no check digit calculation, no task1_2 test pairs and no task1_3.</p>
+<h3>Next step</h3><div class="next"><p>Attempt the 2021 paper&#x27;s Task 1 (IMEI check digit) in this notebook, then Run All and save.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2021-2">
+      <div class="task-header">2021 Paper 2, Task 2 <span class="files"><a href="https://github.com/HaoYangChan/H2-Computing/blob/main/2021%20%282%29.ipynb" target="_blank" rel="noopener">2021 (2).ipynb</a></span></div>
+      <div class="task-body">
+<p>This notebook does not match 2021 Task 2, which asks you to read TEN.txt with task2_1(filename), write an insertion sort (task2_2), a quicksort (task2_3) and compare timings with timeit. Your task2_1 writes random numbers to a file and your task2_2 is a merge sort, which belongs to a different paper. The merge logic itself is sound, with a correct base case and merging of the two halves, but none of the required functions, algorithms or timing evidence for 2021 is present.</p>
+<h3>Next step</h3><div class="next"><p>Redo Task 2 against the 2021 paper: read the provided files, then implement insertion sort and quicksort.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2021-3">
+      <div class="task-header">2021 Paper 2, Task 3 <span class="files"><a href="https://github.com/HaoYangChan/H2-Computing/blob/main/2021%20%282%29.ipynb" target="_blank" rel="noopener">2021 (2).ipynb</a></span></div>
+      <div class="task-body">
+<p>This notebook does not contain the 2021 Task 3 work. The assigned task is a node-based LinkedList class with insert, delete, search, count and to_String, plus SortedLinkedList and Queue subclasses tested on Task3data.txt. Your task3_1 here converts data quantities such as &quot;8TB&quot; into bytes, which is from a different paper. That function runs and returns 8000000000000 correctly, but there is no class, no inheritance and no linked list testing to review.</p>
+<h3>Next step</h3><div class="next"><p>Attempt the 2021 Task 3 LinkedList classes in this notebook and test them with Task3data.txt.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2023-1">
+      <div class="task-header">2023 Paper 2, Task 1 <span class="files"><a href="https://github.com/HaoYangChan/H2-Computing/blob/main/2023.ipynb" target="_blank" rel="noopener">2023.ipynb</a></span></div>
+      <div class="task-body">
+<p>Your sqlite3 workflow is sound, but a few key details need fixing before this is exam-ready.</p>
+<h3>Task 1.1</h3><p>All four tables are present with sensible types, but your foreign key is reversed: <code>FOREIGN KEY(ClassName) REFERENCES Student(ClassName)</code> sits in Class, when Student should carry <code>FOREIGN KEY(ClassName) REFERENCES Class(ClassName)</code>.</p>
+<h3>Task 1.2</h3><p>Good parameterised INSERTs with Mary&#x27;s name split correctly, but you insert Student before Class, and your date <code>&quot;1 Feb 2023&quot;</code> should follow the question&#x27;s format, <code>01-02-2023</code>.</p>
+<h3>Next step</h3><div class="next"><p>Move the ClassName foreign key into Student, then Run All and save so the outputs are visible in the .ipynb before you push.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2023-2">
+      <div class="task-header">2023 Paper 2, Task 2 <span class="files"><a href="https://github.com/HaoYangChan/H2-Computing/blob/main/2023.ipynb" target="_blank" rel="noopener">2023.ipynb</a></span></div>
+      <div class="task-body">
+<p>Your Task 2 is only partly attempted and stops mid-line, with no saved output in the notebook.</p>
+<h3>Task 2.1</h3><p>Both getters return correctly, though the constructor takes (quantity, ID); keep ID first so QueueItem(&#x27;A01&#x27;, 5) behaves as intended.</p>
+<h3>Task 2.2</h3><p>The constructor is right: pointers and count at 0, queueList as [None] * 4.</p>
+<h3>Task 2.3</h3><p>enqueue() wraps tailPointer with % 4, which is good, but it returns &#x27;Full&#x27; instead of False and never returns True; <code>def dequeue(self)</code> is left unfinished so the cell cannot run, and 2.3 to 2.5 have no main code.</p>
+<h3>Next step</h3><div class="next"><p>Complete dequeue() and printQueue() with their test code, then Run All and save before pushing.</p></div>
+      </div>
+    </section>
+    <p class="foot">Disclaimer: AI-assisted evaluation may contain issues. Exercise discretion and seek clarification if in doubt.</p>
+  </main>
+</body>
+</html>

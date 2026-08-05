@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback: Tham Hoa Yu (Tan Haoyu)</title>
+  <style>
+    :root { color-scheme: light; --bg:#f5f7fb; --panel:#fff; --text:#1f2937;
+      --muted:#6b7280; --border:#dbe2ea; --accent:#1d4ed8; --accent-soft:#dbeafe; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: Arial, Helvetica, sans-serif; color:var(--text);
+      background: linear-gradient(180deg,#eef4ff 0%,var(--bg) 240px); }
+    .page { max-width: 840px; margin:0 auto; padding:32px 20px 48px; }
+    .hero { background:var(--panel); border:1px solid var(--border); border-radius:18px;
+      padding:24px 28px; box-shadow:0 16px 40px rgba(15,23,42,.08); }
+    h1 { margin:0 0 6px; font-size:1.8rem; }
+    .meta { color:var(--muted); font-size:.95rem; }
+    .meta a { color:var(--accent); text-decoration:none; }
+    .meta a:hover { text-decoration:underline; }
+    section.task { margin-top:24px; background:var(--panel); border:1px solid var(--border);
+      border-radius:18px; overflow:hidden; box-shadow:0 16px 40px rgba(15,23,42,.06); }
+    .task-header { padding:14px 24px; background:var(--accent-soft);
+      border-bottom:1px solid var(--border); font-weight:700; }
+    .task-header .files { float:right; font-weight:400; font-size:.9rem; }
+    .task-header .files a { margin-left:10px; }
+    .task-body { padding:8px 24px 20px; }
+    h3 { font-size:1.02rem; margin:18px 0 6px; }
+    p { margin:6px 0; line-height:1.55; }
+    code { background:#eef2f7; border:1px solid var(--border); border-radius:4px;
+      padding:1px 5px; font-size:.9em; }
+    ul { margin:6px 0; padding-left:22px; }
+    .next { background:#f0fdf4; border:1px solid #bbf7d0; border-radius:10px;
+      padding:10px 14px; margin-top:6px; }
+    .farewell { padding:22px 24px; font-size:1.05rem; line-height:1.6; }
+    .foot { margin-top:20px; font-size:.85rem; color:var(--muted); }
+</style>
+</head>
+<body>
+  <main class="page">
+    <div class="hero">
+      <h1>Tham Hoa Yu (Tan Haoyu)</h1>
+      <p class="meta">25S21 &middot; <a href="https://github.com/thamhoayu-wq/H2cp" target="_blank" rel="noopener">GitHub repo</a> &middot; <a href="../all.html">Back to the work grid</a></p>
+    </div>
+    <section class="task" id="task-2020-1">
+      <div class="task-header">2020 Paper 2, Task 1 <span class="files"><a href="https://github.com/thamhoayu-wq/H2cp/blob/main/2020/task1_hoa_yu.ipynb" target="_blank" rel="noopener">task1_hoa_yu.ipynb</a></span></div>
+      <div class="task-body">
+<p>Task 1 is complete and correct with all required outputs saved.</p>
+<h3>Task 1.1</h3><p>The implementation mirrors the pseudocode, taking % 1024 inside the loop, and 116, 1008 and 644 for the three required calls are clear evidence your code runs correctly.</p>
+<h3>Task 1.2</h3><p>task1_1(seed + string_value) is the intended reuse, with the seed correctly in front, and all three seeds are tested with &quot;Hello&quot;, giving 388, 156 and 282.</p>
+<h3>Next step</h3><div class="next"><p>Rename the notebook to the required TASK1_&lt;name&gt;_&lt;centre number&gt;_&lt;index number&gt; convention.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2020-2">
+      <div class="task-header">2020 Paper 2, Task 2 <span class="files"><a href="https://github.com/thamhoayu-wq/H2cp/blob/main/2020/task2_hoa_yu_%281%29.ipynb" target="_blank" rel="noopener">task2_hoa_yu_(1).ipynb</a></span></div>
+      <div class="task-body">
+<p>The merge sort works in place, but the function does not meet the task&#x27;s contract.</p>
+<h3>Task 2.1</h3><p>The writing code is correct, but you ran it with 100 numbers up to 500 instead of the required 1000 numbers from 0 to 5000, and &quot;my_file.txt&quot; is not the randomnumbers naming.</p>
+<h3>Task 2.2</h3><p>Your in-place merge is genuinely correct (the printed sorted list proves it), but task2_2 returns None, so the required check task2_2([...]) == [0,0,4,...] would print False.</p>
+<h3>Task 2.3</h3><p>Defined but never called; no run evidence.</p>
+<h3>Next step</h3><div class="next"><p>Add return list_of_integers to task2_2, re-run 2.1 with 1000 and 5000, then call task2_3 and save.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2020-3">
+      <div class="task-header">2020 Paper 2, Task 3 <span class="files"><a href="https://github.com/thamhoayu-wq/H2cp/blob/main/2020/task3_%281%29.ipynb" target="_blank" rel="noopener">task3_(1).ipynb</a></span></div>
+      <div class="task-body">
+<p>Tasks 3.1 and 3.3 are structured well; Task 3.2&#x27;s unit ladder has a serious slip.</p>
+<h3>Task 3.1</h3><p>Unit checking works, but digits are never validated, so int(value) crashes on input like &quot;aKB&quot;; the message should also be exactly &quot;invalid data&quot;, not &quot;Invalid data&quot;.</p>
+<h3>Task 3.2</h3><p>The first binary branch reads elif unit == &quot;TiB&quot;: multiplier = 2**10, so KiB is never matched (&quot;2KiB&quot; reports invalid) and &quot;2TiB&quot; wrongly gives 2048; the later TiB branch is unreachable.</p>
+<h3>Task 3.3</h3><p>It validates target_unit, reuses task3_2, propagates the invalid message, and 0.5 for &quot;512MiB&quot; is right.</p>
+<h3>Next step</h3><div class="next"><p>Correct the KiB and TiB branches and re-test all eight units.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2020-4">
+      <div class="task-header">2020 Paper 2, Task 4 <span class="files"><a href="https://github.com/thamhoayu-wq/H2cp/blob/main/2020/task4/index.html" target="_blank" rel="noopener">index.html</a> <a href="https://github.com/thamhoayu-wq/H2cp/blob/main/2020/task4/task4_1_Hoa%20Yu_25S21.sql" target="_blank" rel="noopener">task4_1_Hoa Yu_25S21.sql</a> <a href="https://github.com/thamhoayu-wq/H2cp/blob/main/2020/task4/task4_2.ipynb" target="_blank" rel="noopener">task4_2.ipynb</a> <a href="https://github.com/thamhoayu-wq/H2cp/blob/main/2020/task4/task4_3.ipynb" target="_blank" rel="noopener">task4_3.ipynb</a></span></div>
+      <div class="task-body">
+<p>Task 4.1 is done well, but 4.2 and 4.3 are unfinished and neither notebook has been run.</p>
+<h3>Task 4.1</h3><p>The DDL matches the specification, including INTEGER PRIMARY KEY AUTOINCREMENT.</p>
+<h3>Task 4.2</h3><p>Only the Person class exists: no Staff or Student, no file reading, no database insertion. screen_name adds integer month and date to a string, raising TypeError, and int() drops the zero needed for JohnTan0601.</p>
+<h3>Task 4.3</h3><p>def __name__ == &quot;__main__&quot;: is a syntax error, and {%end for%} should be {% endfor %}; nothing is run or saved.</p>
+<h3>Next step</h3><div class="next"><p>Finish 4.2 first: use zero-padded month and day strings, add the subclasses, and insert into school.db.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2022-4">
+      <div class="task-header">2022 Paper 2, Task 4 <span class="files"><a href="https://github.com/thamhoayu-wq/H2cp/blob/main/2022/index.html" target="_blank" rel="noopener">index.html</a> <a href="https://github.com/thamhoayu-wq/H2cp/blob/main/2022/task4.ipynb" target="_blank" rel="noopener">task4.ipynb</a></span></div>
+      <div class="task-body">
+<p>There is a working outline here, but copy-paste errors and missing keys hold it back.</p>
+<h3>Task 4.1</h3><p>No table defines a PRIMARY KEY (BookID, MemberNumber, LoanID); the two FOREIGN KEYs on Loan are good. The saved output is still an OperationalError, so rerun after fixing.</p>
+<h3>Task 4.2</h3><p>All three functions run INSERT INTO Book, so member and loan data would land in the wrong table; insert_Loan also reads only 3 of the 5 fields, and none of the functions is ever called.</p>
+<h3>Task 4.4</h3><p><code>Loan.Returned = FALSE</code> will not match the stored text &#x27;FALSE&#x27;, and <code>{%end for%}</code> in index.html should be <code>{% endfor %}</code>.</p>
+<h3>Next step</h3><div class="next"><p>Fix the INSERT table names, add the three primary keys, then Run All and save the outputs.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2023-1">
+      <div class="task-header">2023 Paper 2, Task 1 <span class="files"><a href="https://github.com/thamhoayu-wq/H2cp/blob/main/2023/task1%20%281%29.ipynb" target="_blank" rel="noopener">task1 (1).ipynb</a></span></div>
+      <div class="task-body">
+<p>The structure is right, but wrong types and insert values slipped through because the notebook was never run.</p>
+<h3>Task 1.1</h3><p>All four tables and both <code>Student_Test</code> foreign keys are good; however <code>TestID</code> and <code>ClassName</code> hold codes like EOU1 and CS1, so they should be <code>TEXT</code>, not <code>INTEGER</code>, and <code>Student</code> needs a foreign key to <code>Class</code>.</p>
+<h3>Task 1.2</h3><p><code>INSERT INTO Class VALUES (12, &#x27;CS3&#x27;)</code> swaps your columns: it must be <code>(&#x27;CS3&#x27;, 12)</code>; and <code>Student_Test</code> has <code>&#x27;CS3&#x27;</code> where <code>TestID</code> should be <code>&#x27;PG1&#x27;</code>. Run All with a <code>SELECT</code> and save, as the exam requires visible output.</p>
+<h3>Next step</h3><div class="next"><p>Fix the two wrong inserts and the <code>TEXT</code> types, then Run All and save.</p></div>
+      </div>
+    </section>
+    <p class="foot">Disclaimer: AI-assisted evaluation may contain issues. Exercise discretion and seek clarification if in doubt.</p>
+  </main>
+</body>
+</html>

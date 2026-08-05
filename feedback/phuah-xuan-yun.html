@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback: Phuah Xuan Yun</title>
+  <style>
+    :root { color-scheme: light; --bg:#f5f7fb; --panel:#fff; --text:#1f2937;
+      --muted:#6b7280; --border:#dbe2ea; --accent:#1d4ed8; --accent-soft:#dbeafe; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: Arial, Helvetica, sans-serif; color:var(--text);
+      background: linear-gradient(180deg,#eef4ff 0%,var(--bg) 240px); }
+    .page { max-width: 840px; margin:0 auto; padding:32px 20px 48px; }
+    .hero { background:var(--panel); border:1px solid var(--border); border-radius:18px;
+      padding:24px 28px; box-shadow:0 16px 40px rgba(15,23,42,.08); }
+    h1 { margin:0 0 6px; font-size:1.8rem; }
+    .meta { color:var(--muted); font-size:.95rem; }
+    .meta a { color:var(--accent); text-decoration:none; }
+    .meta a:hover { text-decoration:underline; }
+    section.task { margin-top:24px; background:var(--panel); border:1px solid var(--border);
+      border-radius:18px; overflow:hidden; box-shadow:0 16px 40px rgba(15,23,42,.06); }
+    .task-header { padding:14px 24px; background:var(--accent-soft);
+      border-bottom:1px solid var(--border); font-weight:700; }
+    .task-header .files { float:right; font-weight:400; font-size:.9rem; }
+    .task-header .files a { margin-left:10px; }
+    .task-body { padding:8px 24px 20px; }
+    h3 { font-size:1.02rem; margin:18px 0 6px; }
+    p { margin:6px 0; line-height:1.55; }
+    code { background:#eef2f7; border:1px solid var(--border); border-radius:4px;
+      padding:1px 5px; font-size:.9em; }
+    ul { margin:6px 0; padding-left:22px; }
+    .next { background:#f0fdf4; border:1px solid #bbf7d0; border-radius:10px;
+      padding:10px 14px; margin-top:6px; }
+    .farewell { padding:22px 24px; font-size:1.05rem; line-height:1.6; }
+    .foot { margin-top:20px; font-size:.85rem; color:var(--muted); }
+</style>
+</head>
+<body>
+  <main class="page">
+    <div class="hero">
+      <h1>Phuah Xuan Yun</h1>
+      <p class="meta">25S11 &middot; <a href="https://github.com/xy-cs/H2_Computing" target="_blank" rel="noopener">GitHub repo</a> &middot; <a href="../all.html">Back to the work grid</a></p>
+    </div>
+    <section class="task" id="task-2020-1">
+      <div class="task-header">2020 Paper 2, Task 1 <span class="files"><a href="https://github.com/xy-cs/H2_Computing/blob/main/TYS/2020_Alevel_Paper2/2020_Alevel_paper2_task1.ipynb" target="_blank" rel="noopener">2020_Alevel_paper2_task1.ipynb</a></span></div>
+      <div class="task-body">
+<p>Your testing is complete and the structure follows the pseudocode, but an off-by-one error makes every hash value wrong.</p>
+<h3>Task 1.1</h3><p><code>for i in range(0, len(string_value)-1)</code> stops before the last character, so your outputs are 549, 417 and 53 instead of 116, 1008 and 644. The pseudocode&#x27;s <code>FOR i ← 0 TO length - 1</code> includes the final index; in Python that is simply <code>range(len(string_value))</code>. The modulus inside the loop and <code>33 * ord(...)</code> are otherwise correct.</p>
+<h3>Task 1.2</h3><p>Building the concatenated string and reusing task1_1 is exactly right, and all three seed calls are printed; their values will correct themselves once 1.1 is fixed.</p>
+<h3>Next step</h3><div class="next"><p>Change the loop to <code>range(len(string_value))</code> and rerun all six tests.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2020-2">
+      <div class="task-header">2020 Paper 2, Task 2 <span class="files"><a href="https://github.com/xy-cs/H2_Computing/blob/main/TYS/2020_Alevel_Paper2/2020_Alevel_paper2_task2.ipynb" target="_blank" rel="noopener">2020_Alevel_paper2_task2.ipynb</a></span></div>
+      <div class="task-body">
+<p>Tasks 2.1 and 2.2 are in good shape; 2.3 has a conversion bug that spoils the sorted file.</p>
+<h3>Task 2.1</h3><p>Correct inclusive <code>randint(0, maximum)</code>, one value per line, and the run uses the proper randomnumbers_xy_25S11.txt name.</p>
+<h3>Task 2.2</h3><p>The in-place merge works and the required comparison prints True. Be careful though: the base case returns <code>list_of_integers[0]</code>, an integer rather than a list; it only works because the recursive calls&#x27; return values are discarded, and an empty list would recurse forever.</p>
+<h3>Task 2.3</h3><p>Lines are stripped but never converted with <code>int()</code>, so task2_2 orders them as text, putting &quot;1000&quot; before &quot;5&quot; in sortednumbers_xy_25S11.txt.</p>
+<h3>Next step</h3><div class="next"><p>Convert each line with int() before sorting in 2.3, then rerun and check the output file.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2020-3">
+      <div class="task-header">2020 Paper 2, Task 3 <span class="files"><a href="https://github.com/xy-cs/H2_Computing/blob/main/TYS/2020_Alevel_Paper2/2020_Alevel_paper2_task3.ipynb" target="_blank" rel="noopener">2020_Alevel_paper2_task3.ipynb</a></span></div>
+      <div class="task-body">
+<p>The overall structure is sensible, but several correctness bugs remain and testing is thin.</p>
+<h3>Task 3.1</h3><p>The TB branch multiplies by <code>10<strong>2</code> instead of <code>10</strong>12</code>. There is no digit check, so &quot;abKB&quot; crashes at <code>int()</code>, and the function only prints without returning, which breaks reuse: task3_2 gets None for any decimal unit. Only &quot;8KB&quot; is tested; the task asks for all four units plus invalid data.</p>
+<h3>Task 3.2</h3><p>The unit split on the &quot;i&quot; is neat and &quot;2MiB&quot; gives 2097152, but decimal inputs return None via task3_1.</p>
+<h3>Task 3.3</h3><p>Prints &quot;True&quot;/&quot;False&quot; instead of &quot;invalid data&quot; for a bad target_unit; 0.5 for 512MiB to GiB is correct.</p>
+<h3>Next step</h3><div class="next"><p>Fix the TB exponent and add <code>return result</code> in 3.1, then retest every unit.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2020-4">
+      <div class="task-header">2020 Paper 2, Task 4 <span class="files"><a href="https://github.com/xy-cs/H2_Computing/blob/main/TYS/2020_Alevel_Paper2/TASK4_1_xy_25S11.sql" target="_blank" rel="noopener">TASK4_1_xy_25S11.sql</a> <a href="https://github.com/xy-cs/H2_Computing/blob/main/TYS/2020_Alevel_Paper2/Task4_3_xy_25S11.html" target="_blank" rel="noopener">Task4_3_xy_25S11.html</a> <a href="https://github.com/xy-cs/H2_Computing/blob/main/TYS/2020_Alevel_Paper2/Task4_xy_25S11.py" target="_blank" rel="noopener">Task4_xy_25S11.py</a></span></div>
+      <div class="task-body">
+<p>This is a substantial Task 4 with most parts working; the remaining issues are about meeting the spec exactly.</p>
+<h3>Task 4.1</h3><p>The file is named .sql but contains Python; it should hold the DDL itself. The CREATE TABLE statement is correct.</p>
+<h3>Task 4.2</h3><p>Parameterised INSERTs, commit and isalpha handling of O&#x27;Reilly are all good, with useful class test prints. Two details: is_adult uses <code>&gt;= 18</code> where the spec says strictly greater than 18, and Staff&#x27;s screen name keeps the month and day digits before &quot;Staff&quot;.</p>
+<h3>Task 4.3</h3><p>The route rebuilds screen names from people.txt instead of reading school.db, and the template must sit inside a templates folder.</p>
+<h3>Next step</h3><div class="next"><p>Make the 4.3 route SELECT its data from school.db and move the template into templates/.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2021-1">
+      <div class="task-header">2021 Paper 2, Task 1 <span class="files"><a href="https://github.com/xy-cs/H2_Computing/blob/main/TYS/2021_Alevel%20_Paper2/task1.ipynb" target="_blank" rel="noopener">task1.ipynb</a></span></div>
+      <div class="task-body">
+<p>1.1 is correct; 1.2 and 1.3 both need attention.</p>
+<h3>Task 1.1</h3><p>The doubling, digit splitting and (10 - (total % 10)) % 10 guard are right, and the example call returns 2.</p>
+<h3>Task 1.2</h3><p>Your valid string is the worked example &quot;14576567654934&quot;, which the paper says not to use, and there is no plain integer test.</p>
+<h3>Task 1.3</h3><p>task1_3 calls task1_1(s) but never compares the result with the removed digit, so any valid 15-digit number returns True; there are also only two tests instead of four.</p>
+<h3>Next step</h3><div class="next"><p>Return task1_1(s[:-1]) == int(s[-1]) in task1_3, then rebuild both test sets with your own values.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2021-2">
+      <div class="task-header">2021 Paper 2, Task 2 <span class="files"><a href="https://github.com/xy-cs/H2_Computing/blob/main/TYS/2021_Alevel%20_Paper2/2021%20task2.ipynb" target="_blank" rel="noopener">2021 task2.ipynb</a></span></div>
+      <div class="task-body">
+<p>Excellent: all three functions are correctly implemented with clear evidence of correct runs.</p>
+<h3>Task 2.1 to 2.3</h3><p>File reading, a proper insertion sort with the shifting inner loop, and a recursive quicksort with partition all print the correctly sorted TEN.txt list.</p>
+<h3>Task 2.4</h3><p>You timed both sorts on all three files, but the output is six unlabelled numbers with no written comparison; the task asks you to compare the algorithms using orders of growth, for example insertion sort O(n^2) against quicksort&#x27;s O(n log n) average, citing your timings as evidence.</p>
+<h3>Next step</h3><div class="next"><p>Add a short markdown cell interpreting the six timings in terms of orders of growth.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2021-3">
+      <div class="task-header">2021 Paper 2, Task 3 <span class="files"><a href="https://github.com/xy-cs/H2_Computing/blob/main/TYS/2021_Alevel%20_Paper2/2021%20task3.ipynb" target="_blank" rel="noopener">2021 task3.ipynb</a></span></div>
+      <div class="task-body">
+<p>An ambitious array-of-nodes design, but only 3.1 runs and key requirements are missing.</p>
+<h3>Task 3.1</h3><p>insert, delete and count work in your manual test, but there is no search method at all, and you tested with 11, 2, 7, 4 instead of Task3data.txt; to_String prints a list rather than returning the formatted string.</p>
+<h3>Task 3.2</h3><p>The insert override cannot run: new_index is used before it is defined; there is no test or output.</p>
+<h3>Task 3.3</h3><p>super().__init() is a typo and enqueue references an undefined new_index; again untested.</p>
+<h3>Next step</h3><div class="next"><p>Add search, fix the two subclasses, then test all three with Task3data.txt and save the outputs.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2022-4">
+      <div class="task-header">2022 Paper 2, Task 4 <span class="files"><a href="https://github.com/xy-cs/H2_Computing/blob/main/TYS/2022_Alevel_Paper2/2022%20task4.ipynb" target="_blank" rel="noopener">2022 task4.ipynb</a> <a href="https://github.com/xy-cs/H2_Computing/blob/main/TYS/2022_Alevel_Paper2/TASK_4_4_xy.py" target="_blank" rel="noopener">TASK_4_4_xy.py</a> <a href="https://github.com/xy-cs/H2_Computing/blob/main/TYS/2022_Alevel_Paper2/TASK_4_4_xy_25S11.html" target="_blank" rel="noopener">TASK_4_4_xy_25S11.html</a></span></div>
+      <div class="task-body">
+<p>This is strong work across the database tasks, with only the Flask packaging left to tidy.</p>
+<h3>Task 4.1</h3><p>All three tables define their primary keys and Loan carries both FOREIGN KEYs; the parameterised INSERTs in 4.2 are correct.</p>
+<h3>Task 4.3</h3><p>Clear saved output for member 200 showing each title with its Returned status: good evidence your join runs correctly.</p>
+<h3>Task 4.4</h3><p>The query and Jinja loop are right, but the saved TASK_4_4_xy_25S11.html still contains <code>{% for i in result %}</code>, so it is the template, not the rendered page; and render_template needs that template inside a templates subfolder, which is missing from the repo.</p>
+<h3>Next step</h3><div class="next"><p>Put the template in templates/, run the app, and save the browser&#x27;s rendered page as the .html output.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2023-1">
+      <div class="task-header">2023 Paper 2, Task 1 <span class="files"><a href="https://github.com/xy-cs/H2_Computing/blob/main/TYS/2023%20_Alevel_Paper2/2023%20task1.ipynb" target="_blank" rel="noopener">2023 task1.ipynb</a></span></div>
+      <div class="task-body">
+<p>Your sqlite3 pattern and insert order are right, but no foreign keys are defined anywhere.</p>
+<h3>Task 1.1</h3><p>All four tables have primary keys, yet the question asks for foreign keys too: add <code>FOREIGN KEY (ClassName) REFERENCES Class(ClassName)</code> to Student and keys on StudentID and TestID in Student_Test. Also, <code>&#x27;TestID&#x27; INTEGER NOT NULL</code> in Student_Test should be TEXT to match Test, since codes like PG1 are text.</p>
+<h3>Task 1.2</h3><p>Well done: parents inserted first, Mary&#x27;s name split correctly and <code>&quot;01-02-2023&quot;</code> matches the format; do add a simple SELECT, as the notebook has no saved outputs.</p>
+<h3>Next step</h3><div class="next"><p>Add the foreign keys and fix TestID to TEXT, then Run All and save with outputs showing.</p></div>
+      </div>
+    </section>
+    <p class="foot">Disclaimer: AI-assisted evaluation may contain issues. Exercise discretion and seek clarification if in doubt.</p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback: Mickeannu Chen</title>
+  <style>
+    :root { color-scheme: light; --bg:#f5f7fb; --panel:#fff; --text:#1f2937;
+      --muted:#6b7280; --border:#dbe2ea; --accent:#1d4ed8; --accent-soft:#dbeafe; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: Arial, Helvetica, sans-serif; color:var(--text);
+      background: linear-gradient(180deg,#eef4ff 0%,var(--bg) 240px); }
+    .page { max-width: 840px; margin:0 auto; padding:32px 20px 48px; }
+    .hero { background:var(--panel); border:1px solid var(--border); border-radius:18px;
+      padding:24px 28px; box-shadow:0 16px 40px rgba(15,23,42,.08); }
+    h1 { margin:0 0 6px; font-size:1.8rem; }
+    .meta { color:var(--muted); font-size:.95rem; }
+    .meta a { color:var(--accent); text-decoration:none; }
+    .meta a:hover { text-decoration:underline; }
+    section.task { margin-top:24px; background:var(--panel); border:1px solid var(--border);
+      border-radius:18px; overflow:hidden; box-shadow:0 16px 40px rgba(15,23,42,.06); }
+    .task-header { padding:14px 24px; background:var(--accent-soft);
+      border-bottom:1px solid var(--border); font-weight:700; }
+    .task-header .files { float:right; font-weight:400; font-size:.9rem; }
+    .task-header .files a { margin-left:10px; }
+    .task-body { padding:8px 24px 20px; }
+    h3 { font-size:1.02rem; margin:18px 0 6px; }
+    p { margin:6px 0; line-height:1.55; }
+    code { background:#eef2f7; border:1px solid var(--border); border-radius:4px;
+      padding:1px 5px; font-size:.9em; }
+    ul { margin:6px 0; padding-left:22px; }
+    .next { background:#f0fdf4; border:1px solid #bbf7d0; border-radius:10px;
+      padding:10px 14px; margin-top:6px; }
+    .farewell { padding:22px 24px; font-size:1.05rem; line-height:1.6; }
+    .foot { margin-top:20px; font-size:.85rem; color:var(--muted); }
+</style>
+</head>
+<body>
+  <main class="page">
+    <div class="hero">
+      <h1>Mickeannu Chen</h1>
+      <p class="meta">25S21 &middot; <a href="https://github.com/Mickeannu/H2-Computing-" target="_blank" rel="noopener">GitHub repo</a> &middot; <a href="../all.html">Back to the work grid</a></p>
+    </div>
+    <section class="task" id="task-2020-1">
+      <div class="task-header">2020 Paper 2, Task 1 <span class="files"><a href="https://github.com/Mickeannu/H2-Computing-/blob/main/2020%20P2/Task1_Mickeannu.ipynb" target="_blank" rel="noopener">Task1_Mickeannu.ipynb</a></span></div>
+      <div class="task-body">
+<p>Both parts of Task 1 are correct, with saved outputs as clear evidence your code runs.</p>
+<h3>Task 1.1</h3><p>Your loop follows the pseudocode faithfully, applying % 1024 inside the loop after each val = 33 * ord(...), and the three required calls print 116, 1008 and 644.</p>
+<h3>Task 1.2</h3><p>Good reuse: task1_1(seed + string_value) concatenates in the right order, and all three seeds are tested with &quot;Hello&quot;, giving 388, 156 and 282.</p>
+<h3>Next step</h3><div class="next"><p>Rename the notebook to the required TASK1_&lt;name&gt;_&lt;centre number&gt;_&lt;index number&gt; convention before submitting.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2020-2">
+      <div class="task-header">2020 Paper 2, Task 2 <span class="files"><a href="https://github.com/Mickeannu/H2-Computing-/blob/main/2020%20P2/Task2_Mickeannu.ipynb" target="_blank" rel="noopener">Task2_Mickeannu.ipynb</a></span></div>
+      <div class="task-body">
+<p>Your sorting logic is sound, but the run evidence has gaps.</p>
+<h3>Task 2.1</h3><p>random.randint(0, maximum) with one number per line is correct, but the placeholder filename &quot;randomnumbers_YourName, CentreNumber_IndexNumber.txt&quot; was left unedited, and it differs from the underscore version 2.3 reads, so 2.3 looks for a different file.</p>
+<h3>Task 2.2</h3><p>The merge sort itself is correct, but your print of the == True condition sits after return inside the function, so it never executes and no True output is saved.</p>
+<h3>Next step</h3><div class="next"><p>Move the 2.2 test print outside the function, use one consistent filename with your own name, then Run All and save.</p></div>
+      </div>
+    </section>
+    <p class="foot">Disclaimer: AI-assisted evaluation may contain issues. Exercise discretion and seek clarification if in doubt.</p>
+  </main>
+</body>
+</html>

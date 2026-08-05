@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback: Melissa Nataniela Darmali</title>
+  <style>
+    :root { color-scheme: light; --bg:#f5f7fb; --panel:#fff; --text:#1f2937;
+      --muted:#6b7280; --border:#dbe2ea; --accent:#1d4ed8; --accent-soft:#dbeafe; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: Arial, Helvetica, sans-serif; color:var(--text);
+      background: linear-gradient(180deg,#eef4ff 0%,var(--bg) 240px); }
+    .page { max-width: 840px; margin:0 auto; padding:32px 20px 48px; }
+    .hero { background:var(--panel); border:1px solid var(--border); border-radius:18px;
+      padding:24px 28px; box-shadow:0 16px 40px rgba(15,23,42,.08); }
+    h1 { margin:0 0 6px; font-size:1.8rem; }
+    .meta { color:var(--muted); font-size:.95rem; }
+    .meta a { color:var(--accent); text-decoration:none; }
+    .meta a:hover { text-decoration:underline; }
+    section.task { margin-top:24px; background:var(--panel); border:1px solid var(--border);
+      border-radius:18px; overflow:hidden; box-shadow:0 16px 40px rgba(15,23,42,.06); }
+    .task-header { padding:14px 24px; background:var(--accent-soft);
+      border-bottom:1px solid var(--border); font-weight:700; }
+    .task-header .files { float:right; font-weight:400; font-size:.9rem; }
+    .task-header .files a { margin-left:10px; }
+    .task-body { padding:8px 24px 20px; }
+    h3 { font-size:1.02rem; margin:18px 0 6px; }
+    p { margin:6px 0; line-height:1.55; }
+    code { background:#eef2f7; border:1px solid var(--border); border-radius:4px;
+      padding:1px 5px; font-size:.9em; }
+    ul { margin:6px 0; padding-left:22px; }
+    .next { background:#f0fdf4; border:1px solid #bbf7d0; border-radius:10px;
+      padding:10px 14px; margin-top:6px; }
+    .farewell { padding:22px 24px; font-size:1.05rem; line-height:1.6; }
+    .foot { margin-top:20px; font-size:.85rem; color:var(--muted); }
+</style>
+</head>
+<body>
+  <main class="page">
+    <div class="hero">
+      <h1>Melissa Nataniela Darmali</h1>
+      <p class="meta">25S11 &middot; <a href="https://github.com/meltierd/H2-computing" target="_blank" rel="noopener">GitHub repo</a> &middot; <a href="../all.html">Back to the work grid</a></p>
+    </div>
+    <section class="task" id="task-2020-1">
+      <div class="task-header">2020 Paper 2, Task 1 <span class="files"><a href="https://github.com/meltierd/H2-computing/blob/main/tys/2020/TASK1.ipynb" target="_blank" rel="noopener">TASK1.ipynb</a></span></div>
+      <div class="task-body">
+<p>This is fully correct, with clear evidence your code runs correctly: the saved outputs show 116, 1008 and 644 for the three required strings and the three seed hashes for 1.2.</p>
+<h3>Task 1.1</h3><p>The loop mirrors the pseudocode exactly, applying <code>h = (h + val) % 1024</code> inside each iteration and returning h.</p>
+<h3>Task 1.2</h3><p>Concatenating seed with string_value and passing the result to task1_1 is precisely the reuse the task wants, and all three specified calls are printed.</p>
+<p>There is nothing to fix in the logic; the only detail left is presentation, since the notebook is named TASK1.ipynb rather than the specified TASK1_name_centre_index format.</p>
+<h3>Next step</h3><div class="next"><p>Rename the notebook to follow the TASK1_name_centre_index.ipynb convention before submitting.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2020-2">
+      <div class="task-header">2020 Paper 2, Task 2 <span class="files"><a href="https://github.com/meltierd/H2-computing/blob/main/tys/2020/TASK2.ipynb" target="_blank" rel="noopener">TASK2.ipynb</a></span></div>
+      <div class="task-body">
+<p>All three parts are correct, and the saved outputs give clear evidence the whole pipeline runs.</p>
+<h3>Task 2.1</h3><p><code>random.randint(0, maximum)</code> keeps 0 and maximum inclusive and each value is written on its own line; the 1000 and 5000 run is present, though &quot;randomnumbers.txt&quot; omits the required name, centre and index.</p>
+<h3>Task 2.2</h3><p>A textbook merge sort with a separate merge function that extends the leftovers; you printed the sorted list, which is convincing, but the task asks for the condition <code>task2_2([56,...]) == [0,0,4,4,5,7,18,25,56,98]</code> to print True.</p>
+<h3>Task 2.3</h3><p>Correct: <code>int(line.strip())</code> conversion, reuse of task2_2, and the printed sorted list confirms the run.</p>
+<h3>Next step</h3><div class="next"><p>Print the equality condition for 2.2 so True appears in the output.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2020-3">
+      <div class="task-header">2020 Paper 2, Task 3 <span class="files"><a href="https://github.com/meltierd/H2-computing/blob/main/tys/2020/TASK3.ipynb" target="_blank" rel="noopener">TASK3.ipynb</a></span></div>
+      <div class="task-body">
+<p>This is a strong Task 3 with wide-ranging tests and saved outputs, but one validation gap remains.</p>
+<h3>Task 3.1</h3><p>Checking <code>isdigit()</code> and membership in the unit dictionary before converting is exactly right, and your invalid cases (&quot;abcKB&quot;, &quot;8abc&quot;) behave properly.</p>
+<h3>Task 3.2</h3><p>The binary branch has no digit check: an input like &quot;abcKiB&quot; passes the <code>[-3:]</code> unit test, then <code>int(quantity_of_data[:-3])</code> crashes instead of returning &quot;invalid data&quot;. The decimal branch validates correctly, and all eight units are tested with the right values, including 2097152 for &quot;2MiB&quot;.</p>
+<h3>Task 3.3</h3><p>Correct: target_unit validated, task3_2 reused, invalid propagated, 0.5 shown for 512MiB to GiB.</p>
+<h3>Next step</h3><div class="next"><p>Add an isdigit check to the binary branch of task3_2 and test &quot;abcKiB&quot;.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2020-4">
+      <div class="task-header">2020 Paper 2, Task 4 <span class="files"><a href="https://github.com/meltierd/H2-computing/blob/main/tys/2020/TASK4_1.sql" target="_blank" rel="noopener">TASK4_1.sql</a> <a href="https://github.com/meltierd/H2-computing/blob/main/tys/2020/TASK4_2.py" target="_blank" rel="noopener">TASK4_2.py</a> <a href="https://github.com/meltierd/H2-computing/blob/main/tys/2020/TASK4_3.py" target="_blank" rel="noopener">TASK4_3.py</a></span></div>
+      <div class="task-body">
+<p>You have the right overall skeleton, but this code cannot run yet.</p>
+<h3>Task 4.1</h3><p><code>CREATE DATABASE school</code> is not SQLite (the database is created by connecting to school.db), and the keyword order must be <code>PersonID INTEGER PRIMARY KEY AUTOINCREMENT</code>.</p>
+<h3>Task 4.2</h3><p>The INSERT line is missing its closing bracket, so the file stops with a SyntaxError, and a <code>?</code> placeholder cannot stand in for the table name. The slices <code>[3:5]</code> and <code>[0:2]</code> assume DD-MM, but the DOB format is YYYY-MM-DD, and is_adult still returns False for everyone. Choosing Person, Staff or Student from the third field is correct.</p>
+<h3>Task 4.3</h3><p>Only <code>import flask</code> so far.</p>
+<h3>Next step</h3><div class="next"><p>Fix the INSERT statement so TASK4_2.py runs end to end, then build the Flask app.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2021-1">
+      <div class="task-header">2021 Paper 2, Task 1 <span class="files"><a href="https://github.com/meltierd/H2-computing/blob/main/tys/2021/TASK1.ipynb" target="_blank" rel="noopener">TASK1.ipynb</a></span></div>
+      <div class="task-body">
+<p>Nearly there: one algorithm slip and one banned test value.</p>
+<h3>Task 1.1</h3><p>Doubling alternate digits and summing digit by digit is right, but check = 10 - (total % 10) returns 10 when the total is already divisible by 10; add a final % 10.</p>
+<h3>Task 1.2</h3><p>All four input types print True, but the second test reuses the worked example 14576567654934, which the paper tells you not to use.</p>
+<h3>Task 1.3</h3><p>Correctly reuses task1_1, converts the removed digit with int, and uses not so all four tests print True.</p>
+<h3>Next step</h3><div class="next"><p>Fix the check digit for totals ending in 0, then swap in your own 1.2 value.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2021-2">
+      <div class="task-header">2021 Paper 2, Task 2 <span class="files"><a href="https://github.com/meltierd/H2-computing/blob/main/tys/2021/TASK2.ipynb" target="_blank" rel="noopener">TASK2.ipynb</a></span></div>
+      <div class="task-body">
+<p>Tasks 2.1 and 2.2 are correct; 2.3 has a real bug and 2.4 is unfinished.</p>
+<h3>Task 2.1 and 2.2</h3><p>File reading with int(line.strip()) and the insertion sort both print correct results for TEN.txt.</p>
+<h3>Task 2.3</h3><p>The pivot swap of list_of_integers[i + 1] with list_of_integers[high] sits inside the for loop, so partition moves the pivot on every iteration; your printed list [619, 653, 1447, 2029, 1636, ...] is not sorted.</p>
+<h3>Task 2.4</h3><p>The cell stops at def: no timings and no orders of growth comparison.</p>
+<h3>Next step</h3><div class="next"><p>Unindent the pivot swap so it runs after the loop, re-run 2.3, then complete the timeit comparison.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2021-3">
+      <div class="task-header">2021 Paper 2, Task 3 <span class="files"><a href="https://github.com/meltierd/H2-computing/blob/main/tys/2021/TASK3.ipynb" target="_blank" rel="noopener">TASK3.ipynb</a></span></div>
+      <div class="task-body">
+<p>Task 3 is at an early stage: only part of 3.1 exists and the notebook has no saved outputs. In LinkedList, insert at the head is correct, but to_String never advances curr inside its while loop so it would hang forever, and delete crashes when the value is at the head because prev is still None when you use prev.next. There is no load of Task3data.txt, and 3.2 SortedLinkedList and 3.3 Queue are not attempted. The practical needs output visible in the .ipynb, so Run All and save before pushing.</p>
+<h3>Next step</h3><div class="next"><p>Fix to_String to advance curr and build the comma-separated string, then complete 3.2 and 3.3.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2022-4">
+      <div class="task-header">2022 Paper 2, Task 4 <span class="files"><a href="https://github.com/meltierd/H2-computing/blob/main/tys/2022/TASK4.ipynb" target="_blank" rel="noopener">TASK4.ipynb</a></span></div>
+      <div class="task-body">
+<p>Your database work in 4.1 to 4.3 is largely sound; 4.4 is the part that needs attention.</p>
+<h3>Task 4.1</h3><p>All three CREATE TABLE statements have the correct primary keys and both FOREIGN KEYs on Loan: well done. The parameterised INSERTs in 4.2 with strip() are also correct.</p>
+<h3>Task 4.3</h3><p>The join works and shows saved output, but you tested member 205; the specified test is member 200.</p>
+<h3>Task 4.4</h3><p>This must be a Flask web application returning an HTML table, not console prints; also your filter <code>Loan.Returned = &quot;False&quot;</code> will not match the stored value &#x27;FALSE&#x27; because the comparison is case sensitive, and this cell has no saved output.</p>
+<h3>Next step</h3><div class="next"><p>Rewrite 4.4 as a Flask app filtering on &#x27;FALSE&#x27;, and save the rendered HTML page.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2023-1">
+      <div class="task-header">2023 Paper 2, Task 1 <span class="files"><a href="https://github.com/meltierd/H2-computing/blob/main/tys/2023/TASK1.ipynb" target="_blank" rel="noopener">TASK1.ipynb</a></span></div>
+      <div class="task-body">
+<p>Your SQL is among the most accurate in the class, but the notebook was pushed with no saved outputs.</p>
+<h3>Task 1.1</h3><p>Every foreign key is declared correctly, including <code>FOREIGN KEY (ClassName) REFERENCES Class(ClassName)</code> in Student; the one gap is no <code>DROP TABLE IF EXISTS</code> before each CREATE, so rerunning the cell will crash with &quot;table Student already exists&quot;.</p>
+<h3>Task 1.2</h3><p>Your insert order is textbook, Class and Test before Student and Student_Test, with the date <code>&quot;01-02-2023&quot;</code> correct; add a simple SELECT to show the rows, as the exam requires the output visible in the .ipynb.</p>
+<h3>Next step</h3><div class="next"><p>Add the DROP statements and a verification SELECT, then Run All and save before pushing.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2023-2">
+      <div class="task-header">2023 Paper 2, Task 2 <span class="files"><a href="https://github.com/meltierd/H2-computing/blob/main/tys/2023/TASK2.ipynb" target="_blank" rel="noopener">TASK2.ipynb</a></span></div>
+      <div class="task-body">
+<p>This is close to a fully working circular queue; one design slip in dequeue() causes the saved error.</p>
+<h3>Task 2.3</h3><p>enqueue() with % 4 wrap and numberItems is correct, and your run shows the fifth addition failing as it should.</p>
+<h3>Task 2.4</h3><p>dequeue() should return just the removed item, but you return [new head item, deleted]. When the fourth removal empties the queue, queueList[headPointer] is None, so res[0].getID() raises the AttributeError in your output, and the fifth call never reaches the empty message.</p>
+<h3>Task 2.5</h3><p>printQueue() correctly walks from headPointer for numberItems steps.</p>
+<h3>Next step</h3><div class="next"><p>Return only <code>deleted</code> from dequeue(), print the removed item&#x27;s ID and quantity, and re-run.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2023-3">
+      <div class="task-header">2023 Paper 2, Task 3 <span class="files"><a href="https://github.com/meltierd/H2-computing/blob/main/tys/2023/TASK3.ipynb" target="_blank" rel="noopener">TASK3.ipynb</a></span></div>
+      <div class="task-body">
+<p>All four parts work, with correct results on both examples: -1 and 3 for rows, -1 and 4 for columns, True and False for mini-squares.</p>
+<h3>Task 3.1</h3><p>Validation checks format only and allows duplicates, which is right; note your &#x27;too many numbers&#x27; message also appears when too few are entered.</p>
+<h3>Task 3.2</h3><p>The tests print bare values like -1 and 3; the task asks for an appropriate message depending on the return value.</p>
+<h3>Task 3.4</h3><p>Listing all 81 coordinates works but is heavy; nested loops stepping in 3s over block rows and columns do the same in a few lines.</p>
+<h3>Next step</h3><div class="next"><p>Wrap each test call in an if statement that prints a clear message.</p></div>
+      </div>
+    </section>
+    <p class="foot">Disclaimer: AI-assisted evaluation may contain issues. Exercise discretion and seek clarification if in doubt.</p>
+  </main>
+</body>
+</html>

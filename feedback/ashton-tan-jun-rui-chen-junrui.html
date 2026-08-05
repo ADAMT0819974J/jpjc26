@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback: Ashton Tan Jun Rui (Chen Junrui)</title>
+  <style>
+    :root { color-scheme: light; --bg:#f5f7fb; --panel:#fff; --text:#1f2937;
+      --muted:#6b7280; --border:#dbe2ea; --accent:#1d4ed8; --accent-soft:#dbeafe; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: Arial, Helvetica, sans-serif; color:var(--text);
+      background: linear-gradient(180deg,#eef4ff 0%,var(--bg) 240px); }
+    .page { max-width: 840px; margin:0 auto; padding:32px 20px 48px; }
+    .hero { background:var(--panel); border:1px solid var(--border); border-radius:18px;
+      padding:24px 28px; box-shadow:0 16px 40px rgba(15,23,42,.08); }
+    h1 { margin:0 0 6px; font-size:1.8rem; }
+    .meta { color:var(--muted); font-size:.95rem; }
+    .meta a { color:var(--accent); text-decoration:none; }
+    .meta a:hover { text-decoration:underline; }
+    section.task { margin-top:24px; background:var(--panel); border:1px solid var(--border);
+      border-radius:18px; overflow:hidden; box-shadow:0 16px 40px rgba(15,23,42,.06); }
+    .task-header { padding:14px 24px; background:var(--accent-soft);
+      border-bottom:1px solid var(--border); font-weight:700; }
+    .task-header .files { float:right; font-weight:400; font-size:.9rem; }
+    .task-header .files a { margin-left:10px; }
+    .task-body { padding:8px 24px 20px; }
+    h3 { font-size:1.02rem; margin:18px 0 6px; }
+    p { margin:6px 0; line-height:1.55; }
+    code { background:#eef2f7; border:1px solid var(--border); border-radius:4px;
+      padding:1px 5px; font-size:.9em; }
+    ul { margin:6px 0; padding-left:22px; }
+    .next { background:#f0fdf4; border:1px solid #bbf7d0; border-radius:10px;
+      padding:10px 14px; margin-top:6px; }
+    .farewell { padding:22px 24px; font-size:1.05rem; line-height:1.6; }
+    .foot { margin-top:20px; font-size:.85rem; color:var(--muted); }
+</style>
+</head>
+<body>
+  <main class="page">
+    <div class="hero">
+      <h1>Ashton Tan Jun Rui (Chen Junrui)</h1>
+      <p class="meta">25S21 &middot; <a href="https://github.com/isw1sh/h2-computing" target="_blank" rel="noopener">GitHub repo</a> &middot; <a href="../all.html">Back to the work grid</a></p>
+    </div>
+    <section class="task" id="task-2020-1">
+      <div class="task-header">2020 Paper 2, Task 1 <span class="files"><a href="https://github.com/isw1sh/h2-computing/blob/main/a%20level%20papers/2020%20p2/task1.ipynb" target="_blank" rel="noopener">task1.ipynb</a></span></div>
+      <div class="task-body">
+<p>This is fully correct, with saved outputs giving clear evidence your code runs correctly: 116, 1008 and 644 for the three required strings, then 388, 156 and 282 for the seeds.</p>
+<h3>Task 1.1</h3><p>The loop applies <code>h = (h + val) % 1024</code> inside every iteration, exactly matching the pseudocode, and all three specified calls are printed.</p>
+<h3>Task 1.2</h3><p>Concatenating seed with string_value and handing the result to task1_1 is precisely the function reuse the task wants, with all three seed calls made.</p>
+<p>Nothing needs fixing in the logic; the only detail is that the notebook is named task1.ipynb rather than the specified TASK1_name_centre_index format.</p>
+<h3>Next step</h3><div class="next"><p>Rename the notebook to the TASK1_name_centre_index.ipynb convention before submitting.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2020-2">
+      <div class="task-header">2020 Paper 2, Task 2 <span class="files"><a href="https://github.com/isw1sh/h2-computing/blob/main/a%20level%20papers/2020%20p2/task2.ipynb" target="_blank" rel="noopener">task2.ipynb</a></span></div>
+      <div class="task-body">
+<p>Nearly perfect work across all three parts; one bounds bug in 2.1 is the main issue.</p>
+<h3>Task 2.1</h3><p>You call <code>randint(1, maximum)</code>, but the range is 0 to maximum inclusive, so 0 can never be generated; it should be <code>randint(0, maximum)</code>. The one-per-line file writing and the 1000-value run are otherwise correct, though &quot;randomnumbers.txt&quot; omits your name, centre and index.</p>
+<h3>Task 2.2</h3><p>A clean recursive merge sort with a separate merge function, and the required condition prints True in the saved output.</p>
+<h3>Task 2.3</h3><p>Correct: <code>int(line)</code> conversion, reuse of task2_2 and writing one value per line; the run cell completes without error.</p>
+<h3>Next step</h3><div class="next"><p>Change the lower bound to randint(0, maximum) and rerun both file tasks.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2020-3">
+      <div class="task-header">2020 Paper 2, Task 3 <span class="files"><a href="https://github.com/isw1sh/h2-computing/blob/main/a%20level%20papers/2020%20p2/task3.ipynb" target="_blank" rel="noopener">task3.ipynb</a></span></div>
+      <div class="task-body">
+<p>Tasks 3.1 and 3.2 are solid with thorough eight-unit testing; 3.3 has a bug your own output reveals.</p>
+<h3>Task 3.1 and 3.2</h3><p>Good validation of length and unit, and the &quot;i&quot; check to pick two or three character units is neat. One gap: <code>int(number)</code> runs before any digit check, so &quot;abKB&quot; crashes instead of returning &quot;invalid data&quot;.</p>
+<h3>Task 3.3</h3><p>The decimal and binary conversions are two separate if statements, so after a KB/MB/GB/TB division the second chain&#x27;s <code>else</code> divides again by 2**40: task3_3(&#x27;512MiB&#x27;, &#x27;GB&#x27;) printed 4.8828125e-13 instead of about 0.537. Merge them into one if/elif chain. Also &quot;Invalid data&quot; differs from the required lowercase &quot;invalid data&quot;.</p>
+<h3>Next step</h3><div class="next"><p>Combine the two chains into one if/elif ladder and retest 512MiB to GB.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2020-4">
+      <div class="task-header">2020 Paper 2, Task 4 <span class="files"><a href="https://github.com/isw1sh/h2-computing/blob/main/a%20level%20papers/2020%20p2/TASK4_1_ashtontan.sql" target="_blank" rel="noopener">TASK4_1_ashtontan.sql</a> <a href="https://github.com/isw1sh/h2-computing/blob/main/a%20level%20papers/2020%20p2/TASK4_2_ashtontan.py" target="_blank" rel="noopener">TASK4_2_ashtontan.py</a> <a href="https://github.com/isw1sh/h2-computing/blob/main/a%20level%20papers/2020%20p2/Task4_3_ashtontan/task4_3_ashtontan.py" target="_blank" rel="noopener">task4_3_ashtontan.py</a> <a href="https://github.com/isw1sh/h2-computing/blob/main/a%20level%20papers/2020%20p2/Task4_3_ashtontan/templates/index.html" target="_blank" rel="noopener">index.html</a></span></div>
+      <div class="task-body">
+<p>A very complete Task 4: correct DDL in the .sql file, a proper templates folder, and all three fields shown on the page.</p>
+<h3>Task 4.2</h3><p>Parameterised INSERTs with <code>int(p.is_adult())</code> and isalpha cleaning of O&#x27;Reilly are well done. Two spec details: is_adult uses <code>&gt;= 18</code> where the spec says strictly greater than 18, and Staff&#x27;s screen name keeps the month and day digits before &quot;Staff&quot; (the spec wants name then &quot;Staff&quot; only).</p>
+<h3>Task 4.3</h3><p>Since identity is not stored, you infer it from the &quot;Staff&quot; suffix and IsAdult; a Person aged under 19 would then display as Student. The rendered page is not saved as an .html file.</p>
+<h3>Next step</h3><div class="next"><p>Run the app and save the rendered page as an .html file alongside the code.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2021-2">
+      <div class="task-header">2021 Paper 2, Task 2 <span class="files"><a href="https://github.com/isw1sh/h2-computing/blob/main/a%20level%20papers/2021%20p2/task2.ipynb" target="_blank" rel="noopener">task2.ipynb</a></span></div>
+      <div class="task-body">
+<p>There is no reviewable attempt at Task 2 yet. Every task cell (# Task 2.1 to # Task 2.4) is empty, and the only code in the notebook is the timing loop at the bottom, which calls task2_1, task2_2 and task2_3 that are never defined; the notebook has no saved outputs, so nothing has been run. The timing template itself is correctly adapted, looping over TEN.txt, HUNDRED.txt and THOUSAND.txt, so once the functions exist it should work.</p>
+<h3>Next step</h3><div class="next"><p>Write task2_1 (file reading), task2_2 (insertion sort) and task2_3 (quicksort), then Run All and save before pushing.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2023-1">
+      <div class="task-header">2023 Paper 2, Task 1 <span class="files"><a href="https://github.com/isw1sh/h2-computing/blob/main/a%20level%20papers/2023%20p2/task1.ipynb" target="_blank" rel="noopener">task1.ipynb</a></span></div>
+      <div class="task-body">
+<p>Tidy work with parameterised inserts; the main gaps are a missing foreign key and an unrun notebook.</p>
+<h3>Task 1.1</h3><p>Your primary keys and <code>DROP TABLE IF EXISTS</code> habit are good, but <code>Student</code> lacks <code>FOREIGN KEY (ClassName) REFERENCES Class(ClassName)</code>, and <code>TestID PRIMARY KEY</code> needs the TEXT type.</p>
+<h3>Task 1.2</h3><p>Your insert order (Class, Test, Student, Student_Test) respects the dependencies and <code>&#x27;2023-02-01&#x27;</code> is a defensible date; but there is no saved output, and the exam requires it visible in the .ipynb, so add a <code>SELECT * FROM Student_Test</code>.</p>
+<h3>Next step</h3><div class="next"><p>Add the ClassName foreign key, then Run All and save before pushing.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2023-2">
+      <div class="task-header">2023 Paper 2, Task 2 <span class="files"><a href="https://github.com/isw1sh/h2-computing/blob/main/a%20level%20papers/2023%20p2/task2.ipynb" target="_blank" rel="noopener">task2.ipynb</a></span></div>
+      <div class="task-body">
+<p>Your queue logic is mostly sound, but re-declaring class Queue in every cell wipes earlier methods and leaves the required test runs missing.</p>
+<h3>Task 2.1</h3><p><code>getquantity()</code> should be <code>getQuantity()</code>.</p>
+<h3>Task 2.2</h3><p>Good % 4 wrap and numberItems checks, but enqueue() returns &#x27;Queue is full&#x27; or &#x27;Item queued&#x27; instead of False or True, and your test enqueues plain numbers like q.enqueue(4) rather than five input ID and quantity sets wrapped as QueueItem objects.</p>
+<h3>Task 2.5</h3><p>The fresh <code>class Queue:</code> here has no constructor, hence the NameError; printQueue also uses cur += 1 without wrapping.</p>
+<h3>Next step</h3><div class="next"><p>Keep one complete Queue class, add input-driven tests for 2.3 to 2.5, then Run All.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2023-3">
+      <div class="task-header">2023 Paper 2, Task 3 <span class="files"><a href="https://github.com/isw1sh/h2-computing/blob/main/a%20level%20papers/2023%20p2/task3.ipynb" target="_blank" rel="noopener">task3.ipynb</a></span></div>
+      <div class="task-body">
+<p>This is a strong Task 3: every check is correct and both examples give the expected results.</p>
+<h3>Task 3.1</h3><p>The while loop re-prompts until a row is valid, checking format only, and your output even shows an invalid row being rejected before example1 is stored.</p>
+<h3>Task 3.2</h3><p><code>sorted(row) != [1,2,3,4,5,6,7,8,9]</code> is the right completeness test, but you print the bare return values -1 and 3; the task asks for an appropriate message depending on each return value.</p>
+<h3>Task 3.4</h3><p>Nested loops stepping in 3s with the sorted comparison are neat and correct.</p>
+<h3>Next step</h3><div class="next"><p>Add an if statement after each test call that prints a clear complete or incomplete message.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2023-4">
+      <div class="task-header">2023 Paper 2, Task 4 <span class="files"><a href="https://github.com/isw1sh/h2-computing/blob/main/a%20level%20papers/2023%20p2/TASK_4_3_ashtontan/TASK_4_3_ashtontan.html" target="_blank" rel="noopener">TASK_4_3_ashtontan.html</a> <a href="https://github.com/isw1sh/h2-computing/blob/main/a%20level%20papers/2023%20p2/TASK_4_3_ashtontan/TASK_4_3_ashtontan.py" target="_blank" rel="noopener">TASK_4_3_ashtontan.py</a> <a href="https://github.com/isw1sh/h2-computing/blob/main/a%20level%20papers/2023%20p2/task4.ipynb" target="_blank" rel="noopener">task4.ipynb</a></span></div>
+      <div class="task-body">
+<p>Tasks 4.1 and 4.2 are in good shape, but Task 4.3 is unfinished.</p>
+<h3>Task 4.1</h3><p>Reading with strip(), the run counting, and the single digit string written to compressedimage.txt are all correct, with the compressed output shown.</p>
+<h3>Task 4.2</h3><p>Decompress steps through 4 characters at a time correctly and the menu calls the right functions; the saved run only proves the compressed file was re-read, so show a decompression run too.</p>
+<h3>Task 4.3</h3><p>TASK_4_3_ashtontan.py stops after read_decompressed() and buildGrid(): there is no Flask app or route returning HTML, and TASK_4_3_ashtontan.html is empty (0 bytes).</p>
+<h3>Next step</h3><div class="next"><p>Build the Flask route that renders the 9x9 table, run it, and save the rendered page.</p></div>
+      </div>
+    </section>
+    <p class="foot">Disclaimer: AI-assisted evaluation may contain issues. Exercise discretion and seek clarification if in doubt.</p>
+  </main>
+</body>
+</html>

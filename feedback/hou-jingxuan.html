@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback: Hou Jingxuan</title>
+  <style>
+    :root { color-scheme: light; --bg:#f5f7fb; --panel:#fff; --text:#1f2937;
+      --muted:#6b7280; --border:#dbe2ea; --accent:#1d4ed8; --accent-soft:#dbeafe; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: Arial, Helvetica, sans-serif; color:var(--text);
+      background: linear-gradient(180deg,#eef4ff 0%,var(--bg) 240px); }
+    .page { max-width: 840px; margin:0 auto; padding:32px 20px 48px; }
+    .hero { background:var(--panel); border:1px solid var(--border); border-radius:18px;
+      padding:24px 28px; box-shadow:0 16px 40px rgba(15,23,42,.08); }
+    h1 { margin:0 0 6px; font-size:1.8rem; }
+    .meta { color:var(--muted); font-size:.95rem; }
+    .meta a { color:var(--accent); text-decoration:none; }
+    .meta a:hover { text-decoration:underline; }
+    section.task { margin-top:24px; background:var(--panel); border:1px solid var(--border);
+      border-radius:18px; overflow:hidden; box-shadow:0 16px 40px rgba(15,23,42,.06); }
+    .task-header { padding:14px 24px; background:var(--accent-soft);
+      border-bottom:1px solid var(--border); font-weight:700; }
+    .task-header .files { float:right; font-weight:400; font-size:.9rem; }
+    .task-header .files a { margin-left:10px; }
+    .task-body { padding:8px 24px 20px; }
+    h3 { font-size:1.02rem; margin:18px 0 6px; }
+    p { margin:6px 0; line-height:1.55; }
+    code { background:#eef2f7; border:1px solid var(--border); border-radius:4px;
+      padding:1px 5px; font-size:.9em; }
+    ul { margin:6px 0; padding-left:22px; }
+    .next { background:#f0fdf4; border:1px solid #bbf7d0; border-radius:10px;
+      padding:10px 14px; margin-top:6px; }
+    .farewell { padding:22px 24px; font-size:1.05rem; line-height:1.6; }
+    .foot { margin-top:20px; font-size:.85rem; color:var(--muted); }
+</style>
+</head>
+<body>
+  <main class="page">
+    <div class="hero">
+      <h1>Hou Jingxuan</h1>
+      <p class="meta">25S22 &middot; <a href="https://github.com/jingxuan4/H2_computing" target="_blank" rel="noopener">GitHub repo</a> &middot; <a href="../all.html">Back to the work grid</a></p>
+    </div>
+    <section class="task" id="task-2020-1">
+      <div class="task-header">2020 Paper 2, Task 1 <span class="files"><a href="https://github.com/jingxuan4/H2_computing/blob/main/2020/task1_2020.ipynb" target="_blank" rel="noopener">task1_2020.ipynb</a></span></div>
+      <div class="task-body">
+<p>Both hash functions are implemented correctly; only your test calls stray from the paper.</p>
+<h3>Task 1.1</h3><p>The loop applies % 1024 inside each iteration exactly as the pseudocode requires, and the three required calls print 116, 1008 and 644.</p>
+<h3>Task 1.2</h3><p>Concatenation and reuse of task1_1 are right, but you tested with (&quot;ABC&quot;, &quot;Hello&quot;), (&quot;XYZ&quot;, &quot;Hallo&quot;) and (&quot;123&quot;, &quot;Hullo&quot;) instead of the required task1_2(&quot;seed-one&quot;, &quot;Hello&quot;), (&quot;seed-two&quot;, &quot;Hello&quot;) and (&quot;seed-three&quot;, &quot;Hello&quot;).</p>
+<h3>Next step</h3><div class="next"><p>Replace the Task 1.2 tests with the three seed calls from the paper, then rerun and save.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2020-2">
+      <div class="task-header">2020 Paper 2, Task 2 <span class="files"><a href="https://github.com/jingxuan4/H2_computing/blob/main/2020/2020_task2%2B3.ipynb" target="_blank" rel="noopener">2020_task2+3.ipynb</a></span></div>
+      <div class="task-body">
+<p>Task 2 works end to end with a correct merge sort and sound file handling.</p>
+<h3>Task 2.1</h3><p>The randint bounds and one-number-per-line writing are correct, but you saved to randomnumbers.txt instead of the required randomnumbers_&lt;name&gt;_&lt;centre&gt;_&lt;index&gt;.txt pattern.</p>
+<h3>Task 2.2</h3><p>mergesort plus merge is a genuine merge sort and the printed result matches the expected sorted list; the unused duplicate merge2 should be deleted, and printing the == comparison as True would match the paper&#x27;s example.</p>
+<h3>Task 2.3</h3><p>Reading with int(line.strip()), sorting through task2_2 and writing with newlines are all correct.</p>
+<h3>Next step</h3><div class="next"><p>Rename both output files to the required pattern and remove the leftover merge2 function.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2023-1">
+      <div class="task-header">2023 Paper 2, Task 1 <span class="files"><a href="https://github.com/jingxuan4/H2_computing/blob/main/2023/task1%20%282%29.ipynb" target="_blank" rel="noopener">task1 (2).ipynb</a></span></div>
+      <div class="task-body">
+<p>Strong design with every key declared, but a typo and missing saved outputs hold it back.</p>
+<h3>Task 1.1</h3><p>All primary and foreign keys are declared, including ClassName in Student: well done. However, CREATE TABLE IF NOT EXIST Student must be IF NOT EXISTS; as written the cell raises an OperationalError. Also, print(givenname) shows the cursor object, not rows; loop over the SELECT results instead.</p>
+<h3>Task 1.2</h3><p>Your insert order (Class, Student, Test, Student_Test) and the date &#x27;01-02-2023&#x27; are exactly right. The exam requires the output visible in the .ipynb, and your file has none saved.</p>
+<h3>Next step</h3><div class="next"><p>Fix EXISTS, then restart the kernel, Run All, and save the notebook with outputs before pushing.</p></div>
+      </div>
+    </section>
+    <p class="foot">Disclaimer: AI-assisted evaluation may contain issues. Exercise discretion and seek clarification if in doubt.</p>
+  </main>
+</body>
+</html>

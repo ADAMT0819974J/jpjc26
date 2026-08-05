@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback: Li Qiaoling</title>
+  <style>
+    :root { color-scheme: light; --bg:#f5f7fb; --panel:#fff; --text:#1f2937;
+      --muted:#6b7280; --border:#dbe2ea; --accent:#1d4ed8; --accent-soft:#dbeafe; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: Arial, Helvetica, sans-serif; color:var(--text);
+      background: linear-gradient(180deg,#eef4ff 0%,var(--bg) 240px); }
+    .page { max-width: 840px; margin:0 auto; padding:32px 20px 48px; }
+    .hero { background:var(--panel); border:1px solid var(--border); border-radius:18px;
+      padding:24px 28px; box-shadow:0 16px 40px rgba(15,23,42,.08); }
+    h1 { margin:0 0 6px; font-size:1.8rem; }
+    .meta { color:var(--muted); font-size:.95rem; }
+    .meta a { color:var(--accent); text-decoration:none; }
+    .meta a:hover { text-decoration:underline; }
+    section.task { margin-top:24px; background:var(--panel); border:1px solid var(--border);
+      border-radius:18px; overflow:hidden; box-shadow:0 16px 40px rgba(15,23,42,.06); }
+    .task-header { padding:14px 24px; background:var(--accent-soft);
+      border-bottom:1px solid var(--border); font-weight:700; }
+    .task-header .files { float:right; font-weight:400; font-size:.9rem; }
+    .task-header .files a { margin-left:10px; }
+    .task-body { padding:8px 24px 20px; }
+    h3 { font-size:1.02rem; margin:18px 0 6px; }
+    p { margin:6px 0; line-height:1.55; }
+    code { background:#eef2f7; border:1px solid var(--border); border-radius:4px;
+      padding:1px 5px; font-size:.9em; }
+    ul { margin:6px 0; padding-left:22px; }
+    .next { background:#f0fdf4; border:1px solid #bbf7d0; border-radius:10px;
+      padding:10px 14px; margin-top:6px; }
+    .farewell { padding:22px 24px; font-size:1.05rem; line-height:1.6; }
+    .foot { margin-top:20px; font-size:.85rem; color:var(--muted); }
+</style>
+</head>
+<body>
+  <main class="page">
+    <div class="hero">
+      <h1>Li Qiaoling</h1>
+      <p class="meta">25S11 &middot; <a href="https://github.com/lql-svg/H2-computing" target="_blank" rel="noopener">GitHub repo</a> &middot; <a href="../all.html">Back to the work grid</a></p>
+    </div>
+    <section class="task" id="task-2020-1">
+      <div class="task-header">2020 Paper 2, Task 1 <span class="files"><a href="https://github.com/lql-svg/H2-computing/blob/main/tys/2020/Task%201-3.ipynb" target="_blank" rel="noopener">Task 1-3.ipynb</a></span></div>
+      <div class="task-body">
+<p>Your structure is faithful to the pseudocode, but an off-by-one error makes every hash wrong.</p>
+<h3>Task 1.1</h3><p><code>for i in range(len(string_value) - 1)</code> skips the final character, which is why task1_1(&quot;Hello&quot;) shows 549 instead of 116. The pseudocode&#x27;s <code>FOR i ← 0 TO length - 1</code> includes the last index, so use <code>range(len(string_value))</code>. The modulus inside the loop and <code>33 * ord(...)</code> are correct. &quot;Hallo&quot; and &quot;Hullo&quot; are untested.</p>
+<h3>Task 1.2</h3><p>Concatenating seed with string_value and reusing task1_1 is right, but the cell shows an output (105) with no visible call, and none of the three seed tests appears.</p>
+<h3>Next step</h3><div class="next"><p>Fix the range, add all six required calls, then Run All and save.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2020-4">
+      <div class="task-header">2020 Paper 2, Task 4 <span class="files"><a href="https://github.com/lql-svg/H2-computing/blob/main/tys/2020/TASK4_1.sql" target="_blank" rel="noopener">TASK4_1.sql</a> <a href="https://github.com/lql-svg/H2-computing/blob/main/tys/2020/Task4_2.py" target="_blank" rel="noopener">Task4_2.py</a> <a href="https://github.com/lql-svg/H2-computing/blob/main/tys/2020/Task4_3.html" target="_blank" rel="noopener">Task4_3.html</a> <a href="https://github.com/lql-svg/H2-computing/blob/main/tys/2020/Task4_3.py" target="_blank" rel="noopener">Task4_3.py</a></span></div>
+      <div class="task-body">
+<p>A strong Task 4: the class design and database work in Task4_2.py are largely right.</p>
+<h3>Task 4.1</h3><p>AUTOINCRMENT is misspelt (missing an E), so the DDL would fail; the corrected version inside Task4_2.py is right.</p>
+<h3>Task 4.2</h3><p>Parameterised INSERTs handle Evan O&#x27;Reilly&#x27;s apostrophe safely, isalpha strips punctuation, and IsAdult is stored as 1 or 0 with a commit. Two details: Staff&#x27;s screen name keeps the month and day digits before &quot;Staff&quot; (the spec wants name then &quot;Staff&quot; only), and 2026 is hardcoded in is_adult.</p>
+<h3>Task 4.3</h3><p><code>render_template(&quot;task4_3.html&quot;)</code> needs the template inside a templates folder, but Task4_3.html sits at the top level, so the page cannot render.</p>
+<h3>Next step</h3><div class="next"><p>Move the template into templates/, run the app and save the rendered page.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2021-1">
+      <div class="task-header">2021 Paper 2, Task 1 <span class="files"><a href="https://github.com/lql-svg/H2-computing/blob/main/tys/2021/Task%201-3.ipynb" target="_blank" rel="noopener">Task 1-3.ipynb</a></span></div>
+      <div class="task-body">
+<p>Your functions are correct; the testing format is what needs work.</p>
+<h3>Task 1.1</h3><p>Validation, digit doubling and the (10 - (total % 10)) % 10 guard are all right.</p>
+<h3>Task 1.2</h3><p>You print raw return values (9, 1, then -1 with debug messages) instead of the required print(task1_1(input_value) == expected) form where all four lines print True.</p>
+<h3>Task 1.3</h3><p>The comparison against the removed digit works, but you test only one value, task1_3(145765692549346); the paper wants four tests, two valid and two invalid wrapped in not.</p>
+<h3>Next step</h3><div class="next"><p>Rewrite the 1.2 and 1.3 tests in the comparison form so every line prints True.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2021-4">
+      <div class="task-header">2021 Paper 2, Task 4 <span class="files"><a href="https://github.com/lql-svg/H2-computing/blob/main/tys/2021/task%204/Task4_1.py" target="_blank" rel="noopener">Task4_1.py</a> <a href="https://github.com/lql-svg/H2-computing/blob/main/tys/2021/task%204/task4_1.html" target="_blank" rel="noopener">task4_1.html</a> <a href="https://github.com/lql-svg/H2-computing/blob/main/tys/2021/task%204/task4_2.html" target="_blank" rel="noopener">task4_2.html</a> <a href="https://github.com/lql-svg/H2-computing/blob/main/tys/2021/task%204/task4_2.sql" target="_blank" rel="noopener">task4_2.sql</a> <a href="https://github.com/lql-svg/H2-computing/blob/main/tys/2021/task%204/task4_3.html" target="_blank" rel="noopener">task4_3.html</a> <a href="https://github.com/lql-svg/H2-computing/blob/main/tys/2021/task%204/task4_3.sql" target="_blank" rel="noopener">task4_3.sql</a> <a href="https://github.com/lql-svg/H2-computing/blob/main/tys/2021/task%204/task4_4.html" target="_blank" rel="noopener">task4_4.html</a> <a href="https://github.com/lql-svg/H2-computing/blob/main/tys/2021/task%204/task4_4.sql" target="_blank" rel="noopener">task4_4.sql</a></span></div>
+      <div class="task-body">
+<p>A strong Flask solution; the missing piece is saved output.</p>
+<h3>Task 4.1 and 4.2</h3><p>The menu posts to one /scores route with scores.round = ? parameterised, joined and ordered by score descending: neat design. task4_2.sql, though, fixes round = 1 rather than the parameterised query.</p>
+<h3>Task 4.3 and 4.4</h3><p>ROUND(AVG(...), 2) grouped per competitor ordered by name, and SUM with total &gt; 250 shown as Qualified or Not Qualified for every competitor, ordered descending, are correct.</p>
+<p>The submitted .html files are Jinja templates, not rendered pages, so there is no saved evidence of the output pages.</p>
+<h3>Next step</h3><div class="next"><p>Run the app and save each rendered page as an .html output file.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2022-4">
+      <div class="task-header">2022 Paper 2, Task 4 <span class="files"><a href="https://github.com/lql-svg/H2-computing/blob/main/tys/2022/Task%204.ipynb" target="_blank" rel="noopener">Task 4.ipynb</a> <a href="https://github.com/lql-svg/H2-computing/blob/main/tys/2022/task4_4.html" target="_blank" rel="noopener">task4_4.html</a> <a href="https://github.com/lql-svg/H2-computing/blob/main/tys/2022/task4_4.py" target="_blank" rel="noopener">task4_4.py</a></span></div>
+      <div class="task-body">
+<p>Solid database work in the notebook; the Flask part has two bugs that would stop it running.</p>
+<h3>Task 4.1</h3><p>All three tables carry the right primary keys and both FOREIGN KEYs on Loan; the parameterised INSERTs in 4.2 are correct too.</p>
+<h3>Task 4.3</h3><p>The join works with saved output, though you tested member 201; the specified test is member 200, who has three loans.</p>
+<h3>Task 4.4</h3><p>You call <code>render_template</code> but only <code>import flask</code>, so this raises a NameError; use <code>flask.render_template</code>. In the template, <code>result[0]</code> is plain text without <code>{{ }}</code>, so the page would show the words &quot;result[0]&quot; instead of the data. The saved file is the template, not a rendered page.</p>
+<h3>Next step</h3><div class="next"><p>Fix those two bugs, run the app, and save the rendered page from the browser.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2023-1">
+      <div class="task-header">2023 Paper 2, Task 1 <span class="files"><a href="https://github.com/lql-svg/H2-computing/blob/main/tys/2023/Task%201.ipynb" target="_blank" rel="noopener">Task 1.ipynb</a></span></div>
+      <div class="task-body">
+<p>Careful, well structured work; the one real problem is that the notebook was pushed without being run.</p>
+<h3>Task 1.1</h3><p>Naming each CREATE TABLE string before executing it is very readable, and all keys are present; just write <code>REFERENCES Class(ClassName)</code> in full rather than <code>REFERENCES Class</code>, so the marker sees the complete declaration.</p>
+<h3>Task 1.2</h3><p>Your parameterised INSERTs go in parent-first order with the date <code>01-02-2023</code> correct; add a simple SELECT from each table, since without saved output there is no evidence the code was run.</p>
+<h3>Next step</h3><div class="next"><p>Add verification SELECTs, then Run All and save so every cell&#x27;s output is stored in the .ipynb before pushing.</p></div>
+      </div>
+    </section>
+    <p class="foot">Disclaimer: AI-assisted evaluation may contain issues. Exercise discretion and seek clarification if in doubt.</p>
+  </main>
+</body>
+</html>

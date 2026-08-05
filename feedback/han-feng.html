@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback: Han Feng</title>
+  <style>
+    :root { color-scheme: light; --bg:#f5f7fb; --panel:#fff; --text:#1f2937;
+      --muted:#6b7280; --border:#dbe2ea; --accent:#1d4ed8; --accent-soft:#dbeafe; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: Arial, Helvetica, sans-serif; color:var(--text);
+      background: linear-gradient(180deg,#eef4ff 0%,var(--bg) 240px); }
+    .page { max-width: 840px; margin:0 auto; padding:32px 20px 48px; }
+    .hero { background:var(--panel); border:1px solid var(--border); border-radius:18px;
+      padding:24px 28px; box-shadow:0 16px 40px rgba(15,23,42,.08); }
+    h1 { margin:0 0 6px; font-size:1.8rem; }
+    .meta { color:var(--muted); font-size:.95rem; }
+    .meta a { color:var(--accent); text-decoration:none; }
+    .meta a:hover { text-decoration:underline; }
+    section.task { margin-top:24px; background:var(--panel); border:1px solid var(--border);
+      border-radius:18px; overflow:hidden; box-shadow:0 16px 40px rgba(15,23,42,.06); }
+    .task-header { padding:14px 24px; background:var(--accent-soft);
+      border-bottom:1px solid var(--border); font-weight:700; }
+    .task-header .files { float:right; font-weight:400; font-size:.9rem; }
+    .task-header .files a { margin-left:10px; }
+    .task-body { padding:8px 24px 20px; }
+    h3 { font-size:1.02rem; margin:18px 0 6px; }
+    p { margin:6px 0; line-height:1.55; }
+    code { background:#eef2f7; border:1px solid var(--border); border-radius:4px;
+      padding:1px 5px; font-size:.9em; }
+    ul { margin:6px 0; padding-left:22px; }
+    .next { background:#f0fdf4; border:1px solid #bbf7d0; border-radius:10px;
+      padding:10px 14px; margin-top:6px; }
+    .farewell { padding:22px 24px; font-size:1.05rem; line-height:1.6; }
+    .foot { margin-top:20px; font-size:.85rem; color:var(--muted); }
+</style>
+</head>
+<body>
+  <main class="page">
+    <div class="hero">
+      <h1>Han Feng</h1>
+      <p class="meta">25S22 &middot; <a href="https://github.com/wind-hanfeng/A-Level_Computing" target="_blank" rel="noopener">GitHub repo</a> &middot; <a href="../all.html">Back to the work grid</a></p>
+    </div>
+    <section class="task" id="task-2020-4">
+      <div class="task-header">2020 Paper 2, Task 4 <span class="files"><a href="https://github.com/wind-hanfeng/A-Level_Computing/blob/main/2020%20Paper/TASK4_2_Han%20Feng_25S22.py" target="_blank" rel="noopener">TASK4_2_Han Feng_25S22.py</a> <a href="https://github.com/wind-hanfeng/A-Level_Computing/blob/main/2020%20Paper/TASK4_3_Han%20Feng_25S22.py" target="_blank" rel="noopener">TASK4_3_Han Feng_25S22.py</a> <a href="https://github.com/wind-hanfeng/A-Level_Computing/blob/main/2020%20Paper/index.html" target="_blank" rel="noopener">index.html</a></span></div>
+      <div class="task-body">
+<p>Task 4 is largely working, with a complete class hierarchy and a populated school.db.</p>
+<h3>Task 4.1</h3><p>The CREATE TABLE is correct but sits in a docstring inside the .py; the paper wants a .sql file.</p>
+<h3>Task 4.2</h3><p>Staff and Student override is_adult and screen_name properly, and the INSERT is parameterised with commit(). Two slips: screen_name strips only spaces and commas, so Evan O&#x27;Reilly keeps his apostrophe, and is_adult hardcodes 2026.</p>
+<h3>Task 4.3</h3><p>index.html sits beside the .py, but render_template looks in a templates folder, so the app would raise TemplateNotFound.</p>
+<h3>Next step</h3><div class="next"><p>Move index.html into templates/, run the app, and save the rendered page as .html.</p></div>
+      </div>
+    </section>
+    <p class="foot">Disclaimer: AI-assisted evaluation may contain issues. Exercise discretion and seek clarification if in doubt.</p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback: Han Jeong Seu, Caleb</title>
+  <style>
+    :root { color-scheme: light; --bg:#f5f7fb; --panel:#fff; --text:#1f2937;
+      --muted:#6b7280; --border:#dbe2ea; --accent:#1d4ed8; --accent-soft:#dbeafe; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: Arial, Helvetica, sans-serif; color:var(--text);
+      background: linear-gradient(180deg,#eef4ff 0%,var(--bg) 240px); }
+    .page { max-width: 840px; margin:0 auto; padding:32px 20px 48px; }
+    .hero { background:var(--panel); border:1px solid var(--border); border-radius:18px;
+      padding:24px 28px; box-shadow:0 16px 40px rgba(15,23,42,.08); }
+    h1 { margin:0 0 6px; font-size:1.8rem; }
+    .meta { color:var(--muted); font-size:.95rem; }
+    .meta a { color:var(--accent); text-decoration:none; }
+    .meta a:hover { text-decoration:underline; }
+    section.task { margin-top:24px; background:var(--panel); border:1px solid var(--border);
+      border-radius:18px; overflow:hidden; box-shadow:0 16px 40px rgba(15,23,42,.06); }
+    .task-header { padding:14px 24px; background:var(--accent-soft);
+      border-bottom:1px solid var(--border); font-weight:700; }
+    .task-header .files { float:right; font-weight:400; font-size:.9rem; }
+    .task-header .files a { margin-left:10px; }
+    .task-body { padding:8px 24px 20px; }
+    h3 { font-size:1.02rem; margin:18px 0 6px; }
+    p { margin:6px 0; line-height:1.55; }
+    code { background:#eef2f7; border:1px solid var(--border); border-radius:4px;
+      padding:1px 5px; font-size:.9em; }
+    ul { margin:6px 0; padding-left:22px; }
+    .next { background:#f0fdf4; border:1px solid #bbf7d0; border-radius:10px;
+      padding:10px 14px; margin-top:6px; }
+    .farewell { padding:22px 24px; font-size:1.05rem; line-height:1.6; }
+    .foot { margin-top:20px; font-size:.85rem; color:var(--muted); }
+</style>
+</head>
+<body>
+  <main class="page">
+    <div class="hero">
+      <h1>Han Jeong Seu, Caleb</h1>
+      <p class="meta">25S22 &middot; <a href="https://github.com/kidscoots101/h2-computing" target="_blank" rel="noopener">GitHub repo</a> &middot; <a href="../all.html">Back to the work grid</a></p>
+    </div>
+    <section class="task" id="task-2020-1">
+      <div class="task-header">2020 Paper 2, Task 1 <span class="files"><a href="https://github.com/kidscoots101/h2-computing/blob/main/a-level-papers/2020/TASK1_25S22_Caleb.ipynb" target="_blank" rel="noopener">TASK1_25S22_Caleb.ipynb</a></span></div>
+      <div class="task-body">
+<p>This is a clean, correct Task 1 with clear evidence your code runs correctly.</p>
+<h3>Task 1.1</h3><p>The hash follows the pseudocode faithfully: val = 33 * ord(...) and h = (h + val) % 1024 inside the loop, and the three required calls print 116, 1008 and 644.</p>
+<h3>Task 1.2</h3><p>Concatenating seed + string_value and passing the result to task1_1 is the intended reuse, with all three seed calls shown and their outputs saved.</p>
+<h3>Next step</h3><div class="next"><p>Delete the empty trailing cell, then keep this notebook as your model answer for hashing questions.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2020-2">
+      <div class="task-header">2020 Paper 2, Task 2 <span class="files"><a href="https://github.com/kidscoots101/h2-computing/blob/main/a-level-papers/2020/TASK2_25S22_Caleb.ipynb" target="_blank" rel="noopener">TASK2_25S22_Caleb.ipynb</a></span></div>
+      <div class="task-body">
+<p>Task 2 is essentially complete and correct.</p>
+<h3>Task 2.1</h3><p>random.randint(0, maximum) keeps both bounds inclusive and each value gets a newline; the run to randomnumbers_Caleb_25S22.txt completed without error.</p>
+<h3>Task 2.2</h3><p>A proper recursive merge sort with a merge that drains leftovers from both halves, and the saved comparison shows True. One edge case: with len == 1 as the only base case, an empty list would recurse forever.</p>
+<h3>Task 2.3</h3><p>Reading, int() conversion, sorting through task2_2 and writing one value per line are all correct.</p>
+<h3>Next step</h3><div class="next"><p>Change the base case to len(list_of_integers) &lt;= 1 so an empty list is safe.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2020-3">
+      <div class="task-header">2020 Paper 2, Task 3 <span class="files"><a href="https://github.com/kidscoots101/h2-computing/blob/main/a-level-papers/2020/TASK3_25S22_Caleb.ipynb" target="_blank" rel="noopener">TASK3_25S22_Caleb.ipynb</a></span></div>
+      <div class="task-body">
+<p>All your conversion factors are correct; validation and negative testing are the gap.</p>
+<h3>Task 3.1 and 3.2</h3><p>Reusing task3_1 inside task3_2 and spotting three-letter units via the &quot;i&quot; check is good design. But the number part is never checked with isdigit(), so task3_1(&quot;aKB&quot;) crashes with ValueError instead of returning &quot;invalid data&quot;, and no test covers an invalid case.</p>
+<h3>Task 3.3</h3><p>task3_3 never validates target_unit, so an unknown unit returns the raw byte count, and an invalid quantity reaches value / 1000 and raises TypeError.</p>
+<h3>Next step</h3><div class="next"><p>Add isdigit() and target_unit checks, then add invalid tests such as task3_1(&quot;aKB&quot;) and task3_3(&quot;512MiB&quot;, &quot;XiB&quot;).</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2020-4">
+      <div class="task-header">2020 Paper 2, Task 4 <span class="files"><a href="https://github.com/kidscoots101/h2-computing/blob/main/a-level-papers/2020/TASK4_1_25S22_Caleb.sql" target="_blank" rel="noopener">TASK4_1_25S22_Caleb.sql</a> <a href="https://github.com/kidscoots101/h2-computing/blob/main/a-level-papers/2020/TASK4_2_Caleb_25S22.py" target="_blank" rel="noopener">TASK4_2_Caleb_25S22.py</a> <a href="https://github.com/kidscoots101/h2-computing/blob/main/a-level-papers/2020/TASK4_3_Caleb_25S22.py" target="_blank" rel="noopener">TASK4_3_Caleb_25S22.py</a> <a href="https://github.com/kidscoots101/h2-computing/blob/main/a-level-papers/2020/templates/TASK4_3_Caleb_25S22.html" target="_blank" rel="noopener">TASK4_3_Caleb_25S22.html</a></span></div>
+      <div class="task-body">
+<p>Task 4 is strong across all three parts.</p>
+<h3>Task 4.1</h3><p>The DDL is correct, with PRIMARY KEY(&quot;PersonID&quot; AUTOINCREMENT) and sensible types.</p>
+<h3>Task 4.2</h3><p>Inheritance with super().__init__, isalpha() cleaning that handles Evan O&#x27;Reilly, and parameterised INSERTs with commit() are all right. The paper defines adult as a year difference greater than 18, so &gt;= 18 admits an exact 18, and 2026 is hardcoded.</p>
+<h3>Task 4.3</h3><p>The page shows all three fields, but full name and identity come from people.txt paired by index; selecting them from school.db would be more robust.</p>
+<h3>Next step</h3><div class="next"><p>Change is_adult to a strict &gt; 18 using the current year, then save the rendered page as .html.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2021-1">
+      <div class="task-header">2021 Paper 2, Task 1 <span class="files"><a href="https://github.com/kidscoots101/h2-computing/blob/main/a-level-papers/2021/TASK1_1_Caleb_25S22.ipynb" target="_blank" rel="noopener">TASK1_1_Caleb_25S22.ipynb</a></span></div>
+      <div class="task-body">
+<p>A clear, well-commented solution: positions are numbered from the right exactly as the algorithm describes, and 1.2 uses the required <code>== expected</code> form with your own values.</p>
+<h3>Task 1.1</h3><p><code>check_digit = 10 - (total % 10)</code> returns 10 when the sum is already a multiple of 10; the check digit must be 0 then, so use <code>(10 - total % 10) % 10</code>.</p>
+<h3>Task 1.3</h3><p>Reuse of <code>task1_1</code> is right and all tests print True, though both error cases are wrong-length values; a wrong final digit would test the comparison.</p>
+<h3>Next step</h3><div class="next"><p>Apply the <code>% 10</code> fix and add a wrong-check-digit test to 1.3.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2021-2">
+      <div class="task-header">2021 Paper 2, Task 2 <span class="files"><a href="https://github.com/kidscoots101/h2-computing/blob/main/a-level-papers/2021/TASK2_Caleb_25S22.ipynb" target="_blank" rel="noopener">TASK2_Caleb_25S22.ipynb</a> <a href="https://github.com/kidscoots101/h2-computing/blob/main/a-level-papers/2021/Task2_timing.py" target="_blank" rel="noopener">Task2_timing.py</a></span></div>
+      <div class="task-body">
+<p>Tasks 2.1 to 2.3 are correct with clear evidence: proper integer conversion on reading, an insertion sort that shifts elements, and a recursive quicksort that keeps duplicates through its <code>else</code> branch.</p>
+<h3>Task 2.4</h3><p>This sub-task is only half done. You time <code>task2_2</code> on all three files, but <code>task2_3</code> is never timed, so there is no comparison; and there is no written discussion, when the question explicitly asks you to compare and contrast with orders of growth: insertion sort O(n^2) against quicksort&#x27;s average O(n log n).</p>
+<h3>Next step</h3><div class="next"><p>Time <code>task2_3</code> on the same three files and add a short paragraph interpreting the numbers via orders of growth.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2021-3">
+      <div class="task-header">2021 Paper 2, Task 3 <span class="files"><a href="https://github.com/kidscoots101/h2-computing/blob/main/a-level-papers/2021/TASK3_Caleb_25S22.ipynb" target="_blank" rel="noopener">TASK3_Caleb_25S22.ipynb</a></span></div>
+      <div class="task-body">
+<p>The LinkedList and SortedLinkedList are proper node-based structures with correct output, but two requirements are missed.</p>
+<h3>Task 3.1</h3><p>In <code>delete</code>, the mid-list case relinks with <code>self.head.next = self.head.next.next</code> instead of <code>curr.next = curr.next.next</code>, so deleting a non-head value removes the wrong node. <code>to_String</code> produces the exact required format.</p>
+<h3>Task 3.2</h3><p>The ordered insert is correct; the required <code>search(94)</code> print is missing.</p>
+<h3>Task 3.3</h3><p><code>Queue</code> stores everything in <code>self.array</code>, a plain Python list, abandoning the linked list; enqueue should append a Node at the tail and dequeue detach the head node.</p>
+<h3>Next step</h3><div class="next"><p>Rewrite Queue using nodes, then fix delete to relink through <code>curr</code>.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2021-4">
+      <div class="task-header">2021 Paper 2, Task 4 <span class="files"><a href="https://github.com/kidscoots101/h2-computing/blob/main/a-level-papers/2021/TASK4_1_Caleb_25S22.py" target="_blank" rel="noopener">TASK4_1_Caleb_25S22.py</a> <a href="https://github.com/kidscoots101/h2-computing/blob/main/a-level-papers/2021/TASK4_2_Caleb_25S22.sql" target="_blank" rel="noopener">TASK4_2_Caleb_25S22.sql</a> <a href="https://github.com/kidscoots101/h2-computing/blob/main/a-level-papers/2021/templates/TASK4_1_Caleb_25S22.html" target="_blank" rel="noopener">TASK4_1_Caleb_25S22.html</a></span></div>
+      <div class="task-body">
+<p>This task is only just begun, so most of the required work is still missing.</p>
+<h3>Task 4.1</h3><p>The Flask skeleton runs and renders the menu template, but the five entries are plain <code>&lt;a&gt;</code> tags with no <code>href</code> and no routes behind them, so nothing is clickable.</p>
+<h3>Task 4.2 to 4.4</h3><p>TASK4_2_Caleb_25S22.sql is empty, and there is no code or saved .html output for round scores, mean scores or qualifiers. Task4.db is already in your folder, ready to use.</p>
+<h3>Next step</h3><div class="next"><p>Start with 4.2: join competitor to scores with <code>WHERE round = 1 ORDER BY score DESC</code>, wire it to a /round1 route, and render an HTML table.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2022-1">
+      <div class="task-header">2022 Paper 2, Task 1 <span class="files"><a href="https://github.com/kidscoots101/h2-computing/blob/main/a-level-papers/2022/TASK1_1_Caleb_25S22.ipynb" target="_blank" rel="noopener">TASK1_1_Caleb_25S22.ipynb</a></span></div>
+      <div class="task-body">
+<p>This notebook is only just started: it contains a single cell with the opening of task1_1, no saved output, and nothing for 1.2 or 1.3.</p>
+<h3>Task 1.1</h3><p>Spotting the space case first is a reasonable instinct, but the function should return 33 (the ASCII value of &#x27;!&#x27;), not the character &quot;!&quot;, and the letter handling is missing entirely: add 10 to ord(char), subtract 26 when the result passes 90 for uppercase or 122 for lowercase, and return -1 for anything else.</p>
+<h3>Task 1.2 and 1.3</h3><p>Both sub-tasks are absent: the input() test program with its four runs (A, a, #, space) and the file encryption of DATATOENCRYPT.txt.</p>
+<h3>Next step</h3><div class="next"><p>Complete task1_1 with the shift and wraparound, then build 1.2 and 1.3 and Run All before saving.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2022-3">
+      <div class="task-header">2022 Paper 2, Task 3 <span class="files"><a href="https://github.com/kidscoots101/h2-computing/blob/main/a-level-papers/2022/TASK3_Caleb_25S22.ipynb" target="_blank" rel="noopener">TASK3_Caleb_25S22.ipynb</a></span></div>
+      <div class="task-body">
+<p>Only the very first piece of this task is present, and the saved output is an error rather than a result.</p>
+<h3>Task 3.1</h3><p>Your Tree constructor is correct: left_pointer and right_pointer set to None and data taken from the parameter. Everything else is missing: the recursive insert method that compares with self.data and creates a new Tree at an empty pointer, the recursive in-order and post-order traversal methods, and the main program that makes a Tree instance, generates 10 unique random integers from 0 to 999 (random.sample works well) and inserts each one. The cell&#x27;s saved output is an incomplete input error, so even this fragment did not run cleanly.</p>
+<h3>Next step</h3><div class="next"><p>Write insert and the two traversals, add the main program, then Run All and save with the traversal outputs showing.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2022-4">
+      <div class="task-header">2022 Paper 2, Task 4 <span class="files"><a href="https://github.com/kidscoots101/h2-computing/blob/main/a-level-papers/2022/TASK4_Caleb_25S22.ipynb" target="_blank" rel="noopener">TASK4_Caleb_25S22.ipynb</a></span></div>
+      <div class="task-body">
+<p>This is an early draft: one unrun cell for 4.1 and nothing yet for 4.2 to 4.4.</p>
+<h3>Task 4.1</h3><p>The Book table is right, with BookID as PRIMARY KEY. Two problems follow it: the Member table uses MemberName where the field should be MemberNumber, and <code>CREATE TABLE Loan</code> is unfinished, so there are no Loan columns and no FOREIGN KEYs to Member and Book. Note also that conn.execute() runs only one SQL statement; issue three separate execute calls, one per table. With no saved output there is no evidence any of it runs.</p>
+<h3>Task 4.2 to 4.4</h3><p>The file loading, the member query and the Flask web application are all missing.</p>
+<h3>Next step</h3><div class="next"><p>Finish the three CREATE TABLE statements as separate execute calls, then build 4.2 onwards and Run All before saving.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2023-1">
+      <div class="task-header">2023 Paper 2, Task 1 <span class="files"><a href="https://github.com/kidscoots101/h2-computing/blob/main/a-level-papers/2023/TASK1_25S22_Caleb.ipynb" target="_blank" rel="noopener">TASK1_25S22_Caleb.ipynb</a></span></div>
+      <div class="task-body">
+<p>This is close to a model answer; one stray typo currently stops the notebook running.</p>
+<h3>Task 1.1</h3><p>Every key is declared, including FOREIGN KEY (ClassName) REFERENCES Class(ClassName) in Student: well done. But the stray &quot;eet&quot; after conn.execute(&#x27;&#x27;&#x27;DROP TABLE IF EXISTS Student&#x27;&#x27;&#x27;) is a SyntaxError, so Run All fails at the first cell.</p>
+<h3>Task 1.2</h3><p>Your parameterised INSERTs, correct order (Class before Student), and the saved SELECT output showing (123, 102, &#x27;PG1&#x27;, 85, &#x27;01-02-2023&#x27;) are exactly right. Do close the connection with conn.close() at the end.</p>
+<h3>Next step</h3><div class="next"><p>Delete the stray &quot;eet&quot;, restart the kernel, Run All, and save once it runs cleanly.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2023-2">
+      <div class="task-header">2023 Paper 2, Task 2 <span class="files"><a href="https://github.com/kidscoots101/h2-computing/blob/main/a-level-papers/2023/TASK2_25S22_Caleb.ipynb" target="_blank" rel="noopener">TASK2_25S22_Caleb.ipynb</a></span></div>
+      <div class="task-body">
+<p>This is a complete and correct Task 2 with clear evidence your code runs correctly: input-driven tests, the fifth enqueue rejected, the fifth dequeue reporting &#x27;Queue is empty&#x27;, and printQueue walking from headPointer with % 4 wrap.</p>
+<h3>Task 2.2</h3><p>The attribute is named queuelist while the task specifies queueList; match the given names exactly.</p>
+<h3>Task 2.5</h3><p>printQueue is labelled &#x27;# Task 2.4&#x27; inside the class, and the test cells are missing the #Task 2.x comment headers the paper asks for.</p>
+<h3>Next step</h3><div class="next"><p>Rename queuelist to queueList and label each cell with its sub-task comment.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2023-3">
+      <div class="task-header">2023 Paper 2, Task 3 <span class="files"><a href="https://github.com/kidscoots101/h2-computing/blob/main/a-level-papers/2023/TASK3_25S22_Caleb.ipynb" target="_blank" rel="noopener">TASK3_25S22_Caleb.ipynb</a></span></div>
+      <div class="task-body">
+<p>All four parts run with clear messages and the correct results on both examples.</p>
+<h3>Task 3.1</h3><p><code>if each in &quot;123456789&quot;</code> is a substring test, so a token like &#x27;23&#x27; would pass validation; test each token with isdigit() and a 1 to 9 range check instead.</p>
+<h3>Task 3.4</h3><p>The three copied slicing blocks work, but nested loops stepping in 3s over block rows and columns would do the same in a few lines. Your saved output also reads &#x27;One of the mini-squares...&#x27; while the code prints &#x27;One or more...&#x27;, so this cell was edited after its last run.</p>
+<h3>Next step</h3><div class="next"><p>Re-run the notebook so the saved outputs match the current code, then save.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2023-4">
+      <div class="task-header">2023 Paper 2, Task 4 <span class="files"><a href="https://github.com/kidscoots101/h2-computing/blob/main/a-level-papers/2023/TASK4_25S22_Caleb.ipynb" target="_blank" rel="noopener">TASK4_25S22_Caleb.ipynb</a> <a href="https://github.com/kidscoots101/h2-computing/blob/main/a-level-papers/2023/TASK4_3_Caleb_25S22/TASK4_3_25S22_Caleb.py" target="_blank" rel="noopener">TASK4_3_25S22_Caleb.py</a> <a href="https://github.com/kidscoots101/h2-computing/blob/main/a-level-papers/2023/TASK4_3_Caleb_25S22/templates/TASK4_3_25S22_Caleb.html" target="_blank" rel="noopener">TASK4_3_25S22_Caleb.html</a></span></div>
+      <div class="task-body">
+<p>Tasks 4.1 and 4.2 are correct and the Flask app is well structured; only the rendered page is missing.</p>
+<h3>Task 4.1</h3><p>Run counting and the single digit string written to compressedimage.txt are right.</p>
+<h3>Task 4.2</h3><p>The recursive decompress() is neat and the menu run shows the compress choice working; note your decompressed file is one continuous string, while imagefile.txt stored one code per line.</p>
+<h3>Task 4.3</h3><p>The template renders a 9x9 coloured table correctly, but TASK4_3_25S22_Caleb.html is the Jinja source with {% for %} tags; the task requires saving the web page output the browser displays.</p>
+<h3>Next step</h3><div class="next"><p>Run the app, open it in a browser, and save the rendered page as your output .html.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2024-1">
+      <div class="task-header">2024 Paper 2, Task 1 <span class="files"><a href="https://github.com/kidscoots101/h2-computing/blob/main/a-level-papers/2024/%28%E2%88%9A%29%20Task1_Caleb_25S22.ipynb" target="_blank" rel="noopener">(√) Task1_Caleb_25S22.ipynb</a></span></div>
+      <div class="task-body">
+<p>Your notebook runs cleanly with saved output, and Task 1.4&#x27;s scoring applies the doubled card number for the winning colour correctly.</p>
+<h3>Task 1.1</h3><p><code>random.randint(0,3)</code> gives numbers 0 to 3, but cards are numbered 1 to 4: your own output shows (&#x27;green&#x27;, 0).</p>
+<h3>Task 1.2</h3><p><code>win</code> handles the colour cycle correctly but is never tested; add calls that show results 1, 2 and 3.</p>
+<h3>Task 1.4</h3><p>The question asks for a function returning both scores; yours is top-level code, and the hands are only printed after sorting, not before.</p>
+<h3>Next step</h3><div class="next"><p>Change the number range to <code>random.randint(1, 4)</code>, then Run All and save again.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2024-2">
+      <div class="task-header">2024 Paper 2, Task 2 <span class="files"><a href="https://github.com/kidscoots101/h2-computing/blob/main/a-level-papers/2024/Task2_Caleb_25S22.ipynb" target="_blank" rel="noopener">Task2_Caleb_25S22.ipynb</a></span></div>
+      <div class="task-body">
+<p>Tasks 2.1 to 2.5 are in good shape, but the notebook stops before the tree is built.</p>
+<h3>Task 2.2</h3><p>All four tests in 2.3 print the right counts; though the function returns the message string, not the value.</p>
+<h3>Task 2.4</h3><p><code>total = 2<strong>(no_of_levels-1)</code> is the leaf count, not the full 2 </strong> levels - 1: your own test prints four nodes for a 3 level tree needing seven.</p>
+<h3>Task 2.6</h3><p><code>create_number_tree</code> is just <code>pass</code>, and 2.7&#x27;s main program with the pointer printout is missing.</p>
+<h3>Next step</h3><div class="next"><p>Implement 2.6 by setting each parent to the sum of its two children, then complete 2.7 and Run All.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2024-3">
+      <div class="task-header">2024 Paper 2, Task 3 <span class="files"><a href="https://github.com/kidscoots101/h2-computing/blob/main/a-level-papers/2024/Task3_Caleb_25S22.ipynb" target="_blank" rel="noopener">Task3_Caleb_25S22.ipynb</a></span></div>
+      <div class="task-body">
+<p>There is nothing to review here yet: Task3_Caleb_25S22.ipynb contains a single empty code cell with no code and no saved output. Task 3 needs the three tag functions for h1, h2 and p, the hyperlink function splitting on the comma, <code>body()</code> returning False for unrecognised elements, and <code>read_data()</code> with <code>write_data()</code> tested on both firstPage.txt and website.txt. The practical requires the output to be visible in the .ipynb, so if you have this work elsewhere, copy it in and run it here.</p>
+<h3>Next step</h3><div class="next"><p>Write your Task 3 code, Run All so every cell shows output, then save and push the notebook again.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2024-4">
+      <div class="task-header">2024 Paper 2, Task 4 <span class="files"><a href="https://github.com/kidscoots101/h2-computing/blob/main/a-level-papers/2024/Task4_Caleb_25S22.ipynb" target="_blank" rel="noopener">Task4_Caleb_25S22.ipynb</a></span></div>
+      <div class="task-body">
+<p>A well built solution: your 4.1 tables have sensible types with primary and foreign keys, and 4.2&#x27;s parameterised inserts plus SELECT printouts show the data loaded correctly.</p>
+<h3>Task 4.3</h3><p>Your loop only increments the day, so booking 23 (13-Apr for 21 days) writes impossible dates like 33-Apr instead of rolling into May; the 28-Sep booking has the same problem.</p>
+<h3>Task 4.4</h3><p>The Dolphin test correctly shows 08 and 09-Apr available and 10 and 11-Apr booked, though a second saved output lists all four dates as available; keep one clean run.</p>
+<h3>Next step</h3><div class="next"><p>Add month rollover in 4.3 with a days-per-month lookup, then re-run 4.4 and save.</p></div>
+      </div>
+    </section>
+    <p class="foot">Disclaimer: AI-assisted evaluation may contain issues. Exercise discretion and seek clarification if in doubt.</p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback: Jimson Teo Kheng Seng</title>
+  <style>
+    :root { color-scheme: light; --bg:#f5f7fb; --panel:#fff; --text:#1f2937;
+      --muted:#6b7280; --border:#dbe2ea; --accent:#1d4ed8; --accent-soft:#dbeafe; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: Arial, Helvetica, sans-serif; color:var(--text);
+      background: linear-gradient(180deg,#eef4ff 0%,var(--bg) 240px); }
+    .page { max-width: 840px; margin:0 auto; padding:32px 20px 48px; }
+    .hero { background:var(--panel); border:1px solid var(--border); border-radius:18px;
+      padding:24px 28px; box-shadow:0 16px 40px rgba(15,23,42,.08); }
+    h1 { margin:0 0 6px; font-size:1.8rem; }
+    .meta { color:var(--muted); font-size:.95rem; }
+    .meta a { color:var(--accent); text-decoration:none; }
+    .meta a:hover { text-decoration:underline; }
+    section.task { margin-top:24px; background:var(--panel); border:1px solid var(--border);
+      border-radius:18px; overflow:hidden; box-shadow:0 16px 40px rgba(15,23,42,.06); }
+    .task-header { padding:14px 24px; background:var(--accent-soft);
+      border-bottom:1px solid var(--border); font-weight:700; }
+    .task-header .files { float:right; font-weight:400; font-size:.9rem; }
+    .task-header .files a { margin-left:10px; }
+    .task-body { padding:8px 24px 20px; }
+    h3 { font-size:1.02rem; margin:18px 0 6px; }
+    p { margin:6px 0; line-height:1.55; }
+    code { background:#eef2f7; border:1px solid var(--border); border-radius:4px;
+      padding:1px 5px; font-size:.9em; }
+    ul { margin:6px 0; padding-left:22px; }
+    .next { background:#f0fdf4; border:1px solid #bbf7d0; border-radius:10px;
+      padding:10px 14px; margin-top:6px; }
+    .farewell { padding:22px 24px; font-size:1.05rem; line-height:1.6; }
+    .foot { margin-top:20px; font-size:.85rem; color:var(--muted); }
+</style>
+</head>
+<body>
+  <main class="page">
+    <div class="hero">
+      <h1>Jimson Teo Kheng Seng</h1>
+      <p class="meta">25S21 &middot; <a href="https://github.com/aqua110911/h2-computing" target="_blank" rel="noopener">GitHub repo</a> &middot; <a href="../all.html">Back to the work grid</a></p>
+    </div>
+    <section class="task" id="task-2020-1">
+      <div class="task-header">2020 Paper 2, Task 1 <span class="files"><a href="https://github.com/aqua110911/h2-computing/blob/main/2020%20task%201.py" target="_blank" rel="noopener">2020 task 1.py</a></span></div>
+      <div class="task-body">
+<p>Both functions are correct and fully tested; what is missing is visible evidence of a run.</p>
+<h3>Task 1.1</h3><p><code>h = (h + val) % 1024</code> sits inside the loop, exactly matching the pseudocode, and all three required calls with &quot;Hello&quot;, &quot;Hallo&quot; and &quot;Hullo&quot; are printed. The <code>int()</code> around <code>ord(...)</code> is harmless but redundant, since ord already returns an integer.</p>
+<h3>Task 1.2</h3><p>Correct concatenation <code>seed + string_value</code> and reuse of task1_1 rather than re-implementing the hash, with the three seed calls all on &quot;Hello&quot;.</p>
+<h3>Next step</h3><div class="next"><p>Move this into a Jupyter notebook, Run All so the six printed hash values are saved, then push the .ipynb.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2020-2">
+      <div class="task-header">2020 Paper 2, Task 2 <span class="files"><a href="https://github.com/aqua110911/h2-computing/blob/main/2020%20task%202.py" target="_blank" rel="noopener">2020 task 2.py</a></span></div>
+      <div class="task-body">
+<p>Your merge sort is correct, but 2.3 writes the wrong content.</p>
+<h3>Task 2.1</h3><p><code>randint(0, maximum)</code> inclusive, one number per line, run with 1000 and 5000: correct.</p>
+<h3>Task 2.2</h3><p>The recursive <code>mergesort</code> with low, mid, high and a merge that copies leftovers is right. But the <code>==</code> test is a bare expression in a .py file, so True is computed and thrown away; wrap it in <code>print()</code>.</p>
+<h3>Task 2.3</h3><p>Inside <code>for line in data</code> you call <code>file.write(&#x27;{}\n&#x27;.format(data))</code>, writing the whole list on every line; use <code>format(line)</code>.</p>
+<h3>Next step</h3><div class="next"><p>Fix the write to <code>format(line)</code>, print the equality test, and run it in a notebook.</p></div>
+      </div>
+    </section>
+    <p class="foot">Disclaimer: AI-assisted evaluation may contain issues. Exercise discretion and seek clarification if in doubt.</p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback: Hein Thurein Kyaw</title>
+  <style>
+    :root { color-scheme: light; --bg:#f5f7fb; --panel:#fff; --text:#1f2937;
+      --muted:#6b7280; --border:#dbe2ea; --accent:#1d4ed8; --accent-soft:#dbeafe; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: Arial, Helvetica, sans-serif; color:var(--text);
+      background: linear-gradient(180deg,#eef4ff 0%,var(--bg) 240px); }
+    .page { max-width: 840px; margin:0 auto; padding:32px 20px 48px; }
+    .hero { background:var(--panel); border:1px solid var(--border); border-radius:18px;
+      padding:24px 28px; box-shadow:0 16px 40px rgba(15,23,42,.08); }
+    h1 { margin:0 0 6px; font-size:1.8rem; }
+    .meta { color:var(--muted); font-size:.95rem; }
+    .meta a { color:var(--accent); text-decoration:none; }
+    .meta a:hover { text-decoration:underline; }
+    section.task { margin-top:24px; background:var(--panel); border:1px solid var(--border);
+      border-radius:18px; overflow:hidden; box-shadow:0 16px 40px rgba(15,23,42,.06); }
+    .task-header { padding:14px 24px; background:var(--accent-soft);
+      border-bottom:1px solid var(--border); font-weight:700; }
+    .task-header .files { float:right; font-weight:400; font-size:.9rem; }
+    .task-header .files a { margin-left:10px; }
+    .task-body { padding:8px 24px 20px; }
+    h3 { font-size:1.02rem; margin:18px 0 6px; }
+    p { margin:6px 0; line-height:1.55; }
+    code { background:#eef2f7; border:1px solid var(--border); border-radius:4px;
+      padding:1px 5px; font-size:.9em; }
+    ul { margin:6px 0; padding-left:22px; }
+    .next { background:#f0fdf4; border:1px solid #bbf7d0; border-radius:10px;
+      padding:10px 14px; margin-top:6px; }
+    .farewell { padding:22px 24px; font-size:1.05rem; line-height:1.6; }
+    .foot { margin-top:20px; font-size:.85rem; color:var(--muted); }
+</style>
+</head>
+<body>
+  <main class="page">
+    <div class="hero">
+      <h1>Hein Thurein Kyaw</h1>
+      <p class="meta">25S11 &middot; <a href="https://github.com/heinthureinkyaw-cmyk/2020-task-2" target="_blank" rel="noopener">GitHub repo</a> &middot; <a href="../all.html">Back to the work grid</a></p>
+    </div>
+    <section class="task" id="task-2020-1">
+      <div class="task-header">2020 Paper 2, Task 1 <span class="files"><a href="https://github.com/heinthureinkyaw-cmyk/2020-task-2/blob/main/2020/2020%20task1.py" target="_blank" rel="noopener">2020 task1.py</a></span></div>
+      <div class="task-body">
+<p>Both functions produce the right hashes and all six required test calls are printed, which is good coverage.</p>
+<h3>Task 1.1</h3><p>You apply <code>% 1024</code> once at the end (<code>return h % 1024</code>) rather than inside the loop as the pseudocode states: <code>h ← (h + val) % 1024</code> on every iteration. The result happens to agree here, but follow the given algorithm line by line.</p>
+<h3>Task 1.2</h3><p>Concatenating seed then string_value and reusing task1_1 is correct, with all three seed tests present.</p>
+<p>Note the paper asks for Tasks 1 to 3 in a .ipynb with output visible; a .py file carries no saved run evidence.</p>
+<h3>Next step</h3><div class="next"><p>Move the modulus inside the loop, then run the tests in a notebook and save the outputs.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2020-2">
+      <div class="task-header">2020 Paper 2, Task 2 <span class="files"><a href="https://github.com/heinthureinkyaw-cmyk/2020-task-2/blob/main/2020/task%202%20practice%20question.py" target="_blank" rel="noopener">task 2 practice question.py</a></span></div>
+      <div class="task-body">
+<p>The three functions are essentially correct, but the required runs and tests are commented out, so there is little evidence of them working.</p>
+<h3>Task 2.1</h3><p><code>random.randint(0, maximum)</code> with newline per value is right; the call with 1000 numbers up to 5000 is commented out, and &quot;randomnumbers.txt&quot; lacks the name, centre and index in the filename.</p>
+<h3>Task 2.2</h3><p>A clean merge sort, though the base case <code>len(list_of_integers) == 1</code> recurses forever on an empty list; use <code>&lt;= 1</code>. The <code>== [0,0,4,4,5,7,18,25,56,98]</code> check printing True is commented out.</p>
+<h3>Task 2.3</h3><p>Correct: <code>int(num)</code> conversion, reuse of task2_2, and it is actually called.</p>
+<h3>Next step</h3><div class="next"><p>Uncomment the 2.1 run and 2.2 test, then run everything in a notebook and save the outputs.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2020-3">
+      <div class="task-header">2020 Paper 2, Task 3 <span class="files"><a href="https://github.com/heinthureinkyaw-cmyk/2020-task-2/blob/main/2020/task%203.py" target="_blank" rel="noopener">task 3.py</a></span></div>
+      <div class="task-body">
+<p>All three functions are correct and carefully validated; the weakness is that almost every test is commented out.</p>
+<h3>Task 3.1 and 3.2</h3><p>The length guards, <code>value.isdigit()</code> and unit dictionaries are sound, and 3.2 neatly tries task3_1 first before the binary units. But every test call for both functions sits behind <code>#</code>, so seven of the eight units are never demonstrated. Also the functions only return; the task says return and display the result.</p>
+<h3>Task 3.3</h3><p>Correct: target_unit validated against all eight units, task3_2 reused, invalid propagated, and three live test prints including 512MiB to GiB.</p>
+<h3>Next step</h3><div class="next"><p>Uncomment the 3.1 and 3.2 tests and run the whole file so every unit&#x27;s output is shown.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2020-4">
+      <div class="task-header">2020 Paper 2, Task 4 <span class="files"><a href="https://github.com/heinthureinkyaw-cmyk/2020-task-2/blob/main/2020/index.html" target="_blank" rel="noopener">index.html</a> <a href="https://github.com/heinthureinkyaw-cmyk/2020-task-2/blob/main/2020/task4_3.py" target="_blank" rel="noopener">task4_3.py</a></span></div>
+      <div class="task-body">
+<p>Your 4.3 web app is close to working, but one structural detail stops it running and the earlier parts of Task 4 are not in the repo.</p>
+<h3>Task 4.3</h3><p>The Flask route and the template loop showing full name, screen name and identity are correct, and pulling ScreenName from school.db is the right idea. However, <code>render_template(&#x27;index.html&#x27;)</code> looks in a templates folder, and your index.html sits beside task4_3.py, so the app raises TemplateNotFound. Mapping the third field to staff, student or person is done well.</p>
+<p>Only task4_1.txt exists (not a .sql file) and there is no Task 4.2 Python file, so nothing shows how school.db was populated.</p>
+<h3>Next step</h3><div class="next"><p>Move index.html into a templates folder, then commit your 4.1 .sql and 4.2 .py files.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2021-1">
+      <div class="task-header">2021 Paper 2, Task 1 <span class="files"><a href="https://github.com/heinthureinkyaw-cmyk/2020-task-2/blob/main/2021/Copy%20of%202021%20task%201.ipynb" target="_blank" rel="noopener">Copy of 2021 task 1.ipynb</a></span></div>
+      <div class="task-body">
+<p>Accurate work on 1.1 and 1.2; the 1.3 testing is the gap.</p>
+<h3>Task 1.1</h3><p>Position counting from the right, splitting doubled values, and returning 0 when the sum is divisible by 10 are all correct.</p>
+<h3>Task 1.2</h3><p>All four required input types print True; 14576567654930 is one digit off the worked example, so pick something clearly your own.</p>
+<h3>Task 1.3</h3><p>The function correctly reuses task1_1, but the saved output (True True True False False) has no matching test code, and the False lines show the invalid cases lack not.</p>
+<h3>Next step</h3><div class="next"><p>Restore four task1_3 tests using not for the invalid cases, then Run All and save.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2021-4">
+      <div class="task-header">2021 Paper 2, Task 4 <span class="files"><a href="https://github.com/heinthureinkyaw-cmyk/2020-task-2/blob/main/2021/task4.2.py" target="_blank" rel="noopener">task4.2.py</a> <a href="https://github.com/heinthureinkyaw-cmyk/2020-task-2/blob/main/2021/task4.3.py" target="_blank" rel="noopener">task4.3.py</a> <a href="https://github.com/heinthureinkyaw-cmyk/2020-task-2/blob/main/2021/task4.4.py" target="_blank" rel="noopener">task4.4.py</a> <a href="https://github.com/heinthureinkyaw-cmyk/2020-task-2/blob/main/2021/task4.py" target="_blank" rel="noopener">task4.py</a></span></div>
+      <div class="task-body">
+<p>Your SQL is correct throughout, but the submission is incomplete as a web application.</p>
+<h3>Task 4.2 to 4.4</h3><p>The join on competitor.id = scores.id with the round filtered and ORDER BY scores.score DESC, ROUND(AVG(scores.score), 2) grouped per competitor ordered by name, and SUM(scores.score) &gt; 250 shown as a column with every competitor listed, ordered by total descending, are all right.</p>
+<h3>Task 4.1</h3><p>Only the .py files are in the repo: the templates (index.html, round.html, mean.html, qualified.html) are missing, and no output pages were saved as .html, so there is no evidence the app runs.</p>
+<h3>Next step</h3><div class="next"><p>Push the templates folder and save each rendered page as an .html output.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2023-1">
+      <div class="task-header">2023 Paper 2, Task 1 <span class="files"><a href="https://github.com/heinthureinkyaw-cmyk/2020-task-2/blob/main/2023/2023%20task1.ipynb" target="_blank" rel="noopener">2023 task1.ipynb</a></span></div>
+      <div class="task-body">
+<p>A tidy submission: the printed SELECT output for every table is clear evidence your code runs correctly.</p>
+<h3>Task 1.1</h3><p>Student_Test declares both foreign keys correctly, but Student has only <code>ClassName TEXT</code> with no key; add <code>FOREIGN KEY (ClassName) REFERENCES Class(ClassName)</code>, since the question asks for foreign keys in each table.</p>
+<h3>Task 1.2</h3><p>Your values, name split and date <code>01-02-2023</code> are all correct, with saved output proving it; just note that Student goes in before Class, and the safe habit is parent rows first.</p>
+<h3>Next step</h3><div class="next"><p>Add the ClassName foreign key to Student, then rerun the notebook and save so the fix and its output are captured.</p></div>
+      </div>
+    </section>
+    <p class="foot">Disclaimer: AI-assisted evaluation may contain issues. Exercise discretion and seek clarification if in doubt.</p>
+  </main>
+</body>
+</html>

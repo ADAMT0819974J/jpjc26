@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback: John Silas</title>
+  <style>
+    :root { color-scheme: light; --bg:#f5f7fb; --panel:#fff; --text:#1f2937;
+      --muted:#6b7280; --border:#dbe2ea; --accent:#1d4ed8; --accent-soft:#dbeafe; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: Arial, Helvetica, sans-serif; color:var(--text);
+      background: linear-gradient(180deg,#eef4ff 0%,var(--bg) 240px); }
+    .page { max-width: 840px; margin:0 auto; padding:32px 20px 48px; }
+    .hero { background:var(--panel); border:1px solid var(--border); border-radius:18px;
+      padding:24px 28px; box-shadow:0 16px 40px rgba(15,23,42,.08); }
+    h1 { margin:0 0 6px; font-size:1.8rem; }
+    .meta { color:var(--muted); font-size:.95rem; }
+    .meta a { color:var(--accent); text-decoration:none; }
+    .meta a:hover { text-decoration:underline; }
+    section.task { margin-top:24px; background:var(--panel); border:1px solid var(--border);
+      border-radius:18px; overflow:hidden; box-shadow:0 16px 40px rgba(15,23,42,.06); }
+    .task-header { padding:14px 24px; background:var(--accent-soft);
+      border-bottom:1px solid var(--border); font-weight:700; }
+    .task-header .files { float:right; font-weight:400; font-size:.9rem; }
+    .task-header .files a { margin-left:10px; }
+    .task-body { padding:8px 24px 20px; }
+    h3 { font-size:1.02rem; margin:18px 0 6px; }
+    p { margin:6px 0; line-height:1.55; }
+    code { background:#eef2f7; border:1px solid var(--border); border-radius:4px;
+      padding:1px 5px; font-size:.9em; }
+    ul { margin:6px 0; padding-left:22px; }
+    .next { background:#f0fdf4; border:1px solid #bbf7d0; border-radius:10px;
+      padding:10px 14px; margin-top:6px; }
+    .farewell { padding:22px 24px; font-size:1.05rem; line-height:1.6; }
+    .foot { margin-top:20px; font-size:.85rem; color:var(--muted); }
+</style>
+</head>
+<body>
+  <main class="page">
+    <div class="hero">
+      <h1>John Silas</h1>
+      <p class="meta">25S22 &middot; <a href="https://github.com/silasaple/JPJC-H2_Computing" target="_blank" rel="noopener">GitHub repo</a> &middot; <a href="../all.html">Back to the work grid</a></p>
+    </div>
+    <section class="task" id="task-2020-1">
+      <div class="task-header">2020 Paper 2, Task 1 <span class="files"><a href="https://github.com/silasaple/JPJC-H2_Computing/blob/main/2020/task1.ipynb" target="_blank" rel="noopener">task1.ipynb</a></span></div>
+      <div class="task-body">
+<p>Both functions are implemented correctly; the paper&#x27;s full set of test calls is what is missing.</p>
+<h3>Task 1.1</h3><p>The loop and h = (h + val) % 1024 follow the pseudocode, and task1_1(&quot;Hello&quot;) prints 116. The required calls for &quot;Hallo&quot; and &quot;Hullo&quot; are not shown.</p>
+<h3>Task 1.2</h3><p>seed + string_value passed into task1_1 is the right reuse, with seed-one and seed-two shown; the third required call, task1_2(&quot;seed-three&quot;, &quot;Hello&quot;), is missing.</p>
+<h3>Next step</h3><div class="next"><p>Add the missing test calls for &quot;Hallo&quot;, &quot;Hullo&quot; and &quot;seed-three&quot;, then rerun and save.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2020-2">
+      <div class="task-header">2020 Paper 2, Task 2 <span class="files"><a href="https://github.com/silasaple/JPJC-H2_Computing/blob/main/2020/task2.ipynb" target="_blank" rel="noopener">task2.ipynb</a></span></div>
+      <div class="task-body">
+<p>This notebook has no saved outputs, and Task 2.3 will not run as written.</p>
+<h3>Task 2.1</h3><p>file.write(str(random.randint(0, maximum))) has no newline, so all 1000 numbers run together on one line.</p>
+<h3>Task 2.2</h3><p>The in-place merge logic is sound, but you tested with [2,5,4,7,3,8,9] rather than the paper&#x27;s list and saved no output.</p>
+<h3>Task 2.3</h3><p>int(file.strip()) strips the file object instead of num, fp is never defined before fp.write, and the main call sits indented inside the function so it never executes.</p>
+<h3>Next step</h3><div class="next"><p>Fix the three errors in task2_3 and add the newline in 2.1, then Run All and save before pushing.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2020-3">
+      <div class="task-header">2020 Paper 2, Task 3 <span class="files"><a href="https://github.com/silasaple/JPJC-H2_Computing/blob/main/2020/2020task3.ipynb" target="_blank" rel="noopener">2020task3.ipynb</a></span></div>
+      <div class="task-body">
+<p>The worked examples pass, but testing is too thin to expose a serious bug in Task 3.2.</p>
+<h3>Task 3.1</h3><p>Correct for &quot;8KB&quot;, though it returns &#x27;Invalid data&#x27; where the paper specifies &quot;invalid data&quot;, and only one test is shown.</p>
+<h3>Task 3.2</h3><p>quantity_of_data[-3:] is never all digits for valid input, so every two-letter unit falls into the else branch and task3_2(&quot;8KB&quot;) returns &#x27;Invalid data&#x27;. Testing the decimal units would have caught this.</p>
+<h3>Task 3.3</h3><p>After print the function returns None, and &quot;invalid data&quot; from task3_2 is never checked before dividing.</p>
+<h3>Next step</h3><div class="next"><p>Fix the slicing check in task3_2, then test all eight units plus invalid cases.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2021-1">
+      <div class="task-header">2021 Paper 2, Task 1 <span class="files"><a href="https://github.com/silasaple/JPJC-H2_Computing/blob/main/2021%20Paper%202/2021task1.ipynb" target="_blank" rel="noopener">2021task1.ipynb</a></span></div>
+      <div class="task-body">
+<p>Good, careful work: the doubling of alternate positions is correct, validation with <code>isdigit</code> and length is clean, and 1.3 is a tidy reuse of <code>task1_1</code> that even tests a wrong check digit.</p>
+<h3>Task 1.1</h3><p><code>check_digit = 10 - ((total%10)%10)</code> does not do what the comment claims: the second <code>%10</code> re-applies to the same value, so a sum that is an exact multiple of 10 still returns 10 instead of 0. Use <code>(10 - total%10) % 10</code>.</p>
+<h3>Task 1.2</h3><p>All four required test types are present and print True.</p>
+<h3>Next step</h3><div class="next"><p>Fix the modulo placement and add a test whose digit sum is a multiple of 10.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2021-2">
+      <div class="task-header">2021 Paper 2, Task 2 <span class="files"><a href="https://github.com/silasaple/JPJC-H2_Computing/blob/main/2021%20Paper%202/2021task2.ipynb" target="_blank" rel="noopener">2021task2.ipynb</a></span></div>
+      <div class="task-body">
+<p>Tasks 2.1 to 2.3 are correct, and the three-way quicksort with a middle pivot handles duplicates properly.</p>
+<h3>Task 2.1</h3><p>The hard-coded Windows path &#x27;data files for 2021\\data files\\TEN.txt&#x27; deviates from the required <code>task2_1(&#x27;TEN.txt&#x27;)</code> call; keep the files beside the notebook.</p>
+<h3>Task 2.4</h3><p>Two gaps: <code>task2_2</code> sorts <code>data</code> in place, so quicksort is then timed on an already-sorted list; and there is no written comparison, when the question asks you to compare with orders of growth, insertion sort O(n^2) against quicksort&#x27;s average O(n log n), using your timings as evidence.</p>
+<h3>Next step</h3><div class="next"><p>Time each sort on a fresh copy and add the orders-of-growth paragraph.</p></div>
+      </div>
+    </section>
+    <p class="foot">Disclaimer: AI-assisted evaluation may contain issues. Exercise discretion and seek clarification if in doubt.</p>
+  </main>
+</body>
+</html>

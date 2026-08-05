@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback: Paul Raymond</title>
+  <style>
+    :root { color-scheme: light; --bg:#f5f7fb; --panel:#fff; --text:#1f2937;
+      --muted:#6b7280; --border:#dbe2ea; --accent:#1d4ed8; --accent-soft:#dbeafe; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: Arial, Helvetica, sans-serif; color:var(--text);
+      background: linear-gradient(180deg,#eef4ff 0%,var(--bg) 240px); }
+    .page { max-width: 840px; margin:0 auto; padding:32px 20px 48px; }
+    .hero { background:var(--panel); border:1px solid var(--border); border-radius:18px;
+      padding:24px 28px; box-shadow:0 16px 40px rgba(15,23,42,.08); }
+    h1 { margin:0 0 6px; font-size:1.8rem; }
+    .meta { color:var(--muted); font-size:.95rem; }
+    .meta a { color:var(--accent); text-decoration:none; }
+    .meta a:hover { text-decoration:underline; }
+    section.task { margin-top:24px; background:var(--panel); border:1px solid var(--border);
+      border-radius:18px; overflow:hidden; box-shadow:0 16px 40px rgba(15,23,42,.06); }
+    .task-header { padding:14px 24px; background:var(--accent-soft);
+      border-bottom:1px solid var(--border); font-weight:700; }
+    .task-header .files { float:right; font-weight:400; font-size:.9rem; }
+    .task-header .files a { margin-left:10px; }
+    .task-body { padding:8px 24px 20px; }
+    h3 { font-size:1.02rem; margin:18px 0 6px; }
+    p { margin:6px 0; line-height:1.55; }
+    code { background:#eef2f7; border:1px solid var(--border); border-radius:4px;
+      padding:1px 5px; font-size:.9em; }
+    ul { margin:6px 0; padding-left:22px; }
+    .next { background:#f0fdf4; border:1px solid #bbf7d0; border-radius:10px;
+      padding:10px 14px; margin-top:6px; }
+    .farewell { padding:22px 24px; font-size:1.05rem; line-height:1.6; }
+    .foot { margin-top:20px; font-size:.85rem; color:var(--muted); }
+</style>
+</head>
+<body>
+  <main class="page">
+    <div class="hero">
+      <h1>Paul Raymond</h1>
+      <p class="meta">25S21 &middot; <a href="https://github.com/F1r3Ph0EniX/test1" target="_blank" rel="noopener">GitHub repo</a> &middot; <a href="../all.html">Back to the work grid</a></p>
+    </div>
+    <section class="task" id="task-2020-1">
+      <div class="task-header">2020 Paper 2, Task 1 <span class="files"><a href="https://github.com/F1r3Ph0EniX/test1/blob/main/TYS_2020/TASK1_PAUL%20RAYMOND.ipynb" target="_blank" rel="noopener">TASK1_PAUL RAYMOND.ipynb</a></span></div>
+      <div class="task-body">
+<p>Task 1 is correct and clearly tested; only a little debugging clutter remains.</p>
+<h3>Task 1.1</h3><p>Faithful to the pseudocode with % 1024 inside the loop; outputs 116, 1008 and 644 are correct for the three required calls.</p>
+<h3>Task 1.2</h3><p>Concatenation and reuse of task1_1 are right, and all three seeds are tested with &quot;Hello&quot;. The saved output also shows &quot;seed-oneHello&quot; and similar lines, from a debug print left active inside the function.</p>
+<h3>Next step</h3><div class="next"><p>Remove the leftover debug print and re-run so the saved output shows only the hash values.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2020-2">
+      <div class="task-header">2020 Paper 2, Task 2 <span class="files"><a href="https://github.com/F1r3Ph0EniX/test1/blob/main/TYS_2020/TASK2_PAUL%20RAYMOND.ipynb" target="_blank" rel="noopener">TASK2_PAUL RAYMOND.ipynb</a></span></div>
+      <div class="task-body">
+<p>Your generation and sorting work well; Task 2.3&#x27;s output file is malformed.</p>
+<h3>Task 2.1</h3><p>randint(0, maximum) with one number per line is correct.</p>
+<h3>Task 2.2</h3><p>A correct merge sort with a proper two-pointer merge; the printed sorted list matches. Printing the == True condition from the question would make the test explicit.</p>
+<h3>Task 2.3</h3><p>file.write(integer) has no newline, so every number lands on one continuous line in the output file, and &quot;hehe.txt&quot; does not follow the sortednumbers_&lt;name&gt;_&lt;centre&gt;_&lt;index&gt; naming.</p>
+<h3>Next step</h3><div class="next"><p>Add a newline to each write, rename the output file properly, and re-run 2.3.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2020-3">
+      <div class="task-header">2020 Paper 2, Task 3 <span class="files"><a href="https://github.com/F1r3Ph0EniX/test1/blob/main/TYS_2020/TASK3_PAUL%20RAYMOND.ipynb" target="_blank" rel="noopener">TASK3_PAUL RAYMOND.ipynb</a></span></div>
+      <div class="task-body">
+<p>Careful, well-tested work; one crash path in Task 3.3 needs closing.</p>
+<h3>Task 3.1 and 3.2</h3><p>Validation covers digits, units and empty input, the functions both display and return, and coverage includes &quot;potato&quot; and &quot;&quot;. One gap: letters and digits are collected separately, so order is not enforced and &quot;K8B&quot; would pass.</p>
+<h3>Task 3.3</h3><p>int(task3_2(quantity_of_data)) crashes with ValueError whenever task3_2 returns &quot;invalid data&quot;, for example task3_3(&quot;8XB&quot;, &quot;KB&quot;); your tests miss this because (&quot;&quot;, &quot;&quot;) fails the target-unit check first. Reuse and the 0.5 result for &quot;512MiB&quot; to &quot;GiB&quot; are correct.</p>
+<h3>Next step</h3><div class="next"><p>Store task3_2&#x27;s result, return &quot;invalid data&quot; if that is what it gave, and only then convert.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2020-4">
+      <div class="task-header">2020 Paper 2, Task 4 <span class="files"><a href="https://github.com/F1r3Ph0EniX/test1/blob/main/TYS_2020/TASK4_1_PAUL%20RAYMOND.sql" target="_blank" rel="noopener">TASK4_1_PAUL RAYMOND.sql</a> <a href="https://github.com/F1r3Ph0EniX/test1/blob/main/TYS_2020/TASK4_2_PAUL%20RAYMOND.py" target="_blank" rel="noopener">TASK4_2_PAUL RAYMOND.py</a> <a href="https://github.com/F1r3Ph0EniX/test1/blob/main/TYS_2020/TASK4_3_PAUL%20RAYMOND/TASK4_3_PAUL%20RAYMOND.py" target="_blank" rel="noopener">TASK4_3_PAUL RAYMOND.py</a> <a href="https://github.com/F1r3Ph0EniX/test1/blob/main/TYS_2020/TASK4_3_PAUL%20RAYMOND/static/styles.css" target="_blank" rel="noopener">styles.css</a> <a href="https://github.com/F1r3Ph0EniX/test1/blob/main/TYS_2020/TASK4_3_PAUL%20RAYMOND/templates/index.html" target="_blank" rel="noopener">index.html</a></span></div>
+      <div class="task-body">
+<p>Well-engineered structure, but you tested against your own data rather than the task&#x27;s.</p>
+<h3>Task 4.1</h3><p>The DDL is correct, with personID INTEGER PRIMARY KEY AUTOINCREMENT.</p>
+<h3>Task 4.2</h3><p>Parameterised executemany with commit() is good practice. However the database holds 100 records from your own file, not the seven in people.txt, so Evan O&#x27;Reilly is never exercised; screen_name only removes spaces, so his apostrophe would survive. Student.screen_name also appends &quot;Student&quot;, which the task does not ask for.</p>
+<h3>Task 4.3</h3><p>Proper templates and static folders, all three fields shown; no rendered .html saved.</p>
+<h3>Next step</h3><div class="next"><p>Re-run 4.2 on people.txt with punctuation stripped, then save the page as .html.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2021-1">
+      <div class="task-header">2021 Paper 2, Task 1 <span class="files"><a href="https://github.com/F1r3Ph0EniX/test1/blob/main/Computing_TYS_2021/TASK1_PAUL%20RAYMOND.ipynb" target="_blank" rel="noopener">TASK1_PAUL RAYMOND.ipynb</a></span></div>
+      <div class="task-body">
+<p>A careful solution: the check-digit search loop correctly returns 0 when the sum is already divisible by 10, and Task 1.3 reuses <code>task1_1</code> cleanly with all tests printing True.</p>
+<h3>Task 1.1</h3><p>In the string branch, <code>if input_value.isdigit() == True: valid = True</code> never sets <code>valid = False</code> on failure, so a 14-character string with letters passes validation and crashes at <code>int()</code>. Your &quot;hello world&quot; test only fails on length, which hides this.</p>
+<h3>Task 1.3</h3><p>The same missing <code>else</code> applies to 15-character non-digit strings.</p>
+<h3>Next step</h3><div class="next"><p>Add <code>else: valid = False</code> after each <code>isdigit()</code> check and test a 14-character string containing a letter.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2021-2">
+      <div class="task-header">2021 Paper 2, Task 2 <span class="files"><a href="https://github.com/F1r3Ph0EniX/test1/blob/main/Computing_TYS_2021/TASK2_PAUL%20RAYMOND.ipynb" target="_blank" rel="noopener">TASK2_PAUL RAYMOND.ipynb</a></span></div>
+      <div class="task-body">
+<p>Tasks 2.1 to 2.3 are correct and well built: the in-place partition quicksort is properly recursive and both sorts give the right output, duplicates included.</p>
+<h3>Task 2.4</h3><p>Two problems. There is no discussion at all, yet the sub-task asks you to compare the algorithms with mention of orders of growth. And <code>task2_2</code> sorts each list in place, so <code>task2_3</code> is then timed on already-sorted data, which for a first-element pivot is quicksort&#x27;s worst case; that is why quicksort looks slower than insertion sort in your results.</p>
+<h3>Next step</h3><div class="next"><p>Time each sort on a fresh copy of the data and add a written O(n^2) versus O(n log n) comparison.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2023-1">
+      <div class="task-header">2023 Paper 2, Task 1 <span class="files"><a href="https://github.com/F1r3Ph0EniX/test1/blob/main/Computing_TYS_2023/TASK1_PAUL%20RAYMOND.ipynb" target="_blank" rel="noopener">TASK1_PAUL RAYMOND.ipynb</a></span></div>
+      <div class="task-body">
+<p>Well organised work with parameterised queries; a few schema details need tightening.</p>
+<h3>Task 1.1</h3><p>Dropping <code>Student_Test</code> first shows good thinking, but your <code>Student</code> table lacks <code>FOREIGN KEY (ClassName) REFERENCES Class(ClassName)</code>, and <code>Student_Test</code> names the column <code>Date</code> rather than <code>DateTest</code>; use the exact names in the paper.</p>
+<h3>Task 1.2</h3><p>Values and Mary&#x27;s name split are correct, but the cell shows no output: add a simple <code>SELECT</code> from <code>Student_Test</code>, print the rows, then Run All and save.</p>
+<h3>Next step</h3><div class="next"><p>Add the <code>Class</code> foreign key, rename <code>Date</code> to <code>DateTest</code>, and rerun with a verification <code>SELECT</code>.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2023-2">
+      <div class="task-header">2023 Paper 2, Task 2 <span class="files"><a href="https://github.com/F1r3Ph0EniX/test1/blob/main/Computing_TYS_2023/TASK2_PAUL%20RAYMOND.ipynb" target="_blank" rel="noopener">TASK2_PAUL RAYMOND.ipynb</a></span></div>
+      <div class="task-body">
+<p>Your queue behaves correctly, with wrap-around, numberItems checks, and the full and empty cases both demonstrated.</p>
+<h3>Task 2.3</h3><p>The five sets should come from input(); you hardcode five QueueItem objects. The messages are also printed inside enqueue() itself; the method should just return True or False and the main program should print them.</p>
+<h3>Task 2.4</h3><p>dequeue() prints only temp.getID(); the output should show both the ID and the quantity of each removed item, again from the main code rather than inside the method.</p>
+<h3>Task 2.5</h3><p>printQueue() from headPointer for numberItems steps is exactly right.</p>
+<h3>Next step</h3><div class="next"><p>Move all printing out of the methods and have the main program report ID and quantity.</p></div>
+      </div>
+    </section>
+    <p class="foot">Disclaimer: AI-assisted evaluation may contain issues. Exercise discretion and seek clarification if in doubt.</p>
+  </main>
+</body>
+</html>

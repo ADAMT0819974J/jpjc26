@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback: Niranjan Saravanan</title>
+  <style>
+    :root { color-scheme: light; --bg:#f5f7fb; --panel:#fff; --text:#1f2937;
+      --muted:#6b7280; --border:#dbe2ea; --accent:#1d4ed8; --accent-soft:#dbeafe; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: Arial, Helvetica, sans-serif; color:var(--text);
+      background: linear-gradient(180deg,#eef4ff 0%,var(--bg) 240px); }
+    .page { max-width: 840px; margin:0 auto; padding:32px 20px 48px; }
+    .hero { background:var(--panel); border:1px solid var(--border); border-radius:18px;
+      padding:24px 28px; box-shadow:0 16px 40px rgba(15,23,42,.08); }
+    h1 { margin:0 0 6px; font-size:1.8rem; }
+    .meta { color:var(--muted); font-size:.95rem; }
+    .meta a { color:var(--accent); text-decoration:none; }
+    .meta a:hover { text-decoration:underline; }
+    section.task { margin-top:24px; background:var(--panel); border:1px solid var(--border);
+      border-radius:18px; overflow:hidden; box-shadow:0 16px 40px rgba(15,23,42,.06); }
+    .task-header { padding:14px 24px; background:var(--accent-soft);
+      border-bottom:1px solid var(--border); font-weight:700; }
+    .task-header .files { float:right; font-weight:400; font-size:.9rem; }
+    .task-header .files a { margin-left:10px; }
+    .task-body { padding:8px 24px 20px; }
+    h3 { font-size:1.02rem; margin:18px 0 6px; }
+    p { margin:6px 0; line-height:1.55; }
+    code { background:#eef2f7; border:1px solid var(--border); border-radius:4px;
+      padding:1px 5px; font-size:.9em; }
+    ul { margin:6px 0; padding-left:22px; }
+    .next { background:#f0fdf4; border:1px solid #bbf7d0; border-radius:10px;
+      padding:10px 14px; margin-top:6px; }
+    .farewell { padding:22px 24px; font-size:1.05rem; line-height:1.6; }
+    .foot { margin-top:20px; font-size:.85rem; color:var(--muted); }
+</style>
+</head>
+<body>
+  <main class="page">
+    <div class="hero">
+      <h1>Niranjan Saravanan</h1>
+      <p class="meta">25S21 &middot; <a href="https://github.com/NJ11422/H2-FILES" target="_blank" rel="noopener">GitHub repo</a> &middot; <a href="../all.html">Back to the work grid</a></p>
+    </div>
+    <section class="task" id="task-2020-1">
+      <div class="task-header">2020 Paper 2, Task 1 <span class="files"><a href="https://github.com/NJ11422/H2-FILES/blob/main/A-LVL%202020%20P2/task1.ipynb" target="_blank" rel="noopener">task1.ipynb</a></span></div>
+      <div class="task-body">
+<p>Task 1 is complete and correct, with saved outputs as evidence.</p>
+<h3>Task 1.1</h3><p>The loop matches the pseudocode, applying % 1024 on each iteration, and the outputs 116, 1008 and 644 for the three required calls are all correct.</p>
+<h3>Task 1.2</h3><p>Concatenating seed + string_value into newval and passing it to task1_1 is exactly the reuse the task wants, and all three seeds are tested with &quot;Hello&quot;.</p>
+<h3>Next step</h3><div class="next"><p>Rename the notebook to the TASK1_&lt;name&gt;_&lt;centre number&gt;_&lt;index number&gt; convention so the submission matches the instructions.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2020-2">
+      <div class="task-header">2020 Paper 2, Task 2 <span class="files"><a href="https://github.com/NJ11422/H2-FILES/blob/main/A-LVL%202020%20P2/task2.ipynb" target="_blank" rel="noopener">task2.ipynb</a></span></div>
+      <div class="task-body">
+<p>Your merge sort is strong, but Task 2.1 has a file-handling bug.</p>
+<h3>Task 2.1</h3><p>open(filename, &#x27;w&#x27;) sits inside the loop, so every iteration reopens and truncates the file; as written it finishes with only the final number saved. Open the file once, before the loop.</p>
+<h3>Task 2.2</h3><p>The recursive mergesort with a proper merge works, and the printed sorted list is correct; do also show the == True condition the task asks for.</p>
+<h3>Task 2.3</h3><p>Reads, sorts via task2_2 and writes correctly, with &quot;done&quot; printed as run evidence.</p>
+<h3>Next step</h3><div class="next"><p>Move the open outside the loop, then re-run 2.1 followed by 2.3 and save the notebook.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2020-3">
+      <div class="task-header">2020 Paper 2, Task 3 <span class="files"><a href="https://github.com/NJ11422/H2-FILES/blob/main/A-LVL%202020%20P2/task3.ipynb" target="_blank" rel="noopener">task3.ipynb</a></span></div>
+      <div class="task-body">
+<p>All conversions are correct and well tested; the validation is looser than the task requires.</p>
+<h3>Task 3.1 and 3.2</h3><p>You separate letters from other characters, which accepts scrambled strings: &quot;8K2B&quot; or &quot;KB8&quot; would pass because the order, digits followed by the unit, is never checked. Coverage is good: four then eight units plus invalid cases, all correct.</p>
+<h3>Task 3.3</h3><p>Reuses task3_2 and propagates &quot;invalid data&quot; properly, but it only prints; the task says the converted value must be returned as well as displayed.</p>
+<h3>Next step</h3><div class="next"><p>Validate the shape directly, leading part isdigit() and the string ending in an approved unit, and return the value in 3.3.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2020-4">
+      <div class="task-header">2020 Paper 2, Task 4 <span class="files"><a href="https://github.com/NJ11422/H2-FILES/blob/main/A-LVL%202020%20P2/TASK4_1.sql" target="_blank" rel="noopener">TASK4_1.sql</a> <a href="https://github.com/NJ11422/H2-FILES/blob/main/A-LVL%202020%20P2/TASK4_2.py" target="_blank" rel="noopener">TASK4_2.py</a> <a href="https://github.com/NJ11422/H2-FILES/blob/main/A-LVL%202020%20P2/index.html" target="_blank" rel="noopener">index.html</a> <a href="https://github.com/NJ11422/H2-FILES/blob/main/A-LVL%202020%20P2/server.py" target="_blank" rel="noopener">server.py</a></span></div>
+      <div class="task-body">
+<p>A near-complete Task 4 with genuine run evidence: school.db holds all seven records, including EvanOReilly0415 with the apostrophe correctly stripped.</p>
+<h3>Task 4.1</h3><p>The DDL matches the specification, with INTEGER PRIMARY KEY AUTOINCREMENT.</p>
+<h3>Task 4.2</h3><p>Parameterised INSERTs with commit() are exactly right. Two tidy-ups: you open &#x27;task4_1.sql&#x27; but the file is TASK4_1.sql, which breaks on case-sensitive systems, and Staff.screen_name duplicates the parent code instead of calling super().screen_name().</p>
+<h3>Task 4.3</h3><p>The route and template show all three fields, but index.html must sit in a templates folder, and no rendered .html output is saved.</p>
+<h3>Next step</h3><div class="next"><p>Move index.html into templates/, run server.py and save the page as .html.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2021-1">
+      <div class="task-header">2021 Paper 2, Task 1 <span class="files"><a href="https://github.com/NJ11422/H2-FILES/blob/main/A-LVL%202021%20P2/task1.ipynb" target="_blank" rel="noopener">task1.ipynb</a></span></div>
+      <div class="task-body">
+<p>The check digit algorithm itself is right, with correct doubling of odd positions from the right and proper digit-pair sums.</p>
+<h3>Task 1.1</h3><p>The function returns the string &quot;-1&quot;, not the integer -1 the task asks for; your 1.2 tests only pass because they compare against &quot;-1&quot;. Also <code>check = 10 - precheck</code> gives 10 when the sum is divisible by 10; wrap it with <code>% 10</code>.</p>
+<h3>Task 1.3</h3><p>There is no <code>str()</code> conversion before <code>for i in input_value</code>, so passing a valid integer crashes rather than being validated.</p>
+<h3>Next step</h3><div class="next"><p>Return integer -1, wrap the check digit with <code>% 10</code>, convert 1.3&#x27;s input with <code>str()</code>, then re-run.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2021-2">
+      <div class="task-header">2021 Paper 2, Task 2 <span class="files"><a href="https://github.com/NJ11422/H2-FILES/blob/main/A-LVL%202021%20P2/task2.ipynb" target="_blank" rel="noopener">task2.ipynb</a></span></div>
+      <div class="task-body">
+<p>Your two sorting algorithms are implemented correctly, but the notebook shows no evidence that anything runs.</p>
+<h3>Task 2.1</h3><p><code>open(&quot;TEN.txt&quot;)</code> ignores the <code>filename</code> parameter, so HUNDRED.txt and THOUSAND.txt are never read; t100 and t1000 in 2.4 hold TEN&#x27;s data. The required prints for 2.1 to 2.3 are all commented out.</p>
+<h3>Task 2.4</h3><p>The saved cell ends in FileNotFoundError for TEN.txt, so there are no timings, and no written comparison mentioning O(n^2) and O(n log n).</p>
+<h3>Next step</h3><div class="next"><p>Change to <code>open(filename)</code>, place the data files beside the notebook, uncomment every print, add the orders-of-growth comparison, then Run All and save.</p></div>
+      </div>
+    </section>
+    <p class="foot">Disclaimer: AI-assisted evaluation may contain issues. Exercise discretion and seek clarification if in doubt.</p>
+  </main>
+</body>
+</html>

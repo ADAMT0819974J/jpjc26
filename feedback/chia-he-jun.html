@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback: Chia He Jun</title>
+  <style>
+    :root { color-scheme: light; --bg:#f5f7fb; --panel:#fff; --text:#1f2937;
+      --muted:#6b7280; --border:#dbe2ea; --accent:#1d4ed8; --accent-soft:#dbeafe; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: Arial, Helvetica, sans-serif; color:var(--text);
+      background: linear-gradient(180deg,#eef4ff 0%,var(--bg) 240px); }
+    .page { max-width: 840px; margin:0 auto; padding:32px 20px 48px; }
+    .hero { background:var(--panel); border:1px solid var(--border); border-radius:18px;
+      padding:24px 28px; box-shadow:0 16px 40px rgba(15,23,42,.08); }
+    h1 { margin:0 0 6px; font-size:1.8rem; }
+    .meta { color:var(--muted); font-size:.95rem; }
+    .meta a { color:var(--accent); text-decoration:none; }
+    .meta a:hover { text-decoration:underline; }
+    section.task { margin-top:24px; background:var(--panel); border:1px solid var(--border);
+      border-radius:18px; overflow:hidden; box-shadow:0 16px 40px rgba(15,23,42,.06); }
+    .task-header { padding:14px 24px; background:var(--accent-soft);
+      border-bottom:1px solid var(--border); font-weight:700; }
+    .task-header .files { float:right; font-weight:400; font-size:.9rem; }
+    .task-header .files a { margin-left:10px; }
+    .task-body { padding:8px 24px 20px; }
+    h3 { font-size:1.02rem; margin:18px 0 6px; }
+    p { margin:6px 0; line-height:1.55; }
+    code { background:#eef2f7; border:1px solid var(--border); border-radius:4px;
+      padding:1px 5px; font-size:.9em; }
+    ul { margin:6px 0; padding-left:22px; }
+    .next { background:#f0fdf4; border:1px solid #bbf7d0; border-radius:10px;
+      padding:10px 14px; margin-top:6px; }
+    .farewell { padding:22px 24px; font-size:1.05rem; line-height:1.6; }
+    .foot { margin-top:20px; font-size:.85rem; color:var(--muted); }
+</style>
+</head>
+<body>
+  <main class="page">
+    <div class="hero">
+      <h1>Chia He Jun</h1>
+      <p class="meta">25S11 &middot; <a href="https://github.com/ChiaHeJun/H2Computing" target="_blank" rel="noopener">GitHub repo</a> &middot; <a href="../all.html">Back to the work grid</a></p>
+    </div>
+    <section class="task" id="task-2020-1">
+      <div class="task-header">2020 Paper 2, Task 1 <span class="files"><a href="https://github.com/ChiaHeJun/H2Computing/blob/main/2020/2020.ipynb" target="_blank" rel="noopener">2020.ipynb</a></span></div>
+      <div class="task-body">
+<p>Your code is fully correct and every required test is written, but the notebook has no saved output for this cell, so there is no visible evidence of a run.</p>
+<h3>Task 1.1</h3><p>The loop matches the pseudocode exactly, with the modulus applied inside each iteration, and all three calls (&quot;Hello&quot;, &quot;Hallo&quot;, &quot;Hullo&quot;) are printed.</p>
+<h3>Task 1.2</h3><p>Concatenating seed then string_value and reusing task1_1 is exactly right, and all three seed tests are present. One small note: the specified calls all use &quot;Hello&quot;, while you varied the second argument; keep to the given calls.</p>
+<h3>Next step</h3><div class="next"><p>Run All, save the notebook with outputs showing, then push again.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2020-2">
+      <div class="task-header">2020 Paper 2, Task 2 <span class="files"><a href="https://github.com/ChiaHeJun/H2Computing/blob/main/2020/2020.ipynb" target="_blank" rel="noopener">2020.ipynb</a></span></div>
+      <div class="task-body">
+<p>All three functions are written correctly, but none of them is ever called, so there are no runs, no test evidence and no output files.</p>
+<h3>Task 2.1</h3><p><code>random.randint(0, maximum)</code> with one value per line is correct; the required run with 1000 numbers up to 5000 is missing.</p>
+<h3>Task 2.2</h3><p>The merge sort with <code>pop(0)</code> and extending the leftovers is sound, but the specified check <code>task2_2([56,25,4,98,0,18,4,5,7,0]) == [0,0,4,4,5,7,18,25,56,98]</code> printing True is absent.</p>
+<h3>Task 2.3</h3><p>Reading with <code>int(line.strip())</code>, sorting via task2_2 and writing back is right; it is never run on the randomnumbers file.</p>
+<h3>Next step</h3><div class="next"><p>Add a main section calling 2.1, 2.2 and 2.3, then Run All and save.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2020-3">
+      <div class="task-header">2020 Paper 2, Task 3 <span class="files"><a href="https://github.com/ChiaHeJun/H2Computing/blob/main/2020/2020.ipynb" target="_blank" rel="noopener">2020.ipynb</a></span></div>
+      <div class="task-body">
+<p>This is excellent work: all three functions are correct, validated and shown running, with 0.5 for task3_3(&quot;512MiB&quot;, &quot;GiB&quot;) in the saved output.</p>
+<h3>Task 3.1 and 3.2</h3><p>The dictionary of factors with <code>endswith</code> and <code>isdigit()</code> is clean, and each function both prints and returns as the task requires. Your 3.2 tests cover only KB, MiB, GiB and TiB plus an invalid case; KiB, MB, GB and TB are untested, and the task asks for all eight units.</p>
+<h3>Task 3.3</h3><p>Validating target_unit first, reusing task3_2 and propagating &quot;invalid data&quot; is exactly right; the only blemish is the message printing twice when the input is invalid, since both functions print it.</p>
+<h3>Next step</h3><div class="next"><p>Extend the 3.2 tests to all eight approved units and rerun.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2022-4">
+      <div class="task-header">2022 Paper 2, Task 4 <span class="files"><a href="https://github.com/ChiaHeJun/H2Computing/blob/main/2022/2022%20Task%204.ipynb" target="_blank" rel="noopener">2022 Task 4.ipynb</a></span></div>
+      <div class="task-body">
+<p>Your SQL structure is heading the right way, but the notebook has no saved output and was never run, so several errors are still hiding in it.</p>
+<h3>Task 4.1</h3><p>One DROP TABLE statement cannot drop three tables; also Loan declares the column as MemberID but the FOREIGN KEY line references MemberNumber, so the CREATE TABLE would fail. Your parameterised INSERTs in 4.2 are the right technique.</p>
+<h3>Task 4.3</h3><p><code>conn.ececute</code> is a typo (here and in 4.4), and 4.2 uses conn after conn.close().</p>
+<h3>Task 4.4</h3><p>This needs a Flask web application returning an HTML table, not console prints.</p>
+<h3>Next step</h3><div class="next"><p>Run every cell top to bottom, fix each error as it appears, then save with outputs before pushing.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2023-1">
+      <div class="task-header">2023 Paper 2, Task 1 <span class="files"><a href="https://github.com/ChiaHeJun/H2Computing/blob/main/2023/2023%20Task%201%20and%202.ipynb" target="_blank" rel="noopener">2023 Task 1 and 2.ipynb</a></span></div>
+      <div class="task-body">
+<p>A strong Task 1 with correct primary and foreign keys throughout and saved output showing it ran.</p>
+<h3>Task 1.1</h3><p>Well done: <code>FOREIGN KEY (ClassName) REFERENCES Class(ClassName)</code> in Student and both keys in Student_Test are properly declared, and your cell ran without error with the evidence saved.</p>
+<h3>Task 1.2</h3><p>Values are right, but you insert Student before Class, so CS3 does not yet exist when Mary references it; also store the date as <code>&#x27;01-02-2023&#x27;</code> rather than <code>&#x27;1 February 2023&#x27;</code> to match the question&#x27;s format.</p>
+<h3>Next step</h3><div class="next"><p>Reorder the inserts to Class, Student, Test, Student_Test and add a simple SELECT from each table to show the rows, then rerun and save.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2024-2">
+      <div class="task-header">2024 Paper 2, Task 2 <span class="files"><a href="https://github.com/ChiaHeJun/H2Computing/blob/main/2024%20Task%202%20%281%29.ipynb" target="_blank" rel="noopener">2024 Task 2 (1).ipynb</a></span></div>
+      <div class="task-body">
+<p>A promising start on the Node class and node counting, but the notebook stops partway: 2.4 to 2.6 have no saved output and 2.7 is missing.</p>
+<h3>Task 2.1</h3><p><code>def get _right</code> has a stray space, so this cell cannot run; the other setters and getters are correct.</p>
+<h3>Task 2.2</h3><p>All four 2.3 tests print correct counts; note the function returns the message string rather than the node count value.</p>
+<h3>Task 2.4</h3><p><code>list_of_nodes.append(Node)</code> appends the class itself, not <code>Node()</code> objects, and the loop runs <code>levels</code> times instead of 2 ** levels - 1.</p>
+<h3>Next step</h3><div class="next"><p>Fix <code>get_right</code>, finish 2.6 and 2.7, then Run All and save before pushing.</p></div>
+      </div>
+    </section>
+    <p class="foot">Disclaimer: AI-assisted evaluation may contain issues. Exercise discretion and seek clarification if in doubt.</p>
+  </main>
+</body>
+</html>

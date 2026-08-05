@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback: Goh Jun Le, Javier</title>
+  <style>
+    :root { color-scheme: light; --bg:#f5f7fb; --panel:#fff; --text:#1f2937;
+      --muted:#6b7280; --border:#dbe2ea; --accent:#1d4ed8; --accent-soft:#dbeafe; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: Arial, Helvetica, sans-serif; color:var(--text);
+      background: linear-gradient(180deg,#eef4ff 0%,var(--bg) 240px); }
+    .page { max-width: 840px; margin:0 auto; padding:32px 20px 48px; }
+    .hero { background:var(--panel); border:1px solid var(--border); border-radius:18px;
+      padding:24px 28px; box-shadow:0 16px 40px rgba(15,23,42,.08); }
+    h1 { margin:0 0 6px; font-size:1.8rem; }
+    .meta { color:var(--muted); font-size:.95rem; }
+    .meta a { color:var(--accent); text-decoration:none; }
+    .meta a:hover { text-decoration:underline; }
+    section.task { margin-top:24px; background:var(--panel); border:1px solid var(--border);
+      border-radius:18px; overflow:hidden; box-shadow:0 16px 40px rgba(15,23,42,.06); }
+    .task-header { padding:14px 24px; background:var(--accent-soft);
+      border-bottom:1px solid var(--border); font-weight:700; }
+    .task-header .files { float:right; font-weight:400; font-size:.9rem; }
+    .task-header .files a { margin-left:10px; }
+    .task-body { padding:8px 24px 20px; }
+    h3 { font-size:1.02rem; margin:18px 0 6px; }
+    p { margin:6px 0; line-height:1.55; }
+    code { background:#eef2f7; border:1px solid var(--border); border-radius:4px;
+      padding:1px 5px; font-size:.9em; }
+    ul { margin:6px 0; padding-left:22px; }
+    .next { background:#f0fdf4; border:1px solid #bbf7d0; border-radius:10px;
+      padding:10px 14px; margin-top:6px; }
+    .farewell { padding:22px 24px; font-size:1.05rem; line-height:1.6; }
+    .foot { margin-top:20px; font-size:.85rem; color:var(--muted); }
+</style>
+</head>
+<body>
+  <main class="page">
+    <div class="hero">
+      <h1>Goh Jun Le, Javier</h1>
+      <p class="meta">25S21 &middot; <a href="https://github.com/Javierdaloser/Computing" target="_blank" rel="noopener">GitHub repo</a> &middot; <a href="../all.html">Back to the work grid</a></p>
+    </div>
+    <section class="task" id="task-2020-1">
+      <div class="task-header">2020 Paper 2, Task 1 <span class="files"><a href="https://github.com/Javierdaloser/Computing/blob/main/2020_P2/TASK1_javier.ipynb" target="_blank" rel="noopener">TASK1_javier.ipynb</a></span></div>
+      <div class="task-body">
+<p>Task 1 is fully correct, with saved outputs showing every required call running.</p>
+<h3>Task 1.1</h3><p>The loop applies <code>% 1024</code> inside each iteration exactly as the pseudocode requires, and the outputs 116, 1008 and 644 are all correct.</p>
+<h3>Task 1.2</h3><p><code>seed + string_value</code> in the right order, reusing <code>task1_1</code> rather than re-implementing the hash, and all three seeds tested with <code>&quot;Hello&quot;</code> giving 388, 156 and 282. The only blemish is the debug <code>print(conc)</code>, which displays the concatenated string the task did not ask for.</p>
+<h3>Next step</h3><div class="next"><p>Remove the <code>print(conc)</code> line, then Run All and save so only the hash values show.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2020-2">
+      <div class="task-header">2020 Paper 2, Task 2 <span class="files"><a href="https://github.com/Javierdaloser/Computing/blob/main/2020_P2/2020_TASK2_javier.ipynb" target="_blank" rel="noopener">2020_TASK2_javier.ipynb</a></span></div>
+      <div class="task-body">
+<p>Your merge sort and file handling are solid, but Task 2.1 generates the wrong range of numbers.</p>
+<h3>Task 2.1</h3><p><code>random.randint(0, quantity+1)</code> uses <code>quantity</code> instead of <code>maximum</code>, and the <code>+1</code> is wrong because randint is already inclusive. Your saved 2.3 output confirms it: nothing exceeds about 1001 even though maximum was 5000.</p>
+<h3>Task 2.2</h3><p>Correct recursive merge sort; leftovers are copied and duplicates kept, as the 0, 0, 4, 4 output shows.</p>
+<h3>Task 2.3</h3><p>Reading with <code>int()</code>, sorting through task2_2 and writing one per line are all correct.</p>
+<h3>Next step</h3><div class="next"><p>Change 2.1 to <code>randint(0, maximum)</code>, then re-run 2.1 and 2.3 and save.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2020-3">
+      <div class="task-header">2020 Paper 2, Task 3 <span class="files"><a href="https://github.com/Javierdaloser/Computing/blob/main/2020_P2/2020_TASK3_javier.ipynb" target="_blank" rel="noopener">2020_TASK3_javier.ipynb</a></span></div>
+      <div class="task-body">
+<p>The logic is largely correct across all three parts, but one saved output is stale and invalid inputs are untested.</p>
+<h3>Task 3.1</h3><p>The saved output shows <code>task3_1(&quot;800TB&quot;)</code> printing invalid data, which does not match the current code; that output is stale. The <code>isdigit()</code> check on the sliced digits is good.</p>
+<h3>Task 3.2</h3><p>Delegating two-character units to task3_1 and routing &quot;i&quot; units to <code>convert2</code> is neat; all eight units tested correctly.</p>
+<h3>Task 3.3</h3><p>If task3_2 returns <code>&quot;invalid data&quot;</code>, <code>converter</code> divides that string and crashes; no invalid case is tested.</p>
+<h3>Next step</h3><div class="next"><p>Re-run the notebook, then add an invalid-input test for task3_3 after guarding the division.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2020-4">
+      <div class="task-header">2020 Paper 2, Task 4 <span class="files"><a href="https://github.com/Javierdaloser/Computing/blob/main/2020_P2/TASK4_1.sql" target="_blank" rel="noopener">TASK4_1.sql</a></span></div>
+      <div class="task-body">
+<p>Only Task 4.1 has been submitted; the SQL is correct, but the bulk of Task 4 is missing.</p>
+<h3>Task 4.1</h3><p>Your DDL defines <code>People</code> with <code>PRIMARY KEY(&quot;PersonID&quot; AUTOINCREMENT)</code> and the right TEXT and INTEGER column types; the added NOT NULL constraints are sensible.</p>
+<h3>Task 4.2 and 4.3</h3><p>There is no Python file: no <code>Person</code>, <code>Staff</code> or <code>Student</code> classes, no reading of people.txt, no INSERT into school.db, no Flask application and no saved <code>.html</code> output. This is where most of the task sits, and none of it can be reviewed yet.</p>
+<h3>Next step</h3><div class="next"><p>Write task4_2 starting with the <code>Person</code> class and its <code>is_adult()</code> and <code>screen_name()</code> methods.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2023-1">
+      <div class="task-header">2023 Paper 2, Task 1 <span class="files"><a href="https://github.com/Javierdaloser/Computing/blob/main/2023_P2/2023_TASK1_javier.ipynb" target="_blank" rel="noopener">2023_TASK1_javier.ipynb</a></span></div>
+      <div class="task-body">
+<p>All three foreign keys are correctly declared, but a class name slip and two Python details need fixing.</p>
+<h3>Task 1.1</h3><p>Well done including <code>FOREIGN KEY(ClassName) REFERENCES Class(ClassName)</code> in Student; however <code>connection.commit</code> and <code>connection.close</code> lack brackets, so neither runs, as your <code>&lt;function Connection.close()&gt;</code> output shows.</p>
+<h3>Task 1.2</h3><p>You inserted Mary with class <code>&#x27;C13&#x27;</code> but the Class row is <code>&#x27;CS3&#x27;</code>, breaking the link; the cell also shows nothing, so add a <code>SELECT * FROM Student_Test</code> and print the result.</p>
+<h3>Next step</h3><div class="next"><p>Fix <code>&#x27;C13&#x27;</code> to <code>&#x27;CS3&#x27;</code>, add the verification SELECT, then Run All and save.</p></div>
+      </div>
+    </section>
+    <p class="foot">Disclaimer: AI-assisted evaluation may contain issues. Exercise discretion and seek clarification if in doubt.</p>
+  </main>
+</body>
+</html>

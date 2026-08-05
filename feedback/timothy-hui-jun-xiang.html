@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback: Timothy Hui Jun Xiang</title>
+  <style>
+    :root { color-scheme: light; --bg:#f5f7fb; --panel:#fff; --text:#1f2937;
+      --muted:#6b7280; --border:#dbe2ea; --accent:#1d4ed8; --accent-soft:#dbeafe; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: Arial, Helvetica, sans-serif; color:var(--text);
+      background: linear-gradient(180deg,#eef4ff 0%,var(--bg) 240px); }
+    .page { max-width: 840px; margin:0 auto; padding:32px 20px 48px; }
+    .hero { background:var(--panel); border:1px solid var(--border); border-radius:18px;
+      padding:24px 28px; box-shadow:0 16px 40px rgba(15,23,42,.08); }
+    h1 { margin:0 0 6px; font-size:1.8rem; }
+    .meta { color:var(--muted); font-size:.95rem; }
+    .meta a { color:var(--accent); text-decoration:none; }
+    .meta a:hover { text-decoration:underline; }
+    section.task { margin-top:24px; background:var(--panel); border:1px solid var(--border);
+      border-radius:18px; overflow:hidden; box-shadow:0 16px 40px rgba(15,23,42,.06); }
+    .task-header { padding:14px 24px; background:var(--accent-soft);
+      border-bottom:1px solid var(--border); font-weight:700; }
+    .task-header .files { float:right; font-weight:400; font-size:.9rem; }
+    .task-header .files a { margin-left:10px; }
+    .task-body { padding:8px 24px 20px; }
+    h3 { font-size:1.02rem; margin:18px 0 6px; }
+    p { margin:6px 0; line-height:1.55; }
+    code { background:#eef2f7; border:1px solid var(--border); border-radius:4px;
+      padding:1px 5px; font-size:.9em; }
+    ul { margin:6px 0; padding-left:22px; }
+    .next { background:#f0fdf4; border:1px solid #bbf7d0; border-radius:10px;
+      padding:10px 14px; margin-top:6px; }
+    .farewell { padding:22px 24px; font-size:1.05rem; line-height:1.6; }
+    .foot { margin-top:20px; font-size:.85rem; color:var(--muted); }
+</style>
+</head>
+<body>
+  <main class="page">
+    <div class="hero">
+      <h1>Timothy Hui Jun Xiang</h1>
+      <p class="meta">25S22 &middot; <a href="https://github.com/timothyhref/H2COMPUTING" target="_blank" rel="noopener">GitHub repo</a> &middot; <a href="../all.html">Back to the work grid</a></p>
+    </div>
+    <section class="task" id="task-2020-1">
+      <div class="task-header">2020 Paper 2, Task 1 <span class="files"><a href="https://github.com/timothyhref/H2COMPUTING/blob/main/A_LVL_2020/task1.ipynb" target="_blank" rel="noopener">task1.ipynb</a></span></div>
+      <div class="task-body">
+<p>A fully correct Task 1 with clear evidence your code runs correctly.</p>
+<h3>Task 1.1</h3><p>h = (h + val) % 1024 inside the loop matches the pseudocode line for line, and the three required calls print 116, 1008 and 644.</p>
+<h3>Task 1.2</h3><p>Passing seed + string_value straight to task1_1 is the intended reuse, and all three seed calls are shown with outputs 388, 156 and 282.</p>
+<h3>Next step</h3><div class="next"><p>Rename the notebook to the TASK1_&lt;name&gt;_&lt;centre&gt;_&lt;index&gt;.ipynb pattern before submission.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2020-2">
+      <div class="task-header">2020 Paper 2, Task 2 <span class="files"><a href="https://github.com/timothyhref/H2COMPUTING/blob/main/A_LVL_2020/task2.ipynb" target="_blank" rel="noopener">task2.ipynb</a></span></div>
+      <div class="task-body">
+<p>Tasks 2.1 and 2.2 are correct, but Task 2.3 sorts strings rather than integers.</p>
+<h3>Task 2.1</h3><p>Inclusive randint bounds, a newline per value and a completed run to randomnumbers_Timothy_JPJC_15.txt: all good.</p>
+<h3>Task 2.2</h3><p>A clean recursive merge sort, and you printed the paper&#x27;s comparison returning True.</p>
+<h3>Task 2.3</h3><p>lst.append(line) never converts to int, so task2_2 compares strings and your sortednumbers file begins 1, 1005, 101, 1022: lexicographic order, not numeric. Convert each value with int(line.strip()) when reading and back to str when writing.</p>
+<h3>Next step</h3><div class="next"><p>Add the int() conversion in task2_3, rerun, and check the output file starts from the smallest numbers.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2020-3">
+      <div class="task-header">2020 Paper 2, Task 3 <span class="files"><a href="https://github.com/timothyhref/H2COMPUTING/blob/main/A_LVL_2020/task3.ipynb" target="_blank" rel="noopener">task3.ipynb</a></span></div>
+      <div class="task-body">
+<p>The worked conversions are right, but the validation paths do not actually stop invalid input.</p>
+<h3>Task 3.1</h3><p>After print(&quot;invalid data&quot;) the function still runs the return line, so task3_1(&quot;8XB&quot;) crashes instead of returning the message. Only one test is shown.</p>
+<h3>Task 3.2</h3><p>quantity_of_data[-3:] is never all digits for valid input, so a two-letter unit like &quot;8KB&quot; sets unit to &quot;8KB&quot; and si.index(unit) raises ValueError. Testing beyond &quot;2MiB&quot; would have exposed this.</p>
+<h3>Task 3.3</h3><p>No target_unit validation and only one of the required three tests.</p>
+<h3>Next step</h3><div class="next"><p>Return &quot;invalid data&quot; instead of printing it, then test all eight units in each function.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2020-4">
+      <div class="task-header">2020 Paper 2, Task 4 <span class="files"><a href="https://github.com/timothyhref/H2COMPUTING/blob/main/A_LVL_2020/TASK4_1_25S22_Timothy_15.sql" target="_blank" rel="noopener">TASK4_1_25S22_Timothy_15.sql</a> <a href="https://github.com/timothyhref/H2COMPUTING/blob/main/A_LVL_2020/TASK4_2_Timothy_25S22_15.py" target="_blank" rel="noopener">TASK4_2_Timothy_25S22_15.py</a> <a href="https://github.com/timothyhref/H2COMPUTING/blob/main/A_LVL_2020/TASK4_3_Timothy_25S22_15.py" target="_blank" rel="noopener">TASK4_3_Timothy_25S22_15.py</a> <a href="https://github.com/timothyhref/H2COMPUTING/blob/main/A_LVL_2020/templates/page.html" target="_blank" rel="noopener">page.html</a></span></div>
+      <div class="task-body">
+<p>Task 4 is nearly complete and shows sound technique throughout.</p>
+<h3>Task 4.1</h3><p>The .sql DDL is correct, including NOT NULL columns and PRIMARY KEY(&quot;PersonID&quot; AUTOINCREMENT).</p>
+<h3>Task 4.2</h3><p>A strict (year - birth_year) &gt; 18, isalpha() cleaning that handles Evan O&#x27;Reilly, proper overriding in Staff and Student, and parameterised INSERTs with commit() are all correct.</p>
+<h3>Task 4.3</h3><p>The page shows all three fields, but identity comes from people.txt paired by index with the database rows, which only works while the orders match; the rendered page is not saved as .html.</p>
+<h3>Next step</h3><div class="next"><p>Run the Flask app and save the rendered page as an .html file alongside your code.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2021-1">
+      <div class="task-header">2021 Paper 2, Task 1 <span class="files"><a href="https://github.com/timothyhref/H2COMPUTING/blob/main/A_LVL_2021/task1.ipynb" target="_blank" rel="noopener">task1.ipynb</a></span></div>
+      <div class="task-body">
+<p>Very good Task 1: both functions are correct, doubled digits are summed digit by digit, and a sum already divisible by 10 correctly returns 0.</p>
+<h3>Task 1.2</h3><p>All four tests print True, but the valid-string case reuses the worked example, <code>print(task1_1(&quot;14576567654934&quot;) == 2)</code>; the task says to create your own.</p>
+<h3>Task 1.3</h3><p>Good reuse of <code>task1_1</code> with <code>int(check_d) == compare</code>. One gap: you only validate the length and first 14 digits, so &quot;14576567654934x&quot;, with a non-digit final character, crashes at <code>int(check_d)</code> instead of returning False.</p>
+<h3>Next step</h3><div class="next"><p>Replace the Task 1.2 valid-string test with your own 14-digit value.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2021-2">
+      <div class="task-header">2021 Paper 2, Task 2 <span class="files"><a href="https://github.com/timothyhref/H2COMPUTING/blob/main/A_LVL_2021/task2.ipynb" target="_blank" rel="noopener">task2.ipynb</a></span></div>
+      <div class="task-body">
+<p>Your sorting and timing work is strong, but task2_1 misses its own requirement.</p>
+<h3>Task 2.1</h3><p>The function returns strings: the output shows <code>[&#x27;1636&#x27;, &#x27;3555&#x27;, ...]</code>. Convert with <code>int(line.strip())</code> inside <code>task2_1</code> instead of patching with <code>int()</code> inside both sorts.</p>
+<h3>Task 2.2 and 2.3</h3><p>The recursive insertion sort shifts elements correctly and the quicksort partitions around <code>arr[0]</code> with a proper base case; both print the sorted list.</p>
+<h3>Task 2.4</h3><p>Timings for THOUSAND and TEN support your conclusion and you name quicksort&#x27;s O(n log n), but you never state insertion sort&#x27;s O(n^2) and skipped HUNDRED.txt.</p>
+<h3>Next step</h3><div class="next"><p>Make <code>task2_1</code> return integers, then add HUNDRED.txt timings with the O(n^2) comparison.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2021-3">
+      <div class="task-header">2021 Paper 2, Task 3 <span class="files"><a href="https://github.com/timothyhref/H2COMPUTING/blob/main/A_LVL_2021/task3.ipynb" target="_blank" rel="noopener">task3.ipynb</a></span></div>
+      <div class="task-body">
+<p>A well built set of classes with correct printed outputs; the main weakness is that your lists hold strings, not integers.</p>
+<h3>Task 3.1</h3><p>Node-based design with all five methods, head insertion, and delete handling the head case, with good printed evidence. But you insert <code>line.strip()</code> without <code>int()</code>.</p>
+<h3>Task 3.2</h3><p>The sorted insert is correct at head, middle and tail, but only orders correctly because each value is one character; string comparison puts &quot;10&quot; before &quot;2&quot;. The required <code>search(94)</code> print is also missing.</p>
+<h3>Task 3.3</h3><p><code>enqueue</code> and <code>dequeue</code> are correct, with matching output.</p>
+<h3>Next step</h3><div class="next"><p>Insert <code>int(line.strip())</code> values, rerun, and print <code>search(94)</code> for Task 3.2.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2021-4">
+      <div class="task-header">2021 Paper 2, Task 4 <span class="files"><a href="https://github.com/timothyhref/H2COMPUTING/blob/main/A_LVL_2021/TASK4_1_Timothy_25S22_15.py" target="_blank" rel="noopener">TASK4_1_Timothy_25S22_15.py</a> <a href="https://github.com/timothyhref/H2COMPUTING/blob/main/A_LVL_2021/TASK4_2_Timothy_25S22_15.sql" target="_blank" rel="noopener">TASK4_2_Timothy_25S22_15.sql</a> <a href="https://github.com/timothyhref/H2COMPUTING/blob/main/A_LVL_2021/TASK4_2_Timothy_25S22_15_1.html" target="_blank" rel="noopener">TASK4_2_Timothy_25S22_15_1.html</a> <a href="https://github.com/timothyhref/H2COMPUTING/blob/main/A_LVL_2021/TASK4_2_Timothy_25S22_15_2.html" target="_blank" rel="noopener">TASK4_2_Timothy_25S22_15_2.html</a> <a href="https://github.com/timothyhref/H2COMPUTING/blob/main/A_LVL_2021/TASK4_2_Timothy_25S22_15_3.html" target="_blank" rel="noopener">TASK4_2_Timothy_25S22_15_3.html</a> <a href="https://github.com/timothyhref/H2COMPUTING/blob/main/A_LVL_2021/Task4_%20Timothy%20_%2025S22%20_%2015/index.html" target="_blank" rel="noopener">index.html</a> <a href="https://github.com/timothyhref/H2COMPUTING/blob/main/A_LVL_2021/Task4_%20Timothy%20_%2025S22%20_%2015/mean.html" target="_blank" rel="noopener">mean.html</a> <a href="https://github.com/timothyhref/H2COMPUTING/blob/main/A_LVL_2021/Task4_%20Timothy%20_%2025S22%20_%2015/quals.html" target="_blank" rel="noopener">quals.html</a> <a href="https://github.com/timothyhref/H2COMPUTING/blob/main/A_LVL_2021/Task4_%20Timothy%20_%2025S22%20_%2015/results.html" target="_blank" rel="noopener">results.html</a> <a href="https://github.com/timothyhref/H2COMPUTING/blob/main/A_LVL_2021/Task4_3_Timothy_25S22_%2015.sql" target="_blank" rel="noopener">Task4_3_Timothy_25S22_ 15.sql</a> <a href="https://github.com/timothyhref/H2COMPUTING/blob/main/A_LVL_2021/Task4_3_Timothy_25S22_15.html" target="_blank" rel="noopener">Task4_3_Timothy_25S22_15.html</a> <a href="https://github.com/timothyhref/H2COMPUTING/blob/main/A_LVL_2021/Task4_4_Timothy_25S22_15.sql" target="_blank" rel="noopener">Task4_4_Timothy_25S22_15.sql</a></span></div>
+      <div class="task-body">
+<p>A nearly complete Task 4 with rendered pages saved for the rounds and means; 4.4 falls short on presentation and evidence.</p>
+<h3>Task 4.1 and 4.2</h3><p>The menu offers all five options, and the round query joins competitor to scores with <code>ORDER BY scores.score DESC</code>; three saved pages show the tables.</p>
+<h3>Task 4.3</h3><p><code>ROUND(AVG(scores.score),2)</code> with GROUP BY and <code>ORDER BY competitor.name ASC</code> is correct, with output saved.</p>
+<h3>Task 4.4</h3><p><code>(SUM(scores.score) &gt; 250) AS qual</code> displays 1 or 0 rather than yes/no, and no rendered quals page is saved.</p>
+<h3>Next step</h3><div class="next"><p>Map qual to Yes or No before rendering, then save the Qualifiers page as .html.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2022-1">
+      <div class="task-header">2022 Paper 2, Task 1 <span class="files"><a href="https://github.com/timothyhref/H2COMPUTING/blob/main/A_LVL_2022/task1.ipynb" target="_blank" rel="noopener">task1.ipynb</a></span></div>
+      <div class="task-body">
+<p>A strong Caesar cypher: all three parts run, and your modulo formula <code>((ord(character) - 55) % 26) + 65</code> handles the wraparound neatly, with space and the -1 case both covered.</p>
+<h3>Task 1.2</h3><p>All four required test runs are shown: K, k, invalid, and !.</p>
+<h3>Task 1.3</h3><p><code>open(&quot;ENCRYPTEDMESSAGE.txt&quot;,&#x27;w&#x27;)</code> sits inside the <code>for line in lines</code> loop, so a multi-line file would be overwritten each pass; it only works because the data is one line. The file contents also appear only as a comment, not printed output.</p>
+<h3>Next step</h3><div class="next"><p>Open the output file once before the loop, then read it back and print it as evidence.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2022-2">
+      <div class="task-header">2022 Paper 2, Task 2 <span class="files"><a href="https://github.com/timothyhref/H2COMPUTING/blob/main/A_LVL_2022/task2.ipynb" target="_blank" rel="noopener">task2.ipynb</a></span></div>
+      <div class="task-body">
+<p>Your sorting work is solid, but Task 2.4 drifts away from what the question asks.</p>
+<h3>Task 2.1 to 2.3</h3><p>Hand-written bubble sort with a swap flag and a correct recursive merge sort, both with sorted output shown. One gap: <code>task2_1()</code> returns a local list rather than initialising the required global list.</p>
+<h3>Task 2.4</h3><p>Both versions search a hardcoded 11-element list, not the 100-integer list; there is no <code>input()</code> from the user, the function prints &quot;Not found&quot; instead of returning -1, and no not-found test is shown.</p>
+<h3>Next step</h3><div class="next"><p>Rewrite 2.4 to read an integer, search the sorted task2_1 list, and return -1 when absent.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2022-4">
+      <div class="task-header">2022 Paper 2, Task 4 <span class="files"><a href="https://github.com/timothyhref/H2COMPUTING/blob/main/A_LVL_2022/TASK_4_4_%3CTimothy%3E_%3C25S22%3E_%3C15%3E/index.html" target="_blank" rel="noopener">index.html</a> <a href="https://github.com/timothyhref/H2COMPUTING/blob/main/A_LVL_2022/task4.ipynb" target="_blank" rel="noopener">task4.ipynb</a> <a href="https://github.com/timothyhref/H2COMPUTING/blob/main/A_LVL_2022/task4_3_Timothy_25S22_15.py" target="_blank" rel="noopener">task4_3_Timothy_25S22_15.py</a></span></div>
+      <div class="task-body">
+<p>Your database and web application largely work well, with a few gaps.</p>
+<h3>Task 4.1 and 4.2</h3><p>Loan has <code>FOREIGN KEY(&quot;MemberNumber&quot;)</code>, but no FOREIGN KEY on <code>Loan.BookID</code> referencing Book. Your 4.2 inserts are clean: <code>strip()</code> before splitting, parameterised <code>VALUES (?,?,?)</code>, and a commit.</p>
+<h3>Task 4.3</h3><p>The join returns titles with Returned, but the output includes a TRUE row, so this is not the required member 200 test, whose loans are all FALSE.</p>
+<h3>Task 4.4</h3><p>The Flask app and Jinja table are sound, but the saved <code>index.html</code> is the template, not the rendered page.</p>
+<h3>Next step</h3><div class="next"><p>Add the BookID foreign key, rerun 4.3 with member 200, and save the rendered browser page.</p></div>
+      </div>
+    </section>
+    <p class="foot">Disclaimer: AI-assisted evaluation may contain issues. Exercise discretion and seek clarification if in doubt.</p>
+  </main>
+</body>
+</html>

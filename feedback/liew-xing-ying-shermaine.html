@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback: Liew Xing Ying, Shermaine</title>
+  <style>
+    :root { color-scheme: light; --bg:#f5f7fb; --panel:#fff; --text:#1f2937;
+      --muted:#6b7280; --border:#dbe2ea; --accent:#1d4ed8; --accent-soft:#dbeafe; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: Arial, Helvetica, sans-serif; color:var(--text);
+      background: linear-gradient(180deg,#eef4ff 0%,var(--bg) 240px); }
+    .page { max-width: 840px; margin:0 auto; padding:32px 20px 48px; }
+    .hero { background:var(--panel); border:1px solid var(--border); border-radius:18px;
+      padding:24px 28px; box-shadow:0 16px 40px rgba(15,23,42,.08); }
+    h1 { margin:0 0 6px; font-size:1.8rem; }
+    .meta { color:var(--muted); font-size:.95rem; }
+    .meta a { color:var(--accent); text-decoration:none; }
+    .meta a:hover { text-decoration:underline; }
+    section.task { margin-top:24px; background:var(--panel); border:1px solid var(--border);
+      border-radius:18px; overflow:hidden; box-shadow:0 16px 40px rgba(15,23,42,.06); }
+    .task-header { padding:14px 24px; background:var(--accent-soft);
+      border-bottom:1px solid var(--border); font-weight:700; }
+    .task-header .files { float:right; font-weight:400; font-size:.9rem; }
+    .task-header .files a { margin-left:10px; }
+    .task-body { padding:8px 24px 20px; }
+    h3 { font-size:1.02rem; margin:18px 0 6px; }
+    p { margin:6px 0; line-height:1.55; }
+    code { background:#eef2f7; border:1px solid var(--border); border-radius:4px;
+      padding:1px 5px; font-size:.9em; }
+    ul { margin:6px 0; padding-left:22px; }
+    .next { background:#f0fdf4; border:1px solid #bbf7d0; border-radius:10px;
+      padding:10px 14px; margin-top:6px; }
+    .farewell { padding:22px 24px; font-size:1.05rem; line-height:1.6; }
+    .foot { margin-top:20px; font-size:.85rem; color:var(--muted); }
+</style>
+</head>
+<body>
+  <main class="page">
+    <div class="hero">
+      <h1>Liew Xing Ying, Shermaine</h1>
+      <p class="meta">25S21 &middot; <a href="https://github.com/shemnin/h2cp" target="_blank" rel="noopener">GitHub repo</a> &middot; <a href="../all.html">Back to the work grid</a></p>
+    </div>
+    <section class="task" id="task-2020-1">
+      <div class="task-header">2020 Paper 2, Task 1 <span class="files"><a href="https://github.com/shemnin/h2cp/blob/main/2020/2020Alebelp2task1.py" target="_blank" rel="noopener">2020Alebelp2task1.py</a></span></div>
+      <div class="task-body">
+<p>Both functions are written correctly, but the testing is incomplete and nothing shows the code running.</p>
+<h3>Task 1.1</h3><p>The loop applies <code>h = (h + val) % 1024</code> inside each iteration, matching the pseudocode. Only <code>task1_1(&quot;Hello&quot;)</code> is called; the required &quot;Hallo&quot; and &quot;Hullo&quot; tests are missing.</p>
+<h3>Task 1.2</h3><p><code>new_string = seed + string_value</code> then <code>return task1_1(new_string)</code> is exactly the intended reuse, but the function is never called: none of the three seed tests appear.</p>
+<p>As a .py file there is also no saved output as evidence of a run.</p>
+<h3>Next step</h3><div class="next"><p>Add the five missing test calls and run everything in a notebook so outputs are saved.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2020-2">
+      <div class="task-header">2020 Paper 2, Task 2 <span class="files"><a href="https://github.com/shemnin/h2cp/blob/main/2020/task22020alvl.py" target="_blank" rel="noopener">task22020alvl.py</a></span></div>
+      <div class="task-body">
+<p>Tasks 2.1 and 2.2 are correct, but Task 2.3 is missing entirely.</p>
+<h3>Task 2.1</h3><p><code>random.randint(0, maximum)</code> inclusive with one number per line is right. The filename is literally <code>&quot;randomnumbers_yourname_centrenumber_indexnumber.txt&quot;</code>; substitute your own name, centre and index.</p>
+<h3>Task 2.2</h3><p>A clean recursive merge sort: split at the middle, leftover slices appended after the merge loop; you also print the <code>==</code> comparison the task asks for.</p>
+<h3>Task 2.3</h3><p>There is no <code>task2_3</code> in the file, so reading the numbers, sorting via task2_2 and writing sortednumbers is unattempted.</p>
+<h3>Next step</h3><div class="next"><p>Write task2_3 and run it on your randomnumbers file to produce the sorted output file.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2020-3">
+      <div class="task-header">2020 Paper 2, Task 3 <span class="files"><a href="https://github.com/shemnin/h2cp/blob/main/2020/task32020alvl.py" target="_blank" rel="noopener">task32020alvl.py</a></span></div>
+      <div class="task-body">
+<p>Task 3.3 is your strongest part, but 3.1 and 3.2 have validation and unit-coverage gaps.</p>
+<h3>Task 3.1</h3><p>No digit check, so <code>task3_1(&quot;abKB&quot;)</code> crashes on <code>int()</code> instead of returning the error, and &quot;Invalid unit&quot; should be exactly &quot;invalid data&quot;.</p>
+<h3>Task 3.2</h3><p>Slicing <code>[-3:]</code> only matches three-character units, so <code>task3_2(&quot;8KB&quot;)</code> wrongly returns &quot;invalid data&quot;; the function must accept all eight units including KB, MB, GB and TB.</p>
+<h3>Task 3.3</h3><p>The units dictionary and propagating &quot;invalid data&quot; are well designed, but there are no test calls at all.</p>
+<h3>Next step</h3><div class="next"><p>Extend task3_2 to all eight units, then add the three required test sets for task3_3.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2020-4">
+      <div class="task-header">2020 Paper 2, Task 4 <span class="files"><a href="https://github.com/shemnin/h2cp/blob/main/2020/task4_4_2020_alvl.py" target="_blank" rel="noopener">task4_4_2020_alvl.py</a> <a href="https://github.com/shemnin/h2cp/blob/main/2020/templates/people.html" target="_blank" rel="noopener">people.html</a></span></div>
+      <div class="task-body">
+<p>The table creation runs, but the OOP heart of 4.2 is missing and the web code will crash.</p>
+<h3>Task 4.2</h3><p>There are no Person, Staff or Student classes: ScreenName is inserted as the literal <code>&#x27;abc&#x27;</code> and IsAdult stores the identity string instead of 1 or 0. On the plus side, your INSERT uses <code>?</code> placeholders with commit: the right pattern.</p>
+<h3>Task 4.3</h3><p><code>read_people</code> calls <code>people[person].append(identity)</code> on a tuple, raising AttributeError when the page loads; the template also reads <code>person.full_name</code> where <code>person[0]</code> indexing is needed. No output <code>.html</code> is saved.</p>
+<h3>Next step</h3><div class="next"><p>Write the three classes and insert their <code>screen_name()</code> and <code>is_adult()</code> values instead of &#x27;abc&#x27;.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2021-1">
+      <div class="task-header">2021 Paper 2, Task 1 <span class="files"><a href="https://github.com/shemnin/h2cp/blob/main/2021/2021_task1.py" target="_blank" rel="noopener">2021_task1.py</a></span></div>
+      <div class="task-body">
+<p>Your task1_1 is a correct IMEI check digit function, but the rest of the file answers a different exercise.</p>
+<h3>Task 1.1</h3><p>Type checking, isdigit and length validation, digit splitting and the (10 - total % 10) % 10 guard are all right.</p>
+<h3>Task 1.2 and 1.3</h3><p>What follows encrypts characters and DATATOENCRYPT.txt, which is not the 2021 paper: the four print(task1_1(x) == expected) tests and the task1_3 IMEI validator are missing. A .py file also carries no saved output, so there is no run evidence.</p>
+<h3>Next step</h3><div class="next"><p>Write 1.2 and 1.3 as set in the 2021 paper, in a notebook, then Run All and save.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2021-2">
+      <div class="task-header">2021 Paper 2, Task 2 <span class="files"><a href="https://github.com/shemnin/h2cp/blob/main/2021_task2.py" target="_blank" rel="noopener">2021_task2.py</a></span></div>
+      <div class="task-body">
+<p>This file answers a different exercise, not 2021 Task 2. The 2021 paper asks for task2_1(filename) reading TEN.txt into a list of integers, an insertion sort task2_2, a quicksort task2_3, and a timeit comparison across the three files with orders of growth. Your file instead generates 100 random numbers, bubble sorts them, then defines a merge sort and a recursive binary search. The merge sort and binary search are cleanly written, but none of the required functions, algorithms or timing evidence is present, and a .py file shows no output.</p>
+<h3>Next step</h3><div class="next"><p>Redo Task 2 to the 2021 specification in a notebook, starting from task2_1(&#x27;TEN.txt&#x27;).</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2021-3">
+      <div class="task-header">2021 Paper 2, Task 3 <span class="files"><a href="https://github.com/shemnin/h2cp/blob/main/2021_task3.py" target="_blank" rel="noopener">2021_task3.py</a></span></div>
+      <div class="task-body">
+<p>This file answers a different exercise, not 2021 Task 3. The 2021 paper wants a node-based LinkedList with insert, delete, search, count and to_String, then a SortedLinkedList overriding insert and a Queue adding enqueue and dequeue, each tested with Task3data.txt. Your file defines a binary search tree with insert, in_order and post_order traversals; the recursive insertion and traversals are correct for a tree, but there is no linked list, no subclassing, and no testing with the given file or saved output.</p>
+<h3>Next step</h3><div class="next"><p>Implement the 2021 LinkedList hierarchy in a notebook and test each class with Task3data.txt.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2022-1">
+      <div class="task-header">2022 Paper 2, Task 1 <span class="files"><a href="https://github.com/shemnin/h2cp/blob/main/2022/2022_task1.py" target="_blank" rel="noopener">2022_task1.py</a></span></div>
+      <div class="task-body">
+<p>The function at the heart of this file solves a different problem, so the whole task falls through.</p>
+<h3>Task 1.1</h3><p>Your task1_1 computes a check digit from a 14-digit number; the 2022 task asks for a Caesar cypher: add 10 to the character&#x27;s ASCII value, wrap past &#x27;Z&#x27; or &#x27;z&#x27; by subtracting 26, return 33 for a space and -1 otherwise. As written, every single character fails your 14-digit test, so 1.2 always prints &quot;Invalid character&quot; and 1.3 writes an empty file.</p>
+<h3>Task 1.2 and 1.3</h3><p>The surrounding structure is right: chr() on the returned value, skipping -1 results, and printing ENCRYPTEDMESSAGE.txt afterwards. You also need the four test runs: A, a, #, space.</p>
+<h3>Next step</h3><div class="next"><p>Rewrite task1_1 as the ord() plus 10 cypher with wraparound, then rerun and show all four tests.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2022-2">
+      <div class="task-header">2022 Paper 2, Task 2 <span class="files"><a href="https://github.com/shemnin/h2cp/blob/main/2022/2022_task2.py" target="_blank" rel="noopener">2022_task2.py</a></span></div>
+      <div class="task-body">
+<p>Your algorithms are written well; what is missing is the main programs and test evidence around them.</p>
+<h3>Task 2.1 and 2.2</h3><p>task2_1() correctly fills a global list with randint(1, 100) and prints it, and your hand-written bubble sort is right.</p>
+<h3>Task 2.3</h3><p>merge_sort is correct and recursive, but never called; you also need a main program that loops until a valid algorithm choice, then sorts and outputs the list.</p>
+<h3>Task 2.4</h3><p>binary_search is properly recursive with the low &gt; high base case, but has no main program reading an integer and no test runs; a .py file carries no run evidence.</p>
+<h3>Next step</h3><div class="next"><p>Add the 2.3 menu loop and 2.4 main program, then run and show the required tests.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2022-3">
+      <div class="task-header">2022 Paper 2, Task 3 <span class="files"><a href="https://github.com/shemnin/h2cp/blob/main/2022/2022_task3.py" target="_blank" rel="noopener">2022_task3.py</a></span></div>
+      <div class="task-body">
+<p>Your Tree class is exactly right; the task is incomplete because there is no main program.</p>
+<h3>Task 3.1</h3><p>The constructor sets left_pointer and right_pointer to None and data from the parameter, insert recurses left or right and creates a new Tree at an empty pointer, and both traversals are recursive with in-order printing left, node, right. That is all correct. But the file never creates a tree: the task also requires a main program that generates 10 unique random integers from 0 to 999 (random.sample is the easy way), inserts each one, then calls both traversals so the in-order output can be seen ascending. As a .py file with no main program, there is no run evidence at all.</p>
+<h3>Next step</h3><div class="next"><p>Add the main program with random.sample(range(1000), 10), insert the values and call both traversals.</p></div>
+      </div>
+    </section>
+    <p class="foot">Disclaimer: AI-assisted evaluation may contain issues. Exercise discretion and seek clarification if in doubt.</p>
+  </main>
+</body>
+</html>

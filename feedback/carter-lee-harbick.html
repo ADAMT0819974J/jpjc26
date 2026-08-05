@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback: Carter Lee Harbick</title>
+  <style>
+    :root { color-scheme: light; --bg:#f5f7fb; --panel:#fff; --text:#1f2937;
+      --muted:#6b7280; --border:#dbe2ea; --accent:#1d4ed8; --accent-soft:#dbeafe; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: Arial, Helvetica, sans-serif; color:var(--text);
+      background: linear-gradient(180deg,#eef4ff 0%,var(--bg) 240px); }
+    .page { max-width: 840px; margin:0 auto; padding:32px 20px 48px; }
+    .hero { background:var(--panel); border:1px solid var(--border); border-radius:18px;
+      padding:24px 28px; box-shadow:0 16px 40px rgba(15,23,42,.08); }
+    h1 { margin:0 0 6px; font-size:1.8rem; }
+    .meta { color:var(--muted); font-size:.95rem; }
+    .meta a { color:var(--accent); text-decoration:none; }
+    .meta a:hover { text-decoration:underline; }
+    section.task { margin-top:24px; background:var(--panel); border:1px solid var(--border);
+      border-radius:18px; overflow:hidden; box-shadow:0 16px 40px rgba(15,23,42,.06); }
+    .task-header { padding:14px 24px; background:var(--accent-soft);
+      border-bottom:1px solid var(--border); font-weight:700; }
+    .task-header .files { float:right; font-weight:400; font-size:.9rem; }
+    .task-header .files a { margin-left:10px; }
+    .task-body { padding:8px 24px 20px; }
+    h3 { font-size:1.02rem; margin:18px 0 6px; }
+    p { margin:6px 0; line-height:1.55; }
+    code { background:#eef2f7; border:1px solid var(--border); border-radius:4px;
+      padding:1px 5px; font-size:.9em; }
+    ul { margin:6px 0; padding-left:22px; }
+    .next { background:#f0fdf4; border:1px solid #bbf7d0; border-radius:10px;
+      padding:10px 14px; margin-top:6px; }
+    .farewell { padding:22px 24px; font-size:1.05rem; line-height:1.6; }
+    .foot { margin-top:20px; font-size:.85rem; color:var(--muted); }
+</style>
+</head>
+<body>
+  <main class="page">
+    <div class="hero">
+      <h1>Carter Lee Harbick</h1>
+      <p class="meta">25S22 &middot; <a href="https://github.com/carter166/H2Computing" target="_blank" rel="noopener">GitHub repo</a> &middot; <a href="../all.html">Back to the work grid</a></p>
+    </div>
+    <section class="task" id="task-2020-4">
+      <div class="task-header">2020 Paper 2, Task 4 <span class="files"><a href="https://github.com/carter166/H2Computing/blob/main/ALevelRevision/2020ALevelPaper.ipynb" target="_blank" rel="noopener">2020ALevelPaper.ipynb</a></span></div>
+      <div class="task-body">
+<p>Tasks 4.1 and 4.2 are in good shape, but Task 4.3, the web page, is missing entirely.</p>
+<h3>Task 4.1</h3><p>The CREATE TABLE has the right five columns with PRIMARY KEY(&quot;PersonID&quot; AUTOINCREMENT); note the paper wants this DDL saved as a .sql file.</p>
+<h3>Task 4.2</h3><p>Inheritance is handled well: is_adult uses a strict age &gt; 18, the isalnum() filter copes with Evan O&#x27;Reilly, and the INSERT is parameterised with IsAdult stored as 1 or 0. The bare except: print(&#x27;Failed&#x27;) would hide any real error, so avoid it.</p>
+<h3>Next step</h3><div class="next"><p>Build Task 4.3: a Flask app showing full name, screen name and identity, saving the rendered page as .html.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2022-4">
+      <div class="task-header">2022 Paper 2, Task 4 <span class="files"><a href="https://github.com/carter166/H2Computing/blob/main/2022ALevelPaper/Task4.ipynb" target="_blank" rel="noopener">Task4.ipynb</a></span></div>
+      <div class="task-body">
+<p>The structure is sensible, but the notebook currently fails at the first cell and stops short of the full task.</p>
+<h3>Task 4.1</h3><p>The saved output is an error, and there is a missing comma between the two FOREIGN KEY clauses in Loan, which will make the CREATE TABLE fail; the primary keys on all three tables are correctly chosen.</p>
+<h3>Task 4.2</h3><p>The parameterised INSERTs with strip().split(&#x27;,&#x27;) are right, though there is no output to confirm they ran.</p>
+<h3>Task 4.3</h3><p>print(data) prints the cursor object, not the rows: loop over the cursor before conn.close() and print each title with its Returned value, then test with member 200.</p>
+<h3>Task 4.4</h3><p>The Flask web application is missing entirely.</p>
+<h3>Next step</h3><div class="next"><p>Fix the Loan comma, print the 4.3 rows, add the 4.4 Flask app, then Run All and save.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2023-1">
+      <div class="task-header">2023 Paper 2, Task 1 <span class="files"><a href="https://github.com/carter166/H2Computing/blob/main/2023ALevelPaper/Task1.ipynb" target="_blank" rel="noopener">Task1.ipynb</a></span></div>
+      <div class="task-body">
+<p>Strong work: every key is declared and your insert order respects the foreign key dependencies perfectly.</p>
+<h3>Task 1.1</h3><p>Your <code>FOREIGN KEY (&quot;ClassName&quot;) REFERENCES Class(&quot;ClassName&quot;)</code> and both keys in <code>Student_Test</code> are textbook, and the cell ran cleanly. One caution: <code>CREATE TABLE IF NOT EXISTS</code> silently keeps an old table from an earlier attempt, so <code>DROP TABLE IF EXISTS</code> first is safer.</p>
+<h3>Task 1.2</h3><p>Values, name split and the date <code>01-02-2023</code> are all correct, but the cell shows no output: add a <code>SELECT</code> from <code>Student_Test</code> and print the rows as evidence.</p>
+<h3>Next step</h3><div class="next"><p>Add a verification <code>SELECT</code> to Task 1.2, then rerun both cells and save.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2023-2">
+      <div class="task-header">2023 Paper 2, Task 2 <span class="files"><a href="https://github.com/carter166/H2Computing/blob/main/2023ALevelPaper/Task2.ipynb" target="_blank" rel="noopener">Task2.ipynb</a></span></div>
+      <div class="task-body">
+<p>All the queue logic is right and the saved run shows every case: fifth enqueue rejected, fifth dequeue empty, and printQueue in head-to-tail order.</p>
+<h3>Task 2.3</h3><p>The five sets of ID and quantity should be taken with input(), and ID is meant to be a string; you pass the loop counter directly. The messages are also printed inside the methods; return True or False and let the main program print them.</p>
+<h3>Task 2.4</h3><p>The dequeue message shows only the item ID; the task asks for both the ID and the quantity of each removed item.</p>
+<h3>Next step</h3><div class="next"><p>Read ID and quantity with input() and move the messages into the main program.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2023-3">
+      <div class="task-header">2023 Paper 2, Task 3 <span class="files"><a href="https://github.com/carter166/H2Computing/blob/main/2023ALevelPaper/Task3.ipynb" target="_blank" rel="noopener">Task3.ipynb</a></span></div>
+      <div class="task-body">
+<p>Task 3.1 runs and stores both examples correctly, but the three checking functions are never shown working.</p>
+<h3>Task 3.1</h3><p>You read each row as an unbroken 9-character string; the task specifies digits separated by spaces, split into a list, so accept &#x27;7 8 2 9 1 3 4 5 6&#x27; rather than &#x27;782913456&#x27;.</p>
+<h3>Task 3.2</h3><p>rowValidity and colValidity return i + 1 correctly, but neither is ever called on example_1 or example_2, so there is no output for these parts.</p>
+<h3>Task 3.4</h3><p>The cell ends with an incomplete-input error, so squareValidity never ran; check the stray lines after <code>return True</code>.</p>
+<h3>Next step</h3><div class="next"><p>Fix the 3.4 cell, add test calls with messages for 3.2 to 3.4, then Run All and save.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2024-1">
+      <div class="task-header">2024 Paper 2, Task 1 <span class="files"><a href="https://github.com/carter166/H2Computing/blob/main/2024ALevelPaper/Task1.ipynb" target="_blank" rel="noopener">Task1.ipynb</a></span></div>
+      <div class="task-body">
+<p>Your game runs end to end with saved output, and <code>colourComparison</code> in Task 1.2 covers the full red, green, blue cycle neatly.</p>
+<h3>Task 1.3</h3><p>Your bubble sort swaps only <code>hand[j][1]</code>, so numbers move while colours stay put and each card&#x27;s colour-number pairing is destroyed; compare Hand 1 before and after. There is also no red, green, blue tie-break for equal numbers.</p>
+<h3>Task 1.4</h3><p>In <code>score_tally</code> the losing player scores nothing, but the rules give the loser their own card number as well.</p>
+<h3>Next step</h3><div class="next"><p>Swap the whole card in 1.3 with <code>hand[j], hand[j+1] = hand[j+1], hand[j]</code>, then re-run and recheck the scores.</p></div>
+      </div>
+    </section>
+    <p class="foot">Disclaimer: AI-assisted evaluation may contain issues. Exercise discretion and seek clarification if in doubt.</p>
+  </main>
+</body>
+</html>
