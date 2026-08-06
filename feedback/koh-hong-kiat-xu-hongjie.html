@@ -108,6 +108,36 @@
 <h3>Next step</h3><div class="next"><p>Make ClassName the sole primary key of Class and add the matching foreign key in Student.</p></div>
       </div>
     </section>
+    <section class="task" id="task-2025-1">
+      <div class="task-header">2025 Paper 2, Task 1 <span class="files">Koh Hong Kiat - task1.ipynb</span></div>
+      <div class="task-body">
+<p>This notebook currently holds only the opening line <code>def push():</code> with no body, and the 1.2 and 1.3 cells are empty, so there is no working code or output to assess yet. Your Task 3 work shows you can write and test substantial programs, so this looks unfinished rather than beyond you. A way in: <code>push()</code> stores the item at the index held by the pointer, appends first if the list is full, then returns the pointer plus one. Once they behave, <code>main()</code> is mostly two short loops.</p>
+<h3>Next step</h3>
+<div class="next"><p>Write <code>push()</code> and <code>pop()</code>, test them on a small list, and save the notebook with outputs showing.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2025-3">
+      <div class="task-header">2025 Paper 2, Task 3 <span class="files">Koh Hong Kiat - task3.ipynb</span></div>
+      <div class="task-body">
+<p>Strong work on the queries: your insert code is careful and parameterised, and the 3.3 run prints exactly the four comments from blocked users.</p>
+<h3>Task 3.1</h3>
+<p>Comment is declared with <code>PRIMARY KEY (CommentID, PostID)</code>, but CommentID alone identifies a comment; Post also has no foreign key even though its Username references User.</p>
+<h3>Task 3.3</h3>
+<p>The task asks for a Python function; your query and printing loop run at the top level, so wrapping them in a <code>def</code> and calling it would complete the requirement.</p>
+<h3>Next step</h3>
+<div class="next"><p>Wrap 3.3 in a function, call it, and re-run the notebook to confirm the same four lines appear.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2025-4">
+      <div class="task-header">2025 Paper 2, Task 4 <span class="files">Koh Hong Kiat - task4.ipynb</span></div>
+      <div class="task-body">
+<p>Tasks 4.1 and 4.2 are working and shown with outputs, and your test calls to <code>insert()</code> are a good habit; the task tails off after 4.3, with 4.4 to 4.6 left empty.</p>
+<h3>Task 4.3</h3>
+<p>Two returns undo the probing: the branch that stores straight into a free home slot never returns <code>True</code>, and <code>return False</code> sits inside the while loop body, so the search gives up after a single probe. The wrap-around test <code>if index &gt; len(hash_table)</code> would also let the index reach 100 and go out of range.</p>
+<h3>Next step</h3>
+<div class="next"><p>Move <code>return False</code> outside the loop, trace three colliding keys by hand, then attempt Task 4.4.</p></div>
+      </div>
+    </section>
     <p class="foot">Disclaimer: AI-assisted evaluation may contain issues. Exercise discretion and seek clarification if in doubt.</p>
   </main>
 </body>

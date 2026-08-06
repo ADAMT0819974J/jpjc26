@@ -152,6 +152,40 @@
 <h3>Next step</h3><div class="next"><p>Open your real notebook locally, Run All, save it, check the file is not zero bytes and reopens with your code and outputs, then push it to replace the empty one.</p></div>
       </div>
     </section>
+    <section class="task" id="task-2025-1">
+      <div class="task-header">2025 Paper 2, Task 1 <span class="files">Hrithikram Ganeshkumar - task1.ipynb</span></div>
+      <div class="task-body">
+<p>This is a complete and convincing solution. Your stack functions follow the model described in the task closely, and the saved outputs for 0, 22 and 46967 all match the expected binary values.</p>
+<h3>Task 1.1</h3>
+<p>The check <code>if top_of_stack_pointer &lt; len(stack)</code> before choosing between overwriting a slot and appending handles the grow-when-full requirement neatly. Adding your own test calls such as <code>push(test_stack, 5, 6)</code> and the two pop cases shows good habits, since each function is verified before it is relied upon in main().</p>
+<h3>Next step</h3>
+<div class="next"><p>Try adapting main() to convert to another base, such as octal, using the same push and pop functions to check your design generalises.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2025-3">
+      <div class="task-header">2025 Paper 2, Task 3 <span class="files">Hrithikram Ganeshkumar - task3.ipynb</span></div>
+      <div class="task-body">
+<p>Your database design is sound, but the notebook shows the program stopping at Task 3.2.</p>
+<h3>Task 3.1</h3>
+<p>All three tables declare the correct primary keys and foreign keys.</p>
+<h3>Task 3.2</h3>
+<p>Because 3.1 ends with <code>conn.close()</code>, the insert cell fails with <code>Cannot operate on a closed database</code>. Reconnecting at the start of 3.2, as you already do inside your 3.3 function, would fix this. The 3.3 cell also has no saved output, so nothing shows the query working.</p>
+<h3>Next step</h3>
+<div class="next"><p>Reconnect to the database at the start of 3.2, then Run All and save so every cell shows its output.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2025-4">
+      <div class="task-header">2025 Paper 2, Task 4 <span class="files">Hrithikram Ganeshkumar - task4.ipynb</span></div>
+      <div class="task-body">
+<p>The storage side of this task is strong; the searching side needs more work.</p>
+<h3>Task 4.3</h3>
+<p>Your <code>insert()</code> probes with <code>index = (index + 1) % 100</code> and stops after checking every slot, exactly the linear probing described.</p>
+<h3>Task 4.5</h3>
+<p><code>find_record()</code> only inspects the home index and never compares keys. Since 475 and 175 both hash to 75, your own 4.6 output shows <code>(175, 'heavy')</code> rather than the record for 475. A related gap: <code>read_data()</code> ignores the value insert() returns, so failed records are never reported.</p>
+<h3>Next step</h3>
+<div class="next"><p>Make find_record() keep probing until it meets a matching key or an empty slot, then rerun Task 4.6 and save.</p></div>
+      </div>
+    </section>
     <p class="foot">Disclaimer: AI-assisted evaluation may contain issues. Exercise discretion and seek clarification if in doubt.</p>
   </main>
 </body>

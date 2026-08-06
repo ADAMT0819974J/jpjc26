@@ -49,6 +49,30 @@
 <h3>Next step</h3><div class="next"><p>Complete task3_2 and task3_3 by extending your unit handling to KiB, MiB, GiB and TiB, then Run All and save.</p></div>
       </div>
     </section>
+    <section class="task" id="task-2025-1">
+      <div class="task-header">2025 Paper 2, Task 1 <span class="files">adam nazraoul - task1.ipynb</span></div>
+      <div class="task-body">
+<p>You have the right overall plan, dividing by 2 and pushing each remainder, and your zero case prints correctly, but the stack machinery is not yet joined up.</p>
+<h3>Task 1.3</h3>
+<p>Your call <code>push(s,spointer,remainder)</code> ignores the returned pointer, so <code>spointer</code> never moves in <code>main()</code> and each digit is printed during the division loop, one per line and in reverse. Assign it: <code>spointer = push(s,spointer,remainder)</code>.</p>
+<h3>Task 1.1</h3>
+<p>When the stack is full, <code>push()</code> returns a message string instead of increasing the length of the list with <code>append</code>.</p>
+<h3>Next step</h3>
+<div class="next"><p>Capture the pointer returned by <code>push()</code>, then pop every digit into one string and print it once.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2025-3">
+      <div class="task-header">2025 Paper 2, Task 3 <span class="files">adam nazraoul - task3.ipynb</span></div>
+      <div class="task-body">
+<p>Your three CREATE TABLE statements show a clear grasp of the table structure, and the foreign keys are declared correctly. Two things hold this task back.</p>
+<h3>Task 3.1</h3>
+<p>No primary keys are defined; each table needs one, for example <code>Username TEXT PRIMARY KEY</code>.</p>
+<h3>Task 3.2</h3>
+<p>Inside <code>for line in file:</code> you call <code>file.read()</code>, which consumes the rest of the file, and the single INSERT sits outside that loop, so at most one row per file would ever be stored.</p>
+<h3>Next step</h3>
+<div class="next"><p>Rework the loops to execute one INSERT per line, then attempt Task 3.3 and run every cell.</p></div>
+      </div>
+    </section>
     <p class="foot">Disclaimer: AI-assisted evaluation may contain issues. Exercise discretion and seek clarification if in doubt.</p>
   </main>
 </body>

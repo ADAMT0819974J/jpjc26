@@ -147,6 +147,40 @@
 <h3>Next step</h3><div class="next"><p>Add the BookID foreign key, rerun 4.3 with member 200, and save the rendered browser page.</p></div>
       </div>
     </section>
+    <section class="task" id="task-2025-1">
+      <div class="task-header">2025 Paper 2, Task 1 <span class="files">timothy_task1.ipynb</span></div>
+      <div class="task-body">
+<p>Your program produces the correct binary output for all three tests, though push() is more fragile than it looks.</p>
+<h3>Task 1.1</h3>
+<p>The branch <code>if stack[top] == " "</code> assumes a free slot holds a space, but popped data stays in the list, so a reused slot would still hold its old value, neither branch would match and push() would return None. The <code>''</code> at index 0 is also never filled, because the first push appends instead.</p>
+<h3>Next step</h3>
+<div class="next"><p>Rewrite push() to store at the pointer position and append only when <code>top == len(stack)</code>, then rerun your tests.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2025-3">
+      <div class="task-header">2025 Paper 2, Task 3 <span class="files">timothy_task3.ipynb</span></div>
+      <div class="task-body">
+<p>This is a strong piece of work; the database builds, loads and returns the expected comments.</p>
+<h3>Task 3.1</h3>
+<p>All three tables carry the right primary keys and foreign keys, and your inserts use parameterised queries such as <code>INSERT INTO Comment VALUES(?,?,?,?,?)</code>, which is good practice.</p>
+<h3>Task 3.3</h3>
+<p>The saved output lists the four comments from blocked users, so the join and the <code>WHERE Blocked = 1</code> filter clearly work. The task asks for a Python function though, and this cell runs at the top level without a <code>def</code>.</p>
+<h3>Next step</h3>
+<div class="next"><p>Wrap the 3.3 query and printing in a function, call it, then rerun and save the notebook.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2025-4">
+      <div class="task-header">2025 Paper 2, Task 4 <span class="files">Timothy_task4.ipynb</span></div>
+      <div class="task-body">
+<p>Much of this works well, but records lose their keys on the way into the table.</p>
+<h3>Task 4.3</h3>
+<p>Your probing loop with <code>hash = (hash+1)%100</code> and the False return after 100 checks is correct. However, <code>hash_table[hash] = data</code> stores only the word, not the key field with it. Without the key, <code>find_record()</code> cannot confirm a match, which is why your 4.6 output shows heavy, the word stored for 175, instead of the record for 475.</p>
+<h3>Task 4.6</h3>
+<p>Resetting <code>hash_table</code> before calling read_data() again also skips the table-full second read.</p>
+<h3>Next step</h3>
+<div class="next"><p>Store <code>[key, data]</code> in insert(), make find_record() probe and compare keys, then rerun 4.4 to 4.6.</p></div>
+      </div>
+    </section>
     <p class="foot">Disclaimer: AI-assisted evaluation may contain issues. Exercise discretion and seek clarification if in doubt.</p>
   </main>
 </body>

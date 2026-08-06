@@ -99,6 +99,38 @@
 <h3>Next step</h3><div class="next"><p>Add verification SELECTs, then Run All and save so every cell&#x27;s output is stored in the .ipynb before pushing.</p></div>
       </div>
     </section>
+    <section class="task" id="task-2025-1">
+      <div class="task-header">2025 Paper 2, Task 1 <span class="files">lql- task1.ipynb</span></div>
+      <div class="task-body">
+<p>This is an excellent solution. <code>push()</code> grows the list only when <code>sp == len(ar)</code>, <code>pop()</code> returns <code>False</code> for an empty stack and moves the pointer without deleting data, and <code>main()</code> keeps <code>stack</code> and <code>sp</code> local, handles the zero case, and builds the binary string by popping with your own functions. The saved outputs for 0, 22 and 46967 are all correct. One small polish point: a comment like <code>#Get the other one</code> could name the quotient instead, since precise comments help a reader follow your method quickly. Keep writing brief test calls under each function as you did here.</p>
+<h3>Next step</h3>
+<div class="next"><p>Practise the same stack pattern with the divisor as a parameter so you can convert to other bases.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2025-3">
+      <div class="task-header">2025 Paper 2, Task 3 <span class="files">lql- task3.ipynb</span></div>
+      <div class="task-body">
+<p>A strong piece of work. The tables carry correct primary and foreign keys, every file is inserted with parameterised queries, and your join on <code>User.Blocked == 1</code> prints the four expected comments in your saved output.</p>
+<h3>Task 3.3</h3>
+<p>The brief asks for a Python function, but your query and printing run at top level. Wrap the block in <code>def blocked_comments():</code> and call it.</p>
+<h3>Task 3.2</h3>
+<p>The insert cell shows no output of its own; a printed row count would give it direct evidence of a successful run.</p>
+<h3>Next step</h3>
+<div class="next"><p>Wrap the Task 3.3 code in a function and call it, then rerun and save.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2025-4">
+      <div class="task-header">2025 Paper 2, Task 4 <span class="files">lql- task4.ipynb</span></div>
+      <div class="task-body">
+<p>Your core logic is very good: <code>insert()</code> probes with proper wrap-around and returns <code>False</code> only after the whole table has been checked, and the saved run finds <code>law</code> for key 475.</p>
+<h3>Task 4.4</h3>
+<p>The calls <code>#read_data()</code> and <code>#print(hash_table)</code> are commented out, so the notebook never shows the filled table, which the task explicitly asks you to output.</p>
+<h3>Task 4.5</h3>
+<p>When the probe stops at an empty slot, <code>return hash_table[index][1]</code> runs on an empty list and would fail; that branch should return <code>False</code>. Try a key that is not stored, such as 1000, to see this happen.</p>
+<h3>Next step</h3>
+<div class="next"><p>Uncomment the Task 4.4 calls, fix the empty-slot return, then Run All and save.</p></div>
+      </div>
+    </section>
     <p class="foot">Disclaimer: AI-assisted evaluation may contain issues. Exercise discretion and seek clarification if in doubt.</p>
   </main>
 </body>

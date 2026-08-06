@@ -79,6 +79,30 @@
 <h3>Next step</h3><div class="next"><p>Split the main program into separate labelled cells for 2.3, 2.4 and 2.5.</p></div>
       </div>
     </section>
+    <section class="task" id="task-2025-1">
+      <div class="task-header">2025 Paper 2, Task 1 <span class="files">TASK1_Kendrick.ipynb</span></div>
+      <div class="task-body">
+<p>Your <code>push()</code> is exactly right: it appends to grow a full stack, overwrites the slot at the pointer otherwise, and returns the updated pointer.</p>
+<h3>Task 1.2</h3>
+<p><code>pop()</code> tests <code>if stack_pointer == -1</code>, but since the pointer holds the index of the next free space, an empty stack is when it equals 0. Reading <code>stack[stack_pointer]</code> also looks one slot too high; the top item sits below the pointer.</p>
+<h3>Task 1.3</h3>
+<p>The 1.3 cell is empty and the notebook has no saved outputs, so there is no run evidence.</p>
+<h3>Next step</h3>
+<div class="next"><p>Write <code>main()</code> using your push and pop, test 0, 22 and 46967, then Run All and save.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2025-3">
+      <div class="task-header">2025 Paper 2, Task 3 <span class="files">TASK3_Kendrick.ipynb</span></div>
+      <div class="task-body">
+<p>Task 3.1 is complete and correct, with all primary and foreign keys defined; the later cells need repair before they can run, and the notebook has no saved outputs.</p>
+<h3>Task 3.2</h3>
+<p>The first two <code>cursor.execute(</code> calls are never closed with a bracket, and the comment insert refers to <code>thetextm</code> and <code>datetimeconnected</code>, which do not match the variables you created, so this cell would stop with errors.</p>
+<h3>Task 3.3</h3>
+<p>The query and join are right, but <code>results = cursor.fetchall())</code> has an extra bracket and the function is never called.</p>
+<h3>Next step</h3>
+<div class="next"><p>Fix the brackets and variable names, call <code>blocked_comments()</code>, then Run All and save so the outputs are kept.</p></div>
+      </div>
+    </section>
     <p class="foot">Disclaimer: AI-assisted evaluation may contain issues. Exercise discretion and seek clarification if in doubt.</p>
   </main>
 </body>

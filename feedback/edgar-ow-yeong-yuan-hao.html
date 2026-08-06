@@ -116,6 +116,28 @@
 <h3>Next step</h3><div class="next"><p>Restart the kernel, Run All top to bottom, then save and push once every cell completes without error.</p></div>
       </div>
     </section>
+    <section class="task" id="task-2025-3">
+      <div class="task-header">2025 Paper 2, Task 3 <span class="files">Edgar Ow Yeong - task3.ipynb</span></div>
+      <div class="task-body">
+<p>Your table creation and file handling are largely sound, and the parameterised INSERT loops for all three files follow the right pattern. Two details need fixing.</p>
+<h3>Task 3.1</h3>
+<p>The Comment table declares <code>PRIMARY KEY("CommentID","Username")</code>. The design calls for <code>CommentID</code> alone as the primary key; adding Username makes it a composite key.</p>
+<h3>Task 3.3</h3>
+<p>The query selects <code>FROM USER,Comment</code> but never matches the two tables on Username, so every comment would be paired with every blocked user rather than only that user's own comments.</p>
+<h3>Next step</h3>
+<div class="next"><p>Add <code>User.Username = Comment.Username</code> to the WHERE clause inside a function, then Run All and save so the results are visible.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2025-4">
+      <div class="task-header">2025 Paper 2, Task 4 <span class="files">Edgar Ow Yeong - task4.ipynb</span></div>
+      <div class="task-body">
+<p>There are no saved outputs in this notebook, so no run can be shown. Your <code>calculate_hash()</code> and the line splitting in <code>read_data()</code> are on the right track.</p>
+<h3>Task 4.3</h3>
+<p>Inside <code>insert()</code> the line <code>hash_table=[None]*100</code> creates a fresh local list on every call, so nothing persists in the global table, and only <code>string</code> is stored without its key. The probing loop also restarts from index 0 rather than continuing from the hash index, and the function prints rather than returns <code>True</code> or <code>False</code>.</p>
+<h3>Next step</h3>
+<div class="next"><p>Remove that line so <code>insert()</code> uses the global table and stores <code>[key, string]</code>, then Run All and save.</p></div>
+      </div>
+    </section>
     <p class="foot">Disclaimer: AI-assisted evaluation may contain issues. Exercise discretion and seek clarification if in doubt.</p>
   </main>
 </body>

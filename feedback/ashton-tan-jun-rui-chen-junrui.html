@@ -125,6 +125,40 @@
 <h3>Next step</h3><div class="next"><p>Build the Flask route that renders the 9x9 table, run it, and save the rendered page.</p></div>
       </div>
     </section>
+    <section class="task" id="task-2025-1">
+      <div class="task-header">2025 Paper 2, Task 1 <span class="files">ashton - task1.ipynb</span></div>
+      <div class="task-body">
+<p>Your <code>pop()</code> is spot on, and your outputs for 22 and 46967 are correct.</p>
+<h3>Task 1.1</h3>
+<p><code>push()</code> begins with <code>stack = []</code> and <code>sp = 0</code>, which wipes out whatever stack and pointer were passed in, so it can never add to an existing stack. That is why <code>main()</code> ends up appending remainders directly instead of relying on push.</p>
+<h3>Task 1.3</h3>
+<p>When the input is 0, the loop never runs and a blank line is printed instead of the binary value 0.</p>
+<h3>Next step</h3>
+<div class="next"><p>Delete the two reset lines in <code>push()</code>, build the stack only through push calls in <code>main()</code>, and re-test all three inputs.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2025-3">
+      <div class="task-header">2025 Paper 2, Task 3 <span class="files">ashton - task3.ipynb</span></div>
+      <div class="task-body">
+<p>Tasks 3.1 and 3.2 are largely done well: the tables carry sensible keys, and your <code>executemany</code> inserts with parameterised queries ran cleanly.</p>
+<h3>Task 3.1</h3>
+<p>One foreign key points at the wrong table: <code>FOREIGN KEY (Username) REFERENCES Comment(Username)</code> makes Comment reference itself, when the username should be checked against User.</p>
+<h3>Task 3.3</h3>
+<p>Your query returns only the blocked usernames. The task asks for each username with the comment text, which means joining Comment to User inside a function you then call.</p>
+<h3>Next step</h3>
+<div class="next"><p>Rewrite 3.3 as a function that joins Comment and User on Username with <code>Blocked = 1</code>, then run it and check four comments appear.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2025-4">
+      <div class="task-header">2025 Paper 2, Task 4 <span class="files">ashton - task4.ipynb</span></div>
+      <div class="task-body">
+<p>This is a strong task overall: your <code>insert()</code> shows clean linear probing with wrap-around and a proper full-table exit, and the final run finds <code>law</code> for key 475.</p>
+<h3>Task 4.5</h3>
+<p><code>find_record()</code> calculates the index but never uses it; the loop scans from position 0 instead of probing from the hash value. It also assumes every slot holds a record, so <code>int(hash_table[i][0])</code> would fail on an empty <code>None</code> slot. It only appeared to work because earlier re-runs had filled the table completely.</p>
+<h3>Next step</h3>
+<div class="next"><p>Restart the kernel, then make <code>find_record()</code> probe from <code>calculate_hash(k)</code> and return <code>False</code> when it meets an empty slot, and Run All again.</p></div>
+      </div>
+    </section>
     <p class="foot">Disclaimer: AI-assisted evaluation may contain issues. Exercise discretion and seek clarification if in doubt.</p>
   </main>
 </body>

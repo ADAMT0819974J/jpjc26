@@ -110,6 +110,36 @@
 <h3>Next step</h3><div class="next"><p>Complete dequeue() and printQueue() with their test code, then Run All and save before pushing.</p></div>
       </div>
     </section>
+    <section class="task" id="task-2025-1">
+      <div class="task-header">2025 Paper 2, Task 1 <span class="files">Hao Yang Chan - task1.ipynb</span></div>
+      <div class="task-body">
+<p>Your stack functions are in good shape, but the task stops there. <code>push()</code> grows the list when the pointer reaches the end and returns the updated pointer, and <code>pop()</code> returns <code>False</code> when empty and moves the pointer back without deleting data, which matches the brief well.</p>
+<h3>Task 1.3</h3>
+<p>The cell contains only <code>#Task 1.3</code>. The conversion itself, dividing by 2, pushing remainders and popping them to build the binary string, is the heart of this task, so there is nothing to assess yet. The notebook also has no saved outputs, so no run can be shown.</p>
+<h3>Next step</h3>
+<div class="next"><p>Write <code>main()</code> using your own <code>push()</code> and <code>pop()</code>, then Run All and save so the three test outputs appear.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2025-3">
+      <div class="task-header">2025 Paper 2, Task 3 <span class="files">Hao Yang Chan - task3.ipynb</span></div>
+      <div class="task-body">
+<p>Your table design is well done. All three tables carry the right primary keys, the foreign keys are declared cleanly, and the insert code reads each file with sensible parameterised queries.</p>
+<h3>Task 3.3</h3>
+<p>Your SQL join is right, but the indentation puts most of the code outside the function: <code>blocked_comments()</code> only opens a connection, while <code>cursor.execute(...)</code> runs at top level where the connection from Task 3.2 has already been closed. The function is also never called, and the notebook has no saved outputs, so no run can be shown for any part.</p>
+<h3>Next step</h3>
+<div class="next"><p>Indent the query and printing inside <code>blocked_comments()</code>, call it, then Run All and save the notebook.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2025-4">
+      <div class="task-header">2025 Paper 2, Task 4 <span class="files">Hao Yang Chan - task4.ipynb</span></div>
+      <div class="task-body">
+<p>You have made a solid start but the task is unfinished. <code>hash_table = [None] * 100</code> and <code>calculate_hash()</code> are both correct, and your probing loop wraps round and stops when it returns to <code>start_index</code>.</p>
+<h3>Task 4.3</h3>
+<p>The line <code>hash_table[index] == [key, data]:</code> is a comparison with a stray colon, so the cell cannot run, and nothing is stored when the first slot is free because the assignment sits inside the probing loop. Tasks 4.4 to 4.6 are empty, and there are no saved outputs, so no run can be shown.</p>
+<h3>Next step</h3>
+<div class="next"><p>Store with <code>hash_table[index] = [key, data]</code> whenever a free slot is found, complete <code>read_data()</code>, then Run All and save.</p></div>
+      </div>
+    </section>
     <p class="foot">Disclaimer: AI-assisted evaluation may contain issues. Exercise discretion and seek clarification if in doubt.</p>
   </main>
 </body>

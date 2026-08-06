@@ -107,6 +107,28 @@
 <h3>Next step</h3><div class="next"><p>Move the code into a notebook, fix the indentation, then Run All and save.</p></div>
       </div>
     </section>
+    <section class="task" id="task-2025-1">
+      <div class="task-header">2025 Paper 2, Task 1 <span class="files">TASK1_albert.ipynb</span></div>
+      <div class="task-body">
+<p>You ran all three tests and handled the zero case, which is a good habit. Two structural problems stop the conversion working.</p>
+<h3>Task 1.3</h3>
+<p>Inside the loop, <code>return push(stack,top_pointer,int(char))</code> exits <code>main()</code> on the first digit, which is why 22 prints as 1. The remainders are also collected into a string first rather than pushed onto the stack as each division happens, so the stack never drives the reversal.</p>
+<h3>Task 1.1</h3>
+<p><code>arr[top_pointer + 1] = data</code> skips the slot the pointer marks; store at <code>top_pointer</code> before incrementing.</p>
+<h3>Next step</h3>
+<div class="next"><p>Rewrite <code>main()</code> to push each remainder during the division loop, pop into one string, print it, and rerun the three tests.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2025-3">
+      <div class="task-header">2025 Paper 2, Task 3 <span class="files">Albert Magana - task3.ipynb</span></div>
+      <div class="task-body">
+<p>Your table definitions are complete, with every primary and foreign key declared, and your inserts are parameterised. Placing all the code in the 3.1 cell makes each part hard to follow, and the run stopped with an error.</p>
+<h3>Task 3.2</h3>
+<p>You assign <code>PostId = data[0]</code> but the insert uses <code>PostID</code>, so the run failed with UnboundLocalError before the post and comment data loaded. Task 3.3's <code>searchTables()</code> is empty, so there is no search for blocked users yet.</p>
+<h3>Next step</h3>
+<div class="next"><p>Fix the <code>PostId</code>/<code>PostID</code> name, move the insert code into the 3.2 cell and rerun, then attempt 3.3.</p></div>
+      </div>
+    </section>
     <p class="foot">Disclaimer: AI-assisted evaluation may contain issues. Exercise discretion and seek clarification if in doubt.</p>
   </main>
 </body>

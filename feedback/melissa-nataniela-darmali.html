@@ -147,6 +147,40 @@
 <h3>Next step</h3><div class="next"><p>Wrap each test call in an if statement that prints a clear message.</p></div>
       </div>
     </section>
+    <section class="task" id="task-2025-1">
+      <div class="task-header">2025 Paper 2, Task 1 <span class="files">Mel D - task1.ipynb</span></div>
+      <div class="task-body">
+<p>Your saved run shows the right binary values for 0, 22 and 46967, and <code>main()</code> drives the conversion through your own <code>push()</code> and <code>pop()</code>, which is the intended design.</p>
+<h3>Tasks 1.1 and 1.2</h3>
+<p>Both functions judge the stack by its contents rather than by the pointer. In <code>pop()</code>, <code>if len(stack) == 0 or stack[0] == None</code> can misjudge a stack whose popped data remains in the list; the brief defines empty as the pointer being 0. Similarly, the full check in <code>push()</code> should be <code>top == len(stack)</code>.</p>
+<h3>Task 1.3</h3>
+<p><code>main()</code> returns its result, but the brief says it should only output and return nothing.</p>
+<h3>Next step</h3>
+<div class="next"><p>Base the empty and full tests on <code>top</code> alone, and print inside <code>main()</code> instead of returning.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2025-3">
+      <div class="task-header">2025 Paper 2, Task 3 <span class="files">Mel D - task3.ipynb</span></div>
+      <div class="task-body">
+<p>This is a complete and well organised solution. All three tables are created with the right primary and foreign keys, the inserts are parameterised, and <code>findBlocked()</code> joins <code>User</code> to <code>Comment</code> and prints each username and comment on its own line. Your saved output shows exactly the four expected comments from blocked users.</p>
+<h3>Task 3.2</h3>
+<p>The insert cell shows no output of its own, so its success is only visible indirectly through Task 3.3. A short confirmation, such as printing a row count after the inserts, would let the cell stand on its own. Note too that splitting on commas leaves quotation marks inside the stored text.</p>
+<h3>Next step</h3>
+<div class="next"><p>Add a small SELECT count after the inserts so each cell shows its own evidence of running.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2025-4">
+      <div class="task-header">2025 Paper 2, Task 4 <span class="files">Mel D - task4.ipynb</span></div>
+      <div class="task-body">
+<p>Most of this works nicely: the hash table fills exactly as expected, <code>read_data()</code> reports unstorable records with a clear message, and your run finds <code>law</code> for key 475.</p>
+<h3>Task 4.3</h3>
+<p>The wrap-around check <code>if index &gt; 100: index -= 100</code> lets <code>index</code> reach 100, outside a 100-element list, and <code>find_record()</code> increments <code>hashval</code> with no wrap at all; <code>(index + 1) % 100</code> avoids both.</p>
+<h3>Task 4.6</h3>
+<p>A second full read should show forty cannot-store messages; your saved output has only the found record, so the cells were not run in order.</p>
+<h3>Next step</h3>
+<div class="next"><p>Fix the wrap-around with <code>% 100</code> in both functions, then Run All from the top and save.</p></div>
+      </div>
+    </section>
     <p class="foot">Disclaimer: AI-assisted evaluation may contain issues. Exercise discretion and seek clarification if in doubt.</p>
   </main>
 </body>

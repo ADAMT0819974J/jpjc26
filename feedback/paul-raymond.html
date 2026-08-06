@@ -115,6 +115,39 @@
 <h3>Next step</h3><div class="next"><p>Move all printing out of the methods and have the main program report ID and quantity.</p></div>
       </div>
     </section>
+    <section class="task" id="task-2025-1">
+      <div class="task-header">2025 Paper 2, Task 1 <span class="files">PAUL RAYMOND PETER AMALRAJ - task1.ipynb</span></div>
+      <div class="task-body">
+<p>You tested as you went, and the remainders in your saved output show the division idea works. Two things cause the crash.</p>
+<h3>Task 1.1 and 1.2</h3>
+<p><code>push()</code> increments a local copy of the pointer and returns nothing, so <code>main()</code> has to increment again itself; <code>pop()</code> then reads <code>stack[stackPointer]</code>, one place above the last item, causing the IndexError shown.</p>
+<h3>Task 1.3</h3>
+<p><code>while user_input // 2 > 0:</code> stops before the final remainder is pushed, so the leading 1 of the binary number is lost.</p>
+<h3>Next step</h3>
+<div class="next"><p>Return the updated pointer from both functions, use those returned values in <code>main()</code>, and rerun with 0, 22 and 46967.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2025-3">
+      <div class="task-header">2025 Paper 2, Task 3 <span class="files">PAUL RAYMOND PETER AMALRAJ - task3.ipynb</span></div>
+      <div class="task-body">
+<p>Tasks 3.1 and 3.2 are excellent: complete key definitions, tidy parameterised <code>executemany()</code> inserts, and the saved output shows all seven users, four posts and thirteen comments loaded.</p>
+<h3>Task 3.3</h3>
+<p>The function searches by a username parameter, but the task asks for comments by any blocked user, so the condition should be <code>User.Blocked = 1</code> with no parameter needed. The run also failed with ambiguous column name: <code>Username</code> exists in both tables, so write <code>Comment.Username</code> in the SELECT.</p>
+<h3>Next step</h3>
+<div class="next"><p>Qualify the columns, filter on <code>User.Blocked = 1</code> and rerun; expect comments from RTG543, POP939 and POP384.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2025-4">
+      <div class="task-header">2025 Paper 2, Task 4 <span class="files">PAUL RAYMOND PETER AMALRAJ - task4.ipynb</span></div>
+      <div class="task-body">
+<p>Your first three sub-tasks show solid understanding: a global table, a correct <code>calculate_hash()</code> and a probing loop that terminates.</p>
+<h3>Task 4.3</h3>
+<p>Only <code>data</code> is stored; the record needs the key too, such as <code>hash_table[next] = [key, data]</code>, or a later search could never match key 475. The probe also uses <code>next &lt; 100</code> without wrapping, so free slots before the hash index are never reached; move with <code>(next + 1) % 100</code>.</p>
+<p>Tasks 4.4 to 4.6 are empty, so there is no file reading or search yet.</p>
+<h3>Next step</h3>
+<div class="next"><p>Store <code>[key, data]</code>, add the wrap-around, then write <code>read_data()</code> and rerun the notebook.</p></div>
+      </div>
+    </section>
     <p class="foot">Disclaimer: AI-assisted evaluation may contain issues. Exercise discretion and seek clarification if in doubt.</p>
   </main>
 </body>

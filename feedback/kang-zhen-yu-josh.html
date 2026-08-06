@@ -41,7 +41,32 @@
       <h1>Kang Zhen Yu, Josh</h1>
       <p class="meta">25S22 &middot; <a href="../all.html">Back to the work grid</a></p>
     </div>
+    <section class="task" id="task-2025-1">
+      <div class="task-header">2025 Paper 2, Task 1 <span class="files">Josh Kang - task1.ipynb</span></div>
+      <div class="task-body">
+<p>The groundwork is in place, but Task 1.3 is unfinished so the conversion never happens.</p>
+<h3>Task 1.1</h3>
+<p>Your push demonstration prints the stack and returned pointer after each call, which shows good testing habits.</p>
+<h3>Task 1.3</h3>
+<p>Inside <code>while int(num) &gt;= 0:</code> the body is just <code>num</code>, so nothing is divided, no remainder is pushed or popped, and <code>main()</code> is never called; the cell has no saved output. In 1.2, <code>popped = stack[top]</code> also reads the next free space rather than the top item.</p>
+<h3>Next step</h3>
+<div class="next"><p>Complete main() so it pushes each remainder with push() and pops digits to build the string, then run the three tests and save.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2025-3">
+      <div class="task-header">2025 Paper 2, Task 3 <span class="files">Josh Kang - task3.ipynb</span></div>
+      <div class="task-body">
+<p>Your table definitions are solid, but the data used for testing is not the data supplied with the task.</p>
+<h3>Task 3.1</h3>
+<p>All three tables define suitable primary keys and foreign keys.</p>
+<h3>Task 3.2</h3>
+<p>The notebook writes its own sample files, for example <code>f.write('user1 0\n')</code>, then parses them with <code>line.split()</code>. The supplied files are comma separated and their text contains spaces, so this parsing would fail on the real files, and your 3.3 output lists invented users rather than the blocked users in the sample data.</p>
+<h3>Next step</h3>
+<div class="next"><p>Remove the file-writing cell, read the supplied files using <code>split(',')</code>, then rerun 3.2 and 3.3 and save.</p></div>
+      </div>
+    </section>
     <section class="task"><div class="task-header">An encouragement note</div><div class="farewell">All the best for your A-levels and life. It has been nice knowing you. :)</div></section>
+    <p class="foot">Disclaimer: AI-assisted evaluation may contain issues. Exercise discretion and seek clarification if in doubt.</p>
 
   </main>
 </body>

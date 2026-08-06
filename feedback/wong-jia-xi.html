@@ -41,7 +41,20 @@
       <h1>Wong Jia Xi</h1>
       <p class="meta">25S21 &middot; <a href="../all.html">Back to the work grid</a></p>
     </div>
+    <section class="task" id="task-2025-3">
+      <div class="task-header">2025 Paper 2, Task 3 <span class="files">Jia Xi Wong - task3.ipynb</span></div>
+      <div class="task-body">
+<p>The structure here is strong: every table declares its primary key, all three foreign keys are present, and Task 3.2 uses parameterised inserts for each file. The saved run stops at an OperationalError, database is locked, so there is no evidence of the inserts completing.</p>
+<h3>Task 3.1</h3>
+<p>Comment defines the column <code>DateTimeConnected</code>, while Task 3.2 inserts into <code>DateTimeCommented</code>; once the lock is cleared, that mismatch will stop the Comment inserts.</p>
+<h3>Task 3.3</h3>
+<p>This cell is still empty, so the blocked-user query has no attempt to assess.</p>
+<h3>Next step</h3>
+<div class="next"><p>Fix the column name, restart the kernel and Run All, then write the Task 3.3 function.</p></div>
+      </div>
+    </section>
     <section class="task"><div class="task-header">An encouragement note</div><div class="farewell">All the best for your A-levels and life. It has been nice knowing you. :)</div></section>
+    <p class="foot">Disclaimer: AI-assisted evaluation may contain issues. Exercise discretion and seek clarification if in doubt.</p>
 
   </main>
 </body>

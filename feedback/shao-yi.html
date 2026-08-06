@@ -77,6 +77,30 @@
 <h3>Next step</h3><div class="next"><p>Keep only alphabetic characters in screen_name, SELECT from school.db in the route, then re-run and re-save.</p></div>
       </div>
     </section>
+    <section class="task" id="task-2025-1">
+      <div class="task-header">2025 Paper 2, Task 1 <span class="files">CodedSmelter - task1.ipynb</span></div>
+      <div class="task-body">
+<p>This is a confident, complete solution. Your conversion works end to end and the saved outputs show 0, 10110 and 1011011101110111 for the three tests.</p>
+<h3>Task 1.1</h3>
+<p>The task states that <code>push()</code> returns the top of stack pointer, but yours ends with <code>return stack, top + 1</code>. Your <code>main()</code> unpacks both values so it works, though it drifts from the stated interface.</p>
+<h3>Task 1.2</h3>
+<p>Similarly, an empty stack should return <code>False</code> on its own, while yours returns <code>False, top</code>, which forces the check <code>str(digit) == 'False'</code> in <code>main()</code>.</p>
+<h3>Next step</h3>
+<div class="next"><p>Before coding each function, note its required parameters and return values from the task wording and match them exactly.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2025-3">
+      <div class="task-header">2025 Paper 2, Task 3 <span class="files">CodedSmelter - task3.ipynb</span></div>
+      <div class="task-body">
+<p>Task 3.1 gets the database started, but the work fades after it, so there is much less here to assess than in your Task 1.</p>
+<h3>Task 3.1</h3>
+<p>All three tables carry the correct columns and primary keys, which is a solid base. The task also asks for foreign keys, and none are declared; Post, for example, needs its <code>Username</code> linked back to <code>User</code>.</p>
+<h3>Task 3.2</h3>
+<p>You read each file, such as <code>comment = file.read()</code>, but no INSERT follows, and Task 3.3 is empty. The saved error also shows commit called on the cursor; it belongs to the connection, <code>conn.commit()</code>.</p>
+<h3>Next step</h3>
+<div class="next"><p>Split each line into fields and store them with a parameterised INSERT, then commit on the connection and run the cell.</p></div>
+      </div>
+    </section>
     <p class="foot">Disclaimer: AI-assisted evaluation may contain issues. Exercise discretion and seek clarification if in doubt.</p>
   </main>
 </body>

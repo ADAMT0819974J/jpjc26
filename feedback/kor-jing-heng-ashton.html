@@ -99,6 +99,40 @@
 <h3>Next step</h3><div class="next"><p>Add the ClassName foreign key to Student and re-run to confirm everything still works.</p></div>
       </div>
     </section>
+    <section class="task" id="task-2025-1">
+      <div class="task-header">2025 Paper 2, Task 1 <span class="files">ash - task1.ipynb</span></div>
+      <div class="task-body">
+<p>Your <code>main()</code> has the right overall shape: local stack and pointer, a clean division loop and a correct zero case.</p>
+<h3>Task 1.1</h3>
+<p>When the stack is full your code runs <code>stack.append(None)</code> but skips the store and increment, so the first push on an empty list loses its value.</p>
+<h3>Task 1.2</h3>
+<p><code>pop()</code> returns only the data item. Without the updated pointer, <code>main()</code> keeps reading the same position, which is why the saved output shows <code>[1, 0, None]</code> rather than the binary number.</p>
+<h3>Next step</h3>
+<div class="next"><p>Return both the item and the new pointer from <code>pop()</code>, use them in the popping loop, and rerun tests 0, 22 and 46967.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2025-3">
+      <div class="task-header">2025 Paper 2, Task 3 <span class="files">ash - task3.ipynb</span></div>
+      <div class="task-body">
+<p>This is close to a complete solution. Your three tables define every primary and foreign key correctly, and your inserts use parameterised queries with commits, which the Task 3.3 output confirms loaded the data.</p>
+<h3>Task 3.3</h3>
+<p>The query filters <code>WHERE User.Blocked = ?</code> with the value <code>0</code>, so it lists comments by users who are not blocked. The task asks for blocked users, whose <code>Blocked</code> value is 1, so usernames like BCD456 should not appear in your printed results.</p>
+<h3>Next step</h3>
+<div class="next"><p>Change the parameter to 1, rerun the search, and check that only blocked users' comments are printed.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2025-4">
+      <div class="task-header">2025 Paper 2, Task 4 <span class="files">ash - task4.ipynb</span></div>
+      <div class="task-body">
+<p>Your table setup and hashing are correct, but the saved output shows the table still full of <code>None</code>, which points to two bugs.</p>
+<h3>Task 4.4</h3>
+<p><code>lines = file.readlines()</code> consumes the whole file, so the following <code>for line in file:</code> loops over nothing and no record is ever inserted. Loop over <code>lines</code> instead, and convert the key with <code>int()</code>.</p>
+<h3>Task 4.3</h3>
+<p><code>insert()</code> stores only <code>data</code>. Keep the key as well, for example <code>hash_table[index] = [key, data]</code>, otherwise a later search can never match key 475.</p>
+<h3>Next step</h3>
+<div class="next"><p>Fix the read loop, store <code>[key, data]</code>, then rerun the whole notebook and save it.</p></div>
+      </div>
+    </section>
     <p class="foot">Disclaimer: AI-assisted evaluation may contain issues. Exercise discretion and seek clarification if in doubt.</p>
   </main>
 </body>

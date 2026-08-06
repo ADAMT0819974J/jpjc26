@@ -145,6 +145,28 @@
 <h3>Next step</h3><div class="next"><p>Rewrite the 2.3 test to read ID and quantity with input() in a loop and print a message based on the returned value.</p></div>
       </div>
     </section>
+    <section class="task" id="task-2025-1">
+      <div class="task-header">2025 Paper 2, Task 1 <span class="files">caleb - task1.ipynb</span></div>
+      <div class="task-body">
+<p>This works from end to end: all three test outputs are saved and correct, including 1011011101110111 for 46967, and your stack grows when it is full. Well done.</p>
+<h3>Task 1.3</h3>
+<p>The paper defines the top of stack pointer as the index of the next free space, initialised to 0, while your <code>sp = -1</code> points at the last stored item. Your version is self-consistent, but the stated design stores at <code>top</code> and then increments, so practise that convention too.</p>
+<h3>Next step</h3>
+<div class="next"><p>Rework push and pop so the pointer starts at 0 and marks the next free slot, and check the same three tests still pass.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2025-3">
+      <div class="task-header">2025 Paper 2, Task 3 <span class="files">caleb - task3.ipynb</span></div>
+      <div class="task-body">
+<p>Your schema is complete and correct, with primary keys and all three foreign keys declared, and the user and post data loaded.</p>
+<h3>Task 3.2</h3>
+<p>The comment insert stopped with the IntegrityError shown: lines are not stripped, so a newline stays in the last field, and splitting on every comma breaks rows whose quoted text contains one.</p>
+<h3>Task 3.3</h3>
+<p><code>SELECT Blocked, FROM TABLE User</code> is an invalid fragment, with stray commas and no function, join or output yet.</p>
+<h3>Next step</h3>
+<div class="next"><p>Parse comment.txt with the csv module so every row inserts, then build 3.3 as a function joining Comment with User on Username, filtered by Blocked = 1.</p></div>
+      </div>
+    </section>
     <p class="foot">Disclaimer: AI-assisted evaluation may contain issues. Exercise discretion and seek clarification if in doubt.</p>
   </main>
 </body>

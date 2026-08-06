@@ -69,6 +69,40 @@
 <h3>Next step</h3><div class="next"><p>Fix EXISTS, then restart the kernel, Run All, and save the notebook with outputs before pushing.</p></div>
       </div>
     </section>
+    <section class="task" id="task-2025-1">
+      <div class="task-header">2025 Paper 2, Task 1 <span class="files">Jingxuan hou - task1.ipynb</span></div>
+      <div class="task-body">
+<p>Your <code>push()</code> is correct, and the structure of <code>main()</code> follows the division by 2 method faithfully. One return statement undermines the result.</p>
+<h3>Task 1.2</h3>
+<p>You compute <code>item = stack[top]</code> but then <code>return stack, top</code>, so the caller receives the whole list instead of the popped item. That is why your saved output shows entire lists joined together rather than binary digits.</p>
+<h3>Tests</h3>
+<p>Only one run is saved, for 47967 rather than the required inputs 0, 22 and 46967.</p>
+<h3>Next step</h3>
+<div class="next"><p>Change the return to <code>return item, top</code>, then run the three specified tests and save the notebook.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2025-3">
+      <div class="task-header">2025 Paper 2, Task 3 <span class="files">Jingxuan hou - task3.ipynb</span></div>
+      <div class="task-body">
+<p>The design here is close, and your Task 3.3 join of <code>Comment</code> and <code>User</code> with <code>User.Blocked = 1</code> is exactly the query needed. The notebook has no saved outputs though, so no run can be seen.</p>
+<h3>Task 3.1</h3>
+<p><code>IF NOT EXIST</code> and <code>REFERENCE</code> are misspelt keywords; SQLite expects <code>IF NOT EXISTS</code> and <code>REFERENCES</code>, so every CREATE statement would fail before any table exists.</p>
+<h3>Task 3.2</h3>
+<p>The Comment insert supplies five values to <code>VALUES (?, ?)</code>, which has only two placeholders.</p>
+<h3>Next step</h3>
+<div class="next"><p>Fix those keywords and placeholders, then Run All and save the notebook so your outputs are visible.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2025-4">
+      <div class="task-header">2025 Paper 2, Task 4 <span class="files">Jingxuan hou - task4.ipynb</span></div>
+      <div class="task-body">
+<p>Your hashing core is very good: <code>insert()</code> probes with wrap-around and returns <code>False</code> only after every index has been checked, and <code>find_record()</code> compares stored keys and stops at an empty slot. However, the notebook has no saved outputs, so there is no evidence of any run.</p>
+<h3>Task 4.4</h3>
+<p><code>line.strip().split(",")</code> splits on a comma, but records.txt separates each key and word with a space, so <code>records[1]</code> would fail on the very first line.</p>
+<h3>Next step</h3>
+<div class="next"><p>Change the split to use a space, then Run All and save so the table contents and any messages appear.</p></div>
+      </div>
+    </section>
     <p class="foot">Disclaimer: AI-assisted evaluation may contain issues. Exercise discretion and seek clarification if in doubt.</p>
   </main>
 </body>

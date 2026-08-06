@@ -128,6 +128,40 @@
 <h3>Next step</h3><div class="next"><p>Add the foreign keys and fix TestID to TEXT, then Run All and save with outputs showing.</p></div>
       </div>
     </section>
+    <section class="task" id="task-2025-1">
+      <div class="task-header">2025 Paper 2, Task 1 <span class="files">xy_wacct - task1.ipynb</span></div>
+      <div class="task-body">
+<p>Your <code>pop()</code> is exactly right, and you tested every function with saved outputs. Two design points hold the task back.</p>
+<h3>Task 1.1</h3>
+<p><code>push()</code> ends with <code>return arr</code>, but the brief says it must update and return the top of stack pointer. Because it does not, <code>main()</code> has to manage <code>top += 1</code> itself.</p>
+<h3>Task 1.3</h3>
+<p>The digits are reversed with <code>arr[::-1]</code> instead of popping with your <code>pop()</code> function, and <code>main()</code> returns a list such as <code>[1, 0, 1, 1, 0]</code> rather than printing the binary number on one line. The brief asks the function to output only and return nothing.</p>
+<h3>Next step</h3>
+<div class="next"><p>Return the updated pointer from <code>push()</code>, build the output by calling <code>pop()</code> in a loop, and print it as one string.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2025-3">
+      <div class="task-header">2025 Paper 2, Task 3 <span class="files">xy_wacct - task3.ipynb</span></div>
+      <div class="task-body">
+<p>This is nearly complete work. The schema declares every primary and foreign key, all three files are read and inserted with parameterised queries, and your join with <code>User.Blocked = ?</code> correctly picks out the four comments by blocked users in the saved output.</p>
+<h3>Task 3.3</h3>
+<p><code>print(block())</code> shows the entire result as one list on a single line, while the brief asks for each username and comment on a new line. Looping over the rows inside the function and printing one at a time would meet this. Returning data is also unnecessary when the task only asks for output.</p>
+<h3>Next step</h3>
+<div class="next"><p>Inside <code>block()</code>, replace the single print with a loop such as <code>for username, text in output: print(username, text)</code>.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2025-4">
+      <div class="task-header">2025 Paper 2, Task 4 <span class="files">xy_wacct - task4.ipynb</span></div>
+      <div class="task-body">
+<p>Your reading and inserting pipeline works, and the saved output shows <code>law</code> found for key 475.</p>
+<h3>Task 4.3</h3>
+<p><code>for i in range(index, 101)</code> probes only towards the end of the list and never wraps to index 0, so <code>False</code> can be returned while free slots remain earlier in the table; <code>(index + 1) % 100</code> gives the wrap. The table is also created with 101 slots, and the test record <code>(2, 23)</code> was left in, which pushes real records such as <code>equinox</code> away from their home index.</p>
+<h3>Task 4.6</h3>
+<p>The brief asks you to call <code>read_data()</code> again before searching, but this cell only calls <code>find_record(475)</code>.</p>
+<h3>Next step</h3>
+<div class="next"><p>Rebuild the table with exactly 100 slots, add wrap-around probing, then rerun the full sequence and save.</p></div>
+      </div>
+    </section>
     <p class="foot">Disclaimer: AI-assisted evaluation may contain issues. Exercise discretion and seek clarification if in doubt.</p>
   </main>
 </body>

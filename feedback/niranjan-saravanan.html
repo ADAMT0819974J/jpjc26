@@ -97,6 +97,18 @@
 <h3>Next step</h3><div class="next"><p>Change to <code>open(filename)</code>, place the data files beside the notebook, uncomment every print, add the orders-of-growth comparison, then Run All and save.</p></div>
       </div>
     </section>
+    <section class="task" id="task-2025-3">
+      <div class="task-header">2025 Paper 2, Task 3 <span class="files">Niranjan - task3.ipynb</span></div>
+      <div class="task-body">
+<p>Your Task 3.1 is correct and complete: all three tables are created with their primary keys and every foreign key, and the cell ran.</p>
+<h3>Task 3.2</h3>
+<p>The INSERT statements put column names inside VALUES, for example <code>VALUES(User,Block)</code>, so SQLite never receives your Python variables; use placeholders such as <code>VALUES(?,?)</code> and pass <code>(User, Block)</code> to <code>execute()</code>. The run also stopped with FileNotFoundError because user.txt was not beside the notebook, so no insert evidence exists.</p>
+<h3>Task 3.3</h3>
+<p>This cell is empty, so the blocked-user search has not been attempted.</p>
+<h3>Next step</h3>
+<div class="next"><p>Switch the inserts to ? placeholders, upload the three text files, and rerun before writing 3.3.</p></div>
+      </div>
+    </section>
     <p class="foot">Disclaimer: AI-assisted evaluation may contain issues. Exercise discretion and seek clarification if in doubt.</p>
   </main>
 </body>

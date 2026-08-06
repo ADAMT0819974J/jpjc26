@@ -195,6 +195,40 @@
 <h3>Next step</h3><div class="next"><p>Make the menu&#x27;s decompress branch read the compressed file as a single string.</p></div>
       </div>
     </section>
+    <section class="task" id="task-2025-1">
+      <div class="task-header">2025 Paper 2, Task 1 <span class="files">Paul Norman Azucena - task1.ipynb</span></div>
+      <div class="task-body">
+<p>This is a well built solution: <code>push()</code> grows the list when full, <code>pop()</code> moves the pointer without deleting data, and all three test outputs are correct.</p>
+<h3>Task 1.3</h3>
+<p>The task states that <code>main()</code> only outputs to the screen and does not return any data, yet yours ends with <code>return string</code> and handles zero with <code>return '0'</code>, leaving the printing to <code>print(main(0))</code> outside the function. Moving the <code>print()</code> inside <code>main()</code> would match the requirement, and the calls would then stand alone.</p>
+<h3>Next step</h3>
+<div class="next"><p>Change <code>main()</code> to print its result directly, call it plainly for 0, 22 and 46967, then Run All and save.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2025-3">
+      <div class="task-header">2025 Paper 2, Task 3 <span class="files">Paul Norman Azucena - task3.ipynb</span></div>
+      <div class="task-body">
+<p>Your database work is well organised: tidy create and delete functions, parameterised inserts for all three files, and the saved output confirms every row loaded correctly.</p>
+<h3>Task 3.1</h3>
+<p>The Post table has no foreign key, although its <code>Username</code> column references User in the same way Comment's does.</p>
+<h3>Task 3.3</h3>
+<p>The query lists <code>FROM User, Post, Comment</code> but never joins Post to anything, so every matching comment is repeated once for each of the four posts; your output shows sixteen lines where four are expected.</p>
+<h3>Next step</h3>
+<div class="next"><p>Remove Post from the FROM clause, re-run the function and check that exactly four username and comment lines appear.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2025-4">
+      <div class="task-header">2025 Paper 2, Task 4 <span class="files">Paul Norman Azucena - task4.ipynb</span></div>
+      <div class="task-body">
+<p>A capable attempt: the overall flow hangs together, and your final run reports <code>Record data: law</code> for key 475 as expected.</p>
+<h3>Task 4.3</h3>
+<p>Inside the loop, <code>index = (index + i ) % 100</code> adds a growing step each time, so this is not linear probing and free slots can be skipped; a step of one checks every slot in turn.</p>
+<h3>Task 4.4</h3>
+<p><code>read_data()</code> ignores the value <code>insert()</code> returns, so when the table fills up on the second read no message is output for records that cannot be stored.</p>
+<h3>Next step</h3>
+<div class="next"><p>Change the probe to move one slot at a time, then re-run the whole notebook from a fresh kernel.</p></div>
+      </div>
+    </section>
     <p class="foot">Disclaimer: AI-assisted evaluation may contain issues. Exercise discretion and seek clarification if in doubt.</p>
   </main>
 </body>

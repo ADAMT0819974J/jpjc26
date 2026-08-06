@@ -98,6 +98,30 @@
 <h3>Next step</h3><div class="next"><p>Fix <code>get_right</code>, finish 2.6 and 2.7, then Run All and save before pushing.</p></div>
       </div>
     </section>
+    <section class="task" id="task-2025-1">
+      <div class="task-header">2025 Paper 2, Task 1 <span class="files">Chia He jun - task1.ipynb</span></div>
+      <div class="task-body">
+<p>This works well: your saved run shows the correct binary values for 0, 22 and 46967, and <code>main()</code> builds the answer using your own <code>push()</code> and <code>pop()</code>, exactly as intended.</p>
+<h3>Task 1.1</h3>
+<p>The debugging line <code>print(stack)</code> left inside <code>push()</code> floods the output with intermediate lists, so the binary number no longer appears cleanly on one line. Remove test prints before saving your final run.</p>
+<h3>Task 1.2</h3>
+<p>For an empty stack you <code>return False, False</code>, which is a tuple, while the brief asks for <code>False</code> alone. A caller checking the result directly would be misled.</p>
+<h3>Next step</h3>
+<div class="next"><p>Delete the debug print, change the empty case to <code>return False</code>, then Run All and save again.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2025-3">
+      <div class="task-header">2025 Paper 2, Task 3 <span class="files">Chia He jun - task3.ipynb</span></div>
+      <div class="task-body">
+<p>Your database creation is very good: all three tables, primary keys and foreign keys are declared correctly, and dropping tables first keeps the notebook re-runnable.</p>
+<h3>Task 3.2</h3>
+<p>The second and third blocks both read <code>post.txt</code> and both run <code>INSERT INTO User(PostID, PostText, DateTimePosted, Username)</code>, so posts are aimed at the wrong table and <code>comment.txt</code> is never loaded. The saved output shows user rows only, which does not match this code, so a clean run of the current version is not evidenced.</p>
+<h3>Task 3.3</h3>
+<p>The join and <code>Blocked = 1</code> filter are right, but the brief asks for a function, and no output is saved.</p>
+<h3>Next step</h3>
+<div class="next"><p>Correct the two INSERT statements, wrap Task 3.3 in a function you call, then Run All and save.</p></div>
+      </div>
+    </section>
     <p class="foot">Disclaimer: AI-assisted evaluation may contain issues. Exercise discretion and seek clarification if in doubt.</p>
   </main>
 </body>

@@ -60,6 +60,40 @@
 <h3>Next step</h3><div class="next"><p>Fix the write to <code>format(line)</code>, print the equality test, and run it in a notebook.</p></div>
       </div>
     </section>
+    <section class="task" id="task-2025-1">
+      <div class="task-header">2025 Paper 2, Task 1 <span class="files">Jimson Teo - task1.ipynb</span></div>
+      <div class="task-body">
+<p>Your program produces the correct binary output for all three tests, including the zero case, and <code>main()</code> keeps everything in local variables as required.</p>
+<h3>Task 1.1</h3>
+<p><code>push()</code> increments the pointer before storing, so index 0 is never used and the item lands one slot above the next-free-space convention. Storing first with <code>stack[top]=item</code> and then adding one keeps to the stated convention. The growth line <code>stack=stack+[-1 for i in range(len(stack))]</code> also rebinds a local name, so the caller's list is never extended.</p>
+<h3>Next step</h3>
+<div class="next"><p>Rework push to store at the pointer index before incrementing, and remove the debug print from <code>pop()</code> so only the binary number is output.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2025-3">
+      <div class="task-header">2025 Paper 2, Task 3 <span class="files">Jimson Teo - task3.ipynb</span></div>
+      <div class="task-body">
+<p>Task 3.1 is complete and accurate: all three tables, every primary key and all three foreign keys are defined properly.</p>
+<h3>Task 3.2</h3>
+<p>The inserts run but the changes are never saved with <code>db.commit()</code>. Because 3.3 opens a fresh connection, it read an empty database, which is why it printed <code>[]</code>.</p>
+<h3>Task 3.3</h3>
+<p>The join on Username with <code>User.Blocked=1</code> is the right idea, but the task asks for a function, so the query and printing loop belong inside a <code>def</code> that you then call.</p>
+<h3>Next step</h3>
+<div class="next"><p>Add a commit after the inserts, wrap 3.3 in a function, then Run All and confirm four comments appear.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2025-4">
+      <div class="task-header">2025 Paper 2, Task 4 <span class="files">Jimson Teo - task4.ipynb</span></div>
+      <div class="task-body">
+<p>You made a start with a correct <code>calculate_hash()</code>, but 4.4 to 4.6 are empty and the notebook has no saved outputs, so no run can be shown.</p>
+<h3>Task 4.1</h3>
+<p>The table is only built inside <code>createhashtable()</code>, which is never called, so the global <code>hash_table</code> the other functions rely on does not exist.</p>
+<h3>Task 4.3</h3>
+<p>The loop moves with <code>index=(index+1)</code> before checking, so the hash's home index is skipped, and the bare <code>return</code> on the first occupied slot ends the search instead of probing onwards.</p>
+<h3>Next step</h3>
+<div class="next"><p>Create <code>hash_table</code> as a global list, fix the probe loop, then complete 4.4 and use Run All so outputs are saved.</p></div>
+      </div>
+    </section>
     <p class="foot">Disclaimer: AI-assisted evaluation may contain issues. Exercise discretion and seek clarification if in doubt.</p>
   </main>
 </body>

@@ -41,7 +41,32 @@
       <h1>Tan Bo Yu (Chen Boyu)</h1>
       <p class="meta">25S21 &middot; <a href="../all.html">Back to the work grid</a></p>
     </div>
+    <section class="task" id="task-2025-1">
+      <div class="task-header">2025 Paper 2, Task 1 <span class="files">Boyu Tan - task1(1).ipynb</span></div>
+      <div class="task-body">
+<p>The overall shape of your method is right: divide by 2, push the remainders, then pop them to build the string. Several small slips stop it from running, and the only saved output is an error from an earlier version of the code.</p>
+<h3>Task 1.1</h3>
+<p><code>stack = stack.append(data)</code> stores None in <code>stack</code>, because append returns nothing, and the function never returns the updated pointer.</p>
+<h3>Task 1.3</h3>
+<p><code>num = num / 2</code> produces decimals, so the remainders stop being 0 or 1; integer division <code>//</code> keeps whole numbers. <code>main()</code> also returns its result instead of printing it, and is never called.</p>
+<h3>Next step</h3>
+<div class="next"><p>Return the pointer from <code>push()</code>, switch to <code>//</code>, print the result, then run the three tests and save.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2025-3">
+      <div class="task-header">2025 Paper 2, Task 3 <span class="files">Boyu Tan - task3.ipynb</span></div>
+      <div class="task-body">
+<p>You clearly know the table structures, and the column lists for all three tables match the design. Syntax problems stop the database from being created or filled, and the saved output is a NameError from an older run.</p>
+<h3>Task 3.1</h3>
+<p><code>PostID(PRIMARY KEY, AUTOINCREMENT)</code> is not valid in a CREATE TABLE; declare the key on the column itself or as <code>PRIMARY KEY(PostID)</code> after the columns.</p>
+<h3>Task 3.2</h3>
+<p>Your values sit outside the call: the bracket closes after the SQL string, leaving <code>,(Username, int(Blocked))</code> dangling, so nothing is passed in. The parameters must be the second argument of <code>cursor.execute()</code>, and comment.txt still needs its own loop.</p>
+<h3>Next step</h3>
+<div class="next"><p>Fix these two statements, add the comment.txt inserts, then run every cell in order and save.</p></div>
+      </div>
+    </section>
     <section class="task"><div class="task-header">An encouragement note</div><div class="farewell">All the best for your A-levels and life. It has been nice knowing you. :)</div></section>
+    <p class="foot">Disclaimer: AI-assisted evaluation may contain issues. Exercise discretion and seek clarification if in doubt.</p>
 
   </main>
 </body>

@@ -98,6 +98,26 @@
 <h3>Next step</h3><div class="next"><p>Swap the whole card in 1.3 with <code>hand[j], hand[j+1] = hand[j+1], hand[j]</code>, then re-run and recheck the scores.</p></div>
       </div>
     </section>
+    <section class="task" id="task-2025-1">
+      <div class="task-header">2025 Paper 2, Task 1 <span class="files">Carter Harbick - task1.ipynb</span></div>
+      <div class="task-body">
+<p>Your notebook has no saved outputs, so there is no visible evidence of a run, and <code>main()</code> is never called. The code itself shows a sensible shape, using your own <code>push()</code> and <code>pop()</code> to build the binary string.</p>
+<h3>Task 1.3</h3>
+<p>The loop <code>while num // 2 != 0:</code> stops one division early, so the final remainder, the leading binary digit, is never pushed. Also, <code>main()</code> ends with <code>return binary_num</code>, but the task asks it to print the result and return nothing.</p>
+<h3>Next step</h3>
+<div class="next"><p>Add calls to <code>main()</code> for 0, 22 and 46967, then Run All and save the notebook so the outputs are kept.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2025-3">
+      <div class="task-header">2025 Paper 2, Task 3 <span class="files">Carter Harbick - task3.ipynb</span></div>
+      <div class="task-body">
+<p>Tasks 3.1 and 3.2 are well written: all the primary and foreign keys are defined, and your line-by-line parameterised inserts are exactly the right pattern. Task 3.3 needs attention.</p>
+<h3>Task 3.3</h3>
+<p>The condition <code>Post.PostID = Comment.PostID</code> refers to <code>Post</code>, which is not in your FROM clause, so the query cannot run. Also, <code>print(data)</code> prints the cursor object itself; you need to loop over the returned rows and print each username and comment, inside a function as the task asks.</p>
+<h3>Next step</h3>
+<div class="next"><p>Remove the <code>Post</code> condition, wrap the query in a function that prints each row on a new line, then Run All and save.</p></div>
+      </div>
+    </section>
     <p class="foot">Disclaimer: AI-assisted evaluation may contain issues. Exercise discretion and seek clarification if in doubt.</p>
   </main>
 </body>

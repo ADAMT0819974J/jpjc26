@@ -214,6 +214,38 @@
 <h3>Next step</h3><div class="next"><p>Add month rollover in 4.3 with a days-per-month lookup, then re-run 4.4 and save.</p></div>
       </div>
     </section>
+    <section class="task" id="task-2025-1">
+      <div class="task-header">2025 Paper 2, Task 1 <span class="files">Caleb Han - task1.ipynb</span></div>
+      <div class="task-body">
+<p>This is a complete and convincing solution, well done. <code>push()</code> grows the list only when full, <code>pop()</code> returns both the item and the updated pointer without deleting data, and all three saved test outputs match, including the zero case.</p>
+<h3>Task 1.3</h3>
+<p>One small refinement: you print <code>int(output)</code>. Converting the assembled string to an integer happens to work because a binary value never begins with a zero digit, but printing the string directly avoids relying on that and shows exactly the digits you popped.</p>
+<h3>Next step</h3>
+<div class="next"><p>Print the assembled string itself rather than <code>int(output)</code>, then re-run your three tests to confirm the outputs are unchanged.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2025-3">
+      <div class="task-header">2025 Paper 2, Task 3 <span class="files">Caleb Han - task3.ipynb</span></div>
+      <div class="task-body">
+<p>A strong, fully working submission. All three tables are created with the correct primary and foreign keys, your inserts are parameterised, and the saved output shows the four expected comments from blocked users.</p>
+<h3>Task 3.3</h3>
+<p>Your approach runs one query for blocked users, then a further query per user with <code>WHERE Username = ?</code>. It works, but a single SELECT joining <code>Comment</code> and <code>User</code> with <code>WHERE User.Blocked = 1</code> would perform the whole search in one statement and avoid repeated round trips to the database as the tables grow.</p>
+<h3>Next step</h3>
+<div class="next"><p>Rewrite Task 3.3 as one join query and check that the same four comments are returned.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2025-4">
+      <div class="task-header">2025 Paper 2, Task 4 <span class="files">Caleb Han - task4.ipynb</span></div>
+      <div class="task-body">
+<p>Much of this works well: records are stored with their keys, probing wraps using <code>( hash + 1 ) % 100</code>, and <code>read_data()</code> reports any record it cannot store.</p>
+<h3>Task 4.5</h3>
+<p><code>find_record()</code> checks only the home index and never compares the stored key, which is why your output shows heavy for key 475; that slot holds key 175.</p>
+<h3>Task 4.3</h3>
+<p>The loop <code>while hash_table[hash] != None:</code> can never exit once the table is full, so your <code>if hash == temp</code> check is never reached.</p>
+<h3>Next step</h3>
+<div class="next"><p>Make <code>find_record()</code> probe from the hash index, comparing each stored key until it matches or an empty slot appears.</p></div>
+      </div>
+    </section>
     <p class="foot">Disclaimer: AI-assisted evaluation may contain issues. Exercise discretion and seek clarification if in doubt.</p>
   </main>
 </body>

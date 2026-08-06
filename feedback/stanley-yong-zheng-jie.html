@@ -155,6 +155,39 @@
 <h3>Next step</h3><div class="next"><p>Fix inputPuzzle(), add test calls for both examples, then Run All and save before pushing.</p></div>
       </div>
     </section>
+    <section class="task" id="task-2025-1">
+      <div class="task-header">2025 Paper 2, Task 1 <span class="files">Stanley yong - task1.ipynb</span></div>
+      <div class="task-body">
+<p>Your <code>push()</code> is close to working, and its saved test call shows you experimenting, which is a good habit. The later functions rely on names that do not exist, and <code>main()</code> is never called, so there are no test outputs to assess.</p>
+<h3>Task 1.2</h3>
+<p><code>pop()</code> should read the top item, but <code>stack[top] = item</code> writes into the stack using a variable <code>item</code> that is never defined. It needs to read the item below the pointer and return it with the updated pointer.</p>
+<h3>Task 1.3</h3>
+<p>The line <code>num = temp</code> is reversed, since <code>temp</code> has no value yet, and the call under <code>#main</code> is missing.</p>
+<h3>Next step</h3>
+<div class="next"><p>Fix the undefined names, call <code>main()</code>, then Run All with the three test inputs and save.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2025-3">
+      <div class="task-header">2025 Paper 2, Task 3 <span class="files">Stanley yong - task3.ipynb</span></div>
+      <div class="task-body">
+<p>Your Task 3.1 is the strongest part: all three tables, primary keys and foreign keys are defined correctly. Nothing was run though, so no cell has saved output to confirm anything works.</p>
+<h3>Task 3.2</h3>
+<p><code>line.split(",").strip()</code> calls strip on a list; strip the string first, as in <code>line.strip().split(",")</code>. The connection is also closed at the end of 3.1, so <code>db</code> cannot be reused here without reconnecting.</p>
+<h3>Task 3.3</h3>
+<p>The task asks for a function, and your SELECT names Post and User in the WHERE clause without including them in FROM or a JOIN, so the query cannot run.</p>
+<h3>Next step</h3>
+<div class="next"><p>Reconnect at the start of each cell, then Run All and save so your outputs are visible.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2025-4">
+      <div class="task-header">2025 Paper 2, Task 4 <span class="files">Stanley yong - task4.ipynb</span></div>
+      <div class="task-body">
+<p>There is nothing to assess yet: every Task 4 cell contains only its label, such as <code>#Task 4.1</code>, with no statements beneath and no saved output.</p>
+<p>The early sub-tasks give quick momentum. Task 4.1 is one line creating a global list of 100 empty records, and Task 4.2 is a small function applying the given formula, key mod table size. Once those exist, <code>insert()</code> and <code>find_record()</code> both build on the same linear probing idea, so partial attempts would still show useful evidence.</p>
+<h3>Next step</h3>
+<div class="next"><p>Write Task 4.1 and Task 4.2 first, then Run All and save so each attempt shows its output.</p></div>
+      </div>
+    </section>
     <p class="foot">Disclaimer: AI-assisted evaluation may contain issues. Exercise discretion and seek clarification if in doubt.</p>
   </main>
 </body>

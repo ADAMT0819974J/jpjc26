@@ -99,6 +99,39 @@
 <h3>Next step</h3><div class="next"><p>Fix the two wrong inserts and the <code>TEXT</code> types, then Run All and save.</p></div>
       </div>
     </section>
+    <section class="task" id="task-2025-1">
+      <div class="task-header">2025 Paper 2, Task 1 <span class="files">ATHY_Tham_task1.ipynb</span></div>
+      <div class="task-body">
+<p>Both stack functions have a start, but the order of operations works against you, and with <code>def main()</code> unfinished nothing could run, so there are no saved outputs.</p>
+<h3>Task 1.1</h3>
+<p>You increment first, <code>sp += 1</code>, then store with <code>stack[sp] = data</code>, which steps outside the list on the first push. Store at the current pointer, then move it. <code>len[stack]</code> also needs round brackets.</p>
+<h3>Task 1.2</h3>
+<p>Good instinct keeping popped data in the list, though the decrement happens before the read, so the wrong item comes back.</p>
+<h3>Next step</h3>
+<div class="next"><p>Finish <code>main()</code>, then Run All with the three test inputs and save so the outputs show.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2025-3">
+      <div class="task-header">2025 Paper 2, Task 3 <span class="files">ATHY_Tham_task3.ipynb</span></div>
+      <div class="task-body">
+<p>This task is in good shape: your csv.reader loops load all three files with parameterised inserts, and the saved Task 3.3 output lists the four comments from blocked users, which confirms the data went in.</p>
+<h3>Task 3.1</h3>
+<p>The Comment table defines no primary key and no foreign keys, while User and Post have theirs; <code>CommentID</code> and its two references to Post and User still need declaring.</p>
+<h3>Task 3.3</h3>
+<p>The task asks for a function, and <code>print(cursor.fetchall())</code> puts every row on one line. Looping through the rows lets you print each username and comment on its own line.</p>
+<h3>Next step</h3>
+<div class="next"><p>Wrap the query in a function that prints one row per line, then re-run and save.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2025-4">
+      <div class="task-header">2025 Paper 2, Task 4 <span class="files">ATHY Tham - task4.ipynb</span></div>
+      <div class="task-body">
+<p>Every Task 4 cell contains only its heading comment, such as <code>#Task 4.1</code>, with no statements added, so there is nothing to assess and no saved output.</p>
+<p>This task rewards steady progress. Task 4.1 is a single line building a global list of 100 empty records, Task 4.2 applies the given formula, key mod table size, and the later functions reuse that hash value with linear probing. Given how strong your Task 3 file handling was, even partial attempts at <code>insert()</code> and <code>read_data()</code> would show useful evidence.</p>
+<h3>Next step</h3>
+<div class="next"><p>Write Task 4.1 and Task 4.2, run them, then build <code>insert()</code> and save after Run All.</p></div>
+      </div>
+    </section>
     <p class="foot">Disclaimer: AI-assisted evaluation may contain issues. Exercise discretion and seek clarification if in doubt.</p>
   </main>
 </body>

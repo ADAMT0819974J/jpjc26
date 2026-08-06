@@ -97,6 +97,30 @@
 <h3>Next step</h3><div class="next"><p>Rewrite 2.4 to time each sort on each file, then compare O(n^2) with O(n log n).</p></div>
       </div>
     </section>
+    <section class="task" id="task-2025-1">
+      <div class="task-header">2025 Paper 2, Task 1 <span class="files">alvirra - task1.ipynb</span></div>
+      <div class="task-body">
+<p>Your stack logic in <code>main()</code> reads well: remainders are pushed as you divide by 2, then popped in the correct order.</p>
+<h3>Task 1.1</h3>
+<p>Your <code>push()</code> always runs <code>stack.append(str(data))</code>, so new data goes to the end of the list rather than the index held by the pointer. After a pop, the next push should overwrite the old slot at the pointer position.</p>
+<h3>Tests</h3>
+<p>The saved output shows an <code>AttributeError</code> from an older version of the code, so the current version has no visible evidence of the three tests.</p>
+<h3>Next step</h3>
+<div class="next"><p>Use Run All, check that the outputs for 0, 22 and 46967 appear, then save the notebook.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2025-3">
+      <div class="task-header">2025 Paper 2, Task 3 <span class="files">alvirra - task3.ipynb</span></div>
+      <div class="task-body">
+<p>Your table designs are a good start: all three tables name the right columns and each primary key is correctly chosen.</p>
+<h3>Task 3.1</h3>
+<p>The cell stops at <code>DROP TABLE User IF EXISTS</code>, which SQLite rejects; the keyword order matters, and this error meant no tables were created, which then broke Task 3.2.</p>
+<h3>Task 3.2</h3>
+<p>Each line read from the file is still one string, so <code>user[0]</code> picks out a single character rather than the username. Splitting each line on the comma would give the separate fields.</p>
+<h3>Next step</h3>
+<div class="next"><p>Correct the DROP statements to <code>DROP TABLE IF EXISTS User</code>, re-run from the top, and confirm the inserts complete.</p></div>
+      </div>
+    </section>
     <p class="foot">Disclaimer: AI-assisted evaluation may contain issues. Exercise discretion and seek clarification if in doubt.</p>
   </main>
 </body>

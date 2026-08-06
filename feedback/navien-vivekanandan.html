@@ -164,6 +164,28 @@
 <h3>Next step</h3><div class="next"><p>Pass <code>hand1[i][0]</code> and <code>hand2[i][0]</code> into <code>compare_colours</code>, then re-run from the top.</p></div>
       </div>
     </section>
+    <section class="task" id="task-2025-1">
+      <div class="task-header">2025 Paper 2, Task 1 <span class="files">NAVIEN VIVEKANANDAN - task1.ipynb</span></div>
+      <div class="task-body">
+<p>The stack-based conversion itself works, but extra formatting changes the required output.</p>
+<h3>Task 1.3</h3>
+<p>Your division loop and popping loop are correct, and 46967 produces the expected 1011011101110111. However, the padding block <code>binary_str = ((count-n)*'0') + binary_str</code> is not part of the task, so 22 prints as 00010110 instead of 10110, and 0 prints as 00000000 instead of 0. The task also says main() should only output to the screen and not return data, yet yours ends with <code>return binary_str</code> and relies on <code>print(main())</code> outside the function.</p>
+<h3>Next step</h3>
+<div class="next"><p>Remove the padding and print the binary number inside main(), then rerun the three tests and save.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2025-3">
+      <div class="task-header">2025 Paper 2, Task 3 <span class="files">NAVIEN VIVEKANANDAN - task3.ipynb</span></div>
+      <div class="task-body">
+<p>This is close to a full solution; the database is built, loaded and queried successfully.</p>
+<h3>Task 3.2</h3>
+<p>Reading each file and inserting with parameterised queries such as <code>Values(?,?,?,?,?)</code> is good practice, and your 3.3 output of the four blocked-user comments shows the inserts worked.</p>
+<h3>Task 3.3</h3>
+<p>The task asks for a Python function, but this code runs at the top level with no <code>def</code>. The output also prints whole rows including CommentID, PostID and the date, where only each username and comment are wanted on a new line.</p>
+<h3>Next step</h3>
+<div class="next"><p>Wrap the query in a function that selects and prints only Username and TheText, then rerun and save.</p></div>
+      </div>
+    </section>
     <p class="foot">Disclaimer: AI-assisted evaluation may contain issues. Exercise discretion and seek clarification if in doubt.</p>
   </main>
 </body>

@@ -130,6 +130,37 @@
 <h3>Next step</h3><div class="next"><p>Add the main program with random.sample(range(1000), 10), insert the values and call both traversals.</p></div>
       </div>
     </section>
+    <section class="task" id="task-2025-1">
+      <div class="task-header">2025 Paper 2, Task 1 <span class="files">sher he - task1.ipynb</span></div>
+      <div class="task-body">
+<p>Your push and pop functions work as a consistent pair, growing the list when full and returning the item with the updated pointer.</p>
+<h3>Task 1.3</h3>
+<p>The loop <code>while top != 1:</code> stops before the stack is empty, so digits go missing; with your convention the stack is empty at -1. Also <code>print(digit)</code> puts each digit on its own line, not the whole binary number on one line.</p>
+<p>This cell has no saved output, so the three required tests cannot be seen.</p>
+<h3>Next step</h3>
+<div class="next"><p>Fix the loop condition, build the digits into one string, then Run All and save so the outputs for 0, 22 and 46967 show.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2025-3">
+      <div class="task-header">2025 Paper 2, Task 3 <span class="files">sher he - task3.ipynb</span></div>
+      <div class="task-body">
+<p>Your Task 3.1 is strong: all three tables are created with the correct primary and foreign keys. The later cells have not been run, so there are no saved outputs to confirm anything.</p>
+<h3>Task 3.2</h3>
+<p>This cell begins with <code>DROP TABLE IF EXISTS User</code> and the other two drops but never re-creates the tables, so every insert would fail. The comment data is also inserted with <code>INSERT INTO Post(...)</code>, five values into a four-column table, instead of into Comment.</p>
+<h3>Next step</h3>
+<div class="next"><p>Remove the DROP statements, correct the comment insert, then Run All and save so the outputs are visible.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2025-4">
+      <div class="task-header">2025 Paper 2, Task 4 <span class="files">sher he - task4.ipynb</span></div>
+      <div class="task-body">
+<p>Your start is sound: the table is initialised with 100 empty records and <code>calculate_hash()</code> returns <code>key % 100</code>. The task is unfinished from 4.4 onwards and nothing has been run, so there are no outputs to show.</p>
+<h3>Task 4.3</h3>
+<p>Your probe moves with <code>(index + 1) % 100</code> and detects a full table, which is good, but <code>insert()</code> never actually stores the record, and <code>hash_table(index[0])</code> uses round brackets where list indexing needs <code>hash_table[index]</code>.</p>
+<h3>Next step</h3>
+<div class="next"><p>Make <code>insert()</code> store <code>[key, data]</code> in the free slot, complete <code>read_data()</code> and the later sub-tasks, then Run All and save.</p></div>
+      </div>
+    </section>
     <p class="foot">Disclaimer: AI-assisted evaluation may contain issues. Exercise discretion and seek clarification if in doubt.</p>
   </main>
 </body>
