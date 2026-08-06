@@ -107,6 +107,40 @@
 <h3>Next step</h3><div class="next"><p>Merge everything into one Flask app and add the two missing ORDER BY clauses.</p></div>
       </div>
     </section>
+    <section class="task" id="task-2022-1">
+      <div class="task-header">2022 Paper 2, Task 1 <span class="files"><a href="https://github.com/cynicalzaza/A_Level_2020_Edgar/blob/main/2022/2022_ALevel_Edgar.ipynb" target="_blank" rel="noopener">2022_ALevel_Edgar.ipynb</a> <a href="https://github.com/cynicalzaza/A_Level_2020_Edgar/blob/main/2022/task1Alevel_Edgar.ipynb" target="_blank" rel="noopener">task1Alevel_Edgar.ipynb</a></span></div>
+      <div class="task-body">
+<p>Your Task 1 mostly works, and the encrypted file output in the whole-paper notebook looks right, but the wraparound sits in the wrong function.</p>
+<h3>Task 1.1</h3>
+<p>The brief asks the function itself to return the encrypted character's ASCII value, yet <code>new=ord(i)+10</code> has no wrap, so your own test <code>encrypt("z")</code> shows 132. The modulo work you placed in <code>Task1_2</code> belongs here.</p>
+<h3>Task 1.2</h3>
+<p>There is no <code>input()</code> call to read a character from the user, and printing <code>-1</code> is not an appropriate message. Your four test values are the right ones.</p>
+<h3>Next step</h3>
+<div class="next"><p>Move the modulo wraparound into <code>encrypt</code> so it returns 106 for 'z', then re-run both notebooks and save.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2022-2">
+      <div class="task-header">2022 Paper 2, Task 2 <span class="files"><a href="https://github.com/cynicalzaza/A_Level_2020_Edgar/blob/main/2022/2022_ALevel_Edgar.ipynb" target="_blank" rel="noopener">2022_ALevel_Edgar.ipynb</a></span></div>
+      <div class="task-body">
+<p>Solid work: all three algorithms run and produce sorted output, and your <code>merge</code> helper is cleanly written. Two gaps remain in the test evidence.</p>
+<h3>Task 2.3</h3>
+<p>The brief asks for one invalid choice first, then a valid one. Your saved run shows only the sorted list, so the invalid-input loop is never demonstrated. The bubble sort cell is also mislabelled <code>#task 1.2</code>.</p>
+<h3>Task 2.4</h3>
+<p>Only one search appears, <code>36</code> found at position 20. The brief wants the smallest integer in the list and then one that is not, to show the <code>Not found</code> branch.</p>
+<h3>Next step</h3>
+<div class="next"><p>Re-run 2.3 and 2.4 with the specified test inputs and save the notebook.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2022-3">
+      <div class="task-header">2022 Paper 2, Task 3 <span class="files"><a href="https://github.com/cynicalzaza/A_Level_2020_Edgar/blob/main/2022/2022_ALevel_Edgar.ipynb" target="_blank" rel="noopener">2022_ALevel_Edgar.ipynb</a> <a href="https://github.com/cynicalzaza/A_Level_2020_Edgar/blob/main/2022/task3_2022.ipynb" target="_blank" rel="noopener">task3_2022.ipynb</a></span></div>
+      <div class="task-body">
+<p>Neither notebook has saved output for Task 3, so the run evidence is missing, and the code would not run as written. Your insert method in <code>task3_2022.ipynb</code> does have the correct recursive structure, a good base.</p>
+<h3>Task 3.1</h3>
+<p>The main program calls <code>T=Tree()</code> with no data argument, so it crashes before inserting anything, and the whole-paper version refers to undefined names like <code>root.key</code>. The traversals also need attention: <code>self.right_pointer.inorder</code> is missing its call brackets, <code>print</code> sits inside the branch tests, and the second method is pre-order when the brief asks for post-order.</p>
+<h3>Next step</h3>
+<div class="next"><p>Fix the constructor call and traversals, then Run All and save so the two traversal outputs are captured.</p></div>
+      </div>
+    </section>
     <section class="task" id="task-2023-1">
       <div class="task-header">2023 Paper 2, Task 1 <span class="files"><a href="https://github.com/cynicalzaza/A_Level_2020_Edgar/blob/main/2023/2023_ALevel_Task1.ipynb" target="_blank" rel="noopener">2023_ALevel_Task1.ipynb</a></span></div>
       <div class="task-body">

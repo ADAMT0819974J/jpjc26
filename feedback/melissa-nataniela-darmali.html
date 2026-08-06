@@ -147,6 +147,18 @@
 <h3>Next step</h3><div class="next"><p>Wrap each test call in an if statement that prints a clear message.</p></div>
       </div>
     </section>
+    <section class="task" id="task-2024-2">
+      <div class="task-header">2024 Paper 2, Task 2 <span class="files"><a href="https://github.com/meltierd/H2-computing/blob/main/tys/2024/TASK2%20%282%29.ipynb" target="_blank" rel="noopener">TASK2 (2).ipynb</a></span></div>
+      <div class="task-body">
+<p>Good progress: <code>Node</code>, <code>calculate_nodes()</code> and the leaf assignment all behave, and your pointer pairing in Task 2.6 is the right idea, but one typo stops the later cells.</p>
+<h3>Task 2.6</h3>
+<p>You compute <code>summ</code> but then call <code>list_of_nodes[index].set_data(sum)</code>, which stores Python's built-in <code>sum</code> function in the node. The next addition then raises the TypeError shown in your output, and it also halts Task 2.7, so levels 3 and 5 never print their trees.</p>
+<h3>Task 2.7</h3>
+<p>A small point: <code>print(tree(1))</code> adds an extra <code>None</code> because <code>tree()</code> returns nothing.</p>
+<h3>Next step</h3>
+<div class="next"><p>Change <code>set_data(sum)</code> to <code>set_data(summ)</code>, then Run All so all three tests show complete trees.</p></div>
+      </div>
+    </section>
     <section class="task" id="task-2025-1">
       <div class="task-header">2025 Paper 2, Task 1 <span class="files">Mel D - task1.ipynb</span></div>
       <div class="task-body">

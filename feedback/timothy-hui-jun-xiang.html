@@ -137,6 +137,16 @@
 <h3>Next step</h3><div class="next"><p>Rewrite 2.4 to read an integer, search the sorted task2_1 list, and return -1 when absent.</p></div>
       </div>
     </section>
+    <section class="task" id="task-2022-3">
+      <div class="task-header">2022 Paper 2, Task 3 <span class="files"><a href="https://github.com/timothyhref/H2COMPUTING/blob/main/A_LVL_2022/task3.ipynb" target="_blank" rel="noopener">task3.ipynb</a></span></div>
+      <div class="task-body">
+<p>Your <code>Tree</code> class is well built: the constructor matches the brief's property names, <code>insert</code> recurses correctly, and the saved in-order output is in ascending order. Two parts of the brief are not yet met.</p>
+<h3>Task 3.1</h3>
+<p>The second traversal, <code>preorder_2</code>, prints the node before its children, which is pre-order; the brief asks for post-order, where <code>print(self.data)</code> comes after both recursive calls. Also, the main program should generate 10 unique random integers between 0 and 999, but you insert a hardcoded list, <code>arr = [24,65,3,4,6,76,5,3,5,4]</code>, which even contains duplicates.</p>
+<h3>Next step</h3>
+<div class="next"><p>Write a post-order method and build the tree from 10 unique <code>random.randint(0,999)</code> values, then re-run and save.</p></div>
+      </div>
+    </section>
     <section class="task" id="task-2022-4">
       <div class="task-header">2022 Paper 2, Task 4 <span class="files"><a href="https://github.com/timothyhref/H2COMPUTING/blob/main/A_LVL_2022/TASK_4_4_%3CTimothy%3E_%3C25S22%3E_%3C15%3E/index.html" target="_blank" rel="noopener">index.html</a> <a href="https://github.com/timothyhref/H2COMPUTING/blob/main/A_LVL_2022/task4.ipynb" target="_blank" rel="noopener">task4.ipynb</a> <a href="https://github.com/timothyhref/H2COMPUTING/blob/main/A_LVL_2022/task4_3_Timothy_25S22_15.py" target="_blank" rel="noopener">task4_3_Timothy_25S22_15.py</a></span></div>
       <div class="task-body">
@@ -145,6 +155,28 @@
 <h3>Task 4.3</h3><p>The join returns titles with Returned, but the output includes a TRUE row, so this is not the required member 200 test, whose loans are all FALSE.</p>
 <h3>Task 4.4</h3><p>The Flask app and Jinja table are sound, but the saved <code>index.html</code> is the template, not the rendered page.</p>
 <h3>Next step</h3><div class="next"><p>Add the BookID foreign key, rerun 4.3 with member 200, and save the rendered browser page.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2023-1">
+      <div class="task-header">2023 Paper 2, Task 1 <span class="files"><a href="https://github.com/timothyhref/H2COMPUTING/blob/main/A_LVL_2023/task1.ipynb" target="_blank" rel="noopener">task1.ipynb</a></span></div>
+      <div class="task-body">
+<p>Your schema is largely sound, but there is no run evidence: none of the cells has saved output, so the notebook does not show the database being created or the inserted data being checked, which the task asks for. This is AI-assisted feedback based on the code alone.</p>
+<h3>Task 1.1</h3>
+<p>In the Class table, <code>FOREIGN KEY("ClassName") REFERENCES "Student"("ClassName")</code> points the wrong way. Student is the child here, so Student.ClassName should reference Class. Your Student_Test keys are set up correctly, which is good work.</p>
+<h3>Next step</h3>
+<div class="next"><p>Run All and save the notebook so every cell's output is captured.</p></div>
+      </div>
+    </section>
+    <section class="task" id="task-2023-2">
+      <div class="task-header">2023 Paper 2, Task 2 <span class="files"><a href="https://github.com/timothyhref/H2COMPUTING/blob/main/A_LVL_2023/task2.ipynb" target="_blank" rel="noopener">task2.ipynb</a></span></div>
+      <div class="task-body">
+<p>This runs well: your saved outputs show the fifth enqueue rejected on a full queue and the empty-queue message on the fifth dequeue, and the wraparound with <code>(self.tailPointer + 1)%4</code> is handled neatly.</p>
+<h3>Task 2.2</h3>
+<p>The attribute <code>numberItems</code> is never updated in <code>enqueue()</code> or <code>dequeue()</code>. The class description lists it as the count of items, and using it would simplify checks like <code>self.queueList[(self.tailPointer+1)%4] == None</code>.</p>
+<h3>Task 2.3</h3>
+<p>Also, after <code>.split(",")</code> the quantity stays a string, though it is described as an integer; wrap it in <code>int()</code>.</p>
+<h3>Next step</h3>
+<div class="next"><p>Maintain <code>numberItems</code> in both methods and use it for the full and empty checks, then re-run the cells.</p></div>
       </div>
     </section>
     <section class="task" id="task-2025-1">

@@ -97,6 +97,18 @@
 <h3>Next step</h3><div class="next"><p>Change to <code>open(filename)</code>, place the data files beside the notebook, uncomment every print, add the orders-of-growth comparison, then Run All and save.</p></div>
       </div>
     </section>
+    <section class="task" id="task-2021-3">
+      <div class="task-header">2021 Paper 2, Task 3 <span class="files"><a href="https://github.com/NJ11422/H2-FILES/blob/main/A-LVL%202021%20P2/task3.ipynb" target="_blank" rel="noopener">task3.ipynb</a></span></div>
+      <div class="task-body">
+<p>Your linked list structure is genuinely well built: <code>Node</code>, head insertion, the sorted insert and the queue all traverse pointers correctly, and the saved outputs match the data file. Two things hold it back.</p>
+<h3>Task 3.1</h3>
+<p><code>to_String()</code> returns a Python list, but the brief asks for a string such as <code>[11, 2, 7, 4]</code>; assembling the commas and brackets yourself is part of the task.</p>
+<h3>Task 3.2</h3>
+<p>The required print of searching for 94 is missing, and <code>search</code> would crash on it: after the loop, <code>if current.data == integer_value</code> still runs when <code>current</code> is <code>None</code>.</p>
+<h3>Next step</h3>
+<div class="next"><p>Make <code>search</code> return <code>False</code> once <code>current</code> reaches <code>None</code>, then print <code>person.search(94)</code> in Task 3.2.</p></div>
+      </div>
+    </section>
     <section class="task" id="task-2025-3">
       <div class="task-header">2025 Paper 2, Task 3 <span class="files">Niranjan - task3.ipynb</span></div>
       <div class="task-body">
