@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+    <table border=1>
+        {% for i in range(data|length) %}
+        <tr>
+            <td> {{data[i][1]}} </td>
+            <td> {{data[i][3]}} </td>
+            <td> {{ptype[i]}} </td>
+        </tr>
+        {%endfor%}
+    </table>
+</html>
